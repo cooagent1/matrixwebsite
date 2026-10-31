@@ -102,7 +102,6 @@ export function Landing() {
               <Menu />
               <Link href="/" aria-label="Matrix POS Startseite"><img src="/lp/logo-matrixpos.png" alt="Matrix POS" className="b-logo" /></Link>
             </div>
-            <div className="b-m b-hdr-tag">Hannover · Kassensysteme seit 30+ Jahren</div>
             <Link href="/demo" className="b-btn b-btn-acc b-hdr-cta">Demo buchen</Link>
           </div>
         </header>
