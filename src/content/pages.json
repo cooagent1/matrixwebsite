@@ -1585,10 +1585,10 @@
     ]
    },
    {
-    "id": "kacheln",
-    "name": "Kacheln",
+    "id": "betriebsarten",
+    "name": "Betriebsarten",
     "eyebrow": null,
-    "heading": "Kacheln",
+    "heading": "Betriebsarten",
     "blocks": [
      {
       "type": "list",
