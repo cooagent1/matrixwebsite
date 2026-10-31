@@ -20,7 +20,7 @@ function mergeButtons(blocks: Block[]): Block[] {
 
 // Fett-Einleitung ("**Titel.** Text") als Karte mit Titel und Text
 function splitLead(t: string): { title: string; text: string } | null {
-  const m = t.match(/^\*\*(.+?)\*\*\s*(.*)$/s);
+  const m = t.match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
   return m ? { title: m[1].replace(/[.:]\s*$/, ""), text: m[2] } : null;
 }
 

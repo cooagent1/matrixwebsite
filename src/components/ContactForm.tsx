@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 type State = "idle" | "sending" | "ok" | "error" | "unavailable";
@@ -79,7 +80,7 @@ export function ContactForm() {
       <label className="md:col-span-2 flex items-start gap-2 text-sm text-slate-600">
         <input type="checkbox" name="consent" required className="mt-1" />
         <span>
-          Mit dem Absenden stimme ich der <a href="/datenschutz" className="link">Datenschutzerklärung</a> zu.
+          Mit dem Absenden stimme ich der <Link href="/datenschutz" className="link">Datenschutzerklärung</Link> zu.
         </span>
       </label>
       <div className="md:col-span-2 flex flex-wrap items-center gap-4">
