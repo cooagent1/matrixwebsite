@@ -10,7 +10,6 @@ const COUNT = 3;
 export function ScenesCarousel() {
   const ref = useRef<HTMLElement>(null);
   const [i, setI] = useState(0);
-  const [prog, setProg] = useState(0);
   const [on, setOn] = useState(false);
 
   useEffect(() => {
@@ -31,7 +30,6 @@ export function ScenesCarousel() {
       const r = el.getBoundingClientRect();
       const range = el.offsetHeight - window.innerHeight;
       const p = Math.min(1, Math.max(0, -r.top / Math.max(1, range)));
-      setProg(p);
       setI(Math.min(COUNT - 1, Math.floor(p * COUNT * 0.999)));
     };
     const onScroll = () => { if (!raf) raf = requestAnimationFrame(tick); };
@@ -58,14 +56,6 @@ export function ScenesCarousel() {
               <div className="b-num"><b className="b-d">7</b><span>Tage Support</span></div>
               <div className="b-num"><b className="b-d">30<em>+</em></b><span>Jahre Gastro-Kassen</span></div>
             </div>
-            {on && (
-              <div className="b-dots" aria-hidden="true">
-                {Array.from({ length: COUNT }, (_, k) => (
-                  <span key={k} className={k === i ? "on" : ""} />
-                ))}
-                <span className="b-prog"><span style={{ width: `${prog * 100}%` }} /></span>
-              </div>
-            )}
           </div>
           <div className="b-scene-col">
                   <div className={`b-scene s1 ${cls(0)}`}>
