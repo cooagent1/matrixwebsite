@@ -3,16 +3,26 @@ import Link from "next/link";
 import { NAV, SUPPORT_PORTAL } from "@/lib/nav";
 import { BranchenTabs } from "./BranchenTabs";
 
-// Branchen-Laufband im Hero (Wunsch Robert 31.10.: Domänen statt Kassen-Feed), Ziele = Branchenseiten.
-const FEED: [string, string, string][] = [
-  ["Restaurant", "Gänge, Splitten, Tischplan", "/branchen/restaurant"],
-  ["Hotel", "Rechnung aufs Zimmer", "/branchen/hotel"],
-  ["Bar & Café", "Favoriten vorne, Schlange kurz", "/branchen/bar-cafe"],
-  ["Biergarten & Terrasse", "Mobil kassieren am Tisch", "/branchen/aussengastronomie"],
-  ["Freizeitpark", "Hunderte Kassen, ein Office", "/branchen/freizeitpark"],
-  ["Food Court", "Mehrere Stationen, ein Bon", "/branchen/foodcourt"],
-  ["Systemgastronomie", "Ein Standard für jede Filiale", "/branchen/systemgastronomie"],
+// Branchen-Laufband im Hero (Robert 31.10.: Domänen statt Kassen-Feed, eigenes Design), Ziele = Branchenseiten.
+const FEED: { name: string; hint: string; slug: string }[] = [
+  { name: "Restaurant", hint: "Gänge, Splitten, Tischplan", slug: "restaurant" },
+  { name: "Hotel", hint: "Rechnung aufs Zimmer", slug: "hotel" },
+  { name: "Bar & Café", hint: "Favoriten vorne, Schlange kurz", slug: "bar-cafe" },
+  { name: "Biergarten & Terrasse", hint: "Mobil kassieren am Tisch", slug: "aussengastronomie" },
+  { name: "Freizeitpark", hint: "Hunderte Kassen, ein Office", slug: "freizeitpark" },
+  { name: "Food Court", hint: "Mehrere Stationen, ein Bon", slug: "foodcourt" },
+  { name: "Systemgastronomie", hint: "Ein Standard für jede Filiale", slug: "systemgastronomie" },
 ];
+
+const ICONS: Record<string, string> = {"restaurant": "M7 3v8M10 3v8M8.5 11v10M7 3c0 3 0 5 1.5 5S10 6 10 3M16 3c-1.5 2-2 5-2 8h3v10", "hotel": "M3 18V8M3 12h18v6M3 12V8a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4M21 18v-6a2 2 0 0 0-2-2h-8", "bar-cafe": "M4 8h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8zM16 9h2a2 2 0 0 1 0 4h-2M6 21h8", "aussengastronomie": "M12 3C7 3 3 7 3 12h18c0-5-4-9-9-9zM12 12v9M12 21h3", "freizeitpark": "M12 3v16M4 11h16M6.3 5.3l11.4 11.4M17.7 5.3L6.3 16.7M8 21h8M12 3a8 8 0 1 0 0 16 8 8 0 0 0 0-16z", "foodcourt": "M3 17h18M5 17a7 7 0 0 1 14 0M12 8V6M10 6h4", "systemgastronomie": "M3 21h18M5 21V9l5-3v15M14 21V11h5v10M8 11h1M8 14h1M8 17h1M16 14h1M16 17h1"};
+
+function BranchIcon({ slug }: { slug: string }) {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d={ICONS[slug]} />
+    </svg>
+  );
+}
 
 const LOGOS = [
   ["atlantic-hotels", "Atlantic Hotels", ""],
@@ -110,8 +120,10 @@ export function Landing() {
           </div>
           <div className="b-feedbar">
             <div className="b-marq">
-              {feed.map(([a, b, href], k) => (
-                <Link key={k} href={href} className="b-feed" aria-hidden={k >= FEED.length} tabIndex={k >= FEED.length ? -1 : undefined}><i /><b>{a}</b> {b}</Link>
+              {feed.map((f, k) => (
+                <Link key={k} href={`/branchen/${f.slug}`} className="b-feed" aria-hidden={k >= FEED.length} tabIndex={k >= FEED.length ? -1 : undefined}>
+                  <i><BranchIcon slug={f.slug} /></i><b>{f.name}</b><em>{f.hint}</em>
+                </Link>
               ))}
             </div>
           </div>
