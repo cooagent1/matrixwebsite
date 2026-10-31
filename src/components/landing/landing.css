@@ -46,6 +46,7 @@
 .lp .b-hero-btns{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:6px}
 .lp .b-feedbar{margin:48px -40px 0;border-top:1px solid rgba(255,255,255,0.12);border-bottom:1px solid rgba(255,255,255,0.12);overflow:hidden;background:rgba(7,7,8,0.5);backdrop-filter:blur(10px)}
 .lp .b-feed{display:inline-flex;align-items:center;gap:14px;padding:0 28px;height:52px;border-right:1px solid rgba(255,255,255,0.12);font-size:13px;color:var(--lp-mute2);white-space:nowrap}
+.lp a.b-feed{text-decoration:none;color:var(--lp-mute2)}.lp a.b-feed:hover{color:#fff;background:rgba(255,255,255,0.05)}
 .lp .b-feed b{color:#fff;font-weight:600}
 .lp .b-feed i{display:block;width:7px;height:7px;border-radius:999px;background:#4DBA30;box-shadow:0 0 0 4px rgba(77,186,48,0.25)}
 

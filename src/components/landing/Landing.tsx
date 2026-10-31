@@ -3,14 +3,15 @@ import Link from "next/link";
 import { NAV, SUPPORT_PORTAL } from "@/lib/nav";
 import { BranchenTabs } from "./BranchenTabs";
 
-const FEED = [
-  ["Tisch 4", "Gang 2 an Küche"],
-  ["Tap to Pay", "23,50 € · Trinkgeld 2,50 €"],
-  ["Zimmer 214", "6,80 € aufs Zimmer gebucht"],
-  ["Cloud-TSE", "Vorgang signiert"],
-  ["Neues Handgerät", "per Einrichtungscode angemeldet"],
-  ["Z-Bon", "23:45 automatisch als PDF"],
-  ["Tisch 8", "4 Rechnungen gesplittet"],
+// Branchen-Laufband im Hero (Wunsch Robert 31.10.: Domänen statt Kassen-Feed), Ziele = Branchenseiten.
+const FEED: [string, string, string][] = [
+  ["Restaurant", "Gänge, Splitten, Tischplan", "/branchen/restaurant"],
+  ["Hotel", "Rechnung aufs Zimmer", "/branchen/hotel"],
+  ["Bar & Café", "Favoriten vorne, Schlange kurz", "/branchen/bar-cafe"],
+  ["Biergarten & Terrasse", "Mobil kassieren am Tisch", "/branchen/aussengastronomie"],
+  ["Freizeitpark", "Hunderte Kassen, ein Office", "/branchen/freizeitpark"],
+  ["Food Court", "Mehrere Stationen, ein Bon", "/branchen/foodcourt"],
+  ["Systemgastronomie", "Ein Standard für jede Filiale", "/branchen/systemgastronomie"],
 ];
 
 const LOGOS = [
@@ -109,8 +110,8 @@ export function Landing() {
           </div>
           <div className="b-feedbar">
             <div className="b-marq">
-              {feed.map(([a, b], k) => (
-                <span key={k} className="b-feed" aria-hidden={k >= FEED.length}><i /><b>{a}</b> {b}</span>
+              {feed.map(([a, b, href], k) => (
+                <Link key={k} href={href} className="b-feed" aria-hidden={k >= FEED.length} tabIndex={k >= FEED.length ? -1 : undefined}><i /><b>{a}</b> {b}</Link>
               ))}
             </div>
           </div>
