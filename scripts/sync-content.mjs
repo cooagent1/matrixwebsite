@@ -249,7 +249,8 @@ function parseFile(file, slug) {
   }
   delete page._meta;
   // leere Abschnitte entfernen
-  page.sections = page.sections.filter((s) => s.heading || s.eyebrow || s.blocks.length);
+  // Abschnitte ohne Inhalt (nur Überschrift, Rest war [PRÜFEN]) nicht ausliefern
+  page.sections = page.sections.filter((s) => s.blocks.length);
   page.stub = page.sections.reduce((n, s) => n + s.blocks.length, 0) < 1;
   page.draft = DRAFTS.has(slug);
   return page;

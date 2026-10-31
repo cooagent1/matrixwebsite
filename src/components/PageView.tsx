@@ -57,7 +57,11 @@ function Blocks({ blocks: rawBlocks, dark, sectionName }: { blocks: Block[]; dar
               return (
                 <ul key={i} className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                   {b.items.map((t, j) => {
-                    const m = t.match(/^(.*?)\s+[–-]\s+(.*?)\s*→\s*(\/\S*)$/);
+                    // Formen: "Titel: Text → /slug", "**Titel.** Text → /slug", "Titel – Text → /slug"
+                    const m =
+                      t.match(/^\*\*(.+?)\.?\*\*\s+(.*?)\s*→\s*(\/\S*)$/) ||
+                      t.match(/^([^:]+?):\s+(.*?)\s*→\s*(\/\S*)$/) ||
+                      t.match(/^(.*?)\s+[–-]\s+(.*?)\s*→\s*(\/\S*)$/);
                     if (!m) return null;
                     return (
                       <li key={j}>
