@@ -45,12 +45,13 @@
 .lp .b-hero-p{margin:0;font-size:21px;line-height:1.5;color:#E5E5E5;max-width:560px}
 .lp .b-hero-btns{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:6px}
 .lp .b-feedbar{margin:40px -40px 0;overflow:hidden;padding:0 20px}
-.lp .b-feed{display:inline-flex;align-items:center;gap:12px;margin:10px 6px;padding:0 18px 0 12px;height:48px;border-radius:999px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);font-size:13px;color:var(--lp-mute2);white-space:nowrap;text-decoration:none;transition:background .25s,border-color .25s,color .25s}
+.lp .b-feed{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;margin:10px 6px;padding:12px 22px;min-height:72px;border-radius:24px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);font-size:13px;color:var(--lp-mute2);white-space:nowrap;text-decoration:none;transition:background .25s,border-color .25s,color .25s}
 .lp a.b-feed{color:var(--lp-mute2)}
 .lp .b-feed:hover{background:rgba(0,171,229,0.14);border-color:rgba(0,171,229,0.6);color:#fff}
-.lp .b-feed b{color:#fff;font-weight:700;font-family:var(--font-bricolage),'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:-0.01em}
-.lp .b-feed i{display:inline-flex;width:32px;height:32px;border-radius:999px;background:rgba(0,171,229,0.15);color:var(--lp-acc2);align-items:center;justify-content:center;font-style:normal}
-.lp .b-feed em{font-style:normal;color:#8E8E8E}
+.lp .b-feed b{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-family:var(--font-bricolage),'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:-0.01em}
+.lp .b-feed i{display:inline-flex;width:26px;height:26px;border-radius:999px;background:rgba(0,171,229,0.15);color:var(--lp-acc2);align-items:center;justify-content:center;font-style:normal}
+.lp .b-feed i svg{width:16px;height:16px}
+.lp .b-feed em{font-style:normal;color:#8E8E8E;font-size:12px}
 
 /* Logos */
 .lp .b-logos{padding:44px 0;overflow:hidden}

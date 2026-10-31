@@ -122,7 +122,7 @@ export function Landing() {
             <div className="b-marq">
               {feed.map((f, k) => (
                 <Link key={k} href={`/branchen/${f.slug}`} className="b-feed" aria-hidden={k >= FEED.length} tabIndex={k >= FEED.length ? -1 : undefined}>
-                  <i><BranchIcon slug={f.slug} /></i><b>{f.name}</b><em>{f.hint}</em>
+                  <b><i><BranchIcon slug={f.slug} /></i>{f.name}</b><em>{f.hint}</em>
                 </Link>
               ))}
             </div>
