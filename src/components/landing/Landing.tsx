@@ -78,7 +78,6 @@ export function Landing() {
     <>
       <section className="b-hero" id="top">
         <video autoPlay muted loop playsInline preload="auto" poster="/lp/hero-poster.jpg" aria-hidden="true" className="b-hero-video">
-          <source src="/lp/hero-mobile.mp4" type="video/mp4" media="(max-width: 760px)" />
           <source src="/lp/hero.mp4" type="video/mp4" />
         </video>
         <div className="b-hero-shade" aria-hidden="true" />
