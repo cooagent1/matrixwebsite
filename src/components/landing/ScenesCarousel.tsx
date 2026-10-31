@@ -50,11 +50,11 @@ export function ScenesCarousel() {
           <div className="b-sticky">
             <span className="b-m b-kicker">Drei Szenen, eine Kasse</span>
             <h2 className="b-d b-h2">Der Service läuft. Die Kasse auch.</h2>
-            <p className="b-lead">Am Tisch, an der Theke, im Büro: Matrix NXT ist dieselbe Kasse auf jedem Gerät – im Browser, als Android-App, mit Cloud-TSE. Kein Server, kein Techniker, kein Stillstand.</p>
+            <p className="b-lead">Am Tisch, an der Theke, im Büro: Matrix NXT ist dieselbe Kasse auf jedem Gerät. Im Browser, als Android-App, mit Cloud-TSE. Ohne Server im Haus.</p>
             <div className="b-nums">
               <div className="b-num"><b className="b-d">0</b><span>Server im Betrieb</span></div>
-              <div className="b-num"><b className="b-d">7</b><span>Tage Support</span></div>
-              <div className="b-num"><b className="b-d">30<em>+</em></b><span>Jahre Gastro-Kassen</span></div>
+              <div className="b-num"><b className="b-d">7</b><span>Tage die Woche Support</span></div>
+              <div className="b-num"><b className="b-d">30<em>+</em></b><span>Jahre Kassen für die Gastronomie</span></div>
             </div>
           </div>
           <div className="b-scene-col">
@@ -78,9 +78,9 @@ export function ScenesCarousel() {
                     </div>
                   </div>
                 </div>
-                <span className="b-m b-kicker">01 · Am Tisch</span>
-                <h3 className="b-d">Tischplan, der den Laden kennt</h3>
-                <p>Räume frei gestalten, offene Beträge auf einen Blick, Gänge getrennt an Küche und Bar. Mehrere Kassen am selben Tisch – Bons landen automatisch richtig.</p>
+                <span className="b-m b-kicker">Am Tisch</span>
+                <h3 className="b-d">Tischplan und Gänge</h3>
+                <p>Räume nach Ihrem Grundriss, offene Beträge auf einen Blick. Gänge gehen an Küche und Bar. Rechnungen lassen sich nach Person oder Position splitten.</p>
               </div>
               <div className={`b-scene s2 ${cls(1)}`}>
                 <div className="b-stage" style={{ height: 400 }}>
@@ -94,9 +94,9 @@ export function ScenesCarousel() {
                     </div>
                   </div>
                 </div>
-                <span className="b-m b-kicker">02 · Mobil</span>
+                <span className="b-m b-kicker">Am Handgerät</span>
                 <h3 className="b-d">Handgerät mit Tap to Pay</h3>
-                <p>Bestellen, splitten, kassieren direkt am Tisch. Karte ans Gerät, Trinkgeld inklusive, Bon aus dem Gürteldrucker – synchron mit allen Kassen im Betrieb.</p>
+                <p>Bestellen und kassieren direkt am Tisch. Karte ans Gerät, Abwicklung über Adyen. Zertifiziert: Orderman 10, Orderman Magellan EASY, Google Pixel 9 und 10.</p>
               </div>
               <div className={`b-scene s3 ${cls(2)}`}>
                 <div className="b-stage" style={{ height: 230 }}>
@@ -108,9 +108,9 @@ export function ScenesCarousel() {
                     </div>
                   </div>
                 </div>
-                <span className="b-m b-kicker">03 · Im Büro, oder auf dem Sofa</span>
-                <h3 className="b-d">Office überall</h3>
-                <p>Z-Bon von Hand oder automatisch, Berichte nach Tag, Artikel und Kellner, Rechte pro Gruppe – im Browser, TSE-signiert, DSFinV-K-ready.</p>
+                <span className="b-m b-kicker">Im Büro</span>
+                <h3 className="b-d">Auswertung im Browser</h3>
+                <p>Tagesabschluss, Berichte nach Tag, Artikel und Kellner, Rechte je Rolle. Im Browser, TSE-signiert, mit DSFinV-K-Export für den Steuerberater.</p>
               </div>
           </div>
         </div>

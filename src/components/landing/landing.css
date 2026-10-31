@@ -4,7 +4,7 @@
 .lp .b-d{font-family:var(--font-bricolage),'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-0.035em}
 .lp .b-m{font-family:var(--font-jetbrains),ui-monospace,Menlo,monospace;letter-spacing:.02em}
 .lp .b-wrap{max-width:1360px;margin:0 auto;padding:0 40px;box-sizing:border-box;width:100%}
-.lp .b-kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--lp-acc2)}
+.lp .b-kicker{font-size:14px;letter-spacing:.02em;color:var(--lp-acc2)}
 .lp .b-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:60px;padding:0 28px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;white-space:nowrap;transition:transform .25s,background .25s;cursor:pointer}
 .lp .b-btn:hover{transform:translateY(-2px)}
 .lp .b-btn-acc{background:var(--lp-acc);color:var(--lp-bg)}.lp .b-btn-acc:hover{background:var(--lp-acc2);color:var(--lp-bg)}

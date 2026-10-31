@@ -6,13 +6,13 @@ import { ScenesCarousel } from "./ScenesCarousel";
 
 // Branchen-Laufband im Hero (Robert 31.10.: Domänen statt Kassen-Feed, eigenes Design), Ziele = Branchenseiten.
 const FEED: { name: string; hint: string; slug: string }[] = [
-  { name: "Restaurant", hint: "Gänge, Splitten, Tischplan", slug: "restaurant" },
-  { name: "Hotel", hint: "Rechnung aufs Zimmer", slug: "hotel" },
-  { name: "Bar & Café", hint: "Favoriten vorne, Schlange kurz", slug: "bar-cafe" },
-  { name: "Biergarten & Terrasse", hint: "Mobil kassieren am Tisch", slug: "aussengastronomie" },
-  { name: "Freizeitpark", hint: "Hunderte Kassen, ein Office", slug: "freizeitpark" },
-  { name: "Food Court", hint: "Mehrere Stationen, ein Bon", slug: "foodcourt" },
-  { name: "Systemgastronomie", hint: "Ein Standard für jede Filiale", slug: "systemgastronomie" },
+  { name: "Restaurant", hint: "Tischplan, Gänge, Splitten", slug: "restaurant" },
+  { name: "Hotel", hint: "Umsätze aufs Zimmer, Hotelsoftware", slug: "hotel" },
+  { name: "Bar & Café", hint: "Schnellwahl, Theke und Terrasse", slug: "bar-cafe" },
+  { name: "Biergarten & Terrasse", hint: "Handgerät, Pfand", slug: "aussengastronomie" },
+  { name: "Freizeitpark", hint: "Viele Outlets, ein Backoffice", slug: "freizeitpark" },
+  { name: "Food Court", hint: "Mehrere Stationen, Selbstbedienung", slug: "foodcourt" },
+  { name: "Systemgastronomie", hint: "Zentrale Stammdaten, Filialen", slug: "systemgastronomie" },
 ];
 
 const ICONS: Record<string, string> = {"restaurant": "M7 3v8M10 3v8M8.5 11v10M7 3c0 3 0 5 1.5 5S10 6 10 3M16 3c-1.5 2-2 5-2 8h3v10", "hotel": "M3 18V8M3 12h18v6M3 12V8a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4M21 18v-6a2 2 0 0 0-2-2h-8", "bar-cafe": "M4 8h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8zM16 9h2a2 2 0 0 1 0 4h-2M6 21h8", "aussengastronomie": "M12 3C7 3 3 7 3 12h18c0-5-4-9-9-9zM12 12v9M12 21h3", "freizeitpark": "M12 3v16M4 11h16M6.3 5.3l11.4 11.4M17.7 5.3L6.3 16.7M8 21h8M12 3a8 8 0 1 0 0 16 8 8 0 0 0 0-16z", "foodcourt": "M3 17h18M5 17a7 7 0 0 1 14 0M12 8V6M10 6h4", "systemgastronomie": "M3 21h18M5 21V9l5-3v15M14 21V11h5v10M8 11h1M8 14h1M8 17h1M16 14h1M16 17h1"};
@@ -36,14 +36,14 @@ const LOGOS = [
 ];
 
 const CARDS: { n: string; t: string; d: string; acc?: boolean }[] = [
-  { n: "01", t: "Tischplan mit Gängen", d: "Mehrere Räume, offene Beträge, Tischwechsel beim Schichtwechsel, Tisch retten." },
-  { n: "02", t: "Bezahlen, wie der Gast will", d: "Bar, Karte, Gutschein, Kundenkonto, Zimmerrechnung, Tap to Pay. Rechnung splitten in Sekunden." },
-  { n: "03", t: "Cloud-TSE ohne Stick", d: "Jeder Vorgang signiert über Fiskaly. Fällt die TSE aus, läuft die Kasse weiter. DSFinV-K, RKSV für Österreich.", acc: true },
-  { n: "04", t: "Drucken, wo es hingehört", d: "Bons automatisch je Warengruppe an Küche oder Bar, eigenes Layout mit Logo und QR, Warnung bei Druckerausfall." },
-  { n: "05", t: "Mein Layout, mein Modus", d: "Favoritenleiste, mehrere Layouts in einer Kasse, heller und dunkler Modus für Mittagssonne und Kneipenlicht." },
-  { n: "06", t: "Hotel kommt dazu", d: "Zimmerbuchung aus der Kasse über protel und ASA Hotel, Start im 4. Quartal 2026 – eine Abrechnung mit Matrix PAY." },
-  { n: "07", t: "Gerät rein, Code rein, läuft", d: "Neues Tablet oder Handgerät per Einrichtungscode anmelden. Updates kommen zentral und automatisch." },
-  { n: "08", t: "Umstieg von Matrix Classic", d: "Artikel und Personal übernehmen wir. Update für Update wächst NXT in Richtung Classic-Umfang." },
+  { n: "01", t: "Tischplan mit Gängen", d: "Mehrere Räume, offene Beträge, Tische zusammenlegen und umsetzen." },
+  { n: "02", t: "Bezahlen, wie der Gast will", d: "Bar, Karte, Tap to Pay am Handgerät. Rechnung splitten nach Person oder Position." },
+  { n: "03", t: "Cloud-TSE ohne Stick", d: "Jeder Vorgang signiert über Fiskaly. KassenSichV, DSFinV-K, RKSV für Österreich.", acc: true },
+  { n: "04", t: "Bons an Küche und Bar", d: "Bons gehen automatisch je Warengruppe an Küche oder Bar. Jede Station bekommt nur, was sie braucht." },
+  { n: "05", t: "Layout nach Betrieb", d: "Favoritenleiste, mehrere Layouts in einer Kasse, heller und dunkler Modus." },
+  { n: "06", t: "Hotelsoftware in Arbeit", d: "Zimmerbuchung aus der Kasse über protel und ASA Hotel kommt als Update. Dann mit einer Payment-Abrechnung über Matrix PAY." },
+  { n: "07", t: "Neues Gerät per Code", d: "Tablet oder Handgerät per Einrichtungscode anmelden. Updates kommen zentral, ohne Techniker." },
+  { n: "08", t: "Umstieg von Matrix Classic", d: "Artikel und Personal übernehmen wir. NXT wächst mit jedem Update." },
 ];
 
 function Arrow() {
@@ -70,15 +70,15 @@ export function Landing() {
         <LpHeader />
 
         <div className="b-wrap b-hero-body">
-          <div className="b-rise b-m b-kicker" style={{ animationDelay: ".1s" }}>Matrix NXT — Cloud-Kasse für die Gastronomie</div>
+          <div className="b-rise b-m b-kicker" style={{ animationDelay: ".1s" }}>Matrix NXT. Die Cloud-Kasse aus Hannover.</div>
           <h1 className="b-d b-h1 b-rise" style={{ animationDelay: ".2s" }}>
             Weniger Kasse im Kopf.<br /><span className="b-grad">Mehr Gastgeber.</span>
           </h1>
           <div className="b-rise b-hero-row" style={{ animationDelay: ".35s" }}>
-            <p className="b-hero-p">Läuft im Browser und auf dem Handgerät. TSE aus der Cloud, null Server im Betrieb, Updates über Nacht. Damit Ihr Team beim Gast ist – nicht an der Kasse.</p>
+            <p className="b-hero-p">Läuft im Browser und auf Android, ohne Server im Betrieb. Tischplan, Handgerät, Kartenzahlung und TSE sind drin. Support von Leuten, die selbst in der Gastronomie gearbeitet haben.</p>
             <div className="b-hero-btns">
               <Link href="/demo" className="b-btn b-btn-acc">Demo buchen<Arrow /></Link>
-              <a href="#szenen" className="b-btn b-btn-ghost">In 30 Sekunden erklärt</a>
+              <a href="#szenen" className="b-btn b-btn-ghost">NXT kennenlernen</a>
             </div>
           </div>
           <div className="b-feedbar">
@@ -108,7 +108,7 @@ export function Landing() {
 
       <section className="b-railsec" aria-label="Funktionen">
         <div className="b-wrap b-railhead">
-          <h2 className="b-d">Alles, was der Service braucht. <span>Nichts, was ihn bremst.</span></h2>
+          <h2 className="b-d">Was im Service zählt.</h2>
           <span className="b-m b-railhint">← scrollen →</span>
         </div>
         <div className="b-rail">
@@ -124,18 +124,18 @@ export function Landing() {
       <section className="b-hand" aria-label="Alles aus einer Hand">
         <div className="b-aurora b-aurora-wide" aria-hidden="true" />
         <div className="b-wrap b-hand-in">
-          <span className="b-m b-kicker">Kasse. Payment. Personal.</span>
-          <h2 className="b-d b-big"><span className="b-grad">Eine Hand.</span></h2>
-          <p>Kasse, Payment und Personalmanagement von einem Anbieter. Ein Ansprechpartner, eine Abrechnung, ein Support an sieben Tagen – aus Hannover, von Leuten aus der Gastronomie.</p>
+          <span className="b-m b-kicker">Kasse, Bezahlen und Service von einem Anbieter</span>
+          <h2 className="b-d b-big"><span className="b-grad">Alles aus einer Hand.</span></h2>
+          <p>Ein Ansprechpartner, eine Abrechnung. Support aus Hannover, 7 Tage die Woche, von Leuten aus der Gastronomie.</p>
         </div>
       </section>
 
       <section id="familie" className="b-famsec" aria-label="Produkte">
         <div className="b-wrap">
           <div className="b-fam">
-            <Link href="/nxt" className="f-nxt"><span className="b-m k">Cloud-Kasse</span><span className="b-d name">matrix <em>NXT</em></span><span className="sub">Browser · Android · Cloud-TSE</span><span className="fam-more">Browser und Android-App, Cloud-TSE, Updates automatisch. Für neue Betriebe und den Umstieg von Matrix Classic.</span></Link>
-            <Link href="/pos" className="f-pos"><span className="b-m k">Stationär &amp; integriert</span><span className="b-d name">matrix <em>POS</em></span><span className="sub">Stationär · NEO · CONGA · 30+ Schnittstellen</span><span className="fam-more">Das bewährte System mit NEO fürs Mobile und CONGA fürs Personal. Über 30 Schnittstellen im Einsatz – PMS, Warenwirtschaft, DATEV, Schank.</span></Link>
-            <Link href="/pay" className="f-pay"><span className="b-m k">Alle Zahlarten</span><span className="b-d name">matrix <em>PAY</em></span><span className="sub">Terminals · Tap to Pay · eine Abrechnung</span><span className="fam-more">Eine Abrechnung für alles – Terminals von Adyen, Tap to Pay am Handgerät, Trinkgeld inklusive. Mit NXT, mit POS oder eigenständig.</span></Link>
+            <Link href="/nxt" className="f-nxt"><span className="b-m k">Cloud-Kasse</span><span className="b-d name">matrix <em>NXT</em></span><span className="sub">Browser · Android · Cloud-TSE</span><span className="fam-more">Browser und Android-App, Cloud-TSE, Updates von selbst. Für neue Betriebe und den Umstieg von Matrix Classic.</span></Link>
+            <Link href="/pos" className="f-pos"><span className="b-m k">Stationär &amp; integriert</span><span className="b-d name">matrix <em>POS</em></span><span className="sub">Stationär · NEO · CONGA · über 40 Schnittstellen</span><span className="fam-more">Das bewährte System mit NEO fürs Mobile und CONGA fürs Personal. Über 40 Anbindungen laufen heute im Betrieb: Hotelsoftware, Warenwirtschaft, Buchhaltung.</span></Link>
+            <Link href="/pay" className="f-pay"><span className="b-m k">Bezahlen</span><span className="b-d name">matrix <em>PAY</em></span><span className="sub">Terminals · Tap to Pay · eine Abrechnung</span><span className="fam-more">Eine Abrechnung für alle Zahlarten. Terminals und Tap to Pay über Adyen. Mit NXT, mit POS oder mit einer anderen Kasse.</span></Link>
           </div>
         </div>
       </section>
@@ -157,7 +157,7 @@ export function Landing() {
         <div className="b-grain" aria-hidden="true" />
         <div className="b-wrap b-demo-in">
           <h2 className="b-d">Sehen Sie NXT mit Ihren Tischen.</h2>
-          <p>30 Minuten, online oder vor Ort. Wir bringen Ihre Artikel und Ihren Raumplan mit – dann spielen wir Ihren Abend einmal durch.</p>
+          <p>30 Minuten, online oder vor Ort. Wir richten Ihre Artikel und Ihren Raumplan ein und gehen einen Abend durch.</p>
           <div className="b-demo-btns"><Link href="/demo" className="b-btn b-btn-white">Demo buchen</Link><Link href="/demo#rueckruf" className="b-btn b-btn-ghost">Rückruf vereinbaren</Link></div>
         </div>
       </section>
