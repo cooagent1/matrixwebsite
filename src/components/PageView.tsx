@@ -18,36 +18,59 @@ function mergeButtons(blocks: Block[]): Block[] {
   return out;
 }
 
-function Blocks({ blocks: rawBlocks, dark, sectionName }: { blocks: Block[]; dark: boolean; sectionName: string }) {
+// Fett-Einleitung ("**Titel.** Text") als Karte mit Titel und Text
+function splitLead(t: string): { title: string; text: string } | null {
+  const m = t.match(/^\*\*(.+?)\*\*\s*(.*)$/s);
+  return m ? { title: m[1].replace(/[.:]\s*$/, ""), text: m[2] } : null;
+}
+
+function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionName: string }) {
   const blocks = mergeButtons(rawBlocks);
+  // Aufeinanderfolgende "**Titel.** Text"-Absätze werden zu einem Kartenraster.
+  const groups: (Block | { type: "leadcards"; items: { title: string; text: string }[] })[] = [];
+  for (const b of blocks) {
+    const lead = b.type === "p" ? splitLead(b.text) : null;
+    const prev = groups[groups.length - 1];
+    if (lead && prev && prev.type === "leadcards") prev.items.push(lead);
+    else if (lead) groups.push({ type: "leadcards", items: [lead] });
+    else groups.push(b);
+  }
   return (
     <>
-      {blocks.map((b, i) => {
+      {groups.map((b, i) => {
         switch (b.type) {
+          case "leadcards":
+            if (b.items.length === 1)
+              return (
+                <p key={i} className="sub-p"><strong>{b.items[0].title}.</strong> <Inline text={b.items[0].text} /></p>
+              );
+            return (
+              <div key={i} className="sub-grid">
+                {b.items.map((c, j) => (
+                  <div key={j} className="sub-card">
+                    <h3 className="b-d">{c.title}</h3>
+                    <p><Inline text={c.text} /></p>
+                  </div>
+                ))}
+              </div>
+            );
           case "p":
             return (
-              <p key={i} className={`prose-p ${dark ? "text-white/80" : "text-slate-700"}`}>
-                <Inline text={b.text} />
-              </p>
+              <p key={i} className="sub-p"><Inline text={b.text} /></p>
             );
           case "h3":
             return (
-              <h3 key={i} className="mt-8 text-xl font-semibold tracking-tight">
-                <Inline text={b.text} />
-              </h3>
+              <h3 key={i} className="b-d sub-h3"><Inline text={b.text} /></h3>
             );
           case "list": {
             const stats = /kennzahlen/i.test(sectionName) && b.items.every((t) => t.startsWith("**"));
             if (stats)
               return (
-                <ul key={i} className="grid grid-cols-2 gap-6 md:grid-cols-4">
+                <ul key={i} className="b-nums sub-nums">
                   {b.items.map((t, j) => {
                     const m = t.match(/^\*\*([^*]+)\*\*\s*(.*)$/);
                     return (
-                      <li key={j} className="stat">
-                        <span className="stat-n">{m?.[1]}</span>
-                        <span className="stat-l">{m?.[2]}</span>
-                      </li>
+                      <li key={j} className="b-num"><b className="b-d">{m?.[1]}</b><span>{m?.[2]}</span></li>
                     );
                   })}
                 </ul>
@@ -55,9 +78,8 @@ function Blocks({ blocks: rawBlocks, dark, sectionName }: { blocks: Block[]; dar
             const links = b.items.every((t) => /→\s*\//.test(t));
             if (links)
               return (
-                <ul key={i} className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <ul key={i} className="sub-grid">
                   {b.items.map((t, j) => {
-                    // Formen: "Titel: Text → /slug", "**Titel.** Text → /slug", "Titel – Text → /slug"
                     const m =
                       t.match(/^\*\*(.+?)\.?\*\*\s+(.*?)\s*→\s*(\/\S*)$/) ||
                       t.match(/^([^:]+?):\s+(.*?)\s*→\s*(\/\S*)$/) ||
@@ -65,10 +87,10 @@ function Blocks({ blocks: rawBlocks, dark, sectionName }: { blocks: Block[]; dar
                     if (!m) return null;
                     return (
                       <li key={j}>
-                        <Link href={m[3]} className="card block h-full transition hover:border-ink">
-                          <span className="block text-lg font-semibold">{m[1]}</span>
-                          <span className="mt-1 block text-sm text-slate-600">{m[2]}</span>
-                          <span className="mt-4 block text-sm font-medium text-accent-ink">Mehr erfahren →</span>
+                        <Link href={m[3]} className="sub-card sub-card-link">
+                          <h3 className="b-d">{m[1]}</h3>
+                          <p>{m[2]}</p>
+                          <span className="sub-more">Mehr erfahren →</span>
                         </Link>
                       </li>
                     );
@@ -77,59 +99,49 @@ function Blocks({ blocks: rawBlocks, dark, sectionName }: { blocks: Block[]; dar
               );
             if (b.items.every((t) => t.startsWith("**")))
               return (
-                <ul key={i} className="mt-8 grid gap-4 md:grid-cols-3">
-                  {b.items.map((t, j) => (
-                    <li key={j} className="card text-slate-700">
-                      <Inline text={t} />
-                    </li>
-                  ))}
-                </ul>
+                <div key={i} className="sub-grid">
+                  {b.items.map((t, j) => {
+                    const l = splitLead(t);
+                    return (
+                      <div key={j} className="sub-card">
+                        {l ? (<><h3 className="b-d">{l.title}</h3><p><Inline text={l.text} /></p></>) : <p><Inline text={t} /></p>}
+                      </div>
+                    );
+                  })}
+                </div>
               );
             return (
-              <ul key={i} className="checklist">
+              <ul key={i} className="sub-check">
                 {b.items.map((t, j) => (
-                  <li key={j}>
-                    <Inline text={t} />
-                  </li>
+                  <li key={j}><Inline text={t} /></li>
                 ))}
               </ul>
             );
           }
           case "cards":
             return (
-              <div key={i} className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {b.items.map((c) => (
-                  <div key={c.nr} className="card">
-                    <span className="card-nr">{c.nr}</span>
-                    <p className="mt-3 text-slate-700">
-                      <Inline text={c.text} />
-                    </p>
-                  </div>
-                ))}
+              <div key={i} className="sub-grid">
+                {b.items.map((c) => {
+                  const l = splitLead(c.text);
+                  return (
+                    <div key={c.nr} className="sub-card">
+                      <span className="n b-d">{c.nr}</span>
+                      {l ? (<><h3 className="b-d">{l.title}</h3><p><Inline text={l.text} /></p></>) : <p><Inline text={c.text} /></p>}
+                    </div>
+                  );
+                })}
               </div>
             );
           case "table":
             return (
-              <div key={i} className="mt-6 overflow-x-auto rounded-xl border border-line bg-white">
-                <table className="w-full min-w-[640px] text-left text-sm">
-                  <thead className="bg-surface">
-                    <tr>
-                      {b.head.map((h, j) => (
-                        <th key={j} className="px-4 py-3 font-semibold">
-                          <Inline text={h} />
-                        </th>
-                      ))}
-                    </tr>
+              <div key={i} className="sub-table">
+                <table>
+                  <thead>
+                    <tr>{b.head.map((h, j) => (<th key={j}><Inline text={h} /></th>))}</tr>
                   </thead>
                   <tbody>
                     {b.rows.map((r, j) => (
-                      <tr key={j} className="border-t border-line align-top">
-                        {r.map((c, k) => (
-                          <td key={k} className={`px-4 py-3 ${k === 0 ? "font-medium" : "text-slate-700"}`}>
-                            <Inline text={c} />
-                          </td>
-                        ))}
-                      </tr>
+                      <tr key={j}>{r.map((c, k) => (<td key={k} className={k === 0 ? "first" : ""}><Inline text={c} /></td>))}</tr>
                     ))}
                   </tbody>
                 </table>
@@ -137,40 +149,29 @@ function Blocks({ blocks: rawBlocks, dark, sectionName }: { blocks: Block[]; dar
             );
           case "buttons":
             return (
-              <div key={i} className="mt-6 flex flex-wrap items-center gap-3">
+              <div key={i} className="sub-btns">
                 {b.items.map((it, j) => (
-                  <Btn key={j} item={it} tone={dark ? "dark" : "light"} secondary={j > 0 && it.kind === "button"} />
+                  <Btn key={j} item={it} tone="dark" secondary={j > 0 && it.kind === "button"} />
                 ))}
                 {b.phone && (
-                  <a href={`tel:${b.phone.replace(/[^\d+]/g, "")}`} className={`link ${dark ? "text-white" : ""}`}>
-                    {b.phone}
-                  </a>
+                  <a href={`tel:${b.phone.replace(/[^\d+]/g, "")}`} className="link">{b.phone}</a>
                 )}
               </div>
             );
           case "badges":
             return (
-              <ul key={i} className="mt-5 flex flex-wrap gap-2">
-                {b.items.map((t, j) => (
-                  <li key={j} className="rounded-full border border-line bg-white px-3 py-1 text-sm font-medium text-slate-700">
-                    {t}
-                  </li>
-                ))}
+              <ul key={i} className="b-devs">
+                {b.items.map((t, j) => (<li key={j} className="b-m b-dev">{t}</li>))}
               </ul>
             );
           case "faq":
             return (
-              <div key={i} className="mt-6 divide-y divide-line rounded-xl border border-line bg-white">
+              <div key={i} className="sub-faq">
                 {b.items.map((it, j) => (
-                  <details key={j} className="group p-5">
-                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
-                      {it.q}
-                      <span className="text-accent-ink transition group-open:rotate-45" aria-hidden="true">+</span>
-                    </summary>
-                    <div className="mt-3 space-y-3 text-slate-700">
-                      {it.a.map((t, k) => (
-                        <p key={k} className="leading-relaxed"><Inline text={t} /></p>
-                      ))}
+                  <details key={j}>
+                    <summary className="b-d">{it.q}<span aria-hidden="true">+</span></summary>
+                    <div>
+                      {it.a.map((t, k) => (<p key={k}><Inline text={t} /></p>))}
                     </div>
                   </details>
                 ))}
@@ -178,16 +179,11 @@ function Blocks({ blocks: rawBlocks, dark, sectionName }: { blocks: Block[]; dar
             );
           case "placeholder":
             return SHOW_PLACEHOLDERS ? (
-              <div key={i} className="placeholder" role="img" aria-label="Platzhalter">
-                <span>Platzhalter</span>
-                {b.label}
-              </div>
+              <div key={i} className="sub-ph" role="img" aria-label="Platzhalter"><span className="b-m">Platzhalter</span>{b.label}</div>
             ) : null;
           case "form":
             return (
-              <div key={i} id="formular" className="mt-8">
-                <ContactForm />
-              </div>
+              <div key={i} id="formular" className="sub-form"><ContactForm /></div>
             );
         }
       })}
@@ -195,49 +191,58 @@ function Blocks({ blocks: rawBlocks, dark, sectionName }: { blocks: Block[]; dar
   );
 }
 
-function SectionView({ s, index, isHome }: { s: Section; index: number; isHome: boolean }) {
+function SectionView({ s, index, isFirst }: { s: Section; index: number; isFirst: boolean }) {
   const hero = /^hero$/i.test(s.name);
   const closing = /^abschluss$/i.test(s.name);
-  const dark = hero || closing;
-  const band = !dark && index % 2 === 0 ? "bg-surface" : "bg-white";
+  if (hero)
+    return (
+      <section id={s.id} className="sub-hero">
+        <div className="b-aurora" aria-hidden="true" />
+        <div className="b-grain" aria-hidden="true" />
+        <div className="b-wrap sub-hero-in">
+          {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
+          {s.heading && (isFirst ? <h1 className="b-d sub-h1">{s.heading}</h1> : <h2 className="b-d sub-h1">{s.heading}</h2>)}
+          <div className="sub-hero-body"><Blocks blocks={s.blocks} sectionName={s.name} /></div>
+        </div>
+      </section>
+    );
+  if (closing)
+    return (
+      <section id={s.id} className="sub-close">
+        <div className="b-aurora b-aurora-wide" aria-hidden="true" />
+        <div className="b-grain" aria-hidden="true" />
+        <div className="b-wrap sub-close-in">
+          {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
+          {s.heading && <h2 className="b-d sub-h1">{s.heading}</h2>}
+          <Blocks blocks={s.blocks} sectionName={s.name} />
+        </div>
+      </section>
+    );
   return (
-    <section
-      id={s.id}
-      className={`${dark ? "bg-navy text-white" : band} ${hero ? "hero" : "py-16 md:py-20"}`}
-    >
-      <div className={`wrap ${hero ? "py-20 md:py-28" : ""}`}>
-        <div className={hero ? "max-w-3xl" : "max-w-4xl"}>
-          {s.eyebrow && <p className={`eyebrow ${dark ? "text-accent" : "text-accent-ink"}`}>{s.eyebrow}</p>}
-          {s.heading &&
-            (hero && (isHome || index === 0) ? (
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-6xl">{s.heading}</h1>
-            ) : (
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">{s.heading}</h2>
-            ))}
-        </div>
-        <div className={hero ? "mt-6 max-w-2xl" : "mt-4 max-w-4xl"}>
-          <Blocks blocks={s.blocks} dark={dark} sectionName={s.name} />
-        </div>
+    <section id={s.id} className={`sub-sec ${index % 2 === 0 ? "alt" : ""}`}>
+      <div className="b-wrap">
+        {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
+        {s.heading && <h2 className="b-d sub-h2">{s.heading}</h2>}
+        <Blocks blocks={s.blocks} sectionName={s.name} />
       </div>
     </section>
   );
 }
 
 export function PageView({ page }: { page: Page }) {
-  const isHome = page.slug === "";
   const first = page.sections[0];
   const hasHero = first && /^hero$/i.test(first.name);
   return (
     <>
       {!hasHero && (
-        <section className="bg-navy text-white">
-          <div className="wrap py-20">
-            <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">{page.title}</h1>
-          </div>
+        <section className="sub-hero">
+          <div className="b-aurora" aria-hidden="true" />
+          <div className="b-grain" aria-hidden="true" />
+          <div className="b-wrap sub-hero-in"><h1 className="b-d sub-h1">{page.title}</h1></div>
         </section>
       )}
       {page.sections.map((s, i) => (
-        <SectionView key={s.id + i} s={s} index={i} isHome={isHome} />
+        <SectionView key={s.id + i} s={s} index={i} isFirst={i === 0} />
       ))}
     </>
   );
