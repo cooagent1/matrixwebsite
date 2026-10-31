@@ -1,5 +1,5 @@
 /* Startseite, Design "LP 2027 A2 – Benchmark" (Canvas-Artboard LP27-A2-Benchmark). Nur für die Gruppe (landing). */
-.lp{--lp-bg:#070708;--lp-acc:#00ABE5;--lp-acc2:#7FDCFF;--lp-mute:#A8A8A8;--lp-mute2:#BDBDBD;background:var(--lp-bg);color:#fff;font-family:var(--font-inter),'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden;display:flex;flex-direction:column;min-height:100dvh}
+.lp{--lp-bg:#070708;--lp-acc:#00ABE5;--lp-acc2:#7FDCFF;--lp-mute:#A8A8A8;--lp-mute2:#BDBDBD;background:var(--lp-bg);color:#fff;font-family:var(--font-inter),'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.6;overflow-x:clip;display:flex;flex-direction:column;min-height:100dvh}
 .lp a{color:#fff}.lp a:hover{color:var(--lp-acc2)}
 .lp .b-d{font-family:var(--font-bricolage),'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:-0.035em}
 .lp .b-m{font-family:var(--font-jetbrains),ui-monospace,Menlo,monospace;letter-spacing:.02em}
@@ -60,7 +60,7 @@
 .lp .b-logos .gap{width:96px;flex:0 0 96px}
 
 /* Szenen */
-.lp .b-scenes{position:relative;padding:0;overflow:hidden}
+.lp .b-scenes{position:relative;padding:0;overflow:clip}
 .lp .b-scenes-in{position:relative;padding:140px 0}
 .lp .b-scenes-car{height:300vh}
 .lp .b-scenes-car .b-scenes-in{position:sticky;top:0;height:100vh;display:flex;align-items:center;overflow:hidden;padding:0}
