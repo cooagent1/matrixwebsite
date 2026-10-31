@@ -63,7 +63,6 @@ export function ScenesCarousel() {
                 {Array.from({ length: COUNT }, (_, k) => (
                   <span key={k} className={k === i ? "on" : ""} />
                 ))}
-                <span className="b-m b-dots-n">0{i + 1} / 0{COUNT}</span>
                 <span className="b-prog"><span style={{ width: `${prog * 100}%` }} /></span>
               </div>
             )}
