@@ -572,3 +572,18 @@
 .lp .b-demo h2{font-size:clamp(40px,4.4vw,64px);max-width:none}
 @media (max-width:1100px){.lp .b-fam a{min-height:220px}}
 @media (max-width:720px){.lp .b-seg-l{min-height:320px}.lp .b-branchen-body{padding-top:40px;padding-bottom:40px}}
+/* Feinschliff 2, 06.11.: Karten und Listen kompakter */
+.lp .b-scene-col .b-stage{height:360px !important;margin-bottom:20px}
+.lp .b-scene p,.lp .b-card p,.lp .b-feat .t small,.lp .sub-card p{font-size:16px;line-height:1.5}
+.lp .b-card{min-height:260px;padding:24px}
+.lp .b-card .n,.lp .sub-card .n,.lp .pt-step .n{font-size:clamp(30px,1.6vw + 10px,36px)}
+.lp .b-card h3,.lp .sub-card h3{font-size:20px}
+.lp .b-railsec{padding:64px 0 48px}
+.lp .b-qcard{min-height:300px;padding:28px;gap:14px}
+.lp .b-qcard blockquote{font-size:20px;line-height:1.4}
+.lp .b-qsec{padding:64px 0 56px}
+.lp .sub-card{padding:24px}
+.lp .sub-sec{padding:64px 0}
+.lp .sub-faq summary{font-size:18px;padding:16px 0}
+.lp .sub-faq details>div{padding-bottom:16px}
+.lp .b-famsec{padding:24px 0 64px}
