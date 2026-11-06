@@ -34,13 +34,26 @@ export function isPlaceholder(k: string): boolean {
   return !entry(k).text;
 }
 
-/** Text im Layout. Platzhalter werden sichtbar markiert, Schlüssel steht im Tooltip. */
+const LOREM =
+  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.";
+
+/** Blindtext in der Länge des Platzhalters (max Zeichen), am Wortende abgeschnitten, mit Punkt. */
+export function lorem(max: number): string {
+  const n = Math.max(12, Math.min(max || 60, LOREM.length));
+  let t = LOREM.slice(0, n);
+  const cut = t.lastIndexOf(" ");
+  if (cut > n * 0.6) t = t.slice(0, cut);
+  t = t.replace(/[,.;]+$/, "");
+  return t + ".";
+}
+
+/** Text im Layout. Platzhalter zeigen Blindtext in Ziel-Länge (Robert 06.11.), Briefing und Schlüssel stehen im Tooltip. */
 export function T({ k }: { k: string }) {
   const e = entry(k);
   if (e.text) return <>{e.text}</>;
   return (
-    <span className="ph" data-k={k} title={`Platzhalter ${k}, ca. ${e.max} Zeichen`}>
-      {e.brief}
+    <span className="ph" data-k={k} title={`Platzhalter ${k}, ca. ${e.max} Zeichen: ${e.brief}`}>
+      {lorem(e.max)}
     </span>
   );
 }
