@@ -35,10 +35,10 @@ const LOGOS = [
   ["gop", "GOP Varieté", "mid"],
 ];
 
-const CARDS: { n: string; t: string; d: string; acc?: boolean }[] = [
+const CARDS: { n: string; t: string; d: string }[] = [
   { n: "01", t: "Tischplan mit Gängen", d: "Mehrere Räume, offene Beträge, Tische zusammenlegen und umsetzen." },
   { n: "02", t: "Bezahlen, wie der Gast will", d: "Bar, Karte, Tap to Pay am Handgerät. Rechnung splitten nach Person oder Position." },
-  { n: "03", t: "Cloud-TSE ohne Stick", d: "Jeder Vorgang signiert über Fiskaly. KassenSichV, DSFinV-K, RKSV für Österreich.", acc: true },
+  { n: "03", t: "Cloud-TSE ohne Stick", d: "Jeder Vorgang signiert über Fiskaly. KassenSichV, DSFinV-K, RKSV für Österreich." },
   { n: "04", t: "Bons an Küche und Bar", d: "Bons gehen automatisch je Warengruppe an Küche oder Bar. Jede Station bekommt nur, was sie braucht." },
   { n: "05", t: "Layout nach Betrieb", d: "Favoritenleiste, mehrere Layouts in einer Kasse, heller und dunkler Modus." },
   { n: "06", t: "Hotelsoftware in Arbeit", d: "Zimmerbuchung aus der Kasse über protel und ASA Hotel kommt als Update. Dann mit einer Payment-Abrechnung über Matrix PAY." },
@@ -113,7 +113,7 @@ export function Landing() {
         </div>
         <div className="b-rail">
           {CARDS.map((c) => (
-            <div key={c.n} className={`b-card ${c.acc ? "acc" : ""}`}>
+            <div key={c.n} className="b-card">
               <span className="n b-d">{c.n}</span>
               <div><h3 className="b-d">{c.t}</h3><p>{c.d}</p></div>
             </div>

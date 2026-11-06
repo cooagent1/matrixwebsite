@@ -152,8 +152,6 @@
 .lp .b-card .n{font-size:72px;font-weight:800;line-height:1;color:rgba(255,255,255,0.12)}
 .lp .b-card h3{margin:0;font-size:24px;font-weight:700}
 .lp .b-card p{margin:0;font-size:15px;line-height:1.5;color:var(--lp-mute)}
-.lp .b-card.acc{background:var(--lp-acc);color:var(--lp-bg);border-color:var(--lp-acc)}
-.lp .b-card.acc .n{color:rgba(7,7,8,0.25)}.lp .b-card.acc h3{color:var(--lp-bg)}.lp .b-card.acc p{color:#0F2F3C}
 
 /* Eine Hand */
 .lp .b-hand{position:relative;padding:160px 0;overflow:hidden}
