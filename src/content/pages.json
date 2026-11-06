@@ -1554,25 +1554,31 @@
       "text": "Telefon und Supportportal für Matrix NXT, POS und PAY, 7 Tage die Woche aus Hannover."
      },
      {
+      "type": "p",
+      "text": "Im Support arbeiten Restaurantfachleute, Köche und F&B-Manager."
+     },
+     {
       "type": "buttons",
       "items": [
        {
         "kind": "button",
         "label": "Zum Supportportal",
         "href": "https://support.matrixpos.de/help"
+       },
+       {
+        "kind": "link",
+        "label": "+49 511 592938-0",
+        "href": "tel:+495115929380"
        }
       ],
       "phone": null
-     },
-     {
-      "type": "p",
-      "text": "Telefon: +49 511 592938-0"
      }
     ],
     "image": {
      "src": "/lp/fotos/nxt-restaurant-ncr-terminal-speisen.jpg",
      "alt": "Kassenterminal an der Bar eines Restaurants",
-     "position": "50% 40%"
+     "position": "50% 40%",
+     "asset": "Zwischenstand bis zum Wunschfoto: Foto Support-Team (F8)"
     }
    },
    {
@@ -1622,16 +1628,21 @@
       "text": "Über TeamViewer QuickSupport greift unser Support nach Ihrer Freigabe auf die Kasse zu. Sie trennen die Verbindung jederzeit."
      },
      {
-      "type": "p",
-      "text": "1 **Laden.** QuickSupport laden Sie direkt bei TeamViewer. Das Programm startet ohne Installation."
-     },
-     {
-      "type": "p",
-      "text": "2 **ID nennen.** QuickSupport öffnen und die angezeigte ID am Telefon nennen: +49 511 592938-0."
-     },
-     {
-      "type": "p",
-      "text": "3 **Freigeben.** Bestätigen Sie die Verbindungsanfrage. Schließen Sie QuickSupport, ist die Verbindung getrennt."
+      "type": "cards",
+      "items": [
+       {
+        "nr": "01",
+        "text": "**Laden.** QuickSupport laden Sie direkt bei TeamViewer. Das Programm startet ohne Installation."
+       },
+       {
+        "nr": "02",
+        "text": "**ID nennen.** QuickSupport öffnen und die angezeigte ID am Telefon nennen: +49 511 592938-0."
+       },
+       {
+        "nr": "03",
+        "text": "**Freigeben.** Bestätigen Sie die Verbindungsanfrage. Schließen Sie QuickSupport, ist die Verbindung getrennt."
+       }
+      ]
      },
      {
       "type": "buttons",
@@ -1651,32 +1662,33 @@
     ]
    },
    {
-    "id": "wer-am-telefon-sitzt",
-    "name": "Wer am Telefon sitzt",
-    "eyebrow": null,
-    "heading": "Wer am Telefon sitzt",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "Im Support arbeiten Restaurantfachleute, Köche und F&B-Manager."
-     },
-     {
-      "type": "placeholder",
-      "label": "Foto Support-Team (F8)"
-     }
-    ]
-   },
-   {
     "id": "wartungsvertrag",
     "name": "Wartungsvertrag",
     "eyebrow": null,
     "heading": "Zwei Modelle.",
     "blocks": [
      {
-      "type": "list",
+      "type": "columns",
       "items": [
-       "**Basic.** Support per Telefon und Supportportal, Fernwartung, Software-Updates.",
-       "**Enterprise.** Zusätzlich priorisierte Bearbeitung, feste Ansprechpartner und Service vor Ort. Gedacht für Betriebe mit mehreren Standorten."
+       {
+        "title": "Basic",
+        "tone": "grey",
+        "points": [
+         "Support per Telefon und Supportportal",
+         "Fernwartung",
+         "Software-Updates"
+        ]
+       },
+       {
+        "title": "Enterprise",
+        "tone": "blue",
+        "text": "Zusätzlich zu Basic. Gedacht für Betriebe mit mehreren Standorten.",
+        "points": [
+         "Priorisierte Bearbeitung",
+         "Feste Ansprechpartner",
+         "Service vor Ort"
+        ]
+       }
       ]
      },
      {
@@ -1697,41 +1709,20 @@
     ]
    },
    {
-    "id": "fuer-bestandskunden",
-    "name": "Für Bestandskunden",
-    "eyebrow": null,
-    "heading": "Für Bestandskunden",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "Anleitungen und Ihr Kundenkonto liegen im Supportportal."
-     },
-     {
-      "type": "buttons",
-      "items": [
-       {
-        "kind": "link",
-        "label": "Zum Supportportal",
-        "href": "https://support.matrixpos.de/help"
-       }
-      ],
-      "phone": null
-     }
-    ]
-   },
-   {
     "id": "referenz",
     "name": "Referenz",
     "eyebrow": null,
     "heading": "Referenz",
     "blocks": [
      {
-      "type": "p",
-      "text": "„Die Zusammenarbeit seit 15 Jahren ist außerordentlich gut. Gerade in der Gastronomie, wenn es Probleme gibt, meistens am Wochenende, ist sofort jemand erreichbar.\""
-     },
-     {
-      "type": "p",
-      "text": "Jan Fleißig, Inhaber, Konditorei Kreipe, Hannover"
+      "type": "quotes",
+      "items": [
+       {
+        "text": "Die Zusammenarbeit seit 15 Jahren ist außerordentlich gut. Gerade in der Gastronomie, wenn es Probleme gibt, meistens am Wochenende, ist sofort jemand erreichbar.",
+        "name": "Jan Fleißig",
+        "role": "Inhaber, Konditorei Kreipe, Hannover"
+       }
+      ]
      }
     ]
    },

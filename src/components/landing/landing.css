@@ -820,3 +820,4 @@
 .lp .sub-sec.alt .sub-qcard{background:#fff}
 @media (max-width:900px){.lp .sub-quotes{grid-template-columns:1fr}.lp .sub-qcard blockquote{font-size:18px}}
 .lp .sub-split-aside .sub-quotes{grid-template-columns:1fr;margin-top:0}.lp .sub-split-aside:has(.sub-quotes){position:static}
+.lp .sub-quotes:has(>:only-child){grid-template-columns:minmax(0,760px)}

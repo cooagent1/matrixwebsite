@@ -240,6 +240,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                 {b.items.map((c, j) => (
                   <div key={j} className={`sub-col sub-col-${c.tone ?? "grey"}`}>
                     <h3 className="b-d">{c.title}</h3>
+                    {c.text && <p className="sub-p">{c.text}</p>}
                     <ul className="sub-check">{c.points.map((t, k) => (<li key={k}><Inline text={t} /></li>))}</ul>
                     {c.button && <div className="sub-btns"><Btn item={c.button} tone="dark" secondary={c.button.kind !== "button"} /></div>}
                   </div>
