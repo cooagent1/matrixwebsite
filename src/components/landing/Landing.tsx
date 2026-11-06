@@ -46,21 +46,13 @@ export function Landing() {
         <HeroVideo />
         <div className="b-hero-shade" aria-hidden="true" />
         <div className="b-grain" aria-hidden="true" />
-        <div className="b-d b-word" aria-hidden="true">NXT</div>
 
         <LpHeader />
 
         <div className="b-wrap b-hero-body">
-          <div className="b-rise b-m b-kicker" style={{ animationDelay: "0s" }}>Matrix NXT · Cloud-Kasse</div>
-          <h1 className="b-d b-h1">
-            Gastro-Kassen aus Hannover.<br /><span className="b-grad">Seit 30 Jahren.</span>
-          </h1>
-          <div className="b-rise b-hero-row" style={{ animationDelay: ".1s" }}>
-            <p className="b-hero-p">Läuft im Browser und auf Android, ohne Server im Betrieb. Tischplan, Handgerät, Kartenzahlung und TSE sind drin. Support von Leuten, die selbst in der Gastronomie gearbeitet haben.</p>
-            <div className="b-hero-btns">
-              <Link href="/demo" className="b-btn b-btn-acc">Demo buchen<Arrow /></Link>
-              <a href="#szenen" className="b-btn b-btn-ghost">NXT kennenlernen</a>
-            </div>
+          <h1 className="b-d b-h1">Gastro-Kassen aus Hannover.</h1>
+          <div className="b-rise b-hero-btns" style={{ animationDelay: ".1s" }}>
+            <Link href="/demo" className="b-btn b-btn-acc">Demo buchen<Arrow /></Link>
           </div>
         </div>
       </section>
