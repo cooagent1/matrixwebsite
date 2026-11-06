@@ -577,12 +577,14 @@
        }
       ],
       "phone": null
-     },
-     {
-      "type": "placeholder",
-      "label": "Foto NXT auf Orderman und Tablet (F1)"
      }
-    ]
+    ],
+    "image": {
+     "src": "/lp/fotos/nxt-handgeraet.jpg",
+     "alt": "Matrix NXT auf einem Tablet an der Theke, Artikeltasten für Getränke",
+     "position": "50% 70%",
+     "asset": "Zwischenstand bis zum Wunschfoto: Foto NXT auf Orderman und Tablet (F1)"
+    }
    },
    {
     "id": "was-nxt-heute-kann",
@@ -891,12 +893,14 @@
        }
       ],
       "phone": null
-     },
-     {
-      "type": "placeholder",
-      "label": "Produktfoto POS-Terminal (F2)"
      }
-    ]
+    ],
+    "image": {
+     "src": "/lp/fotos/nxt-terminal.jpg",
+     "alt": "Touchkasse an der Bar, eine Hand bucht einen Artikel",
+     "position": "50% 60%",
+     "asset": "Zwischenstand bis zum Wunschfoto: Produktfoto POS-Terminal (F2)"
+    }
    },
    {
     "id": "wann-pos-passt",
@@ -1146,12 +1150,14 @@
        }
       ],
       "phone": null
-     },
-     {
-      "type": "placeholder",
-      "label": "Foto Terminal, stationär und mobil (F4)"
      }
-    ]
+    ],
+    "image": {
+     "src": "/lp/fotos/nxt-bistro-getraenke-bon.jpg",
+     "alt": "Kasse an der Theke eines Bistros mit Weinkarte im Hintergrund",
+     "position": "50% 35%",
+     "asset": "Zwischenstand bis zum Wunschfoto: Foto Terminal, stationär und mobil (F4)"
+    }
    },
    {
     "id": "drei-wege",
@@ -1536,7 +1542,12 @@
       "type": "p",
       "text": "Ein Restaurant steuert Gänge, ein Hotel bucht aufs Zimmerkonto, ein Biergarten kassiert am Handgerät, ein Freizeitpark verbindet viele Outlets."
      }
-    ]
+    ],
+    "image": {
+     "src": "/lp/fotos/nxt-bistro-tisch107-weit.jpg",
+     "alt": "Bistro mit Bar und Gästen, im Vordergrund Matrix NXT mit Tisch 107",
+     "position": "50% 45%"
+    }
    },
    {
     "id": "restaurant",
@@ -1770,7 +1781,12 @@
       "type": "p",
       "text": "Telefon: +49 511 592938-0"
      }
-    ]
+    ],
+    "image": {
+     "src": "/lp/fotos/nxt-restaurant-ncr-terminal-speisen.jpg",
+     "alt": "Kassenterminal an der Bar eines Restaurants",
+     "position": "50% 40%"
+    }
    },
    {
     "id": "drei-wege",
@@ -2611,12 +2627,14 @@
        }
       ],
       "phone": null
-     },
-     {
-      "type": "placeholder",
-      "label": "Teamfoto (F7)"
      }
-    ]
+    ],
+    "image": {
+     "src": "/lp/fotos/nxt-bistro-tisch107-nah.jpg",
+     "alt": "Matrix NXT im Bistro, im Hintergrund die Bar",
+     "position": "50% 40%",
+     "asset": "Zwischenstand bis zum Wunschfoto: Teamfoto (F7)"
+    }
    },
    {
     "id": "stellen",

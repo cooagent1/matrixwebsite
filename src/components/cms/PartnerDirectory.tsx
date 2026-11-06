@@ -17,7 +17,7 @@ function sorted(list: Partner[]): Partner[] {
 // Auf /partner steht nur ein Teaser mit Anzahl und Link.
 export async function PartnerTeaser() {
   const partners = await getPartners();
-  const lands = [...new Set(sorted(partners).map((p) => LAND[p.country]))];
+  const lands = [...new Set(sorted(partners).map((p) => (p.country === "CH" ? "der Schweiz" : LAND[p.country])))];
   const where = lands.length > 1 ? `${lands.slice(0, -1).join(", ")} und ${lands[lands.length - 1]}` : lands[0];
   return (
     <section id="haendler" className="sub-sec alt">

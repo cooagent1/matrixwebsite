@@ -739,3 +739,11 @@
 @media (max-width:900px){.lp .pd-head{display:none}.lp .pd-row{grid-template-columns:72px minmax(0,1fr);gap:4px 16px}.lp .pd-row .pd-plz{grid-row:span 3}.lp .pd-row .pd-addr,.lp .pd-row .pd-links{grid-column:2}}
 .lp .pt-block .c-int{color:#8A6700}.lp .pt-block .c-schn{color:#2F7A1C}
 .lp .pt-product .c-int{color:#FFC938}
+/* Hero mit Foto rechts (pages.json: hero.image), ab 1024 zweispaltig, mobil Foto unter dem Text, 4:3, Radius 28 */
+.lp .sub-hero-img{padding-bottom:80px}
+.lp .sub-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.lp .sub-hero-grid .sub-hero-in{min-width:0}
+.lp .sub-hero-img .sub-h1{font-size:clamp(40px,3.6vw + 10px,72px)}
+.lp .sub-hero-photo{position:relative;margin:0;aspect-ratio:4/3;border-radius:28px;overflow:hidden;background:var(--lp-surface)}
+@media (max-width:1023px){.lp .sub-hero-grid{grid-template-columns:1fr;gap:32px}.lp .sub-hero-photo{border-radius:24px}}
+@media (max-width:720px){.lp .sub-hero-img{padding-bottom:48px}.lp .sub-hero-photo{border-radius:20px}}

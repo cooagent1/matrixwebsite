@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Block, Page, Section } from "@/lib/content";
 import { Btn } from "./Button";
@@ -240,6 +241,22 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
   // In Produktion keine Abschnitte, die nur aus Platzhaltern bestehen (sonst leere Überschrift).
   if (!hero && !SHOW_PLACEHOLDERS && s.blocks.every((b) => b.type === "placeholder")) return null;
   const closing = /^abschluss$/i.test(s.name);
+  if (hero && s.image)
+    // ANNAHME (Nachtpaket 07.11.): Fotos aus dem NXT-Shooting 09/2026 sind freigegeben (Robert, 05.11.).
+    return (
+      <section id={s.id} className="sub-hero sub-hero-img">
+        <div className="b-wrap sub-hero-grid">
+          <div className="sub-hero-in">
+            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
+            {s.heading && (isFirst ? <h1 className="b-d sub-h1">{s.heading}</h1> : <h2 className="b-d sub-h1">{s.heading}</h2>)}
+            <div className="sub-hero-body"><Blocks blocks={s.blocks} sectionName={s.name} /></div>
+          </div>
+          <figure className="sub-hero-photo">
+            <Image src={s.image.src} alt={s.image.alt} fill priority sizes="(min-width: 1024px) 50vw, 100vw" style={{ objectFit: "cover", objectPosition: s.image.position ?? "50% 50%" }} />
+          </figure>
+        </div>
+      </section>
+    );
   if (hero)
     return (
       <section id={s.id} className="sub-hero">

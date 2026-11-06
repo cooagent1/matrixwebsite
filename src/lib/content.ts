@@ -21,6 +21,8 @@ export type Section = {
   eyebrow: string | null;
   heading: string | null;
   blocks: Block[];
+  /** Foto rechts im Hero (ab 1024 px), mobil unter dem Text. */
+  image?: { src: string; alt: string; position?: string; asset?: string };
   /** Rechte Spalte neben den Blöcken (ab 1024 px), mobil darunter. */
   aside?: Block[];
 };
