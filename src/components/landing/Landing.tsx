@@ -117,7 +117,7 @@ export function Landing() {
         <div className="b-wrap b-quote-in">
           <span className="b-d b-qmark" aria-hidden="true">„</span>
           <figure>
-            <blockquote className="b-d">Matrix Payment läuft reibungslos mit unserer Hotelsoftware. Ein großer Vorteil: Es gibt nur noch eine Payment-Abrechnung.</blockquote>
+            <blockquote className="b-d">Matrix Payment läuft reibungslos mit unserer Hotelsoftware! Ein großer Vorteil: es gibt nur noch eine Payment-Abrechnung und alle Zahlungen sind in einer einzigen Payment Applikation abgebildet.</blockquote>
             <figcaption><span className="b-avatar">[Foto]</span><div><b>Florian Sbrizzai</b><small>Stellv. Direktor, Parkhotel Laim, München</small></div></figcaption>
           </figure>
         </div>
