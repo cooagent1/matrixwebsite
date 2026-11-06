@@ -2152,59 +2152,6 @@
   "draft": false
  },
  {
-  "slug": "ratgeber",
-  "title": "Ratgeber",
-  "metaTitle": "Ratgeber für Gastronomen: Kasse, TSE und Meldepflicht | Matrix POS",
-  "description": "Ratgeber zu Kassensystemen in der Gastronomie: TSE, KassenSichV, Kassenmeldepflicht, Kassenwechsel und Kartenzahlung.",
-  "sections": [
-   {
-    "id": "hero",
-    "name": "Hero",
-    "eyebrow": null,
-    "heading": "Ratgeber.",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "Antworten auf die Fragen rund um Kasse, Gesetz und Bezahlen in der Gastronomie."
-     }
-    ]
-   },
-   {
-    "id": "artikel",
-    "name": "Artikel",
-    "eyebrow": null,
-    "heading": "Artikel",
-    "blocks": [
-     {
-      "type": "placeholder",
-      "label": "Artikelliste, erste Themen: Kassenmeldepflicht, TSE und Cloud-TSE, KassenSichV und GoBD, Kassennachschau, Kassenwechsel, Kartenzahlung und Tap to Pay"
-     }
-    ]
-   },
-   {
-    "id": "abschluss",
-    "name": "Abschluss",
-    "eyebrow": null,
-    "heading": "Ihre Frage ist nicht dabei?",
-    "blocks": [
-     {
-      "type": "buttons",
-      "items": [
-       {
-        "kind": "button",
-        "label": "Rückruf vereinbaren",
-        "href": "/demo?thema=frage"
-       }
-      ],
-      "phone": "+49 511 592938-0"
-     }
-    ]
-   }
-  ],
-  "stub": false,
-  "draft": false
- },
- {
   "slug": "ueber-uns",
   "title": "Über uns",
   "metaTitle": "Über Matrix POS: 30 Jahre Gastro-Kassen aus Hannover | Matrix POS",

@@ -19,7 +19,6 @@ const PAGES = [
   ["branchen.md", "branchen"],
   ["support.md", "support"],
   ["faq.md", "faq"],
-  ["ratgeber.md", "ratgeber"],
   ["ueber-uns.md", "ueber-uns"],
   ["partner-werden.md", "partner"],
   ["jobs.md", "jobs"],
