@@ -234,6 +234,18 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                 ))}
               </div>
             );
+          case "points":
+            return (
+              <ul key={i} className="sub-check sub-points">
+                {b.items.map((t, j) => (<li key={j}><Inline text={t} /></li>))}
+              </ul>
+            );
+          case "jumpnav":
+            return (
+              <nav key={i} className="sub-jump" aria-label="Auf dieser Seite">
+                {b.items.map((it, j) => (<a key={j} href={it.href} className="b-m sub-jump-chip">{it.label}</a>))}
+              </nav>
+            );
           case "columns":
             return (
               <div key={i} className="sub-cols">
@@ -386,6 +398,26 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
           <aside className="sub-split-aside">
             <Blocks blocks={s.aside} sectionName={s.name} />
           </aside>
+        </div>
+      </section>
+    );
+  if (s.media)
+    // ANNAHME (Nachtpaket 07.11.): Wo kein passendes Foto vorliegt, steht eine neutrale Fläche mit dem Namen der Branche.
+    return (
+      <section id={s.id} className={`sub-sec sub-media-sec ${index % 2 === 0 ? "alt" : ""}`}>
+        <div className={`b-wrap sub-media ${index % 2 === 0 ? "flip" : ""}`}>
+          <figure className={`sub-media-fig ${s.media.src ? "" : "empty"}`}>
+            {s.media.src ? (
+              <Image src={s.media.src} alt={s.media.alt ?? ""} fill sizes="(min-width: 1024px) 45vw, 100vw" style={{ objectFit: "cover", objectPosition: s.media.position ?? "50% 50%" }} />
+            ) : (
+              <span className="b-d">{s.media.label}{SHOW_PLACEHOLDERS && <small className="b-m">Foto folgt</small>}</span>
+            )}
+          </figure>
+          <div className="sub-media-txt">
+            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
+            {s.heading && <h2 className="b-d sub-h2">{s.heading}</h2>}
+            <Blocks blocks={s.blocks} sectionName={s.name} />
+          </div>
         </div>
       </section>
     );

@@ -1328,6 +1328,35 @@
      {
       "type": "p",
       "text": "Ein Restaurant steuert Gänge, ein Hotel bucht aufs Zimmerkonto, ein Biergarten kassiert am Handgerät, ein Freizeitpark verbindet viele Outlets."
+     },
+     {
+      "type": "jumpnav",
+      "items": [
+       {
+        "label": "Restaurant",
+        "href": "#restaurant"
+       },
+       {
+        "label": "Hotel",
+        "href": "#hotel"
+       },
+       {
+        "label": "Bar & Café",
+        "href": "#bar-cafe"
+       },
+       {
+        "label": "Biergarten & Terrasse",
+        "href": "#aussengastronomie"
+       },
+       {
+        "label": "Freizeitpark & Food Court",
+        "href": "#freizeitpark"
+       },
+       {
+        "label": "Systemgastronomie",
+        "href": "#systemgastronomie"
+       }
+      ]
      }
     ],
     "image": {
@@ -1347,23 +1376,19 @@
       "text": "Matrix NXT bildet Ihren Grundriss als Tischplan ab und schickt jeden Gang getrennt an die Küche."
      },
      {
-      "type": "cards",
+      "type": "points",
       "items": [
-       {
-        "nr": "01",
-        "text": "**Tischplan nach Grundriss.** Jeder Raum und die Terrasse bekommen einen eigenen Plan. An einem Tisch führen Sie mehrere Partien getrennt."
-       },
-       {
-        "nr": "02",
-        "text": "**Gangsteuerung.** Die Bestellung geht nach Gängen getrennt an die Küche. Je Tisch lässt sich die Gangsteuerung ausschalten."
-       },
-       {
-        "nr": "03",
-        "text": "**Rechnung splitten.** Sie teilen die Rechnung nach Person, Position oder Betrag."
-       }
+       "**Tischplan nach Grundriss.** Jeder Raum und die Terrasse bekommen einen eigenen Plan. An einem Tisch führen Sie mehrere Partien getrennt.",
+       "**Gangsteuerung.** Die Bestellung geht nach Gängen getrennt an die Küche. Je Tisch lässt sich die Gangsteuerung ausschalten.",
+       "**Rechnung splitten.** Sie teilen die Rechnung nach Person, Position oder Betrag."
       ]
      }
-    ]
+    ],
+    "media": {
+     "src": "/lp/fotos/nxt-restaurant-ncr-terminal-speisen.jpg",
+     "alt": "Kassenterminal an der Bar eines Restaurants",
+     "position": "50% 45%"
+    }
    },
    {
     "id": "hotel",
@@ -1376,23 +1401,17 @@
       "text": "Matrix POS sucht die Buchung im Hotelsystem und bucht den Bon aufs Gastkonto. Für protel, Opera, ASA und weitere."
      },
      {
-      "type": "cards",
+      "type": "points",
       "items": [
-       {
-        "nr": "01",
-        "text": "**Zimmerbuchung aus der Kasse.** Der Gast nennt die Zimmernummer, die Kasse prüft die Buchung im PMS und bucht den Umsatz auf das Zimmerkonto."
-       },
-       {
-        "nr": "02",
-        "text": "**Room-Service über Flixorder.** Gäste bestellen digital über Flixorder, die Bestellung läuft in Matrix POS ein."
-       },
-       {
-        "nr": "03",
-        "text": "**Bankett.** Matrix POS ist an Bp Event, ehemals BANKETTprofi, angebunden."
-       }
+       "**Zimmerbuchung aus der Kasse.** Der Gast nennt die Zimmernummer, die Kasse prüft die Buchung im PMS und bucht den Umsatz auf das Zimmerkonto.",
+       "**Room-Service über Flixorder.** Gäste bestellen digital über Flixorder, die Bestellung läuft in Matrix POS ein.",
+       "**Bankett.** Matrix POS ist an Bp Event, ehemals BANKETTprofi, angebunden."
       ]
      }
-    ]
+    ],
+    "media": {
+     "label": "Hotel"
+    }
    },
    {
     "id": "bar-cafe",
@@ -1405,23 +1424,19 @@
       "text": "Matrix NXT läuft an der Theke auf dem Tablet und draußen am Handgerät. Beide buchen auf denselben Tischplan."
      },
      {
-      "type": "cards",
+      "type": "points",
       "items": [
-       {
-        "nr": "01",
-        "text": "**Artikel nach Warengruppen.** Die Warengruppen stehen als Leiste über dem Artikelraster. Artikel ohne eigene Taste rufen Sie per PLU auf."
-       },
-       {
-        "nr": "02",
-        "text": "**Tablet an der Theke, Handgerät draußen.** An der Theke läuft Matrix NXT auf dem Samsung Galaxy Tab A11, auf der Terrasse auf Orderman 10 oder Google Pixel."
-       },
-       {
-        "nr": "03",
-        "text": "**Tap to Pay.** Der Gast hält Karte oder Smartphone an das Android-Handgerät, die Zahlung läuft über Adyen. Trinkgeld buchen Sie über die Tip-Taste."
-       }
+       "**Artikel nach Warengruppen.** Die Warengruppen stehen als Leiste über dem Artikelraster. Artikel ohne eigene Taste rufen Sie per PLU auf.",
+       "**Tablet an der Theke, Handgerät draußen.** An der Theke läuft Matrix NXT auf dem Samsung Galaxy Tab A11, auf der Terrasse auf Orderman 10 oder Google Pixel.",
+       "**Tap to Pay.** Der Gast hält Karte oder Smartphone an das Android-Handgerät, die Zahlung läuft über Adyen. Trinkgeld buchen Sie über die Tip-Taste."
       ]
      }
-    ]
+    ],
+    "media": {
+     "src": "/lp/fotos/nxt-bistro-getraenke-bon.jpg",
+     "alt": "Matrix NXT auf dem Tablet an der Theke, Artikeltasten für Getränke",
+     "position": "50% 65%"
+    }
    },
    {
     "id": "aussengastronomie",
@@ -1434,23 +1449,17 @@
       "text": "Matrix NXT auf Orderman 10 oder Google Pixel: Bestellung am Tisch aufnehmen, Karte per Tap to Pay kassieren."
      },
      {
-      "type": "cards",
+      "type": "points",
       "items": [
-       {
-        "nr": "01",
-        "text": "**Bonieren am Tisch.** Die Bedienung boniert am Handgerät direkt am Tisch und muss für keine Bestellung zur Kasse laufen."
-       },
-       {
-        "nr": "02",
-        "text": "**Kassieren am Tisch.** Mit Matrix NXT zahlt der Gast per Tap to Pay am Android-Handgerät, abgewickelt über Adyen. Getrennt zahlende Gäste splitten Sie nach Person, Position oder Betrag."
-       },
-       {
-        "nr": "03",
-        "text": "**Handgeräte an der Hauptkasse.** Mit Matrix NEO steht jede Buchung vom Handgerät sofort an der Matrix POS im Haus."
-       }
+       "**Bonieren am Tisch.** Die Bedienung boniert am Handgerät direkt am Tisch und muss für keine Bestellung zur Kasse laufen.",
+       "**Kassieren am Tisch.** Mit Matrix NXT zahlt der Gast per Tap to Pay am Android-Handgerät, abgewickelt über Adyen. Getrennt zahlende Gäste splitten Sie nach Person, Position oder Betrag.",
+       "**Handgeräte an der Hauptkasse.** Mit Matrix NEO steht jede Buchung vom Handgerät sofort an der Matrix POS im Haus."
       ]
      }
-    ]
+    ],
+    "media": {
+     "label": "Biergarten & Terrasse"
+    }
    },
    {
     "id": "freizeitpark",
@@ -1463,23 +1472,17 @@
       "text": "Bediente Gastronomie, Check-out-Gastronomie und Warenwirtschaft mit eigener Produktion laufen in Matrix POS zusammen."
      },
      {
-      "type": "cards",
+      "type": "points",
       "items": [
-       {
-        "nr": "01",
-        "text": "**Bedient und Check-out.** Das Parkrestaurant arbeitet mit Tischplan, der Imbiss mit Check-out-Kasse. Beide buchen in dasselbe System."
-       },
-       {
-        "nr": "02",
-        "text": "**Zentrale Stammdaten.** Artikel und Preise pflegen Sie in Matrix Office, jede Kasse im Park übernimmt sie."
-       },
-       {
-        "nr": "03",
-        "text": "**Bestell-Kiosk und Abholmonitor.** Gäste bestellen und zahlen am Kiosk von Flixorder. Der Abholmonitor zeigt, welche Bestellung fertig ist."
-       }
+       "**Bedient und Check-out.** Das Parkrestaurant arbeitet mit Tischplan, der Imbiss mit Check-out-Kasse. Beide buchen in dasselbe System.",
+       "**Zentrale Stammdaten.** Artikel und Preise pflegen Sie in Matrix Office, jede Kasse im Park übernimmt sie.",
+       "**Bestell-Kiosk und Abholmonitor.** Gäste bestellen und zahlen am Kiosk von Flixorder. Der Abholmonitor zeigt, welche Bestellung fertig ist."
       ]
      }
-    ]
+    ],
+    "media": {
+     "label": "Freizeitpark & Food Court"
+    }
    },
    {
     "id": "systemgastronomie",
@@ -1492,23 +1495,17 @@
       "text": "Matrix für Filialbetriebe mit Cloud-TSE je Filiale und Kartenzahlung aller Standorte über Matrix PAY."
      },
      {
-      "type": "cards",
+      "type": "points",
       "items": [
-       {
-        "nr": "01",
-        "text": "**Updates zentral.** Matrix NXT bekommt Updates zentral, ohne Techniker vor Ort."
-       },
-       {
-        "nr": "02",
-        "text": "**Kartenzahlung über Matrix PAY.** Kartenzahlungen aller Standorte laufen über Adyen und stehen in einer Abrechnung."
-       },
-       {
-        "nr": "03",
-        "text": "**TSE und Meldepflicht je Filiale.** Jede Filiale bekommt die Cloud-TSE von Fiskaly. Die Kassenmeldung an ELSTER ist abgedeckt."
-       }
+       "**Updates zentral.** Matrix NXT bekommt Updates zentral, ohne Techniker vor Ort.",
+       "**Kartenzahlung über Matrix PAY.** Kartenzahlungen aller Standorte laufen über Adyen und stehen in einer Abrechnung.",
+       "**TSE und Meldepflicht je Filiale.** Jede Filiale bekommt die Cloud-TSE von Fiskaly. Die Kassenmeldung an ELSTER ist abgedeckt."
       ]
      }
-    ]
+    ],
+    "media": {
+     "label": "Systemgastronomie"
+    }
    },
    {
     "id": "nicht-dabei",

@@ -22,6 +22,8 @@ export type Block =
   | { type: "featgrid"; items: { title: string; text: string; link?: Button; placeholder?: string }[] }
   | { type: "halves"; items: { id?: string; title: string; text?: string; cards: { nr: string; text: string }[] }[] }
   | { type: "quotes"; items: { text: string; name: string; role?: string }[] }
+  | { type: "points"; items: string[] }
+  | { type: "jumpnav"; items: { label: string; href: string }[] }
   | { type: "columns"; items: { title: string; tone?: "blue" | "grey"; text?: string; points: string[]; button?: Button }[] }
   | { type: "contact"; heading?: string; lines: { label: string; text: string }[]; steps?: string[]; stepsHeading?: string; notes?: string[] };
 export type Section = {
@@ -34,6 +36,8 @@ export type Section = {
   card?: "yellow" | "blue";
   /** Foto rechts im Hero (ab 1024 px), mobil unter dem Text. */
   image?: { src: string; alt: string; position?: string; asset?: string };
+  /** Foto (oder Platzhalter-Fläche mit label) neben dem Abschnitt, Seite wechselt je Abschnitt. */
+  media?: { src?: string; alt?: string; position?: string; label?: string };
   /** Rechte Spalte neben den Blöcken (ab 1024 px), mobil darunter. */
   aside?: Block[];
 };
