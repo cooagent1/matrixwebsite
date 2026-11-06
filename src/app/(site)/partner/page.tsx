@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMeta } from "@/lib/seo";
 import { PartnerForm } from "@/components/partner/PartnerForm";
+import { PartnerDirectory } from "@/components/cms/PartnerDirectory";
+
+// Partnerliste kommt aus Supabase; alle 5 Minuten neu.
+export const revalidate = 300;
 
 export const metadata: Metadata = pageMeta({
   title: "Partner werden: Vertrieb, Integration, Schnittstelle | Matrix POS",
@@ -40,12 +44,14 @@ export default function PartnerPage() {
                 <div><dt>Das bringen Sie</dt><dd>Kundenzugang in der Gastronomie, Installation vor Ort, First-Level-Support, Beratung zu Hardware und Payment.</dd></div>
                 <div><dt>Das bringen wir</dt><dd>Produkt, Schulung, Demo-Zugang, Second-Level-Support aus Hannover, Partnerkonditionen auf Anfrage.</dd></div>
                 <div><dt>So läuft es</dt><dd>Jede verkaufte Kasse kann ein Payment-Vertrag werden. Terminals installieren Sie, den Payment-Support übernimmt Matrix.</dd></div>
-                <div><dt>Nennung</dt><dd>Partnerliste auf matrixpos.de nach Freigabe.</dd></div>
+                <div><dt>Nennung</dt><dd>Eintrag im <a href="#haendler" className="link">Partnerverzeichnis</a> auf matrixpos.de.</dd></div>
               </dl>
             </div>
           </div>
         </div>
       </section>
+
+      <PartnerDirectory />
 
       <section id="technologie" className="pt-sec" style={{ paddingBottom: 96 }}>
         <div className="b-wrap">

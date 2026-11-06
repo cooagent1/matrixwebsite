@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageView } from "@/components/PageView";
 import { JsonLd } from "@/components/JsonLd";
+import { getTeam } from "@/lib/cms";
 import { getPage, livePages } from "@/lib/content";
 import { pageJsonLd, pageMeta } from "@/lib/seo";
 
 export const dynamicParams = false;
+// Inhalte aus dem CMS (Team auf /ueber-uns) alle 5 Minuten neu.
+export const revalidate = 300;
 
 export function generateStaticParams() {
   return livePages()
@@ -27,7 +30,7 @@ export default async function Page(props: PageProps<"/[...slug]">) {
   return (
     <>
       <JsonLd data={pageJsonLd(page, (s) => getPage(s)?.title)} />
-      <PageView page={page} />
+      <PageView page={page} team={page.slug === "ueber-uns" ? await getTeam() : undefined} />
     </>
   );
 }

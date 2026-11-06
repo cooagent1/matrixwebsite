@@ -55,6 +55,7 @@ export function ScenesCarousel() {
               <div className="b-num"><b className="b-d">0</b><span>Server im Betrieb</span></div>
               <div className="b-num"><b className="b-d">7</b><span>Tage die Woche Support</span></div>
               <div className="b-num"><b className="b-d">30<em>+</em></b><span>Jahre Kassen für die Gastronomie</span></div>
+              <div className="b-num"><b className="b-d">10.000<em>+</em></b><span>Installationen in Gastronomie und Hotellerie</span></div>
             </div>
           </div>
           <div className="b-scene-col">

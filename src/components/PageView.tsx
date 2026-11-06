@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Block, Page, Section } from "@/lib/content";
 import { Btn } from "./Button";
 import { ContactForm } from "./ContactForm";
+import { TeamGrid } from "./cms/TeamGrid";
+import type { TeamMember } from "@/lib/cms";
 import { Inline } from "./Inline";
 
 const SHOW_PLACEHOLDERS = process.env.VERCEL_ENV !== "production";
@@ -191,8 +193,18 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
   );
 }
 
-function SectionView({ s, index, isFirst }: { s: Section; index: number; isFirst: boolean }) {
+function SectionView({ s, index, isFirst, team }: { s: Section; index: number; isFirst: boolean; team?: TeamMember[] }) {
   const hero = /^hero$/i.test(s.name);
+  // Team aus dem CMS ersetzt den Textblock im Abschnitt "Management" (/ueber-uns).
+  if (/^management$/i.test(s.name) && team?.length)
+    return (
+      <section id={s.id} className={`sub-sec ${index % 2 === 0 ? "alt" : ""}`}>
+        <div className="b-wrap">
+          {s.heading && <h2 className="b-d sub-h2">{s.heading}</h2>}
+          <TeamGrid team={team} />
+        </div>
+      </section>
+    );
   // In Produktion keine Abschnitte, die nur aus Platzhaltern bestehen (sonst leere Überschrift).
   if (!hero && !SHOW_PLACEHOLDERS && s.blocks.every((b) => b.type === "placeholder")) return null;
   const closing = /^abschluss$/i.test(s.name);
@@ -231,7 +243,7 @@ function SectionView({ s, index, isFirst }: { s: Section; index: number; isFirst
   );
 }
 
-export function PageView({ page }: { page: Page }) {
+export function PageView({ page, team }: { page: Page; team?: TeamMember[] }) {
   const first = page.sections[0];
   const hasHero = first && /^hero$/i.test(first.name);
   return (
@@ -244,7 +256,7 @@ export function PageView({ page }: { page: Page }) {
         </section>
       )}
       {page.sections.map((s, i) => (
-        <SectionView key={s.id + i} s={s} index={i} isFirst={i === 0} />
+        <SectionView key={s.id + i} s={s} index={i} isFirst={i === 0} team={team} />
       ))}
     </>
   );

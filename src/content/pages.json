@@ -54,7 +54,8 @@
       "items": [
        "**30 Jahre** Kassen für die Gastronomie",
        "**7 Tage** die Woche Support",
-       "**1 System** für Kasse, Bezahlen und Auswertung"
+       "**1 System** für Kasse, Bezahlen und Auswertung",
+       "**10.000+** Installationen in Gastronomie und Hotellerie"
       ]
      }
     ]
@@ -1290,6 +1291,14 @@
      {
       "type": "p",
       "text": "Florian Sbrizzai, Stellv. Direktor, Parkhotel Laim, München"
+     },
+     {
+      "type": "p",
+      "text": "„Ich hab Matrix Payment seit ein paar Monaten. Seitdem ich dieses neue System habe, funktioniert alles einwandfrei, und ich, meine Kollegen und die Kunden sind alle zufrieden.\""
+     },
+     {
+      "type": "p",
+      "text": "Abbas Schafie, Restaurant Amorosa, Markthalle Hannover"
      }
     ]
    },
@@ -1757,8 +1766,12 @@
     "heading": "Referenz",
     "blocks": [
      {
-      "type": "placeholder",
-      "label": "Restaurant-Referenz mit Freigabe ()"
+      "type": "p",
+      "text": "„Sie ist total einfach, selbsterklärend und erleichtert einem den Arbeitsalltag enorm. Egal was war, es war immer sofort jemand für uns da und hat das Problem gelöst.\""
+     },
+     {
+      "type": "p",
+      "text": "Samantha Kedzia, Service, Treffpunkt, Markthalle Hannover"
      }
     ]
    },
@@ -2058,6 +2071,14 @@
      {
       "type": "placeholder",
       "label": "Foto"
+     },
+     {
+      "type": "p",
+      "text": "„Die Zusammenarbeit seit 15 Jahren ist außerordentlich gut. Gerade in der Gastronomie, wenn es Probleme gibt, meistens am Wochenende, ist sofort jemand erreichbar.\""
+     },
+     {
+      "type": "p",
+      "text": "Jan Fleißig, Inhaber, Konditorei Kreipe, Hannover"
      }
     ]
    },
@@ -2293,8 +2314,12 @@
     "heading": "Referenz",
     "blocks": [
      {
-      "type": "placeholder",
-      "label": "Freizeitpark-Referenz mit Freigabe ()"
+      "type": "p",
+      "text": "„Überzeugt hat uns, dass Matrix im Prinzip alles abbilden kann: von bedienter Gastronomie über Check-out-Gastronomie bis hin zu einer Warenwirtschaft mit internen Produzenten.\""
+     },
+     {
+      "type": "p",
+      "text": "Dirk Schönekäse, F&B-Leiter, Erlebnis-Zoo Hannover"
      }
     ]
    },
@@ -2380,6 +2405,22 @@
         "text": "**Auswertung je Station.** Umsatz je Station, je Stunde, je Artikel."
        }
       ]
+     }
+    ]
+   },
+   {
+    "id": "referenz",
+    "name": "Referenz",
+    "eyebrow": null,
+    "heading": "Referenz",
+    "blocks": [
+     {
+      "type": "p",
+      "text": "„Ich hab Matrix Payment seit ein paar Monaten. Seitdem ich dieses neue System habe, funktioniert alles einwandfrei, und ich, meine Kollegen und die Kunden sind alle zufrieden.\""
+     },
+     {
+      "type": "p",
+      "text": "Abbas Schafie, Restaurant Amorosa, Markthalle Hannover"
      }
     ]
    },
@@ -2665,6 +2706,22 @@
        }
       ],
       "phone": null
+     }
+    ]
+   },
+   {
+    "id": "referenz",
+    "name": "Referenz",
+    "eyebrow": null,
+    "heading": "Referenz",
+    "blocks": [
+     {
+      "type": "p",
+      "text": "„Die Zusammenarbeit seit 15 Jahren ist außerordentlich gut. Gerade in der Gastronomie, wenn es Probleme gibt, meistens am Wochenende, ist sofort jemand erreichbar.\""
+     },
+     {
+      "type": "p",
+      "text": "Jan Fleißig, Inhaber, Konditorei Kreipe, Hannover"
      }
     ]
    },
@@ -3855,6 +3912,23 @@
     ]
    },
    {
+    "id": "kennzahlen",
+    "name": "Kennzahlen",
+    "eyebrow": null,
+    "heading": null,
+    "blocks": [
+     {
+      "type": "list",
+      "items": [
+       "**30+** Jahre Kassen für die Gastronomie",
+       "**10.000+** Installationen in Gastronomie und Hotellerie",
+       "**60+** Gastro-Profis im Team",
+       "**7** Tage die Woche Support"
+      ]
+     }
+    ]
+   },
+   {
     "id": "geschichte",
     "name": "Geschichte",
     "eyebrow": null,
@@ -3896,6 +3970,18 @@
     ]
    },
    {
+    "id": "management",
+    "name": "Management",
+    "eyebrow": null,
+    "heading": "Wer Matrix führt.",
+    "blocks": [
+     {
+      "type": "p",
+      "text": "Ansprechpartner mit Namen, aus Hannover. Personen und Fotos pflegen wir in Supabase (Tabelle team_members)."
+     }
+    ]
+   },
+   {
     "id": "das-team",
     "name": "Das Team",
     "eyebrow": null,
@@ -3903,7 +3989,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Rund 55 Kolleginnen und Kollegen in Entwicklung, Support, Professional Services, Vertrieb und Verwaltung."
+      "text": "Über 60 Kolleginnen und Kollegen in Entwicklung, Support, Professional Services, Vertrieb und Verwaltung."
      },
      {
       "type": "list",
@@ -3993,7 +4079,7 @@
   "slug": "referenzen",
   "title": "Referenzen",
   "metaTitle": "Referenzen: Restaurants, Hotels und Bars mit Matrix | Matrix POS",
-  "description": "Betriebe, die mit Matrix arbeiten: Hennings Bar, Parkhotel Laim und weitere.",
+  "description": "Betriebe, die mit Matrix arbeiten: Parkhotel Laim, Erlebnis-Zoo Hannover, Konditorei Kreipe, Markthalle Hannover, Hennings Bar und weitere.",
   "sections": [
    {
     "id": "hero",
@@ -4051,6 +4137,70 @@
      {
       "type": "placeholder",
       "label": "Foto oder Logo"
+     },
+     {
+      "type": "h3",
+      "text": "Erlebnis-Zoo Hannover"
+     },
+     {
+      "type": "p",
+      "text": "Bedienung, Check-out-Gastronomie und Warenwirtschaft mit eigener Produktion in einem System."
+     },
+     {
+      "type": "p",
+      "text": "„Überzeugt hat uns, dass Matrix im Prinzip alles abbilden kann: von bedienter Gastronomie über Check-out-Gastronomie bis hin zu einer Warenwirtschaft mit internen Produzenten.\""
+     },
+     {
+      "type": "p",
+      "text": "Dirk Schönekäse, F&B-Leiter"
+     },
+     {
+      "type": "h3",
+      "text": "Konditorei Kreipe, Hannover"
+     },
+     {
+      "type": "p",
+      "text": "Seit 15 Jahren mit Matrix. Support auch am Wochenende."
+     },
+     {
+      "type": "p",
+      "text": "„Die Zusammenarbeit seit 15 Jahren ist außerordentlich gut. Gerade in der Gastronomie, wenn es Probleme gibt, meistens am Wochenende, ist sofort jemand erreichbar.\""
+     },
+     {
+      "type": "p",
+      "text": "Jan Fleißig, Inhaber"
+     },
+     {
+      "type": "h3",
+      "text": "Restaurant Amorosa, Markthalle Hannover"
+     },
+     {
+      "type": "p",
+      "text": "Kartenzahlung mit Matrix PAY."
+     },
+     {
+      "type": "p",
+      "text": "„Ich hab Matrix Payment seit ein paar Monaten. Seitdem ich dieses neue System habe, funktioniert alles einwandfrei, und ich, meine Kollegen und die Kunden sind alle zufrieden.\""
+     },
+     {
+      "type": "p",
+      "text": "Abbas Schafie"
+     },
+     {
+      "type": "h3",
+      "text": "Treffpunkt, Markthalle Hannover"
+     },
+     {
+      "type": "p",
+      "text": "Die Stimme aus dem Service."
+     },
+     {
+      "type": "p",
+      "text": "„Sie ist total einfach, selbsterklärend und erleichtert einem den Arbeitsalltag enorm. Egal was war, es war immer sofort jemand für uns da und hat das Problem gelöst.\""
+     },
+     {
+      "type": "p",
+      "text": "Samantha Kedzia, Service"
      }
     ]
    },
