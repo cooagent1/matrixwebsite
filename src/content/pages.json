@@ -1323,168 +1323,174 @@
    {
     "id": "matrix-pos-und-neo",
     "name": "Matrix POS und NEO",
-    "eyebrow": null,
+    "eyebrow": "Matrix POS und NEO",
     "heading": "Über 40 Anbindungen im Betrieb.",
     "blocks": [
      {
-      "type": "h3",
-      "text": "Hotelsoftware"
-     },
-     {
-      "type": "p",
-      "text": "Die Kasse bucht Umsätze per Zimmerbuchung direkt auf das Zimmerkonto des Gastes."
-     },
-     {
-      "type": "p",
-      "text": "Oracle Opera (OHIP) · protel SPE/MPE und protel AIR · ASA Hotel · Guestline · weitere über die generische Hotelschnittstelle"
-     },
-     {
-      "type": "h3",
-      "text": "Payment"
-     },
-     {
-      "type": "p",
-      "text": "Matrix PAY läuft über Adyen. Terminals anderer Anbieter binden wir über OPI und Nexo an."
-     },
-     {
-      "type": "h3",
-      "text": "Warenwirtschaft"
-     },
-     {
-      "type": "p",
-      "text": "Jeder Verkauf bucht den Bestand in der Warenwirtschaft ab, mit KOST in Echtzeit."
-     },
-     {
-      "type": "p",
-      "text": "KOST · FutureLog · weitere über die generische Schnittstelle"
-     },
-     {
-      "type": "h3",
-      "text": "Buchhaltung"
-     },
-     {
-      "type": "p",
-      "text": "Die Kasse übergibt die Tagesabschlüsse an die Finanzbuchhaltung."
-     },
-     {
-      "type": "p",
-      "text": "DATEV · Addison · CONGA Kassenbuch mit DATEV-Modul"
-     },
-     {
-      "type": "h3",
-      "text": "Reservierung und Self-Ordering"
-     },
-     {
-      "type": "p",
-      "text": "Mit Flixorder bestellen Gäste per QR-Code am Tisch, am Kiosk oder zum Mitnehmen, im Hotel auch über Room-Service."
-     },
-     {
-      "type": "p",
-      "text": "RESERViSiON · Flixorder · servier.bar"
-     },
-     {
-      "type": "h3",
-      "text": "Lieferplattformen"
-     },
-     {
-      "type": "p",
-      "text": "DeliverBee · Lieferando · Wolt"
-     },
-     {
-      "type": "h3",
-      "text": "Schank, Kaffee, Bankett"
-     },
-     {
-      "type": "p",
-      "text": "Schankanlagen und Kaffeemaschinen binden wir über die generische Schnittstelle an."
-     },
-     {
-      "type": "p",
-      "text": "Bp Event (ehemals BANKETTprofi)"
-     },
-     {
-      "type": "h3",
-      "text": "Gutscheine und Karten"
-     },
-     {
-      "type": "p",
-      "text": "Matrix Wallet führt Kunden-, Rabatt- und Bonuskarten sowie aufladbare Geldkarten auf Transponderkarten."
-     },
-     {
-      "type": "p",
-      "text": "Matrix Gutscheinverwaltung · Matrix Wallet"
-     },
-     {
-      "type": "h3",
-      "text": "Personal"
-     },
-     {
-      "type": "p",
-      "text": "Matrix CONGA · Gastromatic"
-     },
-     {
-      "type": "h3",
-      "text": "Branchen"
-     },
-     {
-      "type": "p",
-      "text": "PC Caddie (Golf) · Convious (Freizeitpark)"
-     },
-     {
-      "type": "h3",
-      "text": "Hardware"
-     },
-     {
-      "type": "p",
-      "text": "Orderman · Epson und Star (Drucker) · Mettler Toledo (Waagen) · Cashlogy (Cash-Management)"
-     },
-     {
-      "type": "h3",
-      "text": "Fiskal"
-     },
-     {
-      "type": "p",
-      "text": "Cloud-TSE Fiskaly · ELSTER-Kassenmeldung"
+      "type": "catgrid",
+      "items": [
+       {
+        "title": "Hotelsoftware",
+        "text": "Die Kasse bucht Umsätze per Zimmerbuchung direkt auf das Zimmerkonto des Gastes.",
+        "chips": [
+         "Oracle Opera (OHIP)",
+         "protel SPE/MPE und protel AIR",
+         "ASA Hotel",
+         "Guestline",
+         "weitere über die generische Hotelschnittstelle"
+        ]
+       },
+       {
+        "title": "Payment",
+        "text": "Matrix PAY läuft über Adyen. Terminals anderer Anbieter binden wir über OPI und Nexo an."
+       },
+       {
+        "title": "Warenwirtschaft",
+        "text": "Jeder Verkauf bucht den Bestand in der Warenwirtschaft ab, mit KOST in Echtzeit.",
+        "chips": [
+         "KOST",
+         "FutureLog",
+         "weitere über die generische Schnittstelle"
+        ]
+       },
+       {
+        "title": "Buchhaltung",
+        "text": "Die Kasse übergibt die Tagesabschlüsse an die Finanzbuchhaltung.",
+        "chips": [
+         "DATEV",
+         "Addison",
+         "CONGA Kassenbuch mit DATEV-Modul"
+        ]
+       },
+       {
+        "title": "Reservierung und Self-Ordering",
+        "text": "Mit Flixorder bestellen Gäste per QR-Code am Tisch, am Kiosk oder zum Mitnehmen, im Hotel auch über Room-Service.",
+        "chips": [
+         "RESERViSiON",
+         "Flixorder",
+         "servier.bar"
+        ]
+       },
+       {
+        "title": "Lieferplattformen",
+        "chips": [
+         "DeliverBee",
+         "Lieferando",
+         "Wolt"
+        ]
+       },
+       {
+        "title": "Schank, Kaffee, Bankett",
+        "text": "Schankanlagen und Kaffeemaschinen binden wir über die generische Schnittstelle an.",
+        "chips": [
+         "Bp Event (ehemals BANKETTprofi)"
+        ]
+       },
+       {
+        "title": "Gutscheine und Karten",
+        "text": "Matrix Wallet führt Kunden-, Rabatt- und Bonuskarten sowie aufladbare Geldkarten auf Transponderkarten.",
+        "chips": [
+         "Matrix Gutscheinverwaltung",
+         "Matrix Wallet"
+        ]
+       },
+       {
+        "title": "Personal",
+        "chips": [
+         "Matrix CONGA",
+         "Gastromatic"
+        ]
+       },
+       {
+        "title": "Branchen",
+        "chips": [
+         "PC Caddie (Golf)",
+         "Convious (Freizeitpark)"
+        ]
+       },
+       {
+        "title": "Hardware",
+        "chips": [
+         "Orderman",
+         "Epson und Star (Drucker)",
+         "Mettler Toledo (Waagen)",
+         "Cashlogy (Cash-Management)"
+        ]
+       },
+       {
+        "title": "Fiskal",
+        "chips": [
+         "Cloud-TSE Fiskaly",
+         "ELSTER-Kassenmeldung"
+        ]
+       }
+      ],
+      "notes": [
+       {
+        "title": "Matrix NXT",
+        "tone": "blue",
+        "rows": [
+         {
+          "label": "Heute",
+          "chips": [
+           "Adyen (Matrix PAY)",
+           "Fiskaly (Cloud-TSE)",
+           "Datenübernahme aus Matrix Classic"
+          ]
+         },
+         {
+          "label": "In Arbeit",
+          "chips": [
+           "protel",
+           "ASA Hotel",
+           "Online-Tischreservierung (eigene Lösung, RESERViSiON)",
+           "Küchendisplay"
+          ]
+         }
+        ],
+        "link": {
+         "kind": "link",
+         "label": "Mehr zu NXT",
+         "href": "/kassensysteme/nxt"
+        }
+       },
+       {
+        "title": "Matrix PAY",
+        "tone": "yellow",
+        "rows": [
+         {
+          "chips": [
+           "Matrix POS",
+           "Matrix NXT",
+           "Fremdkassen",
+           "Hotelsoftware über die Kasse",
+           "Front Office und Online-Buchungen über Channelmanager oder Website"
+          ]
+         }
+        ],
+        "link": {
+         "kind": "link",
+         "label": "Mehr zu PAY",
+         "href": "/pay"
+        }
+       }
+      ]
      }
     ]
    },
    {
-    "id": "matrix-nxt",
-    "name": "Matrix NXT",
-    "eyebrow": null,
-    "heading": "Matrix NXT",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "Heute: Adyen (Matrix PAY) · Fiskaly (Cloud-TSE) · Datenübernahme aus Matrix Classic."
-     },
-     {
-      "type": "p",
-      "text": "In Arbeit: protel · ASA Hotel · Online-Tischreservierung (eigene Lösung, RESERViSiON) · Küchendisplay."
-     }
-    ]
-   },
-   {
-    "id": "matrix-pay",
-    "name": "Matrix PAY",
-    "eyebrow": null,
-    "heading": "Matrix PAY",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "Matrix POS · Matrix NXT · Fremdkassen · Hotelsoftware über die Kasse · Front Office und Online-Buchungen über Channelmanager oder Website"
-     }
-    ]
-   },
-   {
-    "id": "ihre-schnittstelle-fehlt",
-    "name": "Ihre Schnittstelle fehlt?",
+    "id": "abschluss",
+    "name": "Abschluss",
     "eyebrow": null,
     "heading": "Ihre Schnittstelle fehlt?",
     "blocks": [
      {
       "type": "p",
       "text": "Nennen Sie uns System und Hersteller. Für Hotelsoftware und Warenwirtschaft gibt es zusätzlich je eine generische Schnittstelle."
+     },
+     {
+      "type": "p",
+      "text": "Hersteller, die ihr System an Matrix anbinden wollen, melden sich über das [Partnerformular](/partner#anfrage)."
      },
      {
       "type": "buttons",
@@ -1496,29 +1502,6 @@
        }
       ],
       "phone": "+49 511 592938-0"
-     }
-    ]
-   },
-   {
-    "id": "fuer-softwarehersteller",
-    "name": "Für Softwarehersteller",
-    "eyebrow": null,
-    "heading": "Für Softwarehersteller",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "Hersteller, die ihr System an Matrix anbinden wollen, melden sich über das Partnerformular."
-     },
-     {
-      "type": "buttons",
-      "items": [
-       {
-        "kind": "link",
-        "label": "Partner",
-        "href": "/partner"
-       }
-      ],
-      "phone": null
      }
     ]
    }

@@ -14,6 +14,11 @@ export type Block =
   | { type: "form" }
   // Nachtpaket 07.11.: kompakte Wege-Zeile (/demo) und Kontaktkarte für die Seitenspalte
   | { type: "ways"; items: { title: string; text: string; button: Button }[] }
+  | {
+      type: "catgrid";
+      items: { title: string; text?: string; chips?: string[] }[];
+      notes?: { title: string; tone: "blue" | "yellow"; rows: { label?: string; chips: string[] }[]; link?: Button }[];
+    }
   | { type: "contact"; heading?: string; lines: { label: string; text: string }[]; steps?: string[]; stepsHeading?: string; notes?: string[] };
 export type Section = {
   id: string;

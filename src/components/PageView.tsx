@@ -188,6 +188,40 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
             return (
               <div key={i} id="formular" className="sub-form"><ContactForm /></div>
             );
+          case "catgrid":
+            return (
+              <div key={i} className="sub-cat-wrap">
+                <ul className="sub-cats">
+                  {b.items.map((c, j) => (
+                    <li key={j} className="sub-card sub-cat">
+                      <h3 className="b-d">{c.title}</h3>
+                      {c.text && <p>{c.text}</p>}
+                      {c.chips && (
+                        <ul className="sub-chips">
+                          {c.chips.map((t, k) => (<li key={k} className={`b-m sub-chip ${/^weitere/.test(t) ? "more" : ""}`}>{t}</li>))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+                {b.notes && (
+                  <div className="sub-cat-notes">
+                    {b.notes.map((n, j) => (
+                      <div key={j} className={`sub-note sub-note-${n.tone}`}>
+                        <h3 className="b-d">{n.title}</h3>
+                        {n.rows.map((r, k) => (
+                          <div key={k} className="sub-note-row">
+                            {r.label && <span className="b-m sub-note-lbl">{r.label}</span>}
+                            <ul className="sub-chips">{r.chips.map((t, l) => (<li key={l} className="b-m sub-chip">{t}</li>))}</ul>
+                          </div>
+                        ))}
+                        {n.link && <Link href={n.link.href} className="sub-more">{n.link.label} →</Link>}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
           case "ways":
             return (
               <ul key={i} className="sub-ways">
