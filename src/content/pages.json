@@ -1006,7 +1006,7 @@
     "id": "warum-pay",
     "name": "Warum PAY",
     "eyebrow": null,
-    "heading": "Warum PAY",
+    "heading": "Warum PAY.",
     "blocks": [
      {
       "type": "cards",
@@ -1017,14 +1017,10 @@
        },
        {
         "nr": "02",
-        "text": "**Eine Abrechnung.** Alle Kartenzahlungen und Stornos stehen in einer Anwendung und im Tagesabschluss der Kasse."
+        "text": "**Eine Abrechnung über Adyen.** Girocard, Kreditkarte, Apple Pay und Google Pay wickelt Adyen ab. Alle Kartenzahlungen und Stornos stehen in einer Anwendung und im Tagesabschluss der Kasse."
        },
        {
         "nr": "03",
-        "text": "**Adyen.** Girocard, Kreditkarte, Apple Pay und Google Pay wickelt Adyen ab."
-       },
-       {
-        "nr": "04",
         "text": "**Support aus Hannover.** Bei Störungen am Terminal hilft dieselbe Hotline wie bei der Kasse, an 7 Tagen die Woche."
        }
       ]
@@ -1033,9 +1029,9 @@
    },
    {
     "id": "terminals",
-    "name": "Terminals",
+    "name": "Terminals und Konditionen",
     "eyebrow": null,
-    "heading": "Terminals",
+    "heading": "Terminals und Konditionen.",
     "blocks": [
      {
       "type": "list",
@@ -1046,44 +1042,29 @@
       ]
      },
      {
+      "type": "p",
+      "text": "Konditionen auf Anfrage. Wir rechnen Ihnen vor, was Sie heute zahlen und was mit Matrix PAY."
+     },
+     {
       "type": "placeholder",
       "label": "Produktfotos"
      }
-    ]
-   },
-   {
-    "id": "konditionen",
-    "name": "Konditionen",
-    "eyebrow": null,
-    "heading": "Konditionen",
-    "blocks": [
+    ],
+    "aside": [
      {
-      "type": "p",
-      "text": "Konditionen auf Anfrage. Wir rechnen Ihnen vor, was Sie heute zahlen und was mit Matrix PAY."
-     }
-    ]
-   },
-   {
-    "id": "referenz",
-    "name": "Referenz",
-    "eyebrow": null,
-    "heading": "Referenz",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "„Matrix Payment läuft reibungslos mit unserer Hotelsoftware! Ein großer Vorteil: es gibt nur noch eine Payment-Abrechnung und alle Zahlungen sind in einer einzigen Payment Applikation abgebildet.\""
-     },
-     {
-      "type": "p",
-      "text": "Florian Sbrizzai, Stellv. Direktor, Parkhotel Laim, München"
-     },
-     {
-      "type": "p",
-      "text": "„Ich hab Matrix Payment seit ein paar Monaten. Seitdem ich dieses neue System habe, funktioniert alles einwandfrei, und ich, meine Kollegen und die Kunden sind alle zufrieden.\""
-     },
-     {
-      "type": "p",
-      "text": "Abbas Schafie, Restaurant Amorosa, Markthalle Hannover"
+      "type": "quotes",
+      "items": [
+       {
+        "text": "Matrix Payment läuft reibungslos mit unserer Hotelsoftware! Ein großer Vorteil: es gibt nur noch eine Payment-Abrechnung und alle Zahlungen sind in einer einzigen Payment Applikation abgebildet.",
+        "name": "Florian Sbrizzai",
+        "role": "Stellv. Direktor, Parkhotel Laim, München"
+       },
+       {
+        "text": "Ich hab Matrix Payment seit ein paar Monaten. Seitdem ich dieses neue System habe, funktioniert alles einwandfrei, und ich, meine Kollegen und die Kunden sind alle zufrieden.",
+        "name": "Abbas Schafie",
+        "role": "Restaurant Amorosa, Markthalle Hannover"
+       }
+      ]
      }
     ]
    },

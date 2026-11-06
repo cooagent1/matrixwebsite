@@ -813,3 +813,10 @@
 .lp .sub-grid:has(>:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:900px){.lp .sub-halves{grid-template-columns:1fr;gap:40px}}
 @media (max-width:720px){.lp .sub-grid:has(>:nth-child(4):last-child){grid-template-columns:1fr}.lp .sub-half-cards .sub-card{padding:18px}}
+/* Zitat-Karten auf Unterseiten (wie Startseite), zwei nebeneinander */
+.lp .sub-quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.lp .sub-qcard{flex:none;min-height:0}
+.lp .sub-qcard blockquote{font-size:20px}
+.lp .sub-sec.alt .sub-qcard{background:#fff}
+@media (max-width:900px){.lp .sub-quotes{grid-template-columns:1fr}.lp .sub-qcard blockquote{font-size:18px}}
+.lp .sub-split-aside .sub-quotes{grid-template-columns:1fr;margin-top:0}.lp .sub-split-aside:has(.sub-quotes){position:static}

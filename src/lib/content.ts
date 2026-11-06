@@ -21,6 +21,7 @@ export type Block =
     }
   | { type: "featgrid"; items: { title: string; text: string; link?: Button; placeholder?: string }[] }
   | { type: "halves"; items: { id?: string; title: string; text?: string; cards: { nr: string; text: string }[] }[] }
+  | { type: "quotes"; items: { text: string; name: string; role?: string }[] }
   | { type: "columns"; items: { title: string; tone?: "blue" | "grey"; points: string[]; button?: Button }[] }
   | { type: "contact"; heading?: string; lines: { label: string; text: string }[]; steps?: string[]; stepsHeading?: string; notes?: string[] };
 export type Section = {

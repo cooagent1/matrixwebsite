@@ -222,6 +222,18 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                 ))}
               </div>
             );
+          case "quotes":
+            return (
+              <div key={i} className="sub-quotes">
+                {b.items.map((q, j) => (
+                  <figure key={j} className="b-qcard sub-qcard">
+                    <svg className="b-qmark-s" width="36" height="28" viewBox="0 0 36 28" aria-hidden="true"><path fill="currentColor" d="M0 28V17C0 7.6 4.6 1.9 13.2 0l1.6 4.2C10 5.8 7.7 9 7.4 13H14v15H0zm21 0V17c0-9.4 4.6-15.1 13.2-17l1.6 4.2C31 5.8 28.7 9 28.4 13H35v15H21z"/></svg>
+                    <blockquote>{q.text}</blockquote>
+                    <figcaption><div><b>{q.name}</b>{q.role && <small>{q.role}</small>}</div></figcaption>
+                  </figure>
+                ))}
+              </div>
+            );
           case "columns":
             return (
               <div key={i} className="sub-cols">
