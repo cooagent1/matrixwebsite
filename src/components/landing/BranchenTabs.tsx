@@ -3,38 +3,21 @@ import Image from "next/image";
 
 import { useState } from "react";
 import Link from "next/link";
+import { T, txt } from "../T";
 
-type Seg = {
-  name: string;
-  slug: string;
-  kicker: string;
-  img: string;
-  title: string;
-  feats: { n: string; t: string; d: string }[];
-  devices: string[];
-};
+type Seg = { slug: string; img: string; feats: number; devices: string[] };
 
-// Fakten: docs/copy/branchen/*.md und Launchdeck 10/2026 (Offline, PMS und Kiosk nicht als "heute" behaupten).
+// Texte in texte.json (start.branchen.<slug>.*). Fakten: docs/copy/branchen/*.md und Launchdeck 10/2026.
 const SEGMENTS: Seg[] = [
-  { name: "Restaurant", slug: "restaurant", kicker: "À la carte & Fine Dining", img: "/lp/branchen/restaurant.jpg", title: "Tischplan, Gänge, Rechnung splitten.",
-    feats: [ { n: "01", t: "Tischplan mit Gängen", d: "mehrere Räume, offene Beträge auf einen Blick" }, { n: "02", t: "Splitten & Bewirtungsbeleg", d: "je Position oder je Gast" }, { n: "03", t: "Bons an Küche und Bar", d: "automatisch je Warengruppe" } ],
-    devices: ["Touch-PC", "Android-Handgerät", "Bondrucker"] },
-  { name: "Hotel", slug: "hotel", kicker: "Bar, Restaurant, Frühstück", img: "/lp/branchen/hotel.jpg", title: "Zimmerbuchung direkt aus der Kasse.",
-    feats: [ { n: "01", t: "PMS-Anbindung", d: "protel und ASA Hotel, Umsätze aufs Zimmer. In Arbeit." }, { n: "02", t: "Eine Payment-Abrechnung", d: "Kasse und Hotel mit Matrix PAY" }, { n: "03", t: "Mehrere Outlets", d: "Restaurant und Hotelbar in einem Office" } ],
-    devices: ["POS-Terminal", "Handgerät", "Kartenterminal"] },
-  { name: "Biergarten", slug: "aussengastronomie", kicker: "Außengastronomie", img: "/lp/branchen/biergarten.jpg", title: "Handgerät statt Weg zur Theke.",
-    feats: [ { n: "01", t: "Handgerät mit Tap to Pay", d: "Karte ans Gerät, Trinkgeld direkt mit erfasst" }, { n: "02", t: "Am Tisch splitten", d: "je Gast oder Position, Abwicklung über Adyen" }, { n: "03", t: "Handgerät mit Drucker", d: "Bon direkt am Tisch" } ],
-    devices: ["Android-Handgerät", "Mobiler Drucker", "Tap to Pay"] },
-  { name: "Café & Bar", slug: "bar-cafe", kicker: "Theke & Schnellservice", img: "/lp/branchen/cafe-bar.jpg", title: "Schnellwahl an Theke und Terrasse.",
-    feats: [ { n: "01", t: "Favoritenleiste", d: "die Top-Artikel immer im Daumenbereich" }, { n: "02", t: "Heller und dunkler Modus", d: "lesbar bei Mittagssonne und Kneipenlicht" }, { n: "03", t: "Kellnerschloss oder PIN", d: "Anmeldung per Kellnerschlüssel oder PIN" } ],
-    devices: ["Touch-PC", "Kundendisplay", "Kartenterminal"] },
-  { name: "Freizeitpark", slug: "freizeitpark", kicker: "Viele Kassen, ein System", img: "/lp/branchen/freizeitpark.jpg", title: "Viele Outlets. Ein Backoffice.",
-    feats: [ { n: "01", t: "Artikel und Preise zentral", d: "ein Office für alle Standorte" }, { n: "02", t: "Neues Gerät per Einrichtungscode", d: "Saisonkräfte ohne Techniker anmelden" }, { n: "03", t: "Berichte je Standort", d: "live im Browser" } ],
-    devices: ["POS-Terminal", "Tablet", "Handgerät"] },
-  { name: "Systemgastro", slug: "systemgastronomie", kicker: "Filialen & Franchise", img: "/lp/branchen/systemgastro.jpg", title: "Zentrale Stammdaten für alle Filialen.",
-    feats: [ { n: "01", t: "Layouts zentral ausrollen", d: "eine Oberfläche für alle Filialen" }, { n: "02", t: "Updates automatisch", d: "zentral eingespielt, ohne Techniker vor Ort" }, { n: "03", t: "Rechte pro Gruppe", d: "Filialleitung, Service, Aushilfe" } ],
-    devices: ["Touch-PC", "Tablet", "Office"] },
+  { slug: "restaurant", img: "/lp/branchen/restaurant.jpg", feats: 3, devices: ["Touch-PC", "Android-Handgerät", "Bondrucker"] },
+  { slug: "hotel", img: "/lp/branchen/hotel.jpg", feats: 3, devices: ["POS-Terminal", "Handgerät", "Kartenterminal"] },
+  { slug: "aussengastronomie", img: "/lp/branchen/biergarten.jpg", feats: 3, devices: ["Android-Handgerät", "Mobiler Drucker", "Tap to Pay"] },
+  { slug: "bar-cafe", img: "/lp/branchen/cafe-bar.jpg", feats: 3, devices: ["Touch-PC", "Kundendisplay", "Kartenterminal"] },
+  { slug: "freizeitpark", img: "/lp/branchen/freizeitpark.jpg", feats: 3, devices: ["POS-Terminal", "Tablet", "Handgerät"] },
+  { slug: "systemgastronomie", img: "/lp/branchen/systemgastro.jpg", feats: 3, devices: ["Touch-PC", "Tablet", "Office"] },
 ];
+
+const k = (slug: string, f: string) => `start.branchen.${slug}.${f}`;
 
 export function BranchenTabs() {
   const [i, setI] = useState(0);
@@ -43,27 +26,27 @@ export function BranchenTabs() {
     <section id="branchen" className="b-branchen" aria-label="Branchen">
       <div className="b-wrap b-branchen-body">
         <div className="b-tabs" role="tablist" aria-label="Betriebsart wählen">
-          {SEGMENTS.map((s, k) => (
-            <button key={s.slug} type="button" role="tab" aria-selected={k === i} className={`b-d b-tab ${k === i ? "on" : ""}`} onClick={() => setI(k)}>
-              {s.name}
+          {SEGMENTS.map((s, j) => (
+            <button key={s.slug} type="button" role="tab" aria-selected={j === i} className={`b-d b-tab ${j === i ? "on" : ""}`} onClick={() => setI(j)}>
+              <T k={k(s.slug, "tab")} />
             </button>
           ))}
         </div>
         <div className="b-seg" role="tabpanel">
           <div className="b-seg-l">
-          {SEGMENTS.map((s, k) => (
+          {SEGMENTS.map((s, j) => (
             // Alle Bilder im DOM, damit der Wechsel ohne Nachladen passiert.
-            <Image key={s.slug} src={s.img} alt={k === i ? `${s.name}: ${s.title}` : ""} aria-hidden={k !== i} fill sizes="(max-width: 1100px) 100vw, 60vw" quality={70} className="b-branchen-img" style={{ opacity: k === i ? 1 : 0, transition: "opacity .5s" }} loading={k === 0 ? "eager" : "lazy"} />
+            <Image key={s.slug} src={s.img} alt={j === i ? txt(k(s.slug, "tab")) : ""} aria-hidden={j !== i} fill sizes="(max-width: 1100px) 100vw, 60vw" quality={70} className="b-branchen-img" style={{ opacity: j === i ? 1 : 0, transition: "opacity .5s" }} loading={j === 0 ? "eager" : "lazy"} />
           ))}
           <div className="b-branchen-shade" aria-hidden="true" />
-            <span className="b-m b-kicker">{seg.kicker}</span>
-            <h2 className="b-d b-seg-h">{seg.title}</h2>
+            <span className="b-m b-kicker"><T k={k(seg.slug, "kicker")} /></span>
+            <h2 className="b-d b-seg-h"><T k={k(seg.slug, "titel")} /></h2>
           </div>
           <div className="b-feats">
-            {seg.feats.map((f) => (
-              <div key={f.n} className="b-feat">
-                <span className="b-m n">{f.n}</span>
-                <span className="t"><b>{f.t}</b><small>{f.d}</small></span>
+            {Array.from({ length: seg.feats }, (_, n) => (
+              <div key={n} className="b-feat">
+                <span className="b-m n">{String(n + 1).padStart(2, "0")}</span>
+                <span className="t"><b><T k={k(seg.slug, `f${n + 1}`)} /></b><small><T k={k(seg.slug, `f${n + 1}.text`)} /></small></span>
               </div>
             ))}
             <div className="b-devs">

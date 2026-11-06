@@ -88,3 +88,26 @@ details > summary::-webkit-details-marker { display: none; }
 .consent-link{background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer}
 .consent-link:hover{color:#0077A3}
 html.mp-has-consent .consent[data-initial]{display:none}
+
+/* Platzhalter für Texte, die Matrix noch liefert (src/components/T.tsx).
+   Das Briefing steht im Layout, damit Länge und Inhalt erkennbar sind. */
+.ph {
+  opacity: 0.62;
+  font-style: italic;
+  text-decoration: underline dotted 1px;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.22em;
+}
+.ph::before {
+  content: "Text folgt";
+  display: inline-block;
+  margin-right: 0.45em;
+  padding: 0.15em 0.45em;
+  border: 1px dashed currentColor;
+  border-radius: 4px;
+  font: 600 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-style: normal;
+  vertical-align: 0.35em;
+}

@@ -1,12 +1,22 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { T, TEXTE } from "../T";
 
 const COUNT = 3;
 
 // "Drei Szenen": beim Scrollen laufen die drei Szenen wie ein Karussell durch (Robert 31.10.).
 // Die Section ist 3 Bildschirmhöhen hoch, der Inhalt klebt; die Scrollposition wählt die Szene.
 // Unter 1100 px Breite: normale Stapelung ohne Karussell.
+// Kennzahl: „30+“ → 30 mit hochgestelltem Plus
+function Zahl({ n }: { n: number }) {
+  const z = TEXTE[`start.szenen.zahl${n}`].text;
+  const m = z.match(/^(.*?)(\+?)$/);
+  return (
+    <div className="b-num"><b className="b-d">{m?.[1]}{m?.[2] && <em>+</em>}</b><span><T k={`start.szenen.zahl${n}.label`} /></span></div>
+  );
+}
+
 export function ScenesCarousel() {
   const ref = useRef<HTMLElement>(null);
   const [i, setI] = useState(0);
@@ -48,14 +58,11 @@ export function ScenesCarousel() {
         <div className="b-grain" aria-hidden="true" />
         <div className="b-wrap b-story">
           <div className="b-sticky">
-            <span className="b-m b-kicker">Drei Szenen, eine Kasse</span>
-            <h2 className="b-d b-h2">Der Service läuft. Die Kasse auch.</h2>
-            <p className="b-lead">Kassenterminal, Handgerät und Backoffice greifen auf dieselben Artikel, Tische und offenen Beträge zu. Jede Buchung wird über die Cloud-TSE signiert.</p>
+            <span className="b-m b-kicker"><T k="start.szenen.kicker" /></span>
+            <h2 className="b-d b-h2"><T k="start.szenen.h2" /></h2>
+            <p className="b-lead"><T k="start.szenen.lead" /></p>
             <div className="b-nums">
-              <div className="b-num"><b className="b-d">0</b><span>Server im Betrieb</span></div>
-              <div className="b-num"><b className="b-d">7</b><span>Tage die Woche Support</span></div>
-              <div className="b-num"><b className="b-d">30<em>+</em></b><span>Jahre Kassen für die Gastronomie</span></div>
-              <div className="b-num"><b className="b-d">10.000<em>+</em></b><span>Installationen in Gastronomie und Hotellerie</span></div>
+              {[1, 2, 3, 4].map((n) => <Zahl key={n} n={n} />)}
             </div>
           </div>
           <div className="b-scene-col">
@@ -79,9 +86,9 @@ export function ScenesCarousel() {
                     </div>
                   </div>
                 </div>
-                <span className="b-m b-kicker">Am Tisch</span>
-                <h3 className="b-d">Tischplan und Gänge</h3>
-                <p>Räume nach Ihrem Grundriss, offene Beträge auf einen Blick. Gänge gehen an Küche und Bar. Rechnungen lassen sich nach Person oder Position splitten.</p>
+                <span className="b-m b-kicker"><T k="start.szene1.kicker" /></span>
+                <h3 className="b-d"><T k="start.szene1.titel" /></h3>
+                <p><T k="start.szene1.text" /></p>
               </div>
               <div className={`b-scene s2 ${cls(1)}`}>
                 <div className="b-stage" style={{ height: 400 }}>
@@ -95,9 +102,9 @@ export function ScenesCarousel() {
                     </div>
                   </div>
                 </div>
-                <span className="b-m b-kicker">Am Handgerät</span>
-                <h3 className="b-d">Handgerät mit Tap to Pay</h3>
-                <p>Bestellen und kassieren direkt am Tisch. Karte ans Gerät, Abwicklung über Adyen. Zertifiziert: Orderman 10, Orderman Magellan EASY, Google Pixel 9 und 10.</p>
+                <span className="b-m b-kicker"><T k="start.szene2.kicker" /></span>
+                <h3 className="b-d"><T k="start.szene2.titel" /></h3>
+                <p><T k="start.szene2.text" /></p>
               </div>
               <div className={`b-scene s3 ${cls(2)}`}>
                 <div className="b-stage" style={{ height: 230 }}>
@@ -109,9 +116,9 @@ export function ScenesCarousel() {
                     </div>
                   </div>
                 </div>
-                <span className="b-m b-kicker">Im Büro</span>
-                <h3 className="b-d">Auswertung im Browser</h3>
-                <p>Tagesabschluss, Berichte nach Tag, Artikel und Kellner, Rechte je Rolle. Im Browser, TSE-signiert, mit DSFinV-K-Export für den Steuerberater.</p>
+                <span className="b-m b-kicker"><T k="start.szene3.kicker" /></span>
+                <h3 className="b-d"><T k="start.szene3.titel" /></h3>
+                <p><T k="start.szene3.text" /></p>
               </div>
           </div>
         </div>

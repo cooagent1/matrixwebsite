@@ -35,44 +35,19 @@ export const QUOTES: Quote[] = [
   },
 ];
 
-export const LAW: { n: string; t: string; d: string }[] = [
-  { n: "01", t: "Cloud-TSE", d: "Matrix NXT und Matrix POS signieren jede Buchung über die Cloud-TSE von Fiskaly. Betriebe mit Hardware-TSE werden auf die Cloud-TSE umgestellt." },
-  { n: "02", t: "Belegausgabe", d: "Zu jedem Vorgang druckt die Kasse einen Beleg mit TSE-Signatur und Transaktionsnummer, wie es die KassenSichV verlangt." },
-  { n: "03", t: "DSFinV-K", d: "Der Export liefert die Kassendaten in dem Format, das Betriebsprüfung und Kassennachschau anfordern." },
-  { n: "04", t: "Meldepflicht", d: "Seit 2025 ist jede Kasse mit TSE über ELSTER zu melden. Matrix POS übermittelt über die ERiC-Schnittstelle der Deutschen Fiskal." },
-];
+// Kasse und Gesetz: Texte in texte.json (start.gesetzN.titel / .text)
+export const LAW = [1, 2, 3, 4].map((i) => ({ n: String(i).padStart(2, "0"), t: `start.gesetz${i}.titel`, d: `start.gesetz${i}.text` }));
 
 export type Faq = { q: string; a: string; link?: { href: string; label: string } };
 
-export const FAQ: Faq[] = [
-  {
-    q: "Welche Zahlarten nimmt Matrix PAY an?",
-    a: "Girocard, Kreditkarten, Apple Pay und Google Pay. Alle Zahlungen laufen in einer Payment-Abrechnung zusammen, im Dashboard sehen Sie jede Transaktion. Matrix PAY arbeitet an der Kasse, am Front Office und bei Online-Buchungen über Channelmanager oder Website.",
-    link: { href: "/pay", label: "Mehr zu PAY" },
-  },
-  {
-    q: "Wen rufe ich an, wenn das Kartenterminal ausfällt?",
-    a: "Die Matrix-Hotline unter +49 511 592938-0, 7 Tage die Woche. Kasse und Payment kommen von der Matrix POS GmbH, Störungen an Terminal und Kasse klären wir deshalb in einem Anruf.",
-    link: { href: "/support", label: "Support & Wartung" },
-  },
-  {
-    q: "Auf welchen Geräten läuft die mobile Kasse?",
-    a: "Matrix NEO läuft auf betriebseigenen Smartphones oder auf Orderman-Handhelds. Rechnungen gehen an Bluetooth- oder WLAN-Drucker, das Personal meldet sich per NFC-Transponder an. Matrix NXT ist für Orderman 10, Orderman Magellan EASY sowie Google Pixel 9 und 10 zertifiziert.",
-    link: { href: "/hardware", label: "Hardware" },
-  },
-  {
-    q: "Welche Geräte lassen sich an Matrix POS anschließen?",
-    a: "Waagen, Scanner, Kartenleser, Bondrucker und Kundendisplays. Hotelsoftware, Warenwirtschaft und Buchhaltung binden wir über Schnittstellen an.",
-    link: { href: "/schnittstellen", label: "Schnittstellen" },
-  },
-  {
-    q: "Wie melde ich meine Kasse beim Finanzamt?",
-    a: "Nach § 146a Abs. 4 AO ist jede Kasse mit TSE über ELSTER zu melden, bei Inbetriebnahme und Außerbetriebnahme jeweils innerhalb eines Monats. Für Matrix POS gibt es zwei Wege: die Übermittlung über die ERiC-Schnittstelle im Cloud-Portal der Deutschen Fiskal (per Softwareupdate) oder die manuelle Meldung im ELSTER-Formular. Eine Ausfüllhilfe erhalten Kunden über support@matrixpos.de.",
-    link: { href: "/kasse-und-gesetz", label: "Kasse und Gesetz" },
-  },
-  {
-    q: "Wie läuft die Fernwartung?",
-    a: "Über TeamViewer QuickSupport. Unser Support nennt Ihnen am Telefon die Downloadseite, Sie geben die angezeigte ID durch. Die Verbindung ist durchgehend verschlüsselt, mit RSA-Schlüsseltausch (2048 Bit) und AES-Sitzung (256 Bit).",
-    link: { href: "/fernwartung", label: "Fernwartung" },
-  },
+// FAQ: Frage und Antwort in texte.json (start.faqN.frage / .antwort), Links hier.
+const FAQ_LINKS: Faq["link"][] = [
+  { href: "/pay", label: "Mehr zu PAY" },
+  { href: "/support", label: "Support & Wartung" },
+  { href: "/hardware", label: "Hardware" },
+  { href: "/schnittstellen", label: "Schnittstellen" },
+  { href: "/kasse-und-gesetz", label: "Kasse und Gesetz" },
+  { href: "/fernwartung", label: "Fernwartung" },
 ];
+
+export const FAQ = FAQ_LINKS.map((link, i) => ({ q: `start.faq${i + 1}.frage`, a: `start.faq${i + 1}.antwort`, link }));

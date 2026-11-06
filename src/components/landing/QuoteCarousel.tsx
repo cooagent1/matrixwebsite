@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { QUOTES } from "./startseite-data";
+import { T } from "../T";
 
 function Chevron({ dir }: { dir: "l" | "r" }) {
   return (
@@ -32,7 +33,7 @@ export function QuoteCarousel() {
   return (
     <section className="b-qsec" aria-label="Kundenstimmen">
       <div className="b-wrap b-railhead">
-        <h2 className="b-d">Was Betriebe über Matrix sagen.</h2>
+        <h2 className="b-d"><T k="start.stimmen.h2" /></h2>
         <div className="b-qnav">
           <button type="button" onClick={() => go(-1)} aria-label="Vorherige Kundenstimme"><Chevron dir="l" /></button>
           <button type="button" onClick={() => go(1)} aria-label="Nächste Kundenstimme"><Chevron dir="r" /></button>

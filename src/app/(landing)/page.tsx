@@ -3,6 +3,7 @@ import { Landing } from "@/components/landing/Landing";
 import { pageMeta } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { FAQ } from "@/components/landing/startseite-data";
+import { txt } from "@/components/T";
 
 export const metadata: Metadata = pageMeta({
   title: "Kassensysteme für die Gastronomie aus Hannover | Matrix POS",
@@ -14,7 +15,7 @@ export const metadata: Metadata = pageMeta({
 export default function Home() {
   const faq = {
     "@type": "FAQPage",
-    mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+    mainEntity: FAQ.map((f) => ({ "@type": "Question", name: txt(f.q), acceptedAnswer: { "@type": "Answer", text: txt(f.a) } })),
   };
   return (
     <>
