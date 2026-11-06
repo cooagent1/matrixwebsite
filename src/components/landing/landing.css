@@ -560,3 +560,15 @@
 .lp .b-demo-in{gap:20px}
 @media (max-width:1024px){.lp .b-scene-col{grid-template-columns:1fr}.lp .b-scene-col .b-stage{zoom:.72;height:300px !important}.lp .b-scene.s2 .b-stage{height:400px !important}.lp .b-scene.s3 .b-stage{height:230px !important}}
 @media (max-width:720px){.lp .b-hero{min-height:calc(100svh - 8px)}.lp .b-scene-col .b-stage{zoom:.56}.lp .b-scenes-in{padding:56px 0}.lp .b-railsec{padding:56px 0 40px}.lp .b-hand{padding:48px 0}.lp .b-famsec{padding:16px 0 56px}.lp .b-qsec,.lp .sub-sec,.lp .b-demo{padding:56px 0}}
+/* Feinschliff 06.11.: Branchen-Karte, Produktkarten, Demo-Headline */
+.lp .b-branchen-body{padding-top:56px;padding-bottom:56px}
+.lp .b-seg-l{min-height:400px}
+@media (min-width:1101px){.lp .b-fam{height:380px}}
+.lp .b-fam a{padding:28px}
+.lp .b-feat{padding:18px 22px}
+.lp .b-feats{gap:10px}
+.lp .b-feat .t small{font-size:15px;line-height:1.45}
+.lp .b-feats .b-btn{height:44px;margin-top:0}
+.lp .b-demo h2{font-size:clamp(40px,4.4vw,64px);max-width:none}
+@media (max-width:1100px){.lp .b-fam a{min-height:220px}}
+@media (max-width:720px){.lp .b-seg-l{min-height:320px}.lp .b-branchen-body{padding-top:40px;padding-bottom:40px}}
