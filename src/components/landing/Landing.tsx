@@ -49,9 +49,9 @@ export function Landing() {
         <LpHeader />
 
         <div className="b-wrap b-hero-body">
-          <div className="b-rise b-m b-kicker" style={{ animationDelay: "0s" }}>Die Gastrokasse aus Hannover</div>
+          <div className="b-rise b-m b-kicker" style={{ animationDelay: "0s" }}>Matrix NXT · Cloud-Kasse</div>
           <h1 className="b-d b-h1">
-            Weniger Kasse im Kopf.<br /><span className="b-grad">Mehr Gastgeber.</span>
+            Gastro-Kassen aus Hannover.<br /><span className="b-grad">Seit 30 Jahren.</span>
           </h1>
           <div className="b-rise b-hero-row" style={{ animationDelay: ".1s" }}>
             <p className="b-hero-p">Läuft im Browser und auf Android, ohne Server im Betrieb. Tischplan, Handgerät, Kartenzahlung und TSE sind drin. Support von Leuten, die selbst in der Gastronomie gearbeitet haben.</p>
