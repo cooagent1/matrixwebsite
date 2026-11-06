@@ -1,44 +1,72 @@
+import Link from "next/link";
 import { getPartners, type Partner } from "@/lib/cms";
 
 const site = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
 const tel = (p: string) => `tel:${p.replace(/[^\d+]/g, "")}`;
+const LAND: Record<Partner["country"], string> = { DE: "Deutschland", AT: "Österreich", CH: "Schweiz" };
+const ORDER: Record<Partner["country"], number> = { DE: 0, AT: 1, CH: 2 };
 
-// Vertriebspartner nach Region, gepflegt in Supabase (Tabelle partners).
-export async function PartnerDirectory() {
+/** Deutschland nach Postleitzahl, danach Österreich und Schweiz. */
+function sorted(list: Partner[]): Partner[] {
+  return [...list].sort(
+    (a, b) => ORDER[a.country] - ORDER[b.country] || (a.postal_code ?? "").localeCompare(b.postal_code ?? "") || a.name.localeCompare(b.name, "de"),
+  );
+}
+
+// ANNAHME (Nachtpaket 07.11.): Verzeichnis auf eigener Seite /partner/verzeichnis, Daten unverändert aus Supabase (Tabelle partners).
+// Auf /partner steht nur ein Teaser mit Anzahl und Link.
+export async function PartnerTeaser() {
   const partners = await getPartners();
-  if (!partners.length) return null;
-  const groups = new Map<string, Partner[]>();
-  for (const p of partners) groups.set(p.region, [...(groups.get(p.region) ?? []), p]);
+  const lands = [...new Set(sorted(partners).map((p) => LAND[p.country]))];
+  const where = lands.length > 1 ? `${lands.slice(0, -1).join(", ")} und ${lands[lands.length - 1]}` : lands[0];
   return (
     <section id="haendler" className="sub-sec alt">
+      <div className="b-wrap pd-teaser">
+        <div className="pt-col">
+          <span className="b-m b-kicker">Vertriebspartner</span>
+          <h2 className="b-d sub-h2">Matrix in Ihrer Nähe.</h2>
+          <p className="sub-p">
+            {partners.length > 0
+              ? `${partners.length} Vertriebspartner in ${where} installieren Matrix vor Ort und übernehmen den First-Level-Support.`
+              : "Vertriebspartner installieren Matrix vor Ort und übernehmen den First-Level-Support."}
+          </p>
+        </div>
+        <Link href="/partner/verzeichnis" className="b-btn b-btn-acc">Zum Partnerverzeichnis</Link>
+      </div>
+    </section>
+  );
+}
+
+// Vertriebspartner als Liste mit PLZ-Spalte, gepflegt in Supabase (Tabelle partners).
+export async function PartnerDirectory() {
+  const partners = sorted(await getPartners());
+  if (!partners.length)
+    return (
+      <section className="sub-sec">
+        <div className="b-wrap"><p className="sub-p">Das Verzeichnis wird gerade aktualisiert. Fragen Sie uns nach einem Partner in Ihrer Region: <a href="tel:+495115929380" className="link">+49 511 592938-0</a>.</p></div>
+      </section>
+    );
+  return (
+    <section id="liste" className="sub-sec">
       <div className="b-wrap">
-        <span className="b-m b-kicker">Vertriebspartner</span>
-        <h2 className="b-d sub-h2">Matrix in Ihrer Nähe.</h2>
-        <p className="sub-p" style={{ maxWidth: 720 }}>
-          Vertriebspartner installieren Matrix vor Ort und übernehmen den First-Level-Support. Sortiert nach Postleitzahl in Deutschland, dazu Österreich und die Schweiz.
-        </p>
-        <div className="pd-groups">
-          {[...groups].map(([region, list]) => (
-            <div key={region} className="pd-group">
-              <h3 className="b-m pd-region">{region}</h3>
-              <ul className="pd-list">
-                {list.map((p) => (
-                  <li key={p.id} className="sub-card pd-card">
-                    <h4 className="b-d">{p.name}</h4>
-                    <p className="pd-addr">
-                      {p.street && <>{p.street}<br /></>}
-                      {[p.postal_code, p.city].filter(Boolean).join(" ")}
-                      {p.country !== "DE" && <>, {p.country === "AT" ? "Österreich" : "Schweiz"}</>}
-                    </p>
-                    {p.contact_person && <p className="pd-contact">{p.contact_person}</p>}
-                    <p className="pd-links">
-                      {p.phone && <a href={tel(p.phone)}>{p.phone}</a>}
-                      {p.email && <a href={`mailto:${p.email}`}>{p.email}</a>}
-                      {p.website && <a href={p.website} target="_blank" rel="noopener noreferrer">{site(p.website)} ↗</a>}
-                    </p>
-                  </li>
-                ))}
-              </ul>
+        <div className="pd-table" role="table" aria-label="Vertriebspartner nach Postleitzahl">
+          <div className="pd-row pd-head" role="row">
+            <span role="columnheader">PLZ</span><span role="columnheader">Partner</span><span role="columnheader">Adresse</span><span role="columnheader">Kontakt</span>
+          </div>
+          {partners.map((p) => (
+            <div key={p.id} className="pd-row" role="row">
+              <span role="cell" className="b-m pd-plz">{p.country !== "DE" && <small>{p.country} </small>}{p.postal_code}</span>
+              <span role="cell" className="pd-name"><b className="b-d">{p.name}</b>{p.contact_person && <small>{p.contact_person}</small>}</span>
+              <span role="cell" className="pd-addr">
+                {p.street && <>{p.street}<br /></>}
+                {[p.postal_code, p.city].filter(Boolean).join(" ")}
+                {p.country !== "DE" && <>, {LAND[p.country]}</>}
+              </span>
+              <span role="cell" className="pd-links">
+                {p.phone && <a href={tel(p.phone)}>{p.phone}</a>}
+                {p.email && <a href={`mailto:${p.email}`}>{p.email}</a>}
+                {p.website && <a href={p.website} target="_blank" rel="noopener noreferrer">{site(p.website)} ↗</a>}
+              </span>
             </div>
           ))}
         </div>

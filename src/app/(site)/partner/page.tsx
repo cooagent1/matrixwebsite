@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMeta } from "@/lib/seo";
 import { PartnerForm } from "@/components/partner/PartnerForm";
-import { PartnerDirectory } from "@/components/cms/PartnerDirectory";
+import { PartnerTeaser } from "@/components/cms/PartnerDirectory";
 
 // Partnerliste kommt aus Supabase; alle 5 Minuten neu.
 export const revalidate = 300;
@@ -44,14 +44,14 @@ export default function PartnerPage() {
                 <div><dt>Das bringen Sie</dt><dd>Kundenzugang in der Gastronomie, Installation vor Ort, First-Level-Support, Beratung zu Hardware und Payment.</dd></div>
                 <div><dt>Das bringen wir</dt><dd>Wir schulen Sie auf Matrix NXT und PAY und stellen einen Demo-Zugang. Der Second-Level-Support kommt aus Hannover. Partnerkonditionen auf Anfrage.</dd></div>
                 <div><dt>So läuft es</dt><dd>Zu jeder Kasse können Sie Matrix PAY mitverkaufen. Die Terminals installieren Sie, den Payment-Support übernimmt Matrix.</dd></div>
-                <div><dt>Nennung</dt><dd>Eintrag im <a href="#haendler" className="link">Partnerverzeichnis</a> auf matrixpos.de.</dd></div>
+                <div><dt>Nennung</dt><dd>Eintrag im <Link href="/partner/verzeichnis" className="link">Partnerverzeichnis</Link> auf matrixpos.de.</dd></div>
               </dl>
             </div>
           </div>
         </div>
       </section>
 
-      <PartnerDirectory />
+      <PartnerTeaser />
 
       <section id="technologie" className="pt-sec" style={{ paddingBottom: 96 }}>
         <div className="b-wrap">
@@ -100,18 +100,10 @@ export default function PartnerPage() {
               </div>
             </div>
 
-            <div className="pt-rows">
-              <div className="pt-row head"><b /><span className="b-m pt-lbl c-int">Integration</span><span className="b-m pt-lbl c-schn">Schnittstelle</span></div>
-              <div className="pt-row"><b>Wo läuft es</b><span>im Matrix-Produkt</span><span>in Ihrem System</span></div>
-              <div className="pt-row"><b>Wer verkauft es</b><span>Matrix und die Vertriebspartner</span><span>Sie, an gemeinsame Kunden</span></div>
-              <div className="pt-row"><b>Technik auf Ihrer Seite</b><span>Produkt nach Matrix-Vorgabe</span><span>Anbindung an Ihrem System</span></div>
-              <div className="pt-row"><b>Matrix liefert</b><span>Zertifizierung, Einbau, Vertrieb</span><span>Dokumentation, Testumgebung</span></div>
-              <div className="pt-row"><b>Nennung</b><span>auf den Produktseiten</span><span>in der Schnittstellenliste</span></div>
-              <div className="pt-row"><b>Konditionen</b><span>auf Anfrage</span><span>auf Anfrage</span></div>
-            </div>
+            {/* ANNAHME (Nachtpaket 07.11.): Vergleichstabelle Integration/Schnittstelle entfernt, die zwei Karten darüber sagen dasselbe. */}
 
             <div className="pt-list">
-              <span className="b-m pt-lbl" style={{ color: "#BDBDBD" }}>Schnittstellen heute</span>
+              <span className="b-m pt-lbl">Schnittstellen heute</span>
               <div className="b-devs">
                 {["protel", "ASA Hotel", "Oracle Opera", "Guestline", "DATEV", "KOST", "RESERViSiON", "Flixorder"].map((n) => (
                   <span key={n} className="b-m b-dev">{n}</span>

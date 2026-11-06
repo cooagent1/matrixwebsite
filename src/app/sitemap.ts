@@ -11,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const used = tags.filter((t) => articles.some((a) => a.tags.some((x) => x.slug === t.slug)));
   return [
     ...pages,
+    { url: `${base}/partner/verzeichnis` },
     { url: `${base}/ratgeber` },
     ...used.map((t) => ({ url: `${base}/ratgeber/thema/${t.slug}` })),
     ...articles.map((a) => ({ url: `${base}/ratgeber/${a.slug}`, lastModified: a.updated_at })),

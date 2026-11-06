@@ -719,3 +719,23 @@
 @media (max-width:1023px){.lp .sub-split{grid-template-columns:1fr}.lp .sub-split-aside{position:static;max-width:none}.lp .sub-ways{grid-template-columns:1fr}}
 @media (max-width:720px){.lp .sub-contact{padding:24px;border-radius:24px}.lp .sub-contact dl div{grid-template-columns:1fr;gap:2px}.lp .sub-ways li{padding:16px}}
 @media (max-width:720px){.lp .sub-ways{gap:8px}.lp .sub-ways li{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;padding:12px 12px 12px 16px;border-radius:16px}.lp .sub-ways li span{display:none}.lp .sub-ways b{font-size:16px}.lp .sub-ways .btn{margin:0;flex:0 0 auto;padding:0 14px;font-size:14px}}
+/* /partner: Teaser aufs Verzeichnis, Technologiepartner-Karten lesbar */
+.lp .sub-sec .b-wrap.pd-teaser{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.lp .pd-teaser .pt-col{max-width:760px}
+.lp .pt-sub,.lp .sub-sec.alt .pt-sub{background:#fff;border-color:rgba(36,36,36,0.12)}
+.lp .pt-sub p{color:var(--lp-text2)}
+.lp .pt-note{color:var(--lp-mute)}
+.lp .pt-list .pt-lbl{color:var(--lp-mute)}
+/* /partner/verzeichnis: Liste mit PLZ-Spalte */
+.lp .pd-table{display:flex;flex-direction:column;border-top:1px solid var(--lp-line)}
+.lp .pd-row{display:grid;grid-template-columns:90px minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr);gap:24px;padding:18px 0;border-bottom:1px solid var(--lp-line);align-items:start;font-size:15px;line-height:1.5}
+.lp .pd-head{padding:12px 0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--lp-mute);font-weight:700}
+.lp .pd-plz{font-size:20px;color:var(--lp-ink)}
+.lp .pd-plz small{font-size:12px;color:var(--lp-mute)}
+.lp .pd-name b{display:block;font-size:18px;color:var(--lp-ink)}
+.lp .pd-name small{display:block;font-size:14px;color:var(--lp-mute)}
+.lp .pd-row .pd-addr{color:var(--lp-text2)}
+.lp .pd-row .pd-links{margin:0;display:flex;flex-direction:column;gap:2px}
+@media (max-width:900px){.lp .pd-head{display:none}.lp .pd-row{grid-template-columns:72px minmax(0,1fr);gap:4px 16px}.lp .pd-row .pd-plz{grid-row:span 3}.lp .pd-row .pd-addr,.lp .pd-row .pd-links{grid-column:2}}
+.lp .pt-block .c-int{color:#8A6700}.lp .pt-block .c-schn{color:#2F7A1C}
+.lp .pt-product .c-int{color:#FFC938}
