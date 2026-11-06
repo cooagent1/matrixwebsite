@@ -41,12 +41,6 @@ export function BranchenTabs() {
   const seg = SEGMENTS[i];
   return (
     <section id="branchen" className="b-branchen" aria-label="Branchen">
-      {SEGMENTS.map((s, k) => (
-        // Alle Bilder im DOM, damit der Wechsel ohne Nachladen passiert.
-        <Image key={s.slug} src={s.img} alt={k === i ? `${s.name}: ${s.title}` : ""} aria-hidden={k !== i} fill sizes="100vw" quality={70} className="b-branchen-img" style={{ opacity: k === i ? 1 : 0, transition: "opacity .5s" }} loading={k === 0 ? "eager" : "lazy"} />
-      ))}
-      <div className="b-branchen-shade" aria-hidden="true" />
-      <div className="b-grain" aria-hidden="true" />
       <div className="b-wrap b-branchen-body">
         <div className="b-tabs" role="tablist" aria-label="Betriebsart wählen">
           {SEGMENTS.map((s, k) => (
@@ -57,9 +51,13 @@ export function BranchenTabs() {
         </div>
         <div className="b-seg" role="tabpanel">
           <div className="b-seg-l">
+          {SEGMENTS.map((s, k) => (
+            // Alle Bilder im DOM, damit der Wechsel ohne Nachladen passiert.
+            <Image key={s.slug} src={s.img} alt={k === i ? `${s.name}: ${s.title}` : ""} aria-hidden={k !== i} fill sizes="(max-width: 1100px) 100vw, 60vw" quality={70} className="b-branchen-img" style={{ opacity: k === i ? 1 : 0, transition: "opacity .5s" }} loading={k === 0 ? "eager" : "lazy"} />
+          ))}
+          <div className="b-branchen-shade" aria-hidden="true" />
             <span className="b-m b-kicker">{seg.kicker}</span>
             <h2 className="b-d b-seg-h">{seg.title}</h2>
-            <Link href={`/demo?branche=${seg.slug}`} className="b-btn b-btn-acc">Demo buchen</Link>
           </div>
           <div className="b-feats">
             {seg.feats.map((f) => (
@@ -73,6 +71,7 @@ export function BranchenTabs() {
                 <span key={d} className="b-m b-dev">{d}</span>
               ))}
             </div>
+            <Link href={`/demo?branche=${seg.slug}`} className="b-btn b-btn-acc">Demo buchen</Link>
           </div>
         </div>
       </div>

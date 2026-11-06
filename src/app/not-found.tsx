@@ -1,15 +1,11 @@
 import Link from "next/link";
-import { Bricolage_Grotesque, Inter, JetBrains_Mono } from "next/font/google";
 import { LpFooter, LpHeader } from "@/components/landing/Chrome";
 import "@/components/landing/landing.css";
 
-const bricolage = Bricolage_Grotesque({ subsets: ["latin"], axes: ["opsz"], variable: "--font-bricolage" });
-const jetbrains = JetBrains_Mono({ subsets: ["latin"], weight: ["500"], variable: "--font-jetbrains" });
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-inter" });
 
 export default function NotFound() {
   return (
-    <div className={`lp lp-sub ${bricolage.variable} ${jetbrains.variable} ${inter.variable}`}>
+    <div className="lp lp-sub">
       <LpHeader />
       <main className="flex-1">
         <section className="sub-hero">
