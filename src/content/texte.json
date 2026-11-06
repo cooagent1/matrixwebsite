@@ -54,28 +54,6 @@
     "entwurf": "Kassenterminal, Handgerät und Backoffice greifen auf dieselben Artikel, Tische und offenen Beträge zu. Jede Buchung wird über die Cloud-TSE signiert.",
     "hinweis": ""
   },
-  "start.szenen.zahl1": {
-    "seite": "Startseite",
-    "bereich": "Drei Szenen",
-    "element": "Kennzahl 1: Zahl",
-    "status": "fest",
-    "max": 8,
-    "brief": "Kennzahl",
-    "text": "0",
-    "entwurf": "",
-    "hinweis": "bitte bestätigen"
-  },
-  "start.szenen.zahl1.label": {
-    "seite": "Startseite",
-    "bereich": "Drei Szenen",
-    "element": "Kennzahl 1: Beschriftung",
-    "status": "fest",
-    "max": 45,
-    "brief": "Beschriftung der Kennzahl",
-    "text": "Server im Betrieb",
-    "entwurf": "",
-    "hinweis": ""
-  },
   "start.szenen.zahl2": {
     "seite": "Startseite",
     "bereich": "Drei Szenen",
