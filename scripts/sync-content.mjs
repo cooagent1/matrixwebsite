@@ -16,7 +16,7 @@ const PAGES = [
   ["kassensysteme/pos.md", "kassensysteme/pos"],
   ["pay.md", "pay"],
   ["schnittstellen.md", "schnittstellen"],
-  ["industries.md", "industries"],
+  ["branchen.md", "branchen"],
   ["support.md", "support"],
   ["faq.md", "faq"],
   ["ratgeber.md", "ratgeber"],

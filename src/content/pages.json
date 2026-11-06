@@ -166,13 +166,13 @@
      {
       "type": "list",
       "items": [
-       "Restaurant: Tischplan, Gänge, Splitten → /industries#restaurant",
-       "Hotel: Umsätze aufs Zimmer, Hotelsoftware → /industries#hotel",
-       "Bar & Café: Schnellwahl, Theke und Terrasse → /industries#bar-cafe",
-       "Biergarten & Terrasse: Handgerät, Pfand → /industries#aussengastronomie",
-       "Freizeitpark: Viele Outlets, ein Backoffice → /industries#freizeitpark",
-       "Food Court: Mehrere Stationen, Selbstbedienung → /industries#freizeitpark",
-       "Systemgastronomie: Zentrale Stammdaten, Filialen → /industries#systemgastronomie"
+       "Restaurant: Tischplan, Gänge, Splitten → /branchen#restaurant",
+       "Hotel: Umsätze aufs Zimmer, Hotelsoftware → /branchen#hotel",
+       "Bar & Café: Schnellwahl, Theke und Terrasse → /branchen#bar-cafe",
+       "Biergarten & Terrasse: Handgerät, Pfand → /branchen#aussengastronomie",
+       "Freizeitpark: Viele Outlets, ein Backoffice → /branchen#freizeitpark",
+       "Food Court: Mehrere Stationen, Selbstbedienung → /branchen#freizeitpark",
+       "Systemgastronomie: Zentrale Stammdaten, Filialen → /branchen#systemgastronomie"
       ]
      }
     ]
@@ -1506,7 +1506,7 @@
   "draft": false
  },
  {
-  "slug": "industries",
+  "slug": "branchen",
   "title": "Branchen",
   "metaTitle": "Kassensysteme nach Betriebsart: Restaurant, Hotel, Bar, Biergarten, Freizeitpark | Matrix POS",
   "description": "So arbeitet Matrix in Restaurant, Hotel, Bar und Café, Biergarten, Freizeitpark, Food Court und Systemgastronomie: Gangsteuerung, Zimmerbuchung, Handgerät, Kiosk.",

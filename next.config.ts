@@ -16,7 +16,7 @@ const OLD_TO_NEW: [string, string][] = [
   ["/matrix-pos", "/kassensysteme/pos"],
   ["/matrix-pay", "/pay"],
   ["/pos/pay", "/pay"],
-  ["/branchen/freizeitpark-foodcourt", "/industries#freizeitpark"],
+  ["/branchen/freizeitpark-foodcourt", "/branchen#freizeitpark"],
   // Service und Unternehmen
   ["/fernwartung-teamviewer", "/support#fernwartung"],
   ["/uber-uns", "/ueber-uns"],
@@ -70,9 +70,9 @@ const OLD_TO_NEW: [string, string][] = [
   ["/kasse-und-gesetz", "/faq#gesetz"],
   ["/referenzen", "/ueber-uns"],
   ["/empfehlen", "/"],
-  ["/branchen", "/industries"],
-  ["/branchen/foodcourt", "/industries#freizeitpark"],
-  ["/branchen/:slug", "/industries#:slug"],
+  ["/branchen/foodcourt", "/branchen#freizeitpark"],
+  ["/branchen/:slug", "/branchen#:slug"],
+  ["/industries", "/branchen"],
   ["/wissen", "/ratgeber"],
   // Social-Links der alten Seite
   ["/website/social/linkedin", "https://www.linkedin.com/company/matrix-pos-gmbh/"],

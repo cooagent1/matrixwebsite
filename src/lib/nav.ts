@@ -15,7 +15,7 @@ export const NAV: NavGroup[] = [
       { label: "Schnittstellen", href: "/schnittstellen" },
     ],
   },
-  { label: "Branchen", href: "/industries" },
+  { label: "Branchen", href: "/branchen" },
   {
     label: "Service",
     children: [
@@ -47,7 +47,7 @@ export const LABELS: Record<string, string> = {
   "/kassensysteme/pos": "Matrix POS",
   "/pay": "Matrix PAY",
   "/schnittstellen": "Schnittstellen",
-  "/industries": "Branchen",
+  "/branchen": "Branchen",
   "/support": "Support & Wartung",
   "/faq": "Häufige Fragen",
   "/ratgeber": "Ratgeber",
@@ -66,7 +66,7 @@ export const FOOTER: { title: string; items: NavItem[] }[] = [
       { label: "Matrix POS", href: "/kassensysteme/pos" },
       { label: "Matrix PAY", href: "/pay" },
       { label: "Schnittstellen", href: "/schnittstellen" },
-      { label: "Branchen", href: "/industries" },
+      { label: "Branchen", href: "/branchen" },
     ],
   },
   {
