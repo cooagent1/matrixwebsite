@@ -590,3 +590,7 @@
 /* Zahlenleiste: je Spalte zentriert (Robert 06.11.) */
 .lp .b-zahlen .b-num{align-items:center;text-align:center}
 .lp .b-zahlen .b-num span{margin:0 auto}
+/* Mobil-Durchlauf 06.11.: Branchen einspaltig, Produktkarten und Gesetz-Karten kompakter */
+@media (max-width:900px){.lp .b-seg{grid-template-columns:1fr}.lp .b-seg-l{min-height:360px}.lp .b-seg-h{font-size:clamp(28px,6vw,40px)}}
+@media (max-width:1100px){.lp .b-fam a{min-height:150px;padding:24px}}
+@media (max-width:720px){.lp .sub-card{padding:20px}.lp .sub-card .n{font-size:28px}.lp .b-zahlen .b-nums{padding:24px 0}.lp .b-seg-l{min-height:300px;padding:24px}}
