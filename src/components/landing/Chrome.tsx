@@ -1,7 +1,7 @@
 import { ConsentLink } from "@/components/Consent";
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { NAV, SUPPORT_PORTAL } from "@/lib/nav";
+import { NAV, QUICK, SUPPORT_PORTAL } from "@/lib/nav";
 
 // Gemeinsamer Rahmen aller Seiten im A2-Design: Menü-Pille oben links, schlanker Footer.
 export function LpHeader() {
@@ -16,20 +16,27 @@ export function LpHeader() {
               </svg>
             </summary>
             <nav className="b-menu" aria-label="Hauptnavigation">
-              {NAV.map((g) => (
-                <div key={g.label}>
-                  <h4 className="b-m">{g.label}</h4>
-                  {g.href && !g.children && <Link href={g.href}>{g.label}</Link>}
-                  {g.children?.map((c) => (
-                    <Link key={c.href} href={c.href}>{c.label}</Link>
-                  ))}
-                </div>
-              ))}
-              <div>
-                <h4 className="b-m">Direkt</h4>
-                <Link href="/demo">Demo buchen</Link>
-                <a href={SUPPORT_PORTAL} target="_blank" rel="noopener noreferrer">Supportportal</a>
-                <Link href="/partner">Partner werden</Link>
+              <div className="b-menu-grid">
+                {NAV.map((g) => (
+                  <div key={g.label} className={g.label === "Lösungen" ? "b-menu-col b-menu-main" : "b-menu-col"}>
+                    <h4 className="b-m">{g.label}</h4>
+                    {g.children?.map((c) => (
+                      <Link key={c.href} href={c.href}>
+                        {c.label}
+                        {c.hint && <small>{c.hint}</small>}
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <div className="b-menu-foot">
+                {QUICK.map((q, k) =>
+                  q.external ? (
+                    <a key={q.href} href={q.href} target="_blank" rel="noopener noreferrer">{q.label} ↗</a>
+                  ) : (
+                    <Link key={q.href} href={q.href} className={k === 0 ? "b-menu-cta" : ""}>{q.label}</Link>
+                  ),
+                )}
               </div>
             </nav>
           </details>

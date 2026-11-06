@@ -4,18 +4,15 @@ export type NavGroup = { label: string; href?: string; children?: NavItem[] };
 export const SUPPORT_PORTAL = "https://support.matrixpos.de/help";
 
 export const NAV: NavGroup[] = [
-  { label: "Matrix NXT", href: "/nxt" },
   {
-    label: "Matrix POS",
-    href: "/pos",
+    label: "Lösungen",
     children: [
-      { label: "Matrix POS", href: "/pos", hint: "Stationär, bewährt, erweiterbar" },
-      { label: "NEO", href: "/pos/neo", hint: "Mobil kassieren" },
-      { label: "CONGA", href: "/pos/conga", hint: "Dienstplan und Zeiterfassung" },
+      { label: "Matrix NXT", href: "/nxt", hint: "Cloud-Kasse, im Browser und auf Android" },
+      { label: "Matrix POS", href: "/pos", hint: "Stationäre Kasse, mit NEO und CONGA" },
+      { label: "Matrix PAY", href: "/pay", hint: "Bezahlen: Terminals und Tap to Pay" },
       { label: "POS oder NXT?", href: "/kassensysteme", hint: "Die Systeme im Vergleich" },
     ],
   },
-  { label: "Matrix PAY", href: "/pay" },
   {
     label: "Branchen",
     href: "/branchen",
@@ -33,22 +30,29 @@ export const NAV: NavGroup[] = [
     label: "Service",
     children: [
       { label: "Support & Wartung", href: "/support" },
-      { label: "Fernwartung", href: "/fernwartung" },
       { label: "Hardware", href: "/hardware" },
       { label: "Schnittstellen", href: "/schnittstellen" },
       { label: "Kasse & Gesetz", href: "/kasse-und-gesetz" },
       { label: "Häufige Fragen", href: "/faq" },
     ],
   },
-  { label: "Partner", href: "/partner" },
   {
     label: "Unternehmen",
     children: [
       { label: "Über uns", href: "/ueber-uns" },
       { label: "Referenzen", href: "/referenzen" },
+      { label: "Partner", href: "/partner" },
       { label: "Jobs", href: "/jobs" },
     ],
   },
+];
+
+// Schnellzugriff unter dem Menü (Robert 6.11.: Produkte unter Lösungen, weniger Punkte, Fernwartung nur über /support)
+export const QUICK: NavItem[] = [
+  { label: "Demo buchen", href: "/demo" },
+  { label: "Rückruf vereinbaren", href: "/demo#rueckruf" },
+  { label: "Supportportal", href: SUPPORT_PORTAL, external: true },
+  { label: "Partner werden", href: "/partner#anfrage" },
 ];
 
 // Linktexte für Querverweise im Fließtext ("→ /pfad")
