@@ -477,3 +477,20 @@
 .lp .b-devs{padding-top:4px}
 .lp .b-feats .b-btn{align-self:flex-start;margin-top:4px;height:52px}
 @media (max-width:720px){.lp .b-hero{margin:8px 8px 0;border-radius:24px}.lp .b-hand,.lp .b-demo,.lp .sub-close{margin:0 8px 8px;border-radius:24px}.lp .b-hand-in{grid-template-columns:1fr}.lp .b-big{font-size:52px}.lp .b-seg-l{min-height:360px}.lp .b-seg-h{font-size:32px}}
+
+/* Kundenstimmen-Karussell (Startseite) */
+.lp .b-qsec{padding:120px 0 96px;overflow:hidden;border-top:1px solid var(--lp-line)}
+.lp .b-qnav{display:flex;gap:10px}
+.lp .b-qnav button{width:52px;height:52px;border-radius:999px;border:1px solid var(--lp-line);background:var(--lp-surface);color:var(--lp-ink);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s,background .2s}
+.lp .b-qnav button:hover{border-color:var(--lp-acc)}
+.lp .b-qnav button:focus-visible,.lp .b-qrail:focus-visible{outline:2px solid var(--lp-acc);outline-offset:3px}
+.lp .b-qcard{flex:0 0 min(520px,82vw);scroll-snap-align:start;margin:0;border-radius:28px;background:var(--lp-surface);border:1px solid var(--lp-line);padding:32px;box-sizing:border-box;min-height:360px;display:flex;flex-direction:column;gap:18px}
+.lp .b-qmark-s{color:var(--lp-acc);flex:0 0 auto}
+.lp .b-qcard blockquote{margin:0;font-size:22px;line-height:1.4;font-weight:500;color:var(--lp-ink);flex:1}
+.lp .b-qcard figcaption{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.lp .b-qcard figcaption div{display:flex;flex-direction:column;gap:2px}
+.lp .b-qcard figcaption small{font-size:14px;color:var(--lp-mute)}
+.lp .b-qtag{font-size:12px;padding:6px 12px;border-radius:999px;border:1px solid var(--lp-line);color:var(--lp-mute);white-space:nowrap}
+.lp .b-law-grid{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1100px){.lp .b-law-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:720px){.lp .b-law-grid{grid-template-columns:1fr}.lp .b-qsec{padding:80px 0 64px}.lp .b-qcard blockquote{font-size:19px}.lp .b-qnav button{width:44px;height:44px}}

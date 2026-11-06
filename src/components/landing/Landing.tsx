@@ -4,6 +4,8 @@ import Link from "next/link";
 import { LpFooter, LpHeader } from "./Chrome";
 import { BranchenTabs } from "./BranchenTabs";
 import { ScenesCarousel } from "./ScenesCarousel";
+import { QuoteCarousel } from "./QuoteCarousel";
+import { FAQ, LAW } from "./startseite-data";
 
 const LOGOS = [
   ["atlantic-hotels", "Atlantic Hotels", ""],
@@ -113,13 +115,37 @@ export function Landing() {
         </div>
       </section>
 
-      <section className="b-quote" aria-label="Referenz">
-        <div className="b-wrap b-quote-in">
-          <span className="b-d b-qmark" aria-hidden="true">„</span>
-          <figure>
-            <blockquote className="b-d">Matrix Payment läuft reibungslos mit unserer Hotelsoftware! Ein großer Vorteil: es gibt nur noch eine Payment-Abrechnung und alle Zahlungen sind in einer einzigen Payment Applikation abgebildet.</blockquote>
-            <figcaption><span className="b-avatar">[Foto]</span><div><b>Florian Sbrizzai</b><small>Stellv. Direktor, Parkhotel Laim, München</small></div></figcaption>
-          </figure>
+      <QuoteCarousel />
+
+      <section className="sub-sec b-law" aria-label="Kasse und Gesetz">
+        <div className="b-wrap">
+          <span className="b-m b-kicker">Kasse und Gesetz</span>
+          <h2 className="b-d sub-h2">Was das Finanzamt verlangt.</h2>
+          <ul className="sub-grid b-law-grid">
+            {LAW.map((c) => (
+              <li key={c.n} className="sub-card"><span className="n b-d">{c.n}</span><h3 className="b-d">{c.t}</h3><p>{c.d}</p></li>
+            ))}
+          </ul>
+          <p className="sub-p">In Österreich signiert Matrix NXT nach RKSV. <Link href="/kasse-und-gesetz" className="link">Mehr zu Kasse und Gesetz</Link></p>
+        </div>
+      </section>
+
+      <section id="faq" className="sub-sec" aria-label="Häufige Fragen">
+        <div className="b-wrap">
+          <span className="b-m b-kicker">Häufige Fragen</span>
+          <h2 className="b-d sub-h2">Fragen aus dem Betrieb.</h2>
+          <div className="sub-faq">
+            {FAQ.map((f) => (
+              <details key={f.q}>
+                <summary className="b-d">{f.q}<svg className="sub-faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+                <div>
+                  <p>{f.a}</p>
+                  {f.link && <p><Link href={f.link.href} className="link">{f.link.label}</Link></p>}
+                </div>
+              </details>
+            ))}
+          </div>
+          <p className="sub-p"><Link href="/faq" className="link">Alle Fragen</Link></p>
         </div>
       </section>
 
