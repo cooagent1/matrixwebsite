@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import { getArticles, getTags } from "@/lib/ratgeber";
 import { ArticleGrid, RatgeberClose, TagChips } from "@/components/cms/Ratgeber";
+import { RatgeberKurz } from "@/components/cms/RatgeberKurz";
 
 // Ratgeber aus Supabase (articles, authors, tags), alle 5 Minuten neu.
 export const revalidate = 300;
@@ -24,12 +25,15 @@ export default async function RatgeberPage() {
           <p className="sub-lead">Antworten auf die Fragen rund um Kasse, Gesetz und Bezahlen in der Gastronomie.</p>
         </div>
       </section>
-      <section className="sub-sec">
-        <div className="b-wrap">
-          <TagChips tags={used} />
-          <ArticleGrid articles={articles} />
-        </div>
-      </section>
+      {articles.length > 0 && (
+        <section className="sub-sec">
+          <div className="b-wrap">
+            <TagChips tags={used} />
+            <ArticleGrid articles={articles} />
+          </div>
+        </section>
+      )}
+      <RatgeberKurz />
       <RatgeberClose />
     </>
   );

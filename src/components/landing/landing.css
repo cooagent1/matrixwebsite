@@ -673,3 +673,17 @@
 .lp .rg-table td:first-child{color:var(--lp-ink);font-weight:600;white-space:nowrap}
 @media (max-width:1024px){.lp .rg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lp .rg-body-sec .b-wrap.rg-layout{grid-template-columns:1fr;gap:32px}.lp .rg-toc{position:static}.lp .rg-prose{grid-column:1}.lp .rg-h1{font-size:56px}}
 @media (max-width:720px){.lp .rg-grid{grid-template-columns:1fr}.lp .rg-h1{font-size:40px}.lp .rg-prose{font-size:17px}.lp .rg-prose h2{font-size:28px}}
+
+/* ---------- Nachtpaket 07./08.11.2026 ---------- */
+/* Ratgeber: Kurz erklärt, vier ausklappbare Karten im 2er-Raster */
+.lp .rk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:8px 0 0;padding:0;list-style:none;align-items:start}
+.lp .rk-card{height:auto}
+.lp .rk-card h3{font-size:24px}
+.lp .sub-card p.rk-teaser{font-size:17px;color:var(--lp-text2)}
+.lp .rk-more summary{display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer;list-style:none;color:var(--lp-acc2);font-size:14px}
+.lp .rk-more summary::-webkit-details-marker{display:none}
+.lp .rk-more summary::after{content:"+";font-size:20px;line-height:1;transition:transform .25s}
+.lp .rk-more[open] summary::after{transform:rotate(45deg)}
+.lp .rk-more p{margin:0 0 12px;font-size:16px;line-height:1.6;color:var(--lp-text2)}
+.lp .rk-more .link{font-size:15px;color:var(--lp-acc2);text-decoration:none;font-weight:600}
+@media (max-width:900px){.lp .rk-grid{grid-template-columns:1fr}}

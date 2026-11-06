@@ -1208,5 +1208,159 @@
     "text": "",
     "entwurf": "30 Minuten, online oder vor Ort. Wir richten Ihre Artikel und Ihren Raumplan ein und gehen einen Abend durch.",
     "hinweis": ""
+  },
+  "ratgeber.kurz.h2": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Überschrift",
+    "status": "fest",
+    "max": 40,
+    "brief": "Überschrift über den vier Kurzartikeln",
+    "text": "Kurz erklärt.",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz1.titel": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 1: Titel",
+    "status": "fest",
+    "max": 30,
+    "brief": "Thema TSE",
+    "text": "TSE",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz1.teaser": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 1: Teaser",
+    "status": "fest",
+    "max": 160,
+    "brief": "Ein Satz: was die TSE ist",
+    "text": "Jede elektronische Kasse muss ihre Buchungen über eine zertifizierte technische Sicherheitseinrichtung (TSE) absichern.",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz1.text": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 1: Text",
+    "status": "fest",
+    "max": 600,
+    "brief": "Rechtsgrundlage, was signiert wird, Hardware oder Cloud, welche TSE NXT nutzt",
+    "text": "Das verlangt § 146a AO seit dem 1. Januar 2020, die Einzelheiten regelt die Kassensicherungsverordnung. Die TSE signiert jeden Vorgang. In der Gastronomie beginnt das schon mit der Bestellung am offenen Tisch, auch Umsetzen, Splitten und Stornieren werden signiert. Die TSE gibt es als Modul in der Kasse oder als Cloud-TSE im Rechenzentrum des Anbieters. Matrix NXT signiert über die Cloud-TSE von fiskaly.",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz2.titel": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 2: Titel",
+    "status": "fest",
+    "max": 30,
+    "brief": "Thema Kassenmeldepflicht",
+    "text": "Kassenmeldepflicht",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz2.teaser": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 2: Teaser",
+    "status": "fest",
+    "max": 160,
+    "brief": "Ein Satz: was gemeldet wird und seit wann",
+    "text": "Seit dem 1. Januar 2025 melden Betriebe ihre elektronischen Kassen samt TSE über ELSTER an das Finanzamt.",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz2.text": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 2: Text",
+    "status": "fest",
+    "max": 600,
+    "brief": "Rechtsgrundlage, Umfang, Fristen, Miete und Leasing, Unterstützung durch Matrix",
+    "text": "Grundlage ist § 146a Abs. 4 AO. Je Betriebsstätte geht eine Mitteilung ein, sie enthält immer alle Kassen dieser Betriebsstätte. Neue Kassen melden Sie innerhalb eines Monats nach Anschaffung, Außerbetriebnahmen ebenfalls innerhalb eines Monats. Gemietete und geleaste Kassen sind genauso meldepflichtig. Bei der Meldung über ELSTER unterstützt Sie unser Support.",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz3.titel": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 3: Titel",
+    "status": "fest",
+    "max": 30,
+    "brief": "Thema Belegausgabepflicht",
+    "text": "Belegausgabepflicht",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz3.teaser": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 3: Teaser",
+    "status": "fest",
+    "max": 160,
+    "brief": "Ein Satz: wer Belege ausgeben muss",
+    "text": "Wer eine elektronische Kasse nutzt, muss nach § 146a AO Belege ausgeben.",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz3.text": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 3: Text",
+    "status": "fest",
+    "max": 300,
+    "brief": "Pflichtangaben auf dem Beleg",
+    "text": "Welche Angaben auf dem Beleg stehen müssen, regelt § 6 KassenSichV. Dazu gehören unter anderem Transaktionsnummer, Signaturzähler, Prüfwert und Seriennummer. Diese Werte liefert die TSE.",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz3.ergaenzung": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 3: Ergänzung",
+    "status": "offen",
+    "max": 300,
+    "brief": "Ob der Beleg elektronisch ausgegeben werden darf, wie Matrix NXT und POS das umsetzen (Papier, QR-Code, E-Mail), ob eine Befreiung möglich ist. Fachlich durch Steuerberatung prüfen lassen.",
+    "text": "",
+    "entwurf": "",
+    "hinweis": "Material fehlt, Nachtpaket 07.11."
+  },
+  "ratgeber.kurz4.titel": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 4: Titel",
+    "status": "fest",
+    "max": 30,
+    "brief": "Thema Wechsel von POS zu NXT",
+    "text": "Wechsel von POS zu NXT",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz4.teaser": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 4: Teaser",
+    "status": "fest",
+    "max": 160,
+    "brief": "Ein Satz: wer wann wechselt",
+    "text": "Neue Betriebe starten mit Matrix NXT. Bestandskunden wechseln, sobald NXT ihren Bedarf abdeckt.",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ratgeber.kurz4.text": {
+    "seite": "Ratgeber",
+    "bereich": "Kurz erklärt",
+    "element": "Karte 4: Text",
+    "status": "fest",
+    "max": 600,
+    "brief": "Datenübernahme, TSE-Umstellung, Meldung, Prüfung im Gespräch, was NXT heute nicht kann",
+    "text": "Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. Betriebe mit Hardware-TSE stellen wir auf die Cloud-TSE um. Beim Finanzamt melden Sie die alte TSE als Außerbetriebnahme und die neue TSE als Anschaffung. Ob Ihr Bedarf heute schon abgedeckt ist, prüfen wir im Gespräch anhand Ihrer Schnittstellen und Abläufe. Wer offline kassieren oder einen Bonmonitor in der Küche braucht, arbeitet heute mit Matrix POS.",
+    "entwurf": "",
+    "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
   }
 }
