@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LpFooter, LpHeader } from "./Chrome";
 import { BranchenTabs } from "./BranchenTabs";
 import { ScenesCarousel } from "./ScenesCarousel";
+import { Zahlen } from "./Zahlen";
 import { QuoteCarousel } from "./QuoteCarousel";
 import { FAQ, LAW } from "./startseite-data";
 import { T } from "../T";
@@ -57,6 +58,8 @@ export function Landing() {
           <span className="gap" />
         </div>
       </section>
+
+      <Zahlen />
 
       <ScenesCarousel />
 

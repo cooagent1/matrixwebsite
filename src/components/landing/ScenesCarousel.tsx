@@ -1,22 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { T, TEXTE } from "../T";
+import { T } from "../T";
 
 const COUNT = 3;
 
 // "Drei Szenen": beim Scrollen laufen die drei Szenen wie ein Karussell durch (Robert 31.10.).
 // Die Section ist 3 Bildschirmhöhen hoch, der Inhalt klebt; die Scrollposition wählt die Szene.
 // Unter 1100 px Breite: normale Stapelung ohne Karussell.
-// Kennzahl: „30+“ → 30 mit hochgestelltem Plus
-function Zahl({ n }: { n: number }) {
-  const z = TEXTE[`start.szenen.zahl${n}`].text;
-  const m = z.match(/^(.*?)(\+?)$/);
-  return (
-    <div className="b-num"><b className="b-d">{m?.[1]}{m?.[2] && <em>+</em>}</b><span><T k={`start.szenen.zahl${n}.label`} /></span></div>
-  );
-}
-
 export function ScenesCarousel() {
   const ref = useRef<HTMLElement>(null);
   const [i, setI] = useState(0);
@@ -61,9 +52,6 @@ export function ScenesCarousel() {
             <span className="b-m b-kicker"><T k="start.szenen.kicker" /></span>
             <h2 className="b-d b-h2"><T k="start.szenen.h2" /></h2>
             <p className="b-lead"><T k="start.szenen.lead" /></p>
-            <div className="b-nums">
-              {[1, 2, 3, 4].map((n) => <Zahl key={n} n={n} />)}
-            </div>
           </div>
           <div className="b-scene-col">
                   <div className={`b-scene s1 ${cls(0)}`}>

@@ -504,3 +504,24 @@
 .lp .b-hero-btns{padding-bottom:0}
 @media (max-width:720px){.lp .b-hero-shade{background:linear-gradient(180deg, rgba(36,36,36,0.25) 0%, rgba(36,36,36,0.1) 40%, rgba(36,36,36,0.85) 100%)}.lp .b-h1{font-size:50px}.lp .b-hero-body{padding-bottom:32px}.lp .b-hero-btns .b-btn{flex:0 0 auto}}
 @media (max-width:720px){.lp .b-hero{min-height:calc(100svh - 8px)}.lp .b-hero-body{padding-bottom:24px}}
+
+/* Typo-Skala (06.11.): vier Stufen, fließend zwischen 375 und 1440 px */
+.lp{--t-display:clamp(46px,7.5vw + 12px,120px);--t-h2:clamp(36px,4.6vw + 8px,72px);--t-h3:clamp(28px,2.6vw + 10px,48px);--t-h4:clamp(20px,1vw + 14px,28px);--t-num:clamp(36px,2.4vw + 12px,52px)}
+.lp .b-h1,.lp .b-demo h2{font-size:var(--t-display)}
+.lp .sub-h1{font-size:clamp(40px,5.5vw + 10px,96px)}
+.lp .b-big{font-size:clamp(52px,8.5vw + 8px,136px)}
+.lp .b-h2,.lp .b-seg-h,.lp .b-railhead h2,.lp .pt-h2,.lp .sub-h2,.lp .legal-title{font-size:var(--t-h2)}
+.lp .b-fam .name,.lp .b-quote blockquote{font-size:var(--t-h3)}
+.lp .b-num b,.lp .ue-nums .b-num b{font-size:var(--t-num)}
+.lp .b-card .n,.lp .sub-card .n,.lp .pt-step .n{font-size:clamp(40px,3.5vw + 14px,64px)}
+/* Zahlenleiste unter den Logos */
+.lp .b-zahlen{padding:0 0 16px}
+.lp .b-zahlen .b-nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding:36px 0;border-top:1px solid var(--lp-line);border-bottom:1px solid var(--lp-line)}
+.lp .b-zahlen .b-num{gap:8px}
+.lp .b-zahlen .b-num span{font-size:14px;line-height:1.4;max-width:220px}
+@media (max-width:1024px){.lp .b-zahlen .b-nums{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px;padding:28px 0}}
+/* Tablet 721 bis 1024 px */
+@media (min-width:721px) and (max-width:1024px){.lp .b-wrap{padding:0 28px}.lp .b-hero{margin:12px 12px 0;border-radius:28px}.lp .b-hero-body{padding-top:150px;padding-bottom:48px}.lp .b-hand,.lp .b-demo,.lp .sub-close{margin:0 12px 12px;border-radius:28px}.lp .b-hand{padding:64px 0}.lp .b-hand-in{grid-template-columns:1fr;gap:32px}.lp .b-hand-img{aspect-ratio:16/10}.lp .b-seg-l{min-height:420px}.lp .b-railsec{padding:96px 0 64px}.lp .b-rail{padding:4px 28px 24px}}
+/* Mindestgrößen: Text 12 px, Tap-Ziele 44 px */
+.lp .b-avatar,.lp .sub-ph span{font-size:12px}
+.lp .b-btn,.lp .b-tab{min-height:44px}
