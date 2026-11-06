@@ -587,3 +587,6 @@
 .lp .sub-faq summary{font-size:18px;padding:16px 0}
 .lp .sub-faq details>div{padding-bottom:16px}
 .lp .b-famsec{padding:24px 0 64px}
+/* Zahlenleiste: je Spalte zentriert (Robert 06.11.) */
+.lp .b-zahlen .b-num{align-items:center;text-align:center}
+.lp .b-zahlen .b-num span{margin:0 auto}
