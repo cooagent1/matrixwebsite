@@ -7,8 +7,9 @@ const HUBSPOT = {
 };
 
 function resolve(href: string): string {
-  if (href === "hubspot:demo") return HUBSPOT.demo || "/demo#termin";
-  if (href === "hubspot:callback") return HUBSPOT.callback || "/demo#rueckruf";
+  // ANNAHME (Nachtpaket 07.11.): Solange keine HubSpot-Links gesetzt sind, führen Termin und Rückruf zum Formular auf /demo.
+  if (href === "hubspot:demo") return HUBSPOT.demo || "/demo?thema=demo#formular";
+  if (href === "hubspot:callback") return HUBSPOT.callback || "/demo?thema=rueckruf#formular";
   return href;
 }
 

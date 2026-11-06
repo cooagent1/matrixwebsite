@@ -187,6 +187,38 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
             return (
               <div key={i} id="formular" className="sub-form"><ContactForm /></div>
             );
+          case "ways":
+            return (
+              <ul key={i} className="sub-ways">
+                {b.items.map((w, j) => (
+                  <li key={j}>
+                    <b className="b-d">{w.title}</b>
+                    <span>{w.text}</span>
+                    <Btn item={w.button} tone="dark" secondary={w.button.kind !== "button"} />
+                  </li>
+                ))}
+              </ul>
+            );
+          case "contact":
+            return (
+              <div key={i} className="sub-contact">
+                {b.heading && <span className="b-d sub-contact-h">{b.heading}</span>}
+                <dl>
+                  {b.lines.map((l, j) => (
+                    <div key={j}><dt className="b-m">{l.label}</dt><dd><Inline text={l.text} /></dd></div>
+                  ))}
+                </dl>
+                {b.steps && (
+                  <>
+                    {b.stepsHeading && <span className="b-d sub-contact-h3">{b.stepsHeading}</span>}
+                    <ol className="sub-contact-steps">
+                      {b.steps.map((t, j) => (<li key={j}><Inline text={t} /></li>))}
+                    </ol>
+                  </>
+                )}
+                {b.notes?.map((t, j) => (<p key={j} className="sub-contact-note"><Inline text={t} /></p>))}
+              </div>
+            );
         }
       })}
     </>
@@ -229,6 +261,21 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
           {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
           {s.heading && <h2 className="b-d sub-h1">{s.heading}</h2>}
           <Blocks blocks={s.blocks} sectionName={s.name} />
+        </div>
+      </section>
+    );
+  if (s.aside?.length)
+    return (
+      <section id={s.id} className={`sub-sec ${index % 2 === 0 ? "alt" : ""}`}>
+        <div className="b-wrap sub-split">
+          <div className="sub-split-main">
+            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
+            {s.heading && <h2 className="b-d sub-h2">{s.heading}</h2>}
+            <Blocks blocks={s.blocks} sectionName={s.name} />
+          </div>
+          <aside className="sub-split-aside">
+            <Blocks blocks={s.aside} sectionName={s.name} />
+          </aside>
         </div>
       </section>
     );

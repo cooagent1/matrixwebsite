@@ -11,13 +11,18 @@ export type Block =
   | { type: "placeholder"; label: string }
   | { type: "badges"; items: string[] }
   | { type: "faq"; items: { q: string; a: string[] }[] }
-  | { type: "form" };
+  | { type: "form" }
+  // Nachtpaket 07.11.: kompakte Wege-Zeile (/demo) und Kontaktkarte für die Seitenspalte
+  | { type: "ways"; items: { title: string; text: string; button: Button }[] }
+  | { type: "contact"; heading?: string; lines: { label: string; text: string }[]; steps?: string[]; stepsHeading?: string; notes?: string[] };
 export type Section = {
   id: string;
   name: string;
   eyebrow: string | null;
   heading: string | null;
   blocks: Block[];
+  /** Rechte Spalte neben den Blöcken (ab 1024 px), mobil darunter. */
+  aside?: Block[];
 };
 export type Page = {
   slug: string;

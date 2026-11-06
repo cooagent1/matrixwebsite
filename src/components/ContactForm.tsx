@@ -6,7 +6,8 @@ import { useState } from "react";
 type State = "idle" | "sending" | "ok" | "error" | "unavailable";
 
 export function ContactForm() {
-  const [role, setRole] = useState<"Interessent" | "Partner">("Interessent");
+  // ANNAHME (Nachtpaket 07.11.): Kein Interessent/Partner-Umschalter mehr, Partner haben ihr Formular auf /partner.
+  const role = "Interessent";
   const [state, setState] = useState<State>("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -39,22 +40,6 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="card grid gap-4 md:grid-cols-2" noValidate={false}>
-      <fieldset className="md:col-span-2">
-        <legend className="mb-2 text-sm font-medium">Ich bin</legend>
-        <div className="flex gap-2">
-          {(["Interessent", "Partner"] as const).map((r) => (
-            <button
-              key={r}
-              type="button"
-              aria-pressed={role === r}
-              onClick={() => setRole(r)}
-              className={`btn ${role === r ? "btn-primary" : "btn-ghost"}`}
-            >
-              {r}
-            </button>
-          ))}
-        </div>
-      </fieldset>
       <label className="field">
         <span>Name</span>
         <input name="name" required autoComplete="name" />
@@ -77,7 +62,7 @@ export function ContactForm() {
       </label>
       {/* Honeypot: für Menschen unsichtbar */}
       <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
-      <label className="md:col-span-2 flex items-start gap-2 text-sm text-slate-600">
+      <label className="md:col-span-2 flex items-start gap-2 form-consent">
         <input type="checkbox" name="consent" required className="mt-1" />
         <span>
           Mit dem Absenden stimme ich der <Link href="/datenschutz" className="link">Datenschutzerklärung</Link> zu.

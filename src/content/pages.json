@@ -2726,59 +2726,40 @@
     "heading": "Demo buchen.",
     "blocks": [
      {
-      "type": "cards",
+      "type": "p",
+      "text": "30 Minuten mit Ihren Artikeln und Ihrem Grundriss, per Video, in Hannover oder bei Ihnen vor Ort."
+     },
+     {
+      "type": "ways",
       "items": [
        {
-        "nr": "30",
-        "text": "Minuten mit Ihren Artikeln und Ihrem Grundriss. Per Video, in Hannover oder bei Ihnen vor Ort."
+        "title": "Demo buchen",
+        "text": "30 Minuten mit einem Berater, Termin direkt wählen.",
+        "button": {
+         "kind": "button",
+         "label": "Termin wählen",
+         "href": "hubspot:demo"
+        }
+       },
+       {
+        "title": "Rückruf vereinbaren",
+        "text": "15 Minuten für eine Fachfrage.",
+        "button": {
+         "kind": "button",
+         "label": "Rückruf vereinbaren",
+         "href": "hubspot:callback"
+        }
+       },
+       {
+        "title": "Nachricht schreiben",
+        "text": "Mit dem Formular. Antwort innerhalb eines Werktags.",
+        "button": {
+         "kind": "link",
+         "label": "Zum Formular",
+         "href": "#formular"
+        }
        }
       ]
-     }
-    ]
-   },
-   {
-    "id": "drei-wege",
-    "name": "Drei Wege",
-    "eyebrow": null,
-    "heading": "Drei Wege",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "**Demo buchen.** 30 Minuten mit einem Berater, Termin direkt wählen."
-     },
-     {
-      "type": "buttons",
-      "items": [
-       {
-        "kind": "button",
-        "label": "Termin wählen",
-        "href": "hubspot:demo"
-       }
-      ],
-      "phone": null
-     },
-     {
-      "type": "p",
-      "text": "**Rückruf vereinbaren.** 15 Minuten für eine Fachfrage."
-     },
-     {
-      "type": "buttons",
-      "items": [
-       {
-        "kind": "button",
-        "label": "Rückruf vereinbaren",
-        "href": "hubspot:callback"
-       }
-      ],
-      "phone": null
-     },
-     {
-      "type": "p",
-      "text": "**Nachricht schreiben.** Das Formular unten. Antwort innerhalb eines Werktags."
-     },
-     {
-      "type": "p",
-      "text": "Sie sind Kunde und brauchen Hilfe? Dann bitte über das Supportportal: support.matrixpos.de"
      }
     ]
    },
@@ -2791,49 +2772,35 @@
      {
       "type": "form"
      }
-    ]
-   },
-   {
-    "id": "grosse-projekte",
-    "name": "Große Projekte",
-    "eyebrow": null,
-    "heading": "Projekte mit mehreren Standorten.",
-    "blocks": [
+    ],
+    "aside": [
      {
-      "type": "p",
-      "text": "Bei mehreren Standorten führen wir Matrix zuerst an einem Pilotstandort ein und rollen dann nach Projektplan aus. Für das Erstgespräch brauchen wir die Zahl der Standorte und Ihr heutiges Kassensystem."
-     }
-    ]
-   },
-   {
-    "id": "kontakt",
-    "name": "Kontakt",
-    "eyebrow": null,
-    "heading": null,
-    "blocks": [
-     {
-      "type": "p",
-      "text": "Matrix POS GmbH · Eckenerstraße 2 · 30179 Hannover · +49 511 592938-0 · info@matrixpos.de"
-     }
-    ]
-   },
-   {
-    "id": "was-nach-dem-absenden-passiert",
-    "name": "Was nach dem Absenden passiert",
-    "eyebrow": null,
-    "heading": "Was nach dem Absenden passiert",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "1 Ein Berater meldet sich innerhalb eines Werktags."
-     },
-     {
-      "type": "p",
-      "text": "2 Im Erstgespräch klären wir Ihre Betriebsart und welche Systeme angebunden werden müssen."
-     },
-     {
-      "type": "p",
-      "text": "3 Demo mit Ihren Artikeln, am vereinbarten Ort oder per Video."
+      "type": "contact",
+      "heading": "Matrix POS GmbH",
+      "lines": [
+       {
+        "label": "Telefon",
+        "text": "[+49 511 592938-0](tel:+495115929380)"
+       },
+       {
+        "label": "E-Mail",
+        "text": "[info@matrixpos.de](mailto:info@matrixpos.de)"
+       },
+       {
+        "label": "Adresse",
+        "text": "Eckenerstraße 2, 30179 Hannover"
+       }
+      ],
+      "stepsHeading": "Was nach dem Absenden passiert",
+      "steps": [
+       "Ein Berater meldet sich innerhalb eines Werktags.",
+       "Im Erstgespräch klären wir Ihre Betriebsart und welche Systeme angebunden werden müssen.",
+       "Demo mit Ihren Artikeln, am vereinbarten Ort oder per Video."
+      ],
+      "notes": [
+       "**Mehrere Standorte.** Bei mehreren Standorten führen wir Matrix zuerst an einem Pilotstandort ein und rollen dann nach Projektplan aus. Für das Erstgespräch brauchen wir die Zahl der Standorte und Ihr heutiges Kassensystem.",
+       "Sie sind Kunde und brauchen Hilfe? Bitte über das [Supportportal](https://support.matrixpos.de/help)."
+      ]
      }
     ]
    }

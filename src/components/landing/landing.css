@@ -687,3 +687,35 @@
 .lp .rk-more p{margin:0 0 12px;font-size:16px;line-height:1.6;color:var(--lp-text2)}
 .lp .rk-more .link{font-size:15px;color:var(--lp-acc2);text-decoration:none;font-weight:600}
 @media (max-width:900px){.lp .rk-grid{grid-template-columns:1fr}}
+/* /demo: Wege-Zeile im Hero, Formular mit Kontaktkarte daneben */
+.lp .sub-hero-body:has(.sub-ways){max-width:1100px}
+.lp .sub-hero-body:has(.sub-ways) .sub-p{max-width:720px}
+.lp .sub-ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0 0;padding:0;list-style:none}
+.lp .sub-ways li{display:flex;flex-direction:column;gap:6px;padding:20px;border:1px solid var(--lp-line);border-radius:20px;background:var(--lp-surface)}
+.lp .sub-ways b{font-size:18px;color:var(--lp-ink)}
+.lp .sub-ways span{font-size:15px;line-height:1.5;color:var(--lp-mute)}
+.lp .sub-ways .btn{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;height:44px;padding:0 18px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid transparent}
+.lp .sub-ways .btn-primary-on-dark{background:var(--lp-acc);color:#fff}
+.lp .sub-ways .btn-ghost{border-color:var(--lp-line);background:#fff;color:var(--lp-ink)}
+.lp .sub-split{display:grid !important;grid-template-columns:minmax(0,600px) minmax(0,1fr);gap:48px;align-items:start}
+.lp .sub-split-main{display:flex;flex-direction:column;gap:20px;min-width:0}
+.lp .sub-split .sub-form{max-width:600px}
+.lp .sub-split-aside{min-width:0;max-width:520px;position:sticky;top:110px}
+.lp .sub-contact{--lp-ink:#fff;--lp-text2:#E5E5E5;--lp-mute:#BDBDBD;--lp-acc2:#7FDCFF;--lp-line:rgba(255,255,255,0.16);background:var(--lp-dark);color:#fff;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:16px}
+.lp .sub-contact a{color:#fff}
+.lp .sub-contact-h{font-size:26px;font-weight:800}
+.lp .sub-contact dl{margin:0;display:flex;flex-direction:column;gap:12px}
+.lp .sub-contact dl div{display:grid;grid-template-columns:90px 1fr;gap:12px;align-items:baseline}
+.lp .sub-contact dt{font-size:13px;color:var(--lp-mute)}
+.lp .sub-contact dd{margin:0;font-size:17px;color:var(--lp-ink)}
+.lp .sub-contact dd a{text-decoration:none}
+.lp .sub-contact-h3{margin-top:8px;padding-top:20px;border-top:1px solid var(--lp-line);font-size:19px;font-weight:700}
+.lp .sub-contact-steps{margin:0;padding:0;list-style:none;counter-reset:st;display:flex;flex-direction:column;gap:12px}
+.lp .sub-contact-steps li{counter-increment:st;display:grid;grid-template-columns:32px 1fr;gap:12px;font-size:16px;line-height:1.5;color:var(--lp-text2)}
+.lp .sub-contact-steps li::before{content:counter(st);display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:999px;background:var(--lp-acc);color:#fff;font-weight:700;font-size:14px}
+.lp .sub-contact-note{margin:0;padding-top:16px;border-top:1px solid var(--lp-line);font-size:15px;line-height:1.55;color:var(--lp-text2)}
+.lp .sub-contact-note strong{color:#fff}
+.lp .sub-form .form-consent{font-size:14px;line-height:1.5;color:var(--lp-text2)}
+@media (max-width:1023px){.lp .sub-split{grid-template-columns:1fr}.lp .sub-split-aside{position:static;max-width:none}.lp .sub-ways{grid-template-columns:1fr}}
+@media (max-width:720px){.lp .sub-contact{padding:24px;border-radius:24px}.lp .sub-contact dl div{grid-template-columns:1fr;gap:2px}.lp .sub-ways li{padding:16px}}
+@media (max-width:720px){.lp .sub-ways{gap:8px}.lp .sub-ways li{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;padding:12px 12px 12px 16px;border-radius:16px}.lp .sub-ways li span{display:none}.lp .sub-ways b{font-size:16px}.lp .sub-ways .btn{margin:0;flex:0 0 auto;padding:0 14px;font-size:14px}}
