@@ -20,6 +20,7 @@ export type Block =
       notes?: { title: string; tone: "blue" | "yellow"; rows: { label?: string; chips: string[] }[]; link?: Button }[];
     }
   | { type: "featgrid"; items: { title: string; text: string; link?: Button; placeholder?: string }[] }
+  | { type: "halves"; items: { id?: string; title: string; text?: string; cards: { nr: string; text: string }[] }[] }
   | { type: "columns"; items: { title: string; tone?: "blue" | "grey"; points: string[]; button?: Button }[] }
   | { type: "contact"; heading?: string; lines: { label: string; text: string }[]; steps?: string[]; stepsHeading?: string; notes?: string[] };
 export type Section = {

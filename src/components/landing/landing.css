@@ -803,3 +803,13 @@
 @media (max-width:900px){.lp .sub-feats{grid-template-columns:1fr}}
 @media (max-width:720px){.lp .sub-tone{padding:24px;border-radius:24px}}
 @media (min-width:901px){.lp .sub-feat:last-child:nth-child(odd){grid-column:span 2}}
+/* /kassensysteme/pos: NEO und CONGA als zwei Hälften mit je drei Karten; Vierer-Raster als 2x2 */
+.lp .sub-halves{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-top:8px}
+.lp .sub-half{display:flex;flex-direction:column;gap:14px;scroll-margin-top:100px}
+.lp .sub-half>h3{margin:0;font-size:clamp(24px,1.4vw + 12px,32px);line-height:1.1;font-weight:800}
+.lp .sub-half-cards{display:flex;flex-direction:column;gap:12px;margin:4px 0 0;padding:0;list-style:none}
+.lp .sub-half-cards .sub-card{gap:6px;padding:20px 24px}
+.lp .sub-half-cards h4{margin:0;font-size:18px;font-weight:700;color:var(--lp-ink)}
+.lp .sub-grid:has(>:nth-child(4):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.lp .sub-halves{grid-template-columns:1fr;gap:40px}}
+@media (max-width:720px){.lp .sub-grid:has(>:nth-child(4):last-child){grid-template-columns:1fr}.lp .sub-half-cards .sub-card{padding:18px}}

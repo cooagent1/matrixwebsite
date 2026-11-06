@@ -201,6 +201,27 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                 ))}
               </ul>
             );
+          case "halves":
+            return (
+              <div key={i} className="sub-halves">
+                {b.items.map((h, j) => (
+                  <div key={j} id={h.id} className="sub-half">
+                    <h3 className="b-d">{h.title}</h3>
+                    {h.text && <p className="sub-p"><Inline text={h.text} /></p>}
+                    <ul className="sub-half-cards">
+                      {h.cards.map((c) => {
+                        const l = splitLead(c.text);
+                        return (
+                          <li key={c.nr} className="sub-card">
+                            {l ? (<><h4 className="b-d">{l.title}</h4><p><Inline text={l.text} /></p></>) : <p><Inline text={c.text} /></p>}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            );
           case "columns":
             return (
               <div key={i} className="sub-cols">

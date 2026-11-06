@@ -776,90 +776,63 @@
        {
         "nr": "03",
         "text": "**TSE und Meldepflicht.** Die TSE-Signatur kommt von der Cloud-TSE von Fiskaly. Die Kassenmeldung nach § 146a AO läuft über ELSTER."
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "neo",
-    "name": "NEO",
-    "eyebrow": null,
-    "heading": "NEO. Kassieren am Tisch.",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "NEO ist die mobile Kasse für Matrix POS. Sie bonieren und kassieren am Tisch, auf Orderman-Handgeräten oder eigenen Smartphones. Jede Buchung steht sofort an der Hauptkasse."
-     },
-     {
-      "type": "cards",
-      "items": [
-       {
-        "nr": "01",
-        "text": "**Bonieren am Tisch.** In der Raumübersicht wählen Sie den Tisch, Schnelltasten und Artikelzwänge führen durch die Bestellung. Die Bons gehen in der Gangfolge an Küche und Bar."
-       },
-       {
-        "nr": "02",
-        "text": "**Kassieren am Tisch.** Sie splitten die Rechnung am Gerät und kassieren bar oder mit Karte, auch mit Apple Pay und Google Pay. Das Trinkgeld erfassen Sie beim Bezahlen."
-       },
-       {
-        "nr": "03",
-        "text": "**Bondruck per Funk.** NEO druckt per Bluetooth oder WLAN, zum Beispiel am Gürteldrucker."
        },
        {
         "nr": "04",
-        "text": "**Synchron mit der POS.** Alles, was NEO bucht, steht sofort an der Hauptkasse. Mehrere Handgeräte arbeiten an einer Matrix POS."
-       },
-       {
-        "nr": "05",
-        "text": "**Anmeldung per Transponder.** Mitarbeitende melden sich per NFC-Transponder am Handgerät an."
+        "text": "**Bons am Küchendisplay.** Der Matrix Bonmonitor zeigt die Bestellungen in der Küche am Bildschirm. Bons lassen sich dort gruppieren, zurückstellen, sperren und priorisieren."
        }
       ]
      }
     ]
    },
    {
-    "id": "conga",
-    "name": "CONGA",
-    "eyebrow": null,
-    "heading": "CONGA. Dienstplan und Zeiterfassung.",
+    "id": "neo-conga",
+    "name": "NEO und CONGA",
+    "eyebrow": "Erweiterungen für Matrix POS",
+    "heading": "NEO und CONGA.",
     "blocks": [
      {
-      "type": "p",
-      "text": "Mit CONGA erfasst Ihr Team die Arbeitszeit an der Kasse. Für Matrix NXT ist CONGA nicht verfügbar."
-     },
-     {
-      "type": "cards",
+      "type": "halves",
       "items": [
        {
-        "nr": "01",
-        "text": "**Kommen und Gehen an der Kasse.** Mitarbeitende stempeln an der Matrix POS, eine separate Stempeluhr entfällt."
+        "id": "neo",
+        "title": "NEO. Kassieren am Tisch.",
+        "text": "NEO ist die mobile Kasse für Matrix POS. Sie bonieren und kassieren am Tisch, auf Orderman-Handgeräten oder eigenen Smartphones. Jede Buchung steht sofort an der Hauptkasse.",
+        "cards": [
+         {
+          "nr": "01",
+          "text": "**Bonieren am Tisch.** In der Raumübersicht wählen Sie den Tisch, Schnelltasten und Artikelzwänge führen durch die Bestellung. Die Bons gehen in der Gangfolge an Küche und Bar. Mitarbeitende melden sich per NFC-Transponder am Handgerät an."
+         },
+         {
+          "nr": "02",
+          "text": "**Kassieren am Tisch.** Sie splitten die Rechnung am Gerät und kassieren bar oder mit Karte, auch mit Apple Pay und Google Pay. Das Trinkgeld erfassen Sie beim Bezahlen."
+         },
+         {
+          "nr": "03",
+          "text": "**Synchron mit der POS.** Alles, was NEO bucht, steht sofort an der Hauptkasse. Mehrere Handgeräte arbeiten an einer Matrix POS. NEO druckt per Bluetooth oder WLAN, zum Beispiel am Gürteldrucker."
+         }
+        ]
        },
        {
-        "nr": "02",
-        "text": "**Personalplanung.** Schichten planen Sie in der CONGA Personalplanung."
-       },
-       {
-        "nr": "03",
-        "text": "**Lohn Manager.** Der CONGA Lohn Manager exportiert die Lohndaten über das DATEV-Modul."
-       },
-       {
-        "nr": "04",
-        "text": "**Kassenbuch.** Der CONGA Kassenbuch Manager führt das Kassenbuch und tauscht die Buchungen über das DATEV-Modul mit DATEV aus."
+        "id": "conga",
+        "title": "CONGA. Dienstplan und Zeiterfassung.",
+        "text": "Mit CONGA erfasst Ihr Team die Arbeitszeit an der Kasse. Für Matrix NXT ist CONGA nicht verfügbar.",
+        "cards": [
+         {
+          "nr": "01",
+          "text": "**Kommen und Gehen an der Kasse.** Mitarbeitende stempeln an der Matrix POS, eine separate Stempeluhr entfällt."
+         },
+         {
+          "nr": "02",
+          "text": "**Personalplanung.** Schichten planen Sie in der CONGA Personalplanung."
+         },
+         {
+          "nr": "03",
+          "text": "**Lohn und Kassenbuch.** Der CONGA Lohn Manager exportiert die Lohndaten über das DATEV-Modul. Der CONGA Kassenbuch Manager führt das Kassenbuch und tauscht die Buchungen über das DATEV-Modul mit DATEV aus."
+         }
+        ]
        }
       ]
-     }
-    ]
-   },
-   {
-    "id": "bonmonitor",
-    "name": "Bonmonitor",
-    "eyebrow": null,
-    "heading": "Bons am Küchendisplay.",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "Der Matrix Bonmonitor zeigt die Bestellungen in der Küche am Bildschirm. Bons lassen sich dort gruppieren, zurückstellen, sperren und priorisieren."
      }
     ]
    },
@@ -906,12 +879,7 @@
        "**Payment:** Matrix PAY (Adyen) · Terminals anderer Anbieter über OPI und Nexo",
        "**Warenwirtschaft:** KOST · FutureLog",
        "**Buchhaltung:** DATEV · Addison",
-       "**Reservierung und Self-Ordering:** RESERViSiON · Flixorder · servier.bar"
-      ]
-     },
-     {
-      "type": "list",
-      "items": [
+       "**Reservierung und Self-Ordering:** RESERViSiON · Flixorder · servier.bar",
        "**Branchen:** PC Caddie (Golf) · Convious (Freizeitpark)"
       ]
      },
@@ -949,7 +917,8 @@
       ],
       "phone": null
      }
-    ]
+    ],
+    "card": "blue"
    },
    {
     "id": "abschluss",
