@@ -11,37 +11,25 @@ const OUT = path.resolve(here, "../src/content/pages.json");
 
 const PAGES = [
   ["startseite.md", ""],
-  ["nxt.md", "nxt"],
-  ["pos.md", "pos"],
-  ["pos/neo.md", "pos/neo"],
-  ["pos/conga.md", "pos/conga"],
-  ["pos/evo.md", "pos/evo"],
+  ["kassensysteme/uebersicht.md", "kassensysteme"],
+  ["kassensysteme/nxt.md", "kassensysteme/nxt"],
+  ["kassensysteme/pos.md", "kassensysteme/pos"],
   ["pay.md", "pay"],
-  ["kassensysteme.md", "kassensysteme"],
-  ["branchen/uebersicht.md", "branchen"],
-  ["branchen/restaurant.md", "branchen/restaurant"],
-  ["branchen/hotel.md", "branchen/hotel"],
-  ["branchen/bar-cafe.md", "branchen/bar-cafe"],
-  ["branchen/aussengastronomie.md", "branchen/aussengastronomie"],
-  ["branchen/freizeitpark.md", "branchen/freizeitpark"],
-  ["branchen/foodcourt.md", "branchen/foodcourt"],
-  ["branchen/systemgastronomie.md", "branchen/systemgastronomie"],
-  ["support.md", "support"],
-  ["fernwartung.md", "fernwartung"],
-  ["hardware.md", "hardware"],
   ["schnittstellen.md", "schnittstellen"],
-  ["kasse-und-gesetz.md", "kasse-und-gesetz"],
+  ["industries.md", "industries"],
+  ["support.md", "support"],
   ["faq.md", "faq"],
-  ["partner-werden.md", "partner"],
-  ["empfehlen.md", "empfehlen"],
+  ["ratgeber.md", "ratgeber"],
   ["ueber-uns.md", "ueber-uns"],
-  ["referenzen.md", "referenzen"],
+  ["partner-werden.md", "partner"],
   ["jobs.md", "jobs"],
   ["demo.md", "demo"],
 ];
+// Schlanke Struktur 07.11. (Robert): NEO, CONGA, Hardware, Fernwartung als Abschnitte; EVO, Branchen-Detailseiten,
+// Kasse & Gesetz, Referenzen, Empfehlen gestrichen. Alte Texte liegen in docs/copy/_archiv/.
 
 // Seiten ohne belastbaren Inhalt werden nicht ausgeliefert, bis die Fakten da sind.
-const DRAFTS = new Set(["pos/evo", "empfehlen"]); // empfehlen: nach Go-live
+const DRAFTS = new Set([]);
 
 const SKIP_SECTIONS = /^(offen|intern|hinweise?|quellen)\b/i;
 

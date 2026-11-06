@@ -19,8 +19,9 @@ export function LpHeader() {
             <nav className="b-menu" aria-label="Hauptnavigation">
               <div className="b-menu-grid">
                 {NAV.map((g) => (
-                  <div key={g.label} className={g.label === "Lösungen" ? "b-menu-col b-menu-main" : "b-menu-col"}>
+                  <div key={g.label} className={g.label === "Produkte" ? "b-menu-col b-menu-main" : "b-menu-col"}>
                     <h4 className="b-m">{g.label}</h4>
+                    {!g.children && g.href && <Link href={g.href}>Alle {g.label}</Link>}
                     {g.children?.map((c) => (
                       <Link key={c.href} href={c.href}>
                         {c.label}

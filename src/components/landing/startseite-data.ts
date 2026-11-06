@@ -44,10 +44,10 @@ export type Faq = { q: string; a: string; link?: { href: string; label: string }
 const FAQ_LINKS: Faq["link"][] = [
   { href: "/pay", label: "Mehr zu PAY" },
   { href: "/support", label: "Support & Wartung" },
-  { href: "/hardware", label: "Hardware" },
+  { href: "/kassensysteme/nxt#hardware", label: "Geräte für NXT" },
   { href: "/schnittstellen", label: "Schnittstellen" },
-  { href: "/kasse-und-gesetz", label: "Kasse und Gesetz" },
-  { href: "/fernwartung", label: "Fernwartung" },
+  { href: "/faq#gesetz", label: "Fragen zu Kasse und Gesetz" },
+  { href: "/support#fernwartung", label: "Fernwartung" },
 ];
 
 export const FAQ = FAQ_LINKS.map((link, i) => ({ q: `start.faq${i + 1}.frage`, a: `start.faq${i + 1}.antwort`, link }));

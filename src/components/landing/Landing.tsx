@@ -95,8 +95,8 @@ export function Landing() {
       <section id="familie" className="b-famsec" aria-label="Produkte">
         <div className="b-wrap">
           <div className="b-fam">
-            <Link href="/nxt" className="f-nxt"><span className="b-m k"><T k="start.familie.nxt.kicker" /></span><span className="b-d name">matrix <em>NXT</em></span><span className="sub"><T k="start.familie.nxt.sub" /></span><span className="fam-more"><T k="start.familie.nxt.text" /></span></Link>
-            <Link href="/pos" className="f-pos"><span className="b-m k"><T k="start.familie.pos.kicker" /></span><span className="b-d name">matrix <em>POS</em></span><span className="sub"><T k="start.familie.pos.sub" /></span><span className="fam-more"><T k="start.familie.pos.text" /></span></Link>
+            <Link href="/kassensysteme/nxt" className="f-nxt"><span className="b-m k"><T k="start.familie.nxt.kicker" /></span><span className="b-d name">matrix <em>NXT</em></span><span className="sub"><T k="start.familie.nxt.sub" /></span><span className="fam-more"><T k="start.familie.nxt.text" /></span></Link>
+            <Link href="/kassensysteme/pos" className="f-pos"><span className="b-m k"><T k="start.familie.pos.kicker" /></span><span className="b-d name">matrix <em>POS</em></span><span className="sub"><T k="start.familie.pos.sub" /></span><span className="fam-more"><T k="start.familie.pos.text" /></span></Link>
             <Link href="/pay" className="f-pay"><span className="b-m k"><T k="start.familie.pay.kicker" /></span><span className="b-d name">matrix <em>PAY</em></span><span className="sub"><T k="start.familie.pay.sub" /></span><span className="fam-more"><T k="start.familie.pay.text" /></span></Link>
           </div>
         </div>
@@ -113,7 +113,7 @@ export function Landing() {
               <li key={c.n} className="sub-card"><span className="n b-d">{c.n}</span><h3 className="b-d"><T k={c.t} /></h3><p><T k={c.d} /></p></li>
             ))}
           </ul>
-          <p className="sub-p"><T k="start.gesetz.at" /> <Link href="/kasse-und-gesetz" className="link">Mehr zu Kasse und Gesetz</Link></p>
+          <p className="sub-p"><T k="start.gesetz.at" /> <Link href="/faq#gesetz" className="link">Fragen zu Kasse und Gesetz</Link></p>
         </div>
       </section>
 

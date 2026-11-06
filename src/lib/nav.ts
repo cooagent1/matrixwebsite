@@ -3,77 +3,56 @@ export type NavGroup = { label: string; href?: string; children?: NavItem[] };
 
 export const SUPPORT_PORTAL = "https://support.matrixpos.de/help";
 
+// Schlanke Struktur, freigegeben 07.11. (Robert): wenige Seiten, höchstens zwei Ebenen. Wachsen können wir später.
 export const NAV: NavGroup[] = [
   {
-    label: "Lösungen",
+    label: "Produkte",
     children: [
-      { label: "Matrix NXT", href: "/nxt", hint: "Cloud-Kasse, im Browser und auf Android" },
-      { label: "Matrix POS", href: "/pos", hint: "Stationäre Kasse, mit NEO und CONGA" },
+      { label: "Kassensysteme", href: "/kassensysteme", hint: "NXT und POS im Vergleich" },
+      { label: "Matrix NXT", href: "/kassensysteme/nxt", hint: "Cloud-Kasse, im Browser und auf Android" },
+      { label: "Matrix POS", href: "/kassensysteme/pos", hint: "Stationäre Kasse, mit NEO und CONGA" },
       { label: "Matrix PAY", href: "/pay", hint: "Bezahlen: Terminals und Tap to Pay" },
-      { label: "POS oder NXT?", href: "/kassensysteme", hint: "Die Systeme im Vergleich" },
+      { label: "Schnittstellen", href: "/schnittstellen" },
     ],
   },
-  {
-    label: "Branchen",
-    href: "/branchen",
-    children: [
-      { label: "Restaurant", href: "/branchen/restaurant" },
-      { label: "Hotel", href: "/branchen/hotel" },
-      { label: "Bar & Café", href: "/branchen/bar-cafe" },
-      { label: "Biergarten & Terrasse", href: "/branchen/aussengastronomie" },
-      { label: "Freizeitpark", href: "/branchen/freizeitpark" },
-      { label: "Food Court", href: "/branchen/foodcourt" },
-      { label: "Systemgastronomie", href: "/branchen/systemgastronomie" },
-    ],
-  },
+  { label: "Branchen", href: "/industries" },
   {
     label: "Service",
     children: [
       { label: "Support & Wartung", href: "/support" },
-      { label: "Hardware", href: "/hardware" },
-      { label: "Schnittstellen", href: "/schnittstellen" },
-      { label: "Kasse & Gesetz", href: "/kasse-und-gesetz" },
       { label: "Häufige Fragen", href: "/faq" },
+      { label: "Ratgeber", href: "/ratgeber" },
     ],
   },
   {
     label: "Unternehmen",
     children: [
       { label: "Über uns", href: "/ueber-uns" },
-      { label: "Referenzen", href: "/referenzen" },
       { label: "Partner", href: "/partner" },
       { label: "Jobs", href: "/jobs" },
     ],
   },
 ];
 
-// Schnellzugriff unter dem Menü (Robert 6.11.: Produkte unter Lösungen, weniger Punkte, Fernwartung nur über /support)
+// Schnellzugriff unter dem Menü: so schlank wie möglich (07.11.)
 export const QUICK: NavItem[] = [
   { label: "Demo buchen", href: "/demo" },
-  { label: "Rückruf vereinbaren", href: "/demo#rueckruf" },
   { label: "Supportportal", href: SUPPORT_PORTAL, external: true },
-  { label: "Partner werden", href: "/partner#anfrage" },
 ];
 
 // Linktexte für Querverweise im Fließtext ("→ /pfad")
 export const LABELS: Record<string, string> = {
-  "/nxt": "Matrix NXT",
-  "/pos": "Matrix POS",
-  "/pos/neo": "Matrix NEO",
-  "/pos/conga": "Matrix CONGA",
-  "/pos/evo": "Matrix EVO",
+  "/kassensysteme": "Kassensysteme im Vergleich",
+  "/kassensysteme/nxt": "Matrix NXT",
+  "/kassensysteme/pos": "Matrix POS",
   "/pay": "Matrix PAY",
-  "/kassensysteme": "Systemvergleich",
-  "/branchen": "Branchen",
-  "/support": "Support & Wartung",
-  "/fernwartung": "Fernwartung",
-  "/hardware": "Hardware",
   "/schnittstellen": "Schnittstellen",
-  "/kasse-und-gesetz": "Kasse & Gesetz",
+  "/industries": "Branchen",
+  "/support": "Support & Wartung",
   "/faq": "Häufige Fragen",
+  "/ratgeber": "Ratgeber",
   "/partner": "Partner",
   "/ueber-uns": "Über uns",
-  "/referenzen": "Referenzen",
   "/jobs": "Jobs",
   "/demo": "Demo buchen",
 };
@@ -82,24 +61,12 @@ export const FOOTER: { title: string; items: NavItem[] }[] = [
   {
     title: "Produkte",
     items: [
-      { label: "Matrix NXT", href: "/nxt" },
-      { label: "Matrix POS", href: "/pos" },
-      { label: "NEO", href: "/pos/neo" },
-      { label: "CONGA", href: "/pos/conga" },
+      { label: "Kassensysteme", href: "/kassensysteme" },
+      { label: "Matrix NXT", href: "/kassensysteme/nxt" },
+      { label: "Matrix POS", href: "/kassensysteme/pos" },
       { label: "Matrix PAY", href: "/pay" },
-      { label: "POS oder NXT?", href: "/kassensysteme" },
-    ],
-  },
-  {
-    title: "Branchen",
-    items: [
-      { label: "Restaurant", href: "/branchen/restaurant" },
-      { label: "Hotel", href: "/branchen/hotel" },
-      { label: "Bar & Café", href: "/branchen/bar-cafe" },
-      { label: "Biergarten & Terrasse", href: "/branchen/aussengastronomie" },
-      { label: "Freizeitpark", href: "/branchen/freizeitpark" },
-      { label: "Food Court", href: "/branchen/foodcourt" },
-      { label: "Systemgastronomie", href: "/branchen/systemgastronomie" },
+      { label: "Schnittstellen", href: "/schnittstellen" },
+      { label: "Branchen", href: "/industries" },
     ],
   },
   {
@@ -107,18 +74,14 @@ export const FOOTER: { title: string; items: NavItem[] }[] = [
     items: [
       { label: "Support & Wartung", href: "/support" },
       { label: "Supportportal", href: SUPPORT_PORTAL, external: true },
-      { label: "Fernwartung", href: "/fernwartung" },
-      { label: "Hardware", href: "/hardware" },
-      { label: "Schnittstellen", href: "/schnittstellen" },
-      { label: "Kasse & Gesetz", href: "/kasse-und-gesetz" },
       { label: "Häufige Fragen", href: "/faq" },
+      { label: "Ratgeber", href: "/ratgeber" },
     ],
   },
   {
     title: "Unternehmen",
     items: [
       { label: "Über uns", href: "/ueber-uns" },
-      { label: "Referenzen", href: "/referenzen" },
       { label: "Partner", href: "/partner" },
       { label: "Jobs", href: "/jobs" },
     ],
