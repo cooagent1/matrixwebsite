@@ -19,6 +19,7 @@ export type Block =
       items: { title: string; text?: string; chips?: string[] }[];
       notes?: { title: string; tone: "blue" | "yellow"; rows: { label?: string; chips: string[] }[]; link?: Button }[];
     }
+  | { type: "featgrid"; items: { title: string; text: string; link?: Button; placeholder?: string }[] }
   | { type: "columns"; items: { title: string; tone?: "blue" | "grey"; points: string[]; button?: Button }[] }
   | { type: "contact"; heading?: string; lines: { label: string; text: string }[]; steps?: string[]; stepsHeading?: string; notes?: string[] };
 export type Section = {
@@ -27,6 +28,8 @@ export type Section = {
   eyebrow: string | null;
   heading: string | null;
   blocks: Block[];
+  /** Abschnitt als farbige Hinweiskarte (gelb wie Technologiepartner, blau wie Vertriebspartner). */
+  card?: "yellow" | "blue";
   /** Foto rechts im Hero (ab 1024 px), mobil unter dem Text. */
   image?: { src: string; alt: string; position?: string; asset?: string };
   /** Rechte Spalte neben den Blöcken (ab 1024 px), mobil darunter. */

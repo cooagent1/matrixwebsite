@@ -523,151 +523,68 @@
     }
    },
    {
-    "id": "was-nxt-heute-kann",
-    "name": "Was NXT heute kann",
-    "eyebrow": null,
-    "heading": "Das Basis-Profil, Stand heute.",
-    "blocks": [
-     {
-      "type": "list",
-      "items": [
-       "Tischverwaltung und Raumplan",
-       "Mobile Bonierung am Handgerät oder Tablet",
-       "Splitbuchung: Rechnung teilen",
-       "Gangsteuerung mit Gangfolge für die Küche",
-       "Kartenzahlung inklusive Tap to Pay, abgewickelt über Adyen",
-       "TSE-Signatur für Deutschland nach KassenSichV",
-       "RKSV für Österreich mit Start- und Belegsignatur",
-       "Tagesabschluss und Auswertungen"
-      ]
-     }
-    ]
-   },
-   {
     "id": "funktionen-im-detail",
     "name": "Funktionen im Detail",
     "eyebrow": null,
-    "heading": "Funktionen im Detail",
+    "heading": "Funktionen im Detail.",
     "blocks": [
      {
-      "type": "h3",
-      "text": "Kasse"
-     },
-     {
-      "type": "p",
-      "text": "Im Raumplan bilden Sie Ihren Grundriss mit allen Tischen ab. Die Gangsteuerung schickt die Gänge in der Gangfolge an die Küche. Rechnungen splitten Sie nach Person, Position oder Betrag."
-     },
-     {
-      "type": "placeholder",
-      "label": "Screenshot Tischplan (S1)"
-     },
-     {
-      "type": "h3",
-      "text": "Bezahlen"
-     },
-     {
-      "type": "p",
-      "text": "Gezahlt wird am Kartenterminal oder per Tap to Pay direkt auf dem Handgerät. Matrix PAY ist in NXT integriert, alle Zahlarten erscheinen in einer Abrechnung."
-     },
-     {
-      "type": "buttons",
+      "type": "featgrid",
       "items": [
        {
-        "kind": "link",
-        "label": "Mehr zu PAY",
-        "href": "/pay"
-       }
-      ],
-      "phone": null
-     },
-     {
-      "type": "placeholder",
-      "label": "Foto Handgerät mit Karte (F5)"
-     },
-     {
-      "type": "h3",
-      "text": "Mobil"
-     },
-     {
-      "type": "p",
-      "text": "Auf dem Handgerät bonieren und kassieren Sie direkt am Tisch. Zertifiziert sind Orderman 10, Orderman Magellan EASY, Google Pixel 9 und 10 sowie das Samsung Galaxy Tab A11."
-     },
-     {
-      "type": "buttons",
-      "items": [
+        "title": "Kasse",
+        "text": "Im Raumplan bilden Sie Ihren Grundriss mit allen Tischen ab. Die Gangsteuerung schickt die Gänge in der Gangfolge an die Küche. Rechnungen splitten Sie nach Person, Position oder Betrag.",
+        "placeholder": "Screenshot Tischplan (S1)"
+       },
        {
-        "kind": "link",
-        "label": "Geräte im Überblick",
-        "href": "#hardware"
-       }
-      ],
-      "phone": null
-     },
-     {
-      "type": "placeholder",
-      "label": "Foto Handgerät im Service"
-     },
-     {
-      "type": "h3",
-      "text": "Personal"
-     },
-     {
-      "type": "p",
-      "text": "Mitarbeitende melden sich per PIN an. Über Rollen legen Sie fest, wer stornieren darf und wer den Tagesabschluss macht."
-     },
-     {
-      "type": "placeholder",
-      "label": "Screenshot Rechteverwaltung (S4)"
-     },
-     {
-      "type": "h3",
-      "text": "Auswertung"
-     },
-     {
-      "type": "p",
-      "text": "Den Tagesabschluss machen Sie an der Kasse. Umsatzberichte nach Artikel und Kellner rufen Sie auch im Browser ab. Für Außenprüfung und Kassennachschau exportieren Sie die Daten im DSFinV-K-Format."
-     },
-     {
-      "type": "placeholder",
-      "label": "Screenshot Berichte (S3)"
-     },
-     {
-      "type": "h3",
-      "text": "TSE und Gesetz"
-     },
-     {
-      "type": "p",
-      "text": "Jeder Vorgang wird über die Cloud-TSE von Fiskaly signiert, ein TSE-Stick im Betrieb entfällt. In Deutschland erfüllt NXT KassenSichV und GoBD, in Österreich signiert NXT nach RKSV."
-     },
-     {
-      "type": "buttons",
-      "items": [
+        "title": "Bezahlen",
+        "text": "Gezahlt wird am Kartenterminal oder per Tap to Pay direkt auf dem Handgerät. Matrix PAY ist in NXT integriert, alle Zahlarten erscheinen in einer Abrechnung.",
+        "link": {
+         "kind": "link",
+         "label": "Mehr zu PAY",
+         "href": "/pay"
+        },
+        "placeholder": "Foto Handgerät mit Karte (F5)"
+       },
        {
-        "kind": "link",
-        "label": "Fragen zu Kasse und Gesetz",
-        "href": "/faq#gesetz"
-       }
-      ],
-      "phone": null
-     },
-     {
-      "type": "h3",
-      "text": "Schnittstellen"
-     },
-     {
-      "type": "p",
-      "text": "Heute angebunden sind Adyen für die Kartenzahlung und Fiskaly für die TSE. Stammdaten übernehmen wir aus Matrix Classic. Die Hotelanbindung an protel und ASA Hotel für die Zimmerbuchung ist in Arbeit."
-     },
-     {
-      "type": "buttons",
-      "items": [
+        "title": "Mobil",
+        "text": "Auf dem Handgerät bonieren und kassieren Sie direkt am Tisch. Zertifiziert sind Orderman 10, Orderman Magellan EASY, Google Pixel 9 und 10 sowie das Samsung Galaxy Tab A11.",
+        "link": {
+         "kind": "link",
+         "label": "Geräte im Überblick",
+         "href": "#hardware"
+        },
+        "placeholder": "Foto Handgerät im Service"
+       },
        {
-        "kind": "link",
-        "label": "Alle Schnittstellen",
-        "href": "/schnittstellen"
+        "title": "Personal",
+        "text": "Mitarbeitende melden sich per PIN an. Über Rollen legen Sie fest, wer stornieren darf und wer den Tagesabschluss macht.",
+        "placeholder": "Screenshot Rechteverwaltung (S4)"
+       },
+       {
+        "title": "Auswertung",
+        "text": "Den Tagesabschluss machen Sie an der Kasse. Umsatzberichte nach Artikel und Kellner rufen Sie auch im Browser ab. Für Außenprüfung und Kassennachschau exportieren Sie die Daten im DSFinV-K-Format.",
+        "placeholder": "Screenshot Berichte (S3)"
+       },
+       {
+        "title": "TSE und Gesetz",
+        "text": "Jeder Vorgang wird über die Cloud-TSE von Fiskaly signiert, ein TSE-Stick im Betrieb entfällt. In Deutschland erfüllt NXT KassenSichV und GoBD, in Österreich signiert NXT nach RKSV.",
+        "link": {
+         "kind": "link",
+         "label": "Fragen zu Kasse und Gesetz",
+         "href": "/faq#gesetz"
+        }
+       },
+       {
+        "title": "Schnittstellen",
+        "text": "Heute angebunden sind Adyen für die Kartenzahlung und Fiskaly für die TSE. Stammdaten übernehmen wir aus Matrix Classic. Die Hotelanbindung an protel und ASA Hotel für die Zimmerbuchung ist in Arbeit.",
+        "link": {
+         "kind": "link",
+         "label": "Alle Schnittstellen",
+         "href": "/schnittstellen"
+        }
        }
-      ],
-      "phone": null
+      ]
      }
     ]
    },
@@ -680,9 +597,9 @@
      {
       "type": "list",
       "items": [
-       "**Orderman 10** und **Orderman Magellan EASY**: Handgeräte für den Service",
-       "**Google Pixel 9 und 10**: Android-Handgerät mit Tap to Pay",
-       "**Samsung Galaxy Tab A11**: Tablet, 11 Zoll, für Theke und Tisch"
+       "**Orderman 10 und Orderman Magellan EASY:** Handgeräte für den Service",
+       "**Google Pixel 9 und 10:** Android-Handgerät mit Tap to Pay",
+       "**Samsung Galaxy Tab A11:** Tablet, 11 Zoll, für Theke und Tisch"
       ]
      },
      {
@@ -751,7 +668,8 @@
       ],
       "phone": null
      }
-    ]
+    ],
+    "card": "yellow"
    },
    {
     "id": "fuer-matrix-pos-kunden",

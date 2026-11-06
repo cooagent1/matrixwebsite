@@ -23,7 +23,7 @@ function mergeButtons(blocks: Block[]): Block[] {
 
 // Fett-Einleitung ("**Titel.** Text") als Karte mit Titel und Text
 function splitLead(t: string): { title: string; text: string } | null {
-  const m = t.match(/^\*\*(.+?)\*\*\s*([\s\S]*)$/);
+  const m = t.match(/^\*\*(.+?)\*\*[.:]?\s*([\s\S]*)$/);
   return m ? { title: m[1].replace(/[.:]\s*$/, ""), text: m[2] } : null;
 }
 
@@ -188,6 +188,19 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
             return (
               <div key={i} id="formular" className="sub-form"><ContactForm /></div>
             );
+          case "featgrid":
+            return (
+              <ul key={i} className="sub-feats">
+                {b.items.map((c, j) => (
+                  <li key={j} className="sub-card sub-feat">
+                    <h3 className="b-d">{c.title}</h3>
+                    <p><Inline text={c.text} /></p>
+                    {c.link && <Link href={c.link.href} className="sub-more">{c.link.label} →</Link>}
+                    {c.placeholder && SHOW_PLACEHOLDERS && <span className="b-m sub-feat-ph">Platzhalter: {c.placeholder}</span>}
+                  </li>
+                ))}
+              </ul>
+            );
           case "columns":
             return (
               <div key={i} className="sub-cols">
@@ -339,6 +352,18 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
           <aside className="sub-split-aside">
             <Blocks blocks={s.aside} sectionName={s.name} />
           </aside>
+        </div>
+      </section>
+    );
+  if (s.card)
+    return (
+      <section id={s.id} className="sub-sec sub-sec-card">
+        <div className="b-wrap">
+          <div className={`sub-tone sub-tone-${s.card}`}>
+            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
+            {s.heading && <h2 className="b-d sub-h2">{s.heading}</h2>}
+            <Blocks blocks={s.blocks} sectionName={s.name} />
+          </div>
         </div>
       </section>
     );
