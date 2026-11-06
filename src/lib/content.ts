@@ -19,6 +19,7 @@ export type Block =
       items: { title: string; text?: string; chips?: string[] }[];
       notes?: { title: string; tone: "blue" | "yellow"; rows: { label?: string; chips: string[] }[]; link?: Button }[];
     }
+  | { type: "columns"; items: { title: string; tone?: "blue" | "grey"; points: string[]; button?: Button }[] }
   | { type: "contact"; heading?: string; lines: { label: string; text: string }[]; steps?: string[]; stepsHeading?: string; notes?: string[] };
 export type Section = {
   id: string;

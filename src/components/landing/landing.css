@@ -767,3 +767,25 @@
 @media (max-width:1100px){.lp .sub-cats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:720px){.lp .sub-cats,.lp .sub-cat-notes{grid-template-columns:1fr}.lp .sub-note{padding:20px}}
 @media (max-width:720px){.lp .sub-cats{gap:10px}.lp .sub-cat{gap:8px;padding:18px}.lp .sub-cat h3{font-size:18px}.lp .sub-cat p{font-size:15px}}
+/* /kassensysteme: NXT und POS als zwei Spalten; Tabellen mobil als gestapelte Karten je Zeile */
+.lp .sub-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:8px}
+.lp .sub-col{border-radius:28px;border:1px solid var(--lp-line);padding:36px;display:flex;flex-direction:column;gap:16px}
+.lp .sub-col h3{margin:0;font-size:clamp(26px,1.6vw + 12px,36px);line-height:1.1;font-weight:800}
+.lp .sub-col-blue{background:#E6F6FC;border-color:rgba(0,171,229,0.35)}
+.lp .sub-col-grey{background:var(--lp-surface)}
+.lp .sub-sec.alt .sub-col-grey{background:#fff}
+.lp .sub-col .sub-btns{margin-top:auto}
+.lp .sub-col .btn-primary-on-dark{background:var(--lp-acc);color:#fff}
+.lp .sub-col .btn-ghost{background:#fff;border:1px solid var(--lp-line);color:var(--lp-ink)}
+@media (max-width:900px){.lp .sub-cols{grid-template-columns:1fr}.lp .sub-col{padding:24px;border-radius:24px}}
+@media (max-width:720px){
+  .lp .sub-table{overflow:visible;border:0;background:none;border-radius:0}
+  .lp .sub-table table{min-width:0;display:block}
+  .lp .sub-table thead{display:none}
+  .lp .sub-table tbody{display:flex;flex-direction:column;gap:10px}
+  .lp .sub-table tr{display:block;border:1px solid var(--lp-line);border-radius:18px;background:var(--lp-surface);padding:14px 16px}
+  .lp .sub-sec.alt .sub-table tr{background:#fff}
+  .lp .sub-table td{display:block;border:0;padding:4px 0}
+  .lp .sub-table td.first{font-size:17px;font-weight:700;padding-bottom:6px}
+  .lp .sub-table td[data-label]::before{content:attr(data-label);display:block;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--lp-mute)}
+}

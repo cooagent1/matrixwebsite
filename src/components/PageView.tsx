@@ -144,7 +144,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                   </thead>
                   <tbody>
                     {b.rows.map((r, j) => (
-                      <tr key={j}>{r.map((c, k) => (<td key={k} className={k === 0 ? "first" : ""}><Inline text={c} /></td>))}</tr>
+                      <tr key={j}>{r.map((c, k) => (<td key={k} className={k === 0 ? "first" : ""} data-label={k > 0 ? b.head[k] : undefined}><Inline text={c} /></td>))}</tr>
                     ))}
                   </tbody>
                 </table>
@@ -187,6 +187,18 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
           case "form":
             return (
               <div key={i} id="formular" className="sub-form"><ContactForm /></div>
+            );
+          case "columns":
+            return (
+              <div key={i} className="sub-cols">
+                {b.items.map((c, j) => (
+                  <div key={j} className={`sub-col sub-col-${c.tone ?? "grey"}`}>
+                    <h3 className="b-d">{c.title}</h3>
+                    <ul className="sub-check">{c.points.map((t, k) => (<li key={k}><Inline text={t} /></li>))}</ul>
+                    {c.button && <div className="sub-btns"><Btn item={c.button} tone="dark" secondary={c.button.kind !== "button"} /></div>}
+                  </div>
+                ))}
+              </div>
             );
           case "catgrid":
             return (

@@ -366,42 +366,37 @@
     "heading": "Was die Systeme unterscheidet.",
     "blocks": [
      {
-      "type": "h3",
-      "text": "NXT. Die Kasse für neue Betriebe."
-     },
-     {
-      "type": "p",
-      "text": "Matrix NXT läuft im Browser und auf Android, ohne Server im Haus. Bonierung am Handgerät und Tap to Pay sind enthalten, Updates spielen wir zentral ein."
-     },
-     {
-      "type": "buttons",
+      "type": "columns",
       "items": [
        {
-        "kind": "link",
-        "label": "Mehr zu NXT",
-        "href": "/kassensysteme/nxt"
-       }
-      ],
-      "phone": null
-     },
-     {
-      "type": "h3",
-      "text": "POS. Stationär."
-     },
-     {
-      "type": "p",
-      "text": "Matrix POS ist lokal installiert und kassiert auch ohne Internet. Über 40 Schnittstellen sind im Einsatz, darunter protel, Oracle Opera und DATEV. Mobil kassieren Sie mit NEO, Dienstplan und Zeiterfassung kommen mit CONGA."
-     },
-     {
-      "type": "buttons",
-      "items": [
+        "title": "NXT. Die Kasse für neue Betriebe.",
+        "tone": "blue",
+        "points": [
+         "Läuft im Browser und auf Android, ohne Server im Haus.",
+         "Bonierung am Handgerät und Tap to Pay sind enthalten.",
+         "Updates spielen wir zentral ein."
+        ],
+        "button": {
+         "kind": "button",
+         "label": "Mehr zu NXT",
+         "href": "/kassensysteme/nxt"
+        }
+       },
        {
-        "kind": "link",
-        "label": "Mehr zu POS",
-        "href": "/kassensysteme/pos"
+        "title": "POS. Stationär.",
+        "tone": "grey",
+        "points": [
+         "Lokal installiert, kassiert auch ohne Internet.",
+         "Über 40 Schnittstellen im Einsatz, darunter protel, Oracle Opera und DATEV.",
+         "Mobil kassieren Sie mit NEO, Dienstplan und Zeiterfassung kommen mit CONGA."
+        ],
+        "button": {
+         "kind": "link",
+         "label": "Mehr zu POS",
+         "href": "/kassensysteme/pos"
+        }
        }
-      ],
-      "phone": null
+      ]
      }
     ]
    },
@@ -435,21 +430,6 @@
         "Mit NEO"
        ],
        [
-        "Küchendisplay",
-        "In Arbeit",
-        "Matrix Bonmonitor"
-       ],
-       [
-        "Dienstplan und Zeiterfassung",
-        "Zeiterfassung in Arbeit",
-        "Mit CONGA"
-       ],
-       [
-        "Self-Ordering und Kiosk",
-        "Nicht enthalten",
-        "Über Schnittstelle, z. B. Flixorder"
-       ],
-       [
         "Auswertung",
         "Im Browser, von überall",
         "Am Backoffice-Platz im Betrieb"
@@ -463,64 +443,20 @@
         "Schnittstellen",
         "Adyen, Fiskaly, Datenübernahme aus Classic. Hotelsoftware in Arbeit",
         "Über 40 im Betrieb"
-       ],
-       [
-        "TSE",
-        "Cloud-TSE Fiskaly, RKSV für Österreich",
-        "Cloud-TSE Fiskaly"
-       ],
-       [
-        "Hardware",
-        "Orderman 10, Orderman Magellan EASY, Google Pixel 9 und 10, Samsung Galaxy Tab A11",
-        "Terminals, Drucker, Displays, Scanner, Waagen"
-       ],
-       [
-        "Support",
-        "7 Tage, aus Hannover",
-        "7 Tage, aus Hannover"
        ]
       ]
      },
      {
       "type": "p",
-      "text": "Kurz: Wer neu startet, nimmt NXT. POS bleibt für Betriebe, die ohne Netz kassieren müssen oder viele Schnittstellen brauchen. Hotels mit Zimmerbuchung arbeiten heute mit POS, die Hotelanbindung für NXT ist in Arbeit."
-     }
-    ]
-   },
-   {
-    "id": "haeufige-fragen",
-    "name": "Häufige Fragen",
-    "eyebrow": null,
-    "heading": "Häufige Fragen",
-    "blocks": [
+      "text": "Küchendisplay, Zeiterfassung, Self-Ordering und Hotelanbindung: [Was NXT heute nicht kann](/kassensysteme/nxt#was-nxt-heute-nicht-kann)."
+     },
      {
-      "type": "faq",
-      "items": [
-       {
-        "q": "Kann ich von Matrix POS auf Matrix NXT wechseln?",
-        "a": [
-         "Ja. Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. Ob NXT Ihren Betrieb heute abdeckt, hängt vor allem an zwei Punkten, die für NXT noch in Arbeit sind: Offline-Betrieb und Hotelschnittstelle."
-        ]
-       },
-       {
-        "q": "Funktioniert die Kasse, wenn das Internet ausfällt?",
-        "a": [
-         "Matrix POS läuft lokal und kassiert ohne Internet weiter. Matrix NXT braucht heute eine Verbindung, der Offline-Betrieb ist in Arbeit. Wer heute ohne Netz kassieren muss, nimmt Matrix POS."
-        ]
-       },
-       {
-        "q": "Welche Hardware brauche ich?",
-        "a": [
-         "Für NXT: Orderman 10, Orderman Magellan EASY, Google Pixel 9 oder 10, Samsung Galaxy Tab A11, dazu ein Bondrucker. Für POS stationäre Terminals. → /kassensysteme"
-        ]
-       },
-       {
-        "q": "Ist Matrix TSE-konform?",
-        "a": [
-         "Ja, beide Systeme. Sie signieren über die Cloud-TSE von Fiskaly, ohne TSE-Hardware im Betrieb. Betriebe mit Hardware-TSE (Swissbit) kassieren damit vorerst weiter und werden später auf die Cloud-TSE umgestellt."
-        ]
-       }
-      ]
+      "type": "p",
+      "text": "Kurz: Wer neu startet, nimmt NXT. POS bleibt für Betriebe, die ohne Netz kassieren müssen oder viele Schnittstellen brauchen. Hotels mit Zimmerbuchung arbeiten heute mit POS, die Hotelanbindung für NXT ist in Arbeit."
+     },
+     {
+      "type": "p",
+      "text": "Weitere Fragen zu Wechsel, Hardware und TSE beantworten wir in den [häufigen Fragen](/faq)."
      }
     ]
    },
