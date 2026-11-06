@@ -9,8 +9,12 @@
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "Die Kasse für Ihren Betrieb.",
+    "heading": "Gastro-Kassen aus Hannover. Seit 30 Jahren.",
     "blocks": [
+     {
+      "type": "p",
+      "text": "Oberzeile: Matrix NXT · Cloud-Kasse"
+     },
      {
       "type": "p",
       "text": "Matrix NXT, die Cloud-Kasse aus Hannover. Support von Leuten, die selbst in der Gastronomie gearbeitet haben."
@@ -841,26 +845,6 @@
        }
       ],
       "phone": null
-     }
-    ]
-   },
-   {
-    "id": "referenz",
-    "name": "Referenz",
-    "eyebrow": null,
-    "heading": "Referenz",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "„Sein Kassen-Partner hat die Matrix komplett auf ihn zugeschnitten.\""
-     },
-     {
-      "type": "p",
-      "text": "Hennings Bar, Hannover"
-     },
-     {
-      "type": "placeholder",
-      "label": "Foto"
      }
     ]
    },
@@ -2077,18 +2061,6 @@
     "eyebrow": null,
     "heading": "Referenz",
     "blocks": [
-     {
-      "type": "p",
-      "text": "„Sein Kassen-Partner hat die Matrix komplett auf ihn zugeschnitten.\""
-     },
-     {
-      "type": "p",
-      "text": "Hennings Bar, Hannover"
-     },
-     {
-      "type": "placeholder",
-      "label": "Foto"
-     },
      {
       "type": "p",
       "text": "„Die Zusammenarbeit seit 15 Jahren ist außerordentlich gut. Gerade in der Gastronomie, wenn es Probleme gibt, meistens am Wochenende, ist sofort jemand erreichbar.\""
