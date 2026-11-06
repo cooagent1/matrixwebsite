@@ -526,3 +526,37 @@
 /* Mindestgrößen: Text 12 px, Tap-Ziele 44 px */
 .lp .b-avatar,.lp .sub-ph span{font-size:12px}
 .lp .b-btn,.lp .b-tab{min-height:44px}
+
+/* Maßstab (06.11., Robert: "alles sehr groß"): Headlines halbiert, Abstände 80, Szenen nebeneinander */
+.lp{--t-display:clamp(44px,5.5vw + 14px,96px);--t-h2:clamp(32px,2.4vw + 14px,48px);--t-h3:clamp(24px,.8vw + 16px,28px);--t-num:clamp(36px,2vw + 12px,48px)}
+.lp .b-big{font-size:clamp(44px,3.6vw + 12px,64px)}
+.lp .b-demo h2{font-size:clamp(40px,3vw + 14px,64px)}
+.lp .b-h1{line-height:.95}
+.lp .b-h2,.lp .b-seg-h,.lp .b-railhead h2,.lp .pt-h2,.lp .sub-h2,.lp .legal-title,.lp .b-qsec h2{line-height:1.05}
+.lp:not(.lp-sub) .sub-sec .sub-h2,.lp .b-qsec h2{font-size:var(--t-h3);line-height:1.2}
+.lp .b-scene h3{font-size:24px}
+.lp .b-feat .t b{font-size:19px}
+.lp .b-card .n,.lp .sub-card .n,.lp .pt-step .n{font-size:clamp(36px,2.4vw + 12px,48px)}
+.lp .b-lead,.lp .b-scene p,.lp .b-hand p,.lp .b-demo p,.lp .sub-p,.lp .b-card p,.lp .b-feat .t small,.lp .b-feat .t,.lp .b-qa p{font-size:17px;line-height:1.55}
+.lp .b-hero-body{padding-top:160px;padding-bottom:56px;gap:24px}
+.lp .b-hero{min-height:760px}
+.lp .b-logos{padding:32px 0}
+.lp .b-zahlen .b-nums{padding:28px 0}
+.lp .b-scenes-in{padding:80px 0}
+.lp .b-story{display:flex;flex-direction:column;gap:40px}
+.lp .b-sticky{position:static;max-width:760px;gap:16px}
+.lp .b-scene-col{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.lp .b-scene{padding:28px;border-radius:24px}
+.lp .b-scene-col .b-stage{height:400px !important;zoom:.58;margin-bottom:24px;overflow:hidden}
+.lp .b-branchen{padding:0 0 16px}
+.lp .b-railsec{padding:80px 0 56px}
+.lp .b-railhead{margin-bottom:28px}
+.lp .b-card{min-height:320px;flex-basis:320px;padding:28px}
+.lp .b-hand{padding:64px 0}
+.lp .b-famsec{padding:24px 0 80px}
+.lp .b-qsec{padding:80px 0 64px}
+.lp .sub-sec{padding:80px 0}
+.lp .b-demo{padding:80px 0}
+.lp .b-demo-in{gap:20px}
+@media (max-width:1024px){.lp .b-scene-col{grid-template-columns:1fr}.lp .b-scene-col .b-stage{zoom:.72;height:300px !important}.lp .b-scene.s2 .b-stage{height:400px !important}.lp .b-scene.s3 .b-stage{height:230px !important}}
+@media (max-width:720px){.lp .b-hero{min-height:calc(100svh - 8px)}.lp .b-scene-col .b-stage{zoom:.56}.lp .b-scenes-in{padding:56px 0}.lp .b-railsec{padding:56px 0 40px}.lp .b-hand{padding:48px 0}.lp .b-famsec{padding:16px 0 56px}.lp .b-qsec,.lp .sub-sec,.lp .b-demo{padding:56px 0}}

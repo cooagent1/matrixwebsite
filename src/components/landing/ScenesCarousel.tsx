@@ -1,49 +1,11 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import { T } from "../T";
 
-const COUNT = 3;
-
-// "Drei Szenen": beim Scrollen laufen die drei Szenen wie ein Karussell durch (Robert 31.10.).
-// Die Section ist 3 Bildschirmhöhen hoch, der Inhalt klebt; die Scrollposition wählt die Szene.
-// Unter 1100 px Breite: normale Stapelung ohne Karussell.
+// Statisch seit 06.11. (Robert: Seite zu lang): Kopf oben, drei Szenen nebeneinander, kein Scroll-Karussell.
 export function ScenesCarousel() {
-  const ref = useRef<HTMLElement>(null);
-  const [i, setI] = useState(0);
-  const [on, setOn] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(min-width: 1100px) and (prefers-reduced-motion: no-preference)");
-    const update = () => setOn(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
-
-  useEffect(() => {
-    if (!on) return;
-    let raf = 0;
-    const tick = () => {
-      raf = 0;
-      const el = ref.current;
-      if (!el) return;
-      const r = el.getBoundingClientRect();
-      const range = el.offsetHeight - window.innerHeight;
-      const p = Math.min(1, Math.max(0, -r.top / Math.max(1, range)));
-      setI(Math.min(COUNT - 1, Math.floor(p * COUNT * 0.999)));
-    };
-    const onScroll = () => { if (!raf) raf = requestAnimationFrame(tick); };
-    tick();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); if (raf) cancelAnimationFrame(raf); };
-  }, [on]);
-
-  const cls = (k: number) => (!on ? "" : k === i ? "is-on" : k < i ? "is-past" : "is-next");
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const cls = (_k: number) => "";
   return (
-    <section id="szenen" ref={ref} className={`b-scenes ${on ? "b-scenes-car" : ""}`}>
+    <section id="szenen" className="b-scenes">
       <div className="b-scenes-in">
         <div className="b-aurora" aria-hidden="true" />
         <div className="b-grain" aria-hidden="true" />
