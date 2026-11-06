@@ -1,3 +1,4 @@
+import { ConsentLink } from "@/components/Consent";
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { NAV, SUPPORT_PORTAL } from "@/lib/nav";
@@ -50,6 +51,7 @@ export function LpFooter() {
           <Link href="/impressum">Impressum</Link>
           <Link href="/datenschutz">Datenschutz</Link>
           <Link href="/agb">AGB</Link>
+          <ConsentLink />
         </div>
       </div>
     </footer>

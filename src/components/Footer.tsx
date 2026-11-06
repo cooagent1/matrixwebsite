@@ -1,3 +1,4 @@
+import { ConsentLink } from "@/components/Consent";
 import Link from "next/link";
 import { FOOTER } from "@/lib/nav";
 
@@ -50,6 +51,7 @@ export function Footer() {
           <Link href="/impressum" className="hover:text-white">Impressum</Link>
           <Link href="/datenschutz" className="hover:text-white">Datenschutz</Link>
           <Link href="/agb" className="hover:text-white">AGB</Link>
+          <ConsentLink />
           <span className="ml-auto">© Matrix POS GmbH</span>
         </div>
       </div>
