@@ -329,11 +329,11 @@
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "POS oder NXT?",
+    "heading": "NXT oder POS?",
     "blocks": [
      {
       "type": "p",
-      "text": "Matrix POS ist lokal installiert, Matrix NXT läuft in der Cloud. Die Tabelle zeigt, was jede Kasse heute kann."
+      "text": "Matrix NXT läuft in der Cloud, Matrix POS ist lokal installiert. Die Tabelle zeigt, was jede Kasse heute kann."
      },
      {
       "type": "buttons",
@@ -367,6 +367,25 @@
     "blocks": [
      {
       "type": "h3",
+      "text": "NXT. Die Kasse für neue Betriebe."
+     },
+     {
+      "type": "p",
+      "text": "Matrix NXT läuft im Browser und auf Android, ohne Server im Haus. Bonierung am Handgerät und Tap to Pay sind enthalten, Updates spielen wir zentral ein."
+     },
+     {
+      "type": "buttons",
+      "items": [
+       {
+        "kind": "link",
+        "label": "Mehr zu NXT",
+        "href": "/kassensysteme/nxt"
+       }
+      ],
+      "phone": null
+     },
+     {
+      "type": "h3",
       "text": "POS. Stationär."
      },
      {
@@ -383,25 +402,6 @@
        }
       ],
       "phone": null
-     },
-     {
-      "type": "h3",
-      "text": "NXT. Cloud."
-     },
-     {
-      "type": "p",
-      "text": "Matrix NXT läuft im Browser und auf Android, ohne Server im Haus. Bonierung am Handgerät und Tap to Pay sind enthalten, Updates spielen wir zentral ein."
-     },
-     {
-      "type": "buttons",
-      "items": [
-       {
-        "kind": "link",
-        "label": "Mehr zu NXT",
-        "href": "/kassensysteme/nxt"
-       }
-      ],
-      "phone": null
      }
     ]
    },
@@ -415,64 +415,64 @@
       "type": "table",
       "head": [
        "",
-       "Matrix POS",
-       "Matrix NXT"
+       "Matrix NXT",
+       "Matrix POS"
       ],
       "rows": [
        [
         "Installation",
-        "Lokal im Betrieb",
-        "Cloud, Browser oder Android-App"
+        "Cloud, Browser oder Android-App",
+        "Lokal im Betrieb"
        ],
        [
         "Kassieren ohne Internet",
-        "Ja",
-        "Heute nicht, Offline-Betrieb in Arbeit"
+        "Heute nicht, Offline-Betrieb in Arbeit",
+        "Ja"
        ],
        [
         "Mobil kassieren",
-        "Mit NEO",
-        "Enthalten: Orderman oder Google Pixel mit Tap to Pay"
+        "Enthalten: Orderman oder Google Pixel mit Tap to Pay",
+        "Mit NEO"
        ],
        [
         "Küchendisplay",
-        "Matrix Bonmonitor",
-        "In Arbeit"
+        "In Arbeit",
+        "Matrix Bonmonitor"
        ],
        [
         "Dienstplan und Zeiterfassung",
-        "Mit CONGA",
-        "Zeiterfassung in Arbeit"
+        "Zeiterfassung in Arbeit",
+        "Mit CONGA"
        ],
        [
         "Self-Ordering und Kiosk",
-        "Über Schnittstelle, z. B. Flixorder",
-        "Nicht enthalten"
+        "Nicht enthalten",
+        "Über Schnittstelle, z. B. Flixorder"
        ],
        [
         "Auswertung",
-        "Am Backoffice-Platz im Betrieb",
-        "Im Browser, von überall"
+        "Im Browser, von überall",
+        "Am Backoffice-Platz im Betrieb"
        ],
        [
         "Updates",
-        "Durch unseren Service",
-        "Zentral und automatisch"
+        "Zentral und automatisch",
+        "Durch unseren Service"
        ],
        [
         "Schnittstellen",
-        "Über 40 im Betrieb",
-        "Adyen, Fiskaly, Datenübernahme aus Classic. Hotelsoftware in Arbeit"
+        "Adyen, Fiskaly, Datenübernahme aus Classic. Hotelsoftware in Arbeit",
+        "Über 40 im Betrieb"
        ],
        [
         "TSE",
-        "Cloud-TSE Fiskaly",
-        "Cloud-TSE Fiskaly, RKSV für Österreich"
+        "Cloud-TSE Fiskaly, RKSV für Österreich",
+        "Cloud-TSE Fiskaly"
        ],
        [
         "Hardware",
-        "Terminals, Drucker, Displays, Scanner, Waagen",
-        "Orderman 10, Orderman Magellan EASY, Google Pixel 9 und 10, Samsung Galaxy Tab A11"
+        "Orderman 10, Orderman Magellan EASY, Google Pixel 9 und 10, Samsung Galaxy Tab A11",
+        "Terminals, Drucker, Displays, Scanner, Waagen"
        ],
        [
         "Support",
@@ -483,7 +483,7 @@
      },
      {
       "type": "p",
-      "text": "Kurz: Wer ohne Netz kassieren muss oder viele Schnittstellen braucht, nimmt POS. Wer neu startet und ohne Server arbeiten will, nimmt NXT. Hotels mit Zimmerbuchung arbeiten heute mit POS, die Hotelanbindung für NXT ist in Arbeit."
+      "text": "Kurz: Wer neu startet, nimmt NXT. POS bleibt für Betriebe, die ohne Netz kassieren müssen oder viele Schnittstellen brauchen. Hotels mit Zimmerbuchung arbeiten heute mit POS, die Hotelanbindung für NXT ist in Arbeit."
      }
     ]
    },
@@ -886,7 +886,7 @@
       "items": [
        {
         "kind": "button",
-        "label": "Demo buchen",
+        "label": "Beratung anfragen",
         "href": "/demo?thema=pos"
        }
       ],
@@ -899,10 +899,10 @@
     ]
    },
    {
-    "id": "das-spricht-fuer-pos",
-    "name": "Das spricht für POS",
+    "id": "wann-pos-passt",
+    "name": "Wann POS passt",
     "eyebrow": null,
-    "heading": "Das spricht für POS",
+    "heading": "Für Betriebe, die offline kassieren oder viele Systeme anbinden.",
     "blocks": [
      {
       "type": "cards",
@@ -913,19 +913,11 @@
        },
        {
         "nr": "02",
-        "text": "**Eingerichtet auf Ihren Betrieb.** Artikel, Warengruppen, Zahlarten und Artikelzwänge richten wir in Matrix Office für Ihren Betrieb ein."
-       },
-       {
-        "nr": "03",
         "text": "**Über 40 Schnittstellen.** Die Kasse bucht per Zimmerbuchung auf das Zimmerkonto in protel oder Oracle Opera und übergibt den Tagesabschluss an DATEV."
        },
        {
-        "nr": "04",
+        "nr": "03",
         "text": "**TSE und Meldepflicht.** Die TSE-Signatur kommt von der Cloud-TSE von Fiskaly. Die Kassenmeldung nach § 146a AO läuft über ELSTER."
-       },
-       {
-        "nr": "05",
-        "text": "**30 Jahre im Einsatz.** Matrix POS läuft in Restaurants, Hotels, Kantinen und Freizeitparks. Im Erlebnis-Zoo Hannover bildet sie bediente Gastronomie und Check-out-Gastronomie in einem System ab."
        }
       ]
      }
@@ -1079,6 +1071,29 @@
     ]
    },
    {
+    "id": "wechsel",
+    "name": "Wechsel zu NXT",
+    "eyebrow": null,
+    "heading": "Die nächste Kasse ist NXT.",
+    "blocks": [
+     {
+      "type": "p",
+      "text": "Neue Betriebe starten mit Matrix NXT. Bestandskunden wechseln, sobald NXT ihren Bedarf abdeckt. Artikel, Preise und Personal übernehmen wir aus der Matrix Classic."
+     },
+     {
+      "type": "buttons",
+      "items": [
+       {
+        "kind": "button",
+        "label": "Mehr zu NXT",
+        "href": "/kassensysteme/nxt"
+       }
+      ],
+      "phone": null
+     }
+    ]
+   },
+   {
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
@@ -1093,7 +1108,7 @@
       "items": [
        {
         "kind": "button",
-        "label": "Demo buchen",
+        "label": "Beratung anfragen",
         "href": "/demo?thema=pos"
        }
       ],

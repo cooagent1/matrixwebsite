@@ -594,3 +594,9 @@
 @media (max-width:900px){.lp .b-seg{grid-template-columns:1fr}.lp .b-seg-l{min-height:360px}.lp .b-seg-h{font-size:clamp(28px,6vw,40px)}}
 @media (max-width:1100px){.lp .b-fam a{min-height:150px;padding:24px}}
 @media (max-width:720px){.lp .sub-card{padding:20px}.lp .sub-card .n{font-size:28px}.lp .b-zahlen .b-nums{padding:24px 0}.lp .b-seg-l{min-height:300px;padding:24px}}
+
+/* 07.11.: NXT im Produktblock standardmäßig groß und aufgeklappt */
+.lp .b-fam a.f-nxt{flex:2.2 1 0}
+.lp .b-fam a.f-nxt .fam-more{opacity:1;max-height:200px}
+.lp .b-fam:hover a.f-nxt:not(:hover){flex:1 1 0}
+.lp .b-fam:hover a.f-nxt:not(:hover) .fam-more{opacity:0;max-height:0}

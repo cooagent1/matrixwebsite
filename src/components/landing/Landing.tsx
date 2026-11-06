@@ -19,8 +19,6 @@ const LOGOS = [
   ["gop", "GOP Varieté", "mid"],
 ];
 
-const CARDS = ["01", "02", "03", "04", "05", "06", "07", "08"];
-
 function Arrow() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -65,34 +63,8 @@ export function Landing() {
 
       <BranchenTabs />
 
-      <section className="b-railsec" aria-label="Funktionen">
-        <div className="b-wrap b-railhead">
-          <h2 className="b-d"><T k="start.funktionen.h2" /></h2>
-          <span className="b-m b-railhint">← scrollen →</span>
-        </div>
-        <div className="b-rail">
-          {CARDS.map((n) => (
-            <div key={n} className="b-card">
-              <span className="n b-d">{n}</span>
-              <div><h3 className="b-d"><T k={`start.funktion${n}.titel`} /></h3><p><T k={`start.funktion${n}.text`} /></p></div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="b-hand" aria-label="Kasse und Terminal von Matrix">
-        <div className="b-aurora b-aurora-wide" aria-hidden="true" />
-        <div className="b-wrap b-hand-in">
-          <div className="b-hand-txt">
-            <span className="b-m b-kicker"><T k="start.pay.kicker" /></span>
-            <h2 className="b-d b-big"><span className="b-grad"><T k="start.pay.h2" /></span></h2>
-            <p><T k="start.pay.text" /></p>
-          </div>
-          <div className="b-hand-img"><img src="/lp/fotos/nxt-terminal.jpg" alt="Matrix NXT auf dem Terminal im Restaurant" loading="lazy" /></div>
-        </div>
-      </section>
-
       <section id="familie" className="b-famsec" aria-label="Produkte">
+        {/* Startseite 07.11.: NXT ist der Star (offen breiter), POS wird passiv verkauft. Funktionen-Leiste und PAY-Block gestrichen. */}
         <div className="b-wrap">
           <div className="b-fam">
             <Link href="/kassensysteme/nxt" className="f-nxt"><span className="b-m k"><T k="start.familie.nxt.kicker" /></span><span className="b-d name">matrix <em>NXT</em></span><span className="sub"><T k="start.familie.nxt.sub" /></span><span className="fam-more"><T k="start.familie.nxt.text" /></span></Link>

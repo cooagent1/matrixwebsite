@@ -9,7 +9,7 @@ export const NAV: NavGroup[] = [
     label: "Produkte",
     children: [
       { label: "Kassensysteme", href: "/kassensysteme", hint: "NXT und POS im Vergleich" },
-      { label: "Matrix NXT", href: "/kassensysteme/nxt", hint: "Cloud-Kasse, im Browser und auf Android" },
+      { label: "Matrix NXT", href: "/kassensysteme/nxt", hint: "Die Cloud-Kasse für neue Betriebe" },
       { label: "Matrix POS", href: "/kassensysteme/pos", hint: "Stationäre Kasse, mit NEO und CONGA" },
       { label: "Matrix PAY", href: "/pay", hint: "Bezahlen: Terminals und Tap to Pay" },
       { label: "Schnittstellen", href: "/schnittstellen" },
