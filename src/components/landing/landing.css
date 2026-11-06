@@ -494,3 +494,6 @@
 .lp .b-law-grid{grid-template-columns:repeat(4,1fr)}
 @media (max-width:1100px){.lp .b-law-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:720px){.lp .b-law-grid{grid-template-columns:1fr}.lp .b-qsec{padding:80px 0 64px}.lp .b-qcard blockquote{font-size:19px}.lp .b-qnav button{width:44px;height:44px}}
+
+/* Menü sitzt im dunklen Hero, braucht aber die hellen Farben (Kontrast) */
+.lp .b-menu{--lp-ink:#242424;--lp-text2:#3A3A3A;--lp-mute:#5A5A5A;--lp-mute2:#5A5A5A;--lp-acc2:#0077A3;--lp-line:rgba(36,36,36,0.12);--lp-surface:#F4F4F4;--lp-surface2:#EDEDED;color:var(--lp-ink)}
