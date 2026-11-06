@@ -17,13 +17,13 @@ const LOGOS = [
 
 const CARDS: { n: string; t: string; d: string }[] = [
   { n: "01", t: "Tischplan mit Gängen", d: "Mehrere Räume, offene Beträge, Tische zusammenlegen und umsetzen." },
-  { n: "02", t: "Bezahlen, wie der Gast will", d: "Bar, Karte, Tap to Pay am Handgerät. Rechnung splitten nach Person oder Position." },
+  { n: "02", t: "Splitten und kassieren", d: "Rechnung nach Person oder Position splitten. Bar, Terminal oder Tap to Pay am Handgerät." },
   { n: "03", t: "Cloud-TSE ohne Stick", d: "Jeder Vorgang signiert über Fiskaly. KassenSichV, DSFinV-K, RKSV für Österreich." },
-  { n: "04", t: "Bons an Küche und Bar", d: "Bons gehen automatisch je Warengruppe an Küche oder Bar. Jede Station bekommt nur, was sie braucht." },
+  { n: "04", t: "Bons an Küche und Bar", d: "Die Bonierung geht je Warengruppe an den Drucker in Küche oder Bar, mit Gangfolge." },
   { n: "05", t: "Layout nach Betrieb", d: "Favoritenleiste, mehrere Layouts in einer Kasse, heller und dunkler Modus." },
   { n: "06", t: "Hotelsoftware in Arbeit", d: "Zimmerbuchung aus der Kasse über protel und ASA Hotel kommt als Update. Dann mit einer Payment-Abrechnung über Matrix PAY." },
   { n: "07", t: "Neues Gerät per Code", d: "Tablet oder Handgerät per Einrichtungscode anmelden. Updates kommen zentral, ohne Techniker." },
-  { n: "08", t: "Umstieg von Matrix Classic", d: "Artikel und Personal übernehmen wir. NXT wächst mit jedem Update." },
+  { n: "08", t: "Umstieg von Matrix Classic", d: "Artikel und Personal übernehmen wir aus der bestehenden Matrix-Kasse." },
 ];
 
 function Arrow() {
@@ -91,13 +91,13 @@ export function Landing() {
         </div>
       </section>
 
-      <section className="b-hand" aria-label="Alles aus einer Hand">
+      <section className="b-hand" aria-label="Kasse und Terminal von Matrix">
         <div className="b-aurora b-aurora-wide" aria-hidden="true" />
         <div className="b-wrap b-hand-in">
           <div className="b-hand-txt">
-            <span className="b-m b-kicker">Kasse, Bezahlen und Service von einem Anbieter</span>
-            <h2 className="b-d b-big"><span className="b-grad">Alles aus einer Hand.</span></h2>
-            <p>Ein Ansprechpartner, eine Abrechnung. Support aus Hannover, 7 Tage die Woche, von Leuten aus der Gastronomie.</p>
+            <span className="b-m b-kicker">Matrix NXT mit Matrix PAY</span>
+            <h2 className="b-d b-big"><span className="b-grad">Kasse und Terminal von Matrix.</span></h2>
+            <p>Kartenzahlungen laufen über Matrix PAY mit Adyen, alle Zahlarten in einer Abrechnung. Streikt am Samstagabend das Terminal, ruft der Betrieb dieselbe Hotline an wie für die Kasse.</p>
           </div>
           <div className="b-hand-img"><img src="/lp/fotos/nxt-terminal.jpg" alt="Matrix NXT auf dem Terminal im Restaurant" loading="lazy" /></div>
         </div>

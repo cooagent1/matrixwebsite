@@ -50,7 +50,7 @@ export function ScenesCarousel() {
           <div className="b-sticky">
             <span className="b-m b-kicker">Drei Szenen, eine Kasse</span>
             <h2 className="b-d b-h2">Der Service läuft. Die Kasse auch.</h2>
-            <p className="b-lead">Am Tisch, an der Theke, im Büro: Matrix NXT ist dieselbe Kasse auf jedem Gerät. Im Browser, als Android-App, mit Cloud-TSE. Ohne Server im Haus.</p>
+            <p className="b-lead">Kassenterminal, Handgerät und Backoffice greifen auf dieselben Artikel, Tische und offenen Beträge zu. Jede Buchung wird über die Cloud-TSE signiert.</p>
             <div className="b-nums">
               <div className="b-num"><b className="b-d">0</b><span>Server im Betrieb</span></div>
               <div className="b-num"><b className="b-d">7</b><span>Tage die Woche Support</span></div>

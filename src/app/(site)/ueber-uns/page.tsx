@@ -6,7 +6,7 @@ import { TeamGrid } from "@/components/cms/TeamGrid";
 export const metadata: Metadata = {
   title: { absolute: "Über Matrix POS: 30 Jahre Gastro-Kassen aus Hannover | Matrix POS" },
   description:
-    "Matrix POS GmbH aus Hannover entwickelt seit über 30 Jahren Kassen für die Gastronomie. Ein Team aus Gastro-Leuten und Entwicklern, mit Matrix NXT in der Cloud.",
+    "Matrix POS GmbH, Hannover: seit über 30 Jahren Kassen für Gastronomie und Hotellerie. Über 60 Mitarbeitende entwickeln und betreuen Matrix NXT, POS, PAY und CONGA.",
 };
 
 const LOGOS: [string, string, string][] = [
@@ -20,17 +20,17 @@ const LOGOS: [string, string, string][] = [
 ];
 
 const VALUES = [
-  { n: "01", t: "Konfiguration", d: "Keine zwei Betriebe sind gleich. Wir richten die Kasse auf den Betrieb ein, nicht den Betrieb auf die Kasse." },
-  { n: "02", t: "Nähe", d: "Support aus Hannover, von Leuten aus der Branche, 7 Tage die Woche. Am Telefon, im Supportportal, per Fernwartung." },
-  { n: "03", t: "Offenheit", d: "Schnittstellen zu den Systemen, mit denen Sie arbeiten: Hotelsoftware, Warenwirtschaft, Buchhaltung. Über 40 Anbindungen laufen im Betrieb." },
-  { n: "04", t: "Ehrlichkeit", d: "Was ein Produkt nicht kann, sagen wir vor dem Kauf. Was in Arbeit ist, heißt bei uns in Arbeit." },
+  { n: "01", t: "Konfiguration", d: "Artikel, Warengruppen, Artikelzwänge und Schnittstellen richtet unser Professional Services auf Ihren Betrieb ein." },
+  { n: "02", t: "Nähe", d: "Telefonsupport an 7 Tagen die Woche aus Hannover, Fernwartung per TeamViewer QuickSupport." },
+  { n: "03", t: "Offenheit", d: "Über 40 Schnittstellen laufen im Betrieb, darunter protel, Oracle Opera und DATEV." },
+  { n: "04", t: "Ehrlichkeit", d: "Was in Arbeit ist, steht bei uns als in Arbeit da, zum Beispiel der Offline-Betrieb von Matrix NXT." },
 ];
 
 const TEAM = [
-  { t: "Support", d: "Leute aus Service, Küche und F&B, die die Kasse von beiden Seiten kennen.", k: "7 Tage die Woche" },
-  { t: "Professional Services", d: "Einführung, Schulung, Schnittstellen. Vor Ort im Betrieb und remote.", k: "Einführung und Schulung" },
+  { t: "Support", d: "Fachleute aus Service und Küche.", k: "7 Tage die Woche" },
+  { t: "Professional Services", d: "Richtet die Kasse ein und schult Ihr Personal, vor Ort oder per Fernwartung.", k: "Einführung und Schulung" },
   { t: "Entwicklung", d: "Matrix NXT, POS, PAY und CONGA entstehen in Hannover.", k: "Vier Produkte" },
-  { t: "Vertrieb", d: "Beratung für Gastronomie und Hotellerie, in Hannover, bei Ihnen oder per Video.", k: "Beratung" },
+  { t: "Vertrieb", d: "Demo und Angebot für Gastronomie und Hotellerie.", k: "Beratung" },
 ];
 
 // Design: Unterseite ohne Hero-Video, Stil wie /partner (6.11.2026). Leitungsteam aus Supabase (team_members), alle 5 Minuten neu.
@@ -47,7 +47,7 @@ export default async function UeberUnsPage() {
         <div className="b-wrap sub-hero-in">
           <span className="b-m b-kicker">Über uns</span>
           <h1 className="b-d sub-h1">Wer wir sind.</h1>
-          <p className="sub-lead" style={{ maxWidth: 720 }}>Seit über 30 Jahren bauen wir in Hannover Kassen für Leute, die im Service stehen, in der Küche oder an der Rezeption. Viele von uns haben das selbst gemacht.</p>
+          <p className="sub-lead" style={{ maxWidth: 720 }}>Seit über 30 Jahren Kassen für Gastronomie und Hotellerie aus Hannover. Im Support arbeiten Fachleute aus Service und Küche.</p>
           <div className="sub-btns"><Link href="/demo" className="b-btn b-btn-acc">Demo buchen</Link><Link href="/jobs" className="b-btn b-btn-ghost">Jobs</Link></div>
           <ul className="b-nums sub-nums ue-nums">
             <li className="b-num"><b className="b-d">30<em>+</em></b><span>Jahre Kassen für die Gastronomie</span></li>
@@ -72,14 +72,14 @@ export default async function UeberUnsPage() {
           <div className="pt-col">
             <span className="b-m b-kicker">Geschichte</span>
             <h2 className="b-d sub-h2">Seit über 30 Jahren die Matrix.</h2>
-            <p className="sub-p">Aus einer Kasse für Restaurants und Hotels wurde eine Produktfamilie: die stationäre Kasse, das Bezahlen, der Dienstplan, die Cloud-Kasse. Seit 2025 arbeiten wir als eigenständige Matrix POS GmbH, weiter aus Hannover.</p>
-            <p className="sub-p">Was gleich geblieben ist: Die Kasse wird auf den Betrieb eingerichtet, und am Telefon sitzt jemand, der den Betrieb kennt.</p>
+            <p className="sub-p">Aus der stationären Kasse Matrix POS sind Matrix PAY für das Bezahlen, CONGA für Dienstplan und Zeiterfassung und die Cloud-Kasse Matrix NXT entstanden.</p>
+            <p className="sub-p">Im Januar 2025 hat Everfield den Gastronomiekassenbereich der 42 GmbH übernommen. Seitdem arbeiten wir als Matrix POS GmbH, weiter in Hannover.</p>
           </div>
           <ol className="ue-line">
-            <li><span className="b-m">Kasse</span><b className="b-d">POS</b><p>Die stationäre Kasse für Restaurant, Hotel und Freizeitpark. Läuft im Haus, auch ohne Internet.</p></li>
-            <li><span className="b-m">Bezahlen</span><b className="b-d">PAY</b><p>Terminals und Tap to Pay, mit Adyen. Eine Abrechnung für Kasse und Zahlung.</p></li>
+            <li><span className="b-m">Kasse</span><b className="b-d">POS</b><p>Die stationäre Kasse mit Server im Haus. Kassiert auch ohne Internet.</p></li>
+            <li><span className="b-m">Bezahlen</span><b className="b-d">PAY</b><p>Terminals und Tap to Pay, abgewickelt über Adyen. Mit POS geht der Betrag direkt ans Terminal.</p></li>
             <li><span className="b-m">Personal</span><b className="b-d">CONGA</b><p>Dienstplan und Zeiterfassung für Matrix POS.</p></li>
-            <li className="on"><span className="b-m">Cloud</span><b className="b-d">NXT</b><p>Die Cloud-Kasse ohne Server im Haus. Browser und Android, Cloud-TSE inklusive. Unser Leadprodukt ab 2026.</p></li>
+            <li className="on"><span className="b-m">Cloud</span><b className="b-d">NXT</b><p>Die Cloud-Kasse ohne Server im Haus. Läuft im Browser und auf Android, die Cloud-TSE ist enthalten.</p></li>
           </ol>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default async function UeberUnsPage() {
       <section id="werte" className="sub-sec alt">
         <div className="b-wrap">
           <span className="b-m b-kicker">Wofür wir stehen</span>
-          <h2 className="b-d sub-h2">Vier Dinge, die sich nicht ändern.</h2>
+          <h2 className="b-d sub-h2">Wie wir arbeiten.</h2>
           <ul className="sub-grid ue-grid4">
             {VALUES.map((v) => (
               <li key={v.n} className="sub-card"><span className="n b-d">{v.n}</span><h3>{v.t}</h3><p>{v.d}</p></li>
@@ -99,8 +99,8 @@ export default async function UeberUnsPage() {
       <section id="team" className="sub-sec">
         <div className="b-wrap">
           <span className="b-m b-kicker">Das Team</span>
-          <h2 className="b-d sub-h2">Über 60 Leute, vier Bereiche.</h2>
-          <p className="sub-p">Entwicklung, Support, Professional Services, Vertrieb und Verwaltung sitzen in Hannover unter einem Dach. Wer anruft, bekommt keinen Dienstleister, sondern das Team, das die Kasse baut.</p>
+          <h2 className="b-d sub-h2">Über 60 Leute in Hannover.</h2>
+          <p className="sub-p">Entwicklung, Support, Professional Services, Vertrieb und Verwaltung arbeiten am selben Standort in Hannover.</p>
           <div className="ue-team">
             {TEAM.map((t) => (
               <div key={t.t} className="ue-area">
@@ -110,7 +110,7 @@ export default async function UeberUnsPage() {
               </div>
             ))}
           </div>
-          <p className="pt-note">Wer mitbauen will: <Link href="/jobs" className="link">Jobs bei Matrix</Link>.</p>
+          <p className="pt-note">Offene Stellen: <Link href="/jobs" className="link">Jobs bei Matrix</Link>.</p>
         </div>
       </section>
 
@@ -119,7 +119,7 @@ export default async function UeberUnsPage() {
           <div className="b-wrap">
             <span className="b-m b-kicker">Management</span>
             <h2 className="b-d sub-h2">Wer Matrix führt.</h2>
-            <p className="sub-p">Ansprechpartner mit Namen, aus Hannover.</p>
+            <p className="sub-p">Geschäftsführung und Bereichsleitungen.</p>
             <TeamGrid team={team} />
           </div>
         </section>
@@ -130,7 +130,7 @@ export default async function UeberUnsPage() {
           <div className="pt-col">
             <span className="b-m b-kicker">Partner</span>
             <h2 className="b-d sub-h2">Mit wem wir arbeiten.</h2>
-            <p className="sub-p">Zwei Partner laufen fest in Matrix: Adyen für das Bezahlen, Fiskaly für die Cloud-TSE. Dazu kommen über 40 Schnittstellen zu Hotelsoftware, Warenwirtschaft und Buchhaltung sowie Vertriebspartner in den Regionen.</p>
+            <p className="sub-p">Zwei Partner laufen fest in Matrix: Adyen für das Bezahlen, Fiskaly für die Cloud-TSE. Dazu kommen über 40 Schnittstellen, etwa zu protel und DATEV, und Vertriebspartner in den Regionen.</p>
             <div className="sub-btns"><Link href="/partner" className="b-btn b-btn-ghost">Mehr zu Partnern</Link></div>
           </div>
           <div className="pt-int ue-int">
@@ -146,7 +146,7 @@ export default async function UeberUnsPage() {
           <div className="pt-col">
             <span className="b-m b-kicker">Standort</span>
             <h2 className="b-d sub-h2">Hannover, Eckenerstraße 2.</h2>
-            <p className="sub-p">Entwicklung, Support und Vertrieb an einem Ort. Besuchen Sie uns für eine Demo, oder wir kommen zu Ihnen in den Betrieb.</p>
+            <p className="sub-p">Demos zeigen wir hier in Hannover oder bei Ihnen im Betrieb.</p>
           </div>
           <div className="ue-addr">
             <span className="b-d">Matrix POS GmbH</span>
@@ -162,7 +162,7 @@ export default async function UeberUnsPage() {
         <div className="b-grain" aria-hidden="true" />
         <div className="b-wrap sub-close-in">
           <h2 className="b-d sub-h1">Lernen Sie uns kennen.</h2>
-          <p className="sub-p">In Hannover, bei Ihnen im Betrieb oder per Video.</p>
+          <p className="sub-p">Demo in Hannover, bei Ihnen im Betrieb oder per Video.</p>
           <div className="sub-btns"><Link href="/demo" className="b-btn b-btn-white">Demo buchen</Link><Link href="/jobs" className="b-btn b-btn-ghost">Jobs</Link></div>
         </div>
       </section>

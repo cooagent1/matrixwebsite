@@ -143,7 +143,7 @@
        },
        {
         "nr": "03",
-        "text": "**Alles aus einer Hand.** Kasse, Bezahlen und Service von einem Anbieter. Ein Ansprechpartner, eine Abrechnung."
+        "text": "**Kasse und Terminal von Matrix.** Kartenzahlungen über Matrix PAY mit Adyen, alle Zahlarten in einer Abrechnung. Für Kasse und Terminal gilt dieselbe Hotline."
        },
        {
         "nr": "04",
@@ -256,19 +256,19 @@
        {
         "q": "Ist Matrix TSE-konform?",
         "a": [
-         "Ja, beide Systeme. Sie nutzen die Cloud-TSE von Fiskaly, ohne TSE-Hardware im Betrieb. Wer heute eine Hardware-TSE einsetzt, kann sie vorerst weiter nutzen. Mehr auf → /kasse-und-gesetz"
+         "Ja, beide Systeme. Sie signieren über die Cloud-TSE von Fiskaly, ohne TSE-Hardware im Betrieb. Betriebe mit Hardware-TSE (Swissbit) kassieren damit vorerst weiter und werden später auf die Cloud-TSE umgestellt. Mehr auf → /kasse-und-gesetz"
         ]
        },
        {
         "q": "Kann ich von Matrix POS auf Matrix NXT wechseln?",
         "a": [
-         "Ja. Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. NXT wächst mit jedem Update. Ob Ihr Betrieb heute schon passt, klären wir im Gespräch."
+         "Ja. Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. Ob NXT Ihren Betrieb heute abdeckt, hängt vor allem an zwei Punkten, die für NXT noch in Arbeit sind: Offline-Betrieb und Hotelschnittstelle."
         ]
        },
        {
         "q": "Welche Hotelsoftware ist angebunden?",
         "a": [
-         "Für Matrix POS: protel, ASA Hotel, Opera, SIHOT, Mews, Guestline. Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit. → /schnittstellen"
+         "Für Matrix POS: protel, ASA Hotel, Oracle Opera, Guestline. Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit. → /schnittstellen"
         ]
        },
        {
@@ -319,7 +319,7 @@
   "slug": "nxt",
   "title": "Matrix NXT",
   "metaTitle": "Matrix NXT, die Cloud-Kasse für die Gastronomie | Matrix POS",
-  "description": "Matrix NXT läuft im Browser und auf Android, ohne Server im Betrieb. Tischplan, Handgerät, Kartenzahlung, Cloud-TSE. Demo buchen.",
+  "description": "Matrix NXT läuft im Browser und auf Android, ohne Server im Betrieb. Bonierung am Handgerät und Kartenzahlung per Tap to Pay sind enthalten, die TSE-Signatur kommt aus der Cloud.",
   "sections": [
    {
     "id": "hero",
@@ -329,7 +329,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Tischplan, Handgerät, Kartenzahlung und TSE in einem System. Matrix NXT läuft im Browser und auf Android, ohne Server im Betrieb."
+      "text": "Matrix NXT läuft im Browser und auf Android. Bonierung und Kartenzahlung laufen in einem System, ohne Server im Betrieb."
      },
      {
       "type": "buttons",
@@ -352,18 +352,18 @@
     "id": "was-nxt-heute-kann",
     "name": "Was NXT heute kann",
     "eyebrow": null,
-    "heading": "Alles, was ein Betrieb am Tag braucht.",
+    "heading": "Das Basis-Profil, Stand heute.",
     "blocks": [
      {
       "type": "list",
       "items": [
        "Tischverwaltung und Raumplan",
        "Mobile Bonierung am Handgerät oder Tablet",
-       "Rechnung splitten",
-       "Gangsteuerung: Gänge an die Küche",
-       "Kartenzahlung inklusive Tap to Pay, mit Adyen",
-       "TSE Deutschland, KassenSichV-konform",
-       "RKSV Österreich",
+       "Splitbuchung: Rechnung teilen",
+       "Gangsteuerung mit Gangfolge für die Küche",
+       "Kartenzahlung inklusive Tap to Pay, abgewickelt über Adyen",
+       "TSE-Signatur für Deutschland nach KassenSichV",
+       "RKSV für Österreich mit Start- und Belegsignatur",
        "Tagesabschluss und Auswertungen"
       ]
      }
@@ -381,7 +381,7 @@
      },
      {
       "type": "p",
-      "text": "Tischplan und Raumplan nach Ihrem Grundriss. Gänge gehen an die Küche, Rechnungen lassen sich nach Person, Position oder Betrag splitten."
+      "text": "Im Raumplan bilden Sie Ihren Grundriss mit allen Tischen ab. Die Gangsteuerung schickt die Gänge in der Gangfolge an die Küche. Rechnungen splitten Sie nach Person, Position oder Betrag."
      },
      {
       "type": "placeholder",
@@ -393,7 +393,7 @@
      },
      {
       "type": "p",
-      "text": "Kartenzahlung am Terminal oder per Tap to Pay direkt am Handgerät. Matrix PAY ist in NXT integriert, alle Zahlarten landen in einer Abrechnung."
+      "text": "Gezahlt wird am Kartenterminal oder per Tap to Pay direkt auf dem Handgerät. Matrix PAY ist in NXT integriert, alle Zahlarten erscheinen in einer Abrechnung."
      },
      {
       "type": "buttons",
@@ -416,7 +416,7 @@
      },
      {
       "type": "p",
-      "text": "Bonieren und kassieren am Tisch, auf der Terrasse, im Biergarten. Zertifiziert: Orderman 10, Orderman Magellan EASY, Google Pixel 9 und 10, Samsung Galaxy Tab A11."
+      "text": "Auf dem Handgerät bonieren und kassieren Sie direkt am Tisch. Zertifiziert sind Orderman 10, Orderman Magellan EASY, Google Pixel 9 und 10 sowie das Samsung Galaxy Tab A11."
      },
      {
       "type": "buttons",
@@ -439,7 +439,7 @@
      },
      {
       "type": "p",
-      "text": "Anmeldung per PIN, Rechte je Rolle: wer stornieren darf, wer Rabatt gibt, wer den Tagesabschluss macht."
+      "text": "Mitarbeitende melden sich per PIN an. Über Rollen legen Sie fest, wer stornieren darf und wer den Tagesabschluss macht."
      },
      {
       "type": "placeholder",
@@ -451,7 +451,7 @@
      },
      {
       "type": "p",
-      "text": "Tagesabschluss, Berichte nach Artikel, Kellner und Storno, DSFinV-K-Export für den Steuerberater. An der Kasse und im Browser."
+      "text": "Den Tagesabschluss machen Sie an der Kasse. Umsatzberichte nach Artikel und Kellner rufen Sie auch im Browser ab. Für Außenprüfung und Kassennachschau exportieren Sie die Daten im DSFinV-K-Format."
      },
      {
       "type": "placeholder",
@@ -463,7 +463,7 @@
      },
      {
       "type": "p",
-      "text": "Cloud-TSE von Fiskaly, ohne TSE-Hardware im Betrieb. KassenSichV und GoBD in Deutschland, RKSV in Österreich."
+      "text": "Jeder Vorgang wird über die Cloud-TSE von Fiskaly signiert, ein TSE-Stick im Betrieb entfällt. In Deutschland erfüllt NXT KassenSichV und GoBD, in Österreich signiert NXT nach RKSV."
      },
      {
       "type": "buttons",
@@ -482,7 +482,7 @@
      },
      {
       "type": "p",
-      "text": "Heute: Adyen für Payment, Fiskaly für die TSE, Datenübernahme aus Matrix Classic. Die Anbindung an protel und ASA Hotel ist in Arbeit."
+      "text": "Heute angebunden sind Adyen für die Kartenzahlung und Fiskaly für die TSE. Stammdaten übernehmen wir aus Matrix Classic. Die Hotelanbindung an protel und ASA Hotel für die Zimmerbuchung ist in Arbeit."
      },
      {
       "type": "buttons",
@@ -501,18 +501,17 @@
     "id": "einrichtung-und-betrieb",
     "name": "Einrichtung und Betrieb",
     "eyebrow": null,
-    "heading": "Im Browser. Ohne Server im Haus.",
+    "heading": "NXT läuft ohne Server im Haus.",
     "blocks": [
      {
       "type": "p",
-      "text": "Neue Geräte melden Sie per Code an. Updates kommen zentral, ohne Techniker vor Ort."
+      "text": "Neue Geräte melden Sie per Einrichtungscode an. Updates spielen wir zentral ein, ein Techniker vor Ort ist dafür nicht nötig."
      },
      {
       "type": "badges",
       "items": [
        "Browser und Android",
-       "Automatische Updates",
-       "Cloud-TSE"
+       "Cloud-TSE von Fiskaly"
       ]
      },
      {
@@ -528,24 +527,20 @@
     "heading": "Was NXT heute nicht kann",
     "blocks": [
      {
-      "type": "p",
-      "text": "Wir sagen es vor dem Kauf."
-     },
-     {
       "type": "list",
       "items": [
        "Kassieren ohne Internet. Der Offline-Betrieb ist in Arbeit.",
-       "Self-Ordering und Kiosk.",
-       "Dienstplanung (CONGA) und EVO gibt es nur für Matrix POS."
+       "Self-Ordering und Kiosk sind nicht enthalten.",
+       "Dienstplan und Zeiterfassung mit CONGA gibt es heute nur für Matrix POS."
       ]
      },
      {
       "type": "p",
-      "text": "Woran wir arbeiten: Hotelanbindung protel und ASA Hotel, Online-Tischreservierung, Küchendisplay, Offline-Betrieb, Zeiterfassung."
+      "text": "In Arbeit sind die Hotelanbindung an protel und ASA Hotel, die Online-Tischreservierung, ein Küchendisplay, der Offline-Betrieb und die Zeiterfassung."
      },
      {
       "type": "p",
-      "text": "Wer das heute braucht, ist mit Matrix POS richtig."
+      "text": "Wer offline kassieren oder einen Bonmonitor in der Küche braucht, arbeitet heute mit Matrix POS."
      },
      {
       "type": "buttons",
@@ -568,7 +563,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. NXT wächst mit jedem Update. Ob Ihr Betrieb heute schon passt, sagen wir Ihnen im Gespräch."
+      "text": "Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. Mit jedem Release übernimmt NXT weitere Funktionen der Classic. Ob Ihr Bedarf heute schon abgedeckt ist, prüfen wir im Gespräch anhand Ihrer Schnittstellen und Abläufe."
      },
      {
       "type": "buttons",
@@ -590,13 +585,8 @@
     "heading": "NXT in Ihrem Betrieb sehen.",
     "blocks": [
      {
-      "type": "cards",
-      "items": [
-       {
-        "nr": "30",
-        "text": "Minuten per Video, in Hannover oder bei Ihnen vor Ort."
-       }
-      ]
+      "type": "p",
+      "text": "Die Demo dauert 30 Minuten, per Video oder bei Ihnen vor Ort."
      },
      {
       "type": "buttons",
@@ -619,7 +609,7 @@
   "slug": "pos",
   "title": "Matrix POS",
   "metaTitle": "Matrix POS, die stationäre Kasse für Gastronomie und Hotel | Matrix POS",
-  "description": "Matrix POS läuft lokal im Betrieb, auch ohne Internet. Erweiterbar mit NEO, CONGA und PAY, über 40 Schnittstellen. Seit 30 Jahren in Restaurants und Hotels.",
+  "description": "Matrix POS ist lokal im Betrieb installiert und kassiert auch ohne Internet. Über 40 Schnittstellen zu Hotelsoftware, Warenwirtschaft und DATEV. Seit 30 Jahren in Restaurants und Hotels.",
   "sections": [
    {
     "id": "hero",
@@ -629,7 +619,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Matrix POS läuft im Haus, auch ohne Internet. Konfiguriert auf Ihren Betrieb, erweiterbar mit NEO, CONGA und PAY. Seit 30 Jahren in Restaurants und Hotels."
+      "text": "Matrix POS ist lokal im Betrieb installiert und kassiert auch ohne Internet. Seit 30 Jahren läuft sie in Restaurants und Hotels."
      },
      {
       "type": "buttons",
@@ -663,19 +653,19 @@
        },
        {
         "nr": "02",
-        "text": "**Konfiguriert auf Ihren Betrieb.** Layout, Warengruppen, Abläufe: alles wird auf Sie eingerichtet."
+        "text": "**Eingerichtet auf Ihren Betrieb.** Artikel, Warengruppen, Zahlarten und Artikelzwänge richten wir in Matrix Office für Ihren Betrieb ein."
        },
        {
         "nr": "03",
-        "text": "**Schnittstellen.** Hotelsoftware, Warenwirtschaft, Buchhaltung, Reservierung. Über 40 Anbindungen im Betrieb."
+        "text": "**Über 40 Schnittstellen.** Die Kasse bucht per Zimmerbuchung auf das Zimmerkonto in protel oder Oracle Opera und übergibt den Tagesabschluss an DATEV."
        },
        {
         "nr": "04",
-        "text": "**TSE und Meldepflicht.** Cloud-TSE von Fiskaly, Kassenmeldepflicht abgedeckt. Bestehende Hardware-TSE läuft vorerst weiter."
+        "text": "**TSE und Meldepflicht.** Die TSE-Signatur kommt von der Cloud-TSE von Fiskaly. Die Kassenmeldung nach § 146a AO läuft über ELSTER."
        },
        {
         "nr": "05",
-        "text": "**30 Jahre im Einsatz.** In Restaurants, Hotels, Kantinen und Freizeitparks."
+        "text": "**30 Jahre im Einsatz.** Matrix POS läuft in Restaurants, Hotels, Kantinen und Freizeitparks. Im Erlebnis-Zoo Hannover bildet sie bediente Gastronomie und Check-out-Gastronomie in einem System ab."
        }
       ]
      }
@@ -685,19 +675,15 @@
     "id": "erweiterungen",
     "name": "Erweiterungen",
     "eyebrow": null,
-    "heading": "Sie nehmen, was Ihr Betrieb braucht.",
+    "heading": "Erweiterungen nach Bedarf.",
     "blocks": [
-     {
-      "type": "p",
-      "text": "Jede Erweiterung kommt aus demselben Haus und wird vom selben Support betreut."
-     },
      {
       "type": "h3",
       "text": "NEO. Mobil kassieren."
      },
      {
       "type": "p",
-      "text": "Bonieren und kassieren am Tisch, synchron mit der Hauptkasse. Handgerät mit Bondruck und Kartenzahlung."
+      "text": "Mit NEO bonieren und kassieren Sie am Tisch, auf Orderman-Handgeräten oder eigenen Smartphones. Jede Bestellung steht sofort an der Hauptkasse."
      },
      {
       "type": "buttons",
@@ -716,7 +702,7 @@
      },
      {
       "type": "p",
-      "text": "Kommen und Gehen an der Kasse erfassen, Schichten planen, Daten für die Lohnbuchhaltung exportieren."
+      "text": "CONGA erfasst die Arbeitszeit an der Kasse und plant die Schichten. Lohn Manager und Kassenbuch Manager übergeben ihre Daten an DATEV."
      },
      {
       "type": "buttons",
@@ -728,6 +714,14 @@
        }
       ],
       "phone": null
+     },
+     {
+      "type": "h3",
+      "text": "Bonmonitor. Bons am Küchendisplay."
+     },
+     {
+      "type": "p",
+      "text": "Der Matrix Bonmonitor zeigt die Bestellungen in der Küche am Bildschirm. Bons lassen sich dort gruppieren, zurückstellen, sperren und priorisieren."
      }
     ]
    },
@@ -735,11 +729,11 @@
     "id": "bezahlen-mit-pay",
     "name": "Bezahlen mit PAY",
     "eyebrow": null,
-    "heading": "Kasse und Bezahlen aus einer Hand.",
+    "heading": "PAY an der POS.",
     "blocks": [
      {
       "type": "p",
-      "text": "Matrix PAY bringt Karte, Wallet und Gutschein in Ihre POS und in eine Abrechnung. Der Betrag geht von der Kasse ans Terminal, der Tagesabschluss braucht keinen Abgleich."
+      "text": "Die Kasse übergibt den Betrag direkt ans Kartenterminal. Girocard, Kreditkarte, Apple Pay und Google Pay laufen über Adyen und stehen im Tagesabschluss der Kasse, ein Abgleich mit dem Terminal entfällt."
      },
      {
       "type": "buttons",
@@ -762,7 +756,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Terminals für Service und Bar, Bondrucker, Kundendisplays, Scanner, Waagen, Kartenleser."
+      "text": "Matrix POS läuft auf Orderman Pulse und auf Terminals von Toshiba. An die Kasse schließen Sie Bondrucker, Kundendisplays, Scanner, Waagen und Kartenleser an."
      },
      {
       "type": "buttons",
@@ -790,11 +784,16 @@
      {
       "type": "list",
       "items": [
-       "**Hotelsoftware:** Oracle Opera (OHIP) · protel · ASA · Guestline · Mews · SIHOT",
+       "**Hotelsoftware:** Oracle Opera (OHIP) · protel · ASA · Guestline",
        "**Payment:** Matrix PAY (Adyen) · Terminals anderer Anbieter über OPI und Nexo",
-       "**Warenwirtschaft:** KOST · FutureLog · Gruber",
+       "**Warenwirtschaft:** KOST · FutureLog",
        "**Buchhaltung:** DATEV · Addison",
-       "**Reservierung und Self-Ordering:** RESERViSiON · Flixorder · servier.bar",
+       "**Reservierung und Self-Ordering:** RESERViSiON · Flixorder · servier.bar"
+      ]
+     },
+     {
+      "type": "list",
+      "items": [
        "**Branchen:** PC Caddie (Golf) · Convious (Freizeitpark)"
       ]
      },
@@ -819,7 +818,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Wer eine Kasse im Haus will, die auch ohne Netz kassiert, oder viele Schnittstellen braucht, nimmt POS. Wer ohne Server arbeiten will, nimmt NXT. Ein Wechsel ist möglich, Artikel und Personal nehmen wir mit."
+      "text": "Wer auch ohne Netz kassieren muss oder viele Schnittstellen braucht, nimmt POS. Wer ohne Server arbeiten will, nimmt NXT. Ein späterer Wechsel ist möglich, Artikel und Personal übernehmen wir."
      },
      {
       "type": "buttons",
@@ -873,7 +872,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Neuinstallation, Erweiterung oder Fragen zu TSE und Meldepflicht. In Hannover oder bei Ihnen vor Ort."
+      "text": "Wir beraten zu Neuinstallation und Erweiterung Ihrer Matrix POS, in Hannover oder bei Ihnen vor Ort."
      },
      {
       "type": "buttons",
@@ -896,7 +895,7 @@
   "slug": "pos/neo",
   "title": "Matrix NEO",
   "metaTitle": "Matrix NEO, mobil kassieren mit Matrix POS | Matrix POS",
-  "description": "Bonieren und kassieren am Tisch, auf der Terrasse, im Biergarten. Handgerät mit Bondruck und Kartenzahlung, synchron mit Ihrer Matrix POS.",
+  "description": "Mit Matrix NEO bonieren und kassieren Sie am Tisch, auf Orderman-Handgeräten oder eigenen Smartphones. Jede Buchung steht sofort in Ihrer Matrix POS.",
   "sections": [
    {
     "id": "hero",
@@ -906,7 +905,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Das Handgerät für Matrix POS. Bonieren, kassieren und drucken am Tisch, synchron mit der Hauptkasse."
+      "text": "NEO ist die mobile Kasse für Matrix POS. Sie bonieren und kassieren am Tisch, jede Buchung steht sofort an der Hauptkasse."
      },
      {
       "type": "buttons",
@@ -936,19 +935,23 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Bonieren am Tisch.** Die Bestellung geht sofort an Küche und Bar. Tischplan und Gänge wie an der Hauptkasse."
+        "text": "**Bonieren am Tisch.** In der Raumübersicht wählen Sie den Tisch, Schnelltasten und Artikelzwänge führen durch die Bestellung. Die Bons gehen in der Gangfolge an Küche und Bar."
        },
        {
         "nr": "02",
-        "text": "**Kassieren am Tisch.** Kartenzahlung am Gerät, Bon aus dem Gürteldrucker."
+        "text": "**Kassieren am Tisch.** Sie splitten die Rechnung am Gerät und kassieren bar oder mit Karte, auch mit Apple Pay und Google Pay. Das Trinkgeld erfassen Sie beim Bezahlen."
        },
        {
         "nr": "03",
-        "text": "**Synchron mit der POS.** Alles, was NEO bucht, steht sofort an der Hauptkasse."
+        "text": "**Bondruck per Funk.** NEO druckt per Bluetooth oder WLAN, zum Beispiel am Gürteldrucker."
        },
        {
         "nr": "04",
-        "text": "**Mehrere Geräte.** Viele Handgeräte, mehrere Ausgabestellen, ein System."
+        "text": "**Synchron mit der POS.** Alles, was NEO bucht, steht sofort an der Hauptkasse. Mehrere Handgeräte arbeiten an einer Matrix POS."
+       },
+       {
+        "nr": "05",
+        "text": "**Anmeldung per Transponder.** Mitarbeitende melden sich per NFC-Transponder am Handgerät an."
        }
       ]
      }
@@ -962,7 +965,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "NEO braucht eine Matrix POS. Ohne stationäre Kasse ist Matrix NXT mit Handgerät die Alternative."
+      "text": "NEO braucht eine Matrix POS. Für Betriebe ohne stationäre Kasse gibt es Matrix NXT, dort ist das Handgerät enthalten."
      },
      {
       "type": "buttons",
@@ -984,6 +987,10 @@
     "heading": "Hardware",
     "blocks": [
      {
+      "type": "p",
+      "text": "NEO läuft auf Orderman-Handgeräten und auf eigenen Smartphones."
+     },
+     {
       "type": "buttons",
       "items": [
        {
@@ -1000,7 +1007,7 @@
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
-    "heading": "Wie viele Tische, wie viele Geräte?",
+    "heading": "NEO im Service einplanen.",
     "blocks": [
      {
       "type": "buttons",
@@ -1023,7 +1030,7 @@
   "slug": "pos/conga",
   "title": "Matrix CONGA",
   "metaTitle": "Matrix CONGA, Dienstplan und Zeiterfassung für Matrix POS | Matrix POS",
-  "description": "Kommen und Gehen an der Kasse erfassen, Schichten planen, Daten für die Lohnbuchhaltung exportieren. Die Personal-Erweiterung für Matrix POS.",
+  "description": "Matrix CONGA ergänzt Matrix POS um Zeiterfassung an der Kasse, Personalplanung, Lohn Manager und Kassenbuch mit DATEV-Export.",
   "sections": [
    {
     "id": "hero",
@@ -1033,7 +1040,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Ihr Team stempelt an der Kasse, die es ohnehin bedient. Schichten planen, Stunden exportieren."
+      "text": "Mit CONGA erfasst Ihr Team die Arbeitszeit an der Kasse. Lohn Manager und Kassenbuch übergeben die Daten an DATEV."
      },
      {
       "type": "buttons",
@@ -1063,15 +1070,19 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Kommen und Gehen an der Kasse.** Anmeldung per PIN oder Kellnerschloss, keine Stempeluhr."
+        "text": "**Kommen und Gehen an der Kasse.** Mitarbeitende stempeln an der Matrix POS, eine separate Stempeluhr entfällt."
        },
        {
         "nr": "02",
-        "text": "**Dienstpläne.** Schichten planen, mit Blick auf die starken Stunden."
+        "text": "**Personalplanung.** Schichten planen Sie in der CONGA Personalplanung."
        },
        {
         "nr": "03",
-        "text": "**Export für die Lohnbuchhaltung.** Stunden und Abwesenheiten als Datei."
+        "text": "**Lohn Manager.** Der CONGA Lohn Manager exportiert die Lohndaten über das DATEV-Modul."
+       },
+       {
+        "nr": "04",
+        "text": "**Kassenbuch.** Der CONGA Kassenbuch Manager führt das Kassenbuch und tauscht die Buchungen über das DATEV-Modul mit DATEV aus."
        }
       ]
      }
@@ -1093,7 +1104,7 @@
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
-    "heading": "Wie viele Mitarbeitende, wie viele Schichten?",
+    "heading": "CONGA für Ihr Team einrichten.",
     "blocks": [
      {
       "type": "buttons",
@@ -1157,7 +1168,7 @@
   "slug": "pay",
   "title": "Matrix PAY",
   "metaTitle": "Matrix PAY, Bezahlen für die Gastronomie, mit jeder Kasse | Matrix POS",
-  "description": "Karte, Wallet, Gutschein in einer Abrechnung. Matrix PAY läuft mit Adyen, in Matrix NXT integriert, mit Matrix POS kombinierbar oder mit Ihrer eigenen Kasse.",
+  "description": "Matrix PAY wickelt Girocard, Kreditkarte, Apple Pay und Google Pay über Adyen ab. In Matrix NXT integriert, mit Matrix POS und anderen Kassen nutzbar.",
   "sections": [
    {
     "id": "hero",
@@ -1167,7 +1178,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Karte, Wallet und Gutschein in einer Abrechnung. In Matrix NXT integriert, mit Matrix POS kombinierbar, oder eigenständig mit der Kasse, die Sie heute haben."
+      "text": "Matrix PAY wickelt Kartenzahlungen über Adyen ab. Sie nutzen PAY in NXT, mit Matrix POS oder mit Ihrer bestehenden Kasse."
      },
      {
       "type": "buttons",
@@ -1194,15 +1205,15 @@
     "blocks": [
      {
       "type": "p",
-      "text": "**Mit NXT.** Integriert. Kartenzahlung am Terminal oder per Tap to Pay am Handgerät, eine Abrechnung ab dem ersten Tag."
+      "text": "**Mit NXT.** PAY ist in NXT eingebaut. Gezahlt wird am Kartenterminal oder per Tap to Pay auf dem Android-Handgerät, die Zahlungen stehen im Tagesabschluss der Kasse."
      },
      {
       "type": "p",
-      "text": "**Mit POS.** Der Betrag geht von der Kasse ans Terminal, der Tagesabschluss braucht keinen Abgleich. Ein Vertrag, eine Hotline."
+      "text": "**Mit POS.** Die Kasse übergibt den Betrag ans Terminal, niemand tippt ihn ab. Kasse und Terminal haben denselben Tagesabschluss, ein Abgleich entfällt."
      },
      {
       "type": "p",
-      "text": "**Eigenständig.** Sie behalten Ihre Kasse und bekommen Terminals, Abrechnung und Support aus Hannover."
+      "text": "**Eigenständig.** Sie behalten Ihre Kasse und bekommen von uns die Terminals und den Support."
      }
     ]
    },
@@ -1217,19 +1228,19 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Aus einer Hand.** Kasse und Bezahlen vom selben Anbieter. Ein Vertrag, ein Ansprechpartner, eine Abrechnung."
+        "text": "**Zahlungen im Hotel.** PAY wickelt auch Zahlungen am Front Office und Online-Buchungen über Channelmanager oder Website ab. Mit der Hotelsoftware gibt es eine gemeinsame Payment-Abrechnung."
        },
        {
         "nr": "02",
-        "text": "**Eine Abrechnung.** Alle Zahlungen, Trinkgelder und Stornos in einer Anwendung und im Tagesabschluss."
+        "text": "**Eine Abrechnung.** Alle Kartenzahlungen und Stornos stehen in einer Anwendung und im Tagesabschluss der Kasse."
        },
        {
         "nr": "03",
-        "text": "**Adyen.** Die Zahlungsabwicklung läuft über Adyen."
+        "text": "**Adyen.** Girocard, Kreditkarte, Apple Pay und Google Pay wickelt Adyen ab."
        },
        {
         "nr": "04",
-        "text": "**Support aus Hannover.** Derselbe Support wie für die Kasse, 7 Tage die Woche."
+        "text": "**Support aus Hannover.** Bei Störungen am Terminal hilft dieselbe Hotline wie bei der Kasse, an 7 Tagen die Woche."
        }
       ]
      }
@@ -1333,7 +1344,7 @@
   "slug": "kassensysteme",
   "title": "Kassensysteme",
   "metaTitle": "Matrix POS oder Matrix NXT? Kassensysteme im Vergleich | Matrix POS",
-  "description": "Stationär oder Cloud: Vergleichen Sie Matrix POS und Matrix NXT. Beide TSE-konform, beide mit Support aus Hannover an 7 Tagen.",
+  "description": "Matrix POS kassiert lokal auch ohne Internet, Matrix NXT läuft ohne Server im Browser und auf Android. Beide signieren über die Cloud-TSE von Fiskaly.",
   "sections": [
    {
     "id": "hero",
@@ -1343,7 +1354,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Die stationäre Kasse im Haus oder die Cloud-Kasse ohne Server. Hier sehen Sie, was zu Ihrem Betrieb passt."
+      "text": "Matrix POS ist lokal installiert, Matrix NXT läuft in der Cloud. Die Tabelle zeigt, was jede Kasse heute kann."
      },
      {
       "type": "buttons",
@@ -1373,7 +1384,7 @@
     "id": "die-systeme",
     "name": "Die Systeme",
     "eyebrow": null,
-    "heading": "Stationär oder Cloud.",
+    "heading": "Was die Systeme unterscheidet.",
     "blocks": [
      {
       "type": "h3",
@@ -1381,7 +1392,7 @@
      },
      {
       "type": "p",
-      "text": "Läuft lokal im Betrieb, auch ohne Internet. Über 40 Schnittstellen. Erweiterbar mit NEO, CONGA und PAY."
+      "text": "Matrix POS ist lokal installiert und kassiert auch ohne Internet. Über 40 Schnittstellen sind im Einsatz, darunter protel, Oracle Opera und DATEV. Mobil kassieren Sie mit NEO, Dienstplan und Zeiterfassung kommen mit CONGA."
      },
      {
       "type": "buttons",
@@ -1400,7 +1411,7 @@
      },
      {
       "type": "p",
-      "text": "Läuft im Browser und auf Android, ohne Server im Haus. Handgerät, Tap to Pay und TSE sind drin. Updates kommen von selbst."
+      "text": "Matrix NXT läuft im Browser und auf Android, ohne Server im Haus. Bonierung am Handgerät und Tap to Pay sind enthalten, Updates spielen wir zentral ein."
      },
      {
       "type": "buttons",
@@ -1445,8 +1456,18 @@
         "Enthalten: Orderman oder Google Pixel mit Tap to Pay"
        ],
        [
+        "Küchendisplay",
+        "Matrix Bonmonitor",
+        "In Arbeit"
+       ],
+       [
+        "Dienstplan und Zeiterfassung",
+        "Mit CONGA",
+        "Zeiterfassung in Arbeit"
+       ],
+       [
         "Self-Ordering und Kiosk",
-        "Über Schnittstelle",
+        "Über Schnittstelle, z. B. Flixorder",
         "Nicht enthalten"
        ],
        [
@@ -1483,7 +1504,7 @@
      },
      {
       "type": "p",
-      "text": "Kurz: Wer ohne Netz kassieren muss oder viele Schnittstellen braucht, nimmt POS. Wer neu startet und ohne Server arbeiten will, nimmt NXT."
+      "text": "Kurz: Wer ohne Netz kassieren muss oder viele Schnittstellen braucht, nimmt POS. Wer neu startet und ohne Server arbeiten will, nimmt NXT. Hotels mit Zimmerbuchung arbeiten heute mit POS, die Hotelanbindung für NXT ist in Arbeit."
      }
     ]
    },
@@ -1495,7 +1516,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "In NXT integriert, mit POS kombinierbar, oder mit Ihrer eigenen Kasse."
+      "text": "In Matrix NXT ist PAY eingebaut, an Matrix POS binden wir die Terminals an. Auch mit einer anderen Kasse ist PAY nutzbar."
      },
      {
       "type": "buttons",
@@ -1522,7 +1543,7 @@
        {
         "q": "Kann ich von Matrix POS auf Matrix NXT wechseln?",
         "a": [
-         "Ja. Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. NXT wächst mit jedem Update. Ob Ihr Betrieb heute schon passt, klären wir im Gespräch."
+         "Ja. Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. Ob NXT Ihren Betrieb heute abdeckt, hängt vor allem an zwei Punkten, die für NXT noch in Arbeit sind: Offline-Betrieb und Hotelschnittstelle."
         ]
        },
        {
@@ -1540,7 +1561,7 @@
        {
         "q": "Ist Matrix TSE-konform?",
         "a": [
-         "Ja, beide Systeme. Sie nutzen die Cloud-TSE von Fiskaly, ohne TSE-Hardware im Betrieb. Wer heute eine Hardware-TSE einsetzt, kann sie vorerst weiter nutzen. Mehr auf → /kasse-und-gesetz"
+         "Ja, beide Systeme. Sie signieren über die Cloud-TSE von Fiskaly, ohne TSE-Hardware im Betrieb. Betriebe mit Hardware-TSE (Swissbit) kassieren damit vorerst weiter und werden später auf die Cloud-TSE umgestellt. Mehr auf → /kasse-und-gesetz"
         ]
        }
       ]
@@ -1551,11 +1572,11 @@
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
-    "heading": "Wir finden die richtige Matrix.",
+    "heading": "Die passende Kasse bestimmen.",
     "blocks": [
      {
       "type": "p",
-      "text": "Betriebsart, Standorte, vorhandene Systeme: Nennen Sie uns drei Dinge, wir sagen Ihnen, was passt."
+      "text": "Nennen Sie uns Ihre Betriebsart und die Systeme, die angebunden werden müssen. Daran entscheidet sich, ob POS oder NXT passt."
      },
      {
       "type": "buttons",
@@ -1578,7 +1599,7 @@
   "slug": "branchen",
   "title": "Branchen",
   "metaTitle": "Kassensysteme nach Betriebsart: Restaurant, Hotel, Bar, Biergarten, Freizeitpark | Matrix POS",
-  "description": "Jeder Betrieb kassiert anders. So arbeitet Matrix in Restaurant, Hotel, Bar und Café, Außengastronomie, Freizeitpark, Food Court und Systemgastronomie.",
+  "description": "So arbeitet Matrix in Restaurant, Hotel, Bar und Café, Außengastronomie, Freizeitpark, Food Court und Systemgastronomie: Gangsteuerung, Zimmerbuchung, Handgerät, Kiosk.",
   "sections": [
    {
     "id": "hero",
@@ -1588,7 +1609,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Ein Restaurant braucht Gänge, ein Hotel das Zimmerkonto, ein Biergarten Handgeräte, ein Freizeitpark zwanzig Kassen. Matrix wird auf Ihren Betrieb eingerichtet."
+      "text": "Ein Restaurant steuert Gänge, ein Hotel bucht aufs Zimmerkonto, ein Biergarten kassiert am Handgerät, ein Freizeitpark verbindet viele Outlets."
      }
     ]
    },
@@ -1601,13 +1622,13 @@
      {
       "type": "list",
       "items": [
-       "**Restaurant.** Tischplan, Gänge, Rechnung splitten. → /branchen/restaurant",
-       "**Hotel.** Umsätze aufs Zimmer, Anbindung an die Hotelsoftware. → /branchen/hotel",
-       "**Bar & Café.** Schnellwahl, Theke und Terrasse in einer Kasse. → /branchen/bar-cafe",
-       "**Biergarten & Außengastronomie.** Handgerät, Pfand, Spitzenlast am Wochenende. → /branchen/aussengastronomie",
-       "**Freizeitpark.** Viele Outlets, ein Backoffice. → /branchen/freizeitpark",
-       "**Food Court.** Mehrere Stationen, Selbstbedienung. → /branchen/foodcourt",
-       "**Systemgastronomie.** Zentrale Stammdaten, Auswertung über alle Standorte. → /branchen/systemgastronomie"
+       "**Restaurant.** Gänge gehen getrennt an die Küche, Rechnungen splitten Sie am Tisch. → /branchen/restaurant",
+       "**Hotel.** Die Kasse bucht Umsätze aufs Zimmerkonto in protel, Opera, ASA und weiteren. → /branchen/hotel",
+       "**Bar & Café.** An der Theke kassieren Sie am Tablet, auf der Terrasse am Handgerät mit Tap to Pay. → /branchen/bar-cafe",
+       "**Biergarten & Außengastronomie.** Die Bedienung boniert und kassiert am Handgerät direkt an der Bierbank. → /branchen/aussengastronomie",
+       "**Freizeitpark.** Parkrestaurant und Check-out-Gastronomie laufen in einem System. → /branchen/freizeitpark",
+       "**Food Court.** Gäste bestellen am Kiosk, der Abholmonitor zeigt fertige Bestellungen. → /branchen/foodcourt",
+       "**Systemgastronomie.** Einführung mit Pilotstandort, Kartenzahlung aller Filialen über Matrix PAY. → /branchen/systemgastronomie"
       ]
      },
      {
@@ -1624,7 +1645,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Kantine, Club, Eventlocation, Bäckerei mit Café: Fragen Sie uns."
+      "text": "Matrix läuft auch in Kantinen, Konditoreien und Golfclubs, für Golfclubs mit Anbindung an PC Caddie. Fragen Sie uns nach Ihrer Betriebsart."
      },
      {
       "type": "buttons",
@@ -1647,17 +1668,17 @@
   "slug": "branchen/restaurant",
   "title": "Restaurant",
   "metaTitle": "Kassensystem für Restaurants: Tischplan, Gänge, Splitten | Matrix POS",
-  "description": "Matrix NXT und Matrix POS im Restaurant: Tischplan nach Ihrem Grundriss, Gänge an die Küche, Rechnungen splitten, Kartenzahlung am Tisch.",
+  "description": "Matrix NXT und Matrix POS im Restaurant: Tischplan nach Ihrem Grundriss, Gangsteuerung zur Küche, Rechnungen splitten, Tap to Pay am Tisch.",
   "sections": [
    {
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "Die Kasse für Ihr Restaurant.",
+    "heading": "Gänge steuern, am Tisch kassieren.",
     "blocks": [
      {
       "type": "p",
-      "text": "Tischplan nach Ihrem Grundriss, Gänge an die Küche, Rechnung splitten, Karte am Tisch."
+      "text": "Matrix NXT bildet Ihren Grundriss als Tischplan ab und schickt jeden Gang getrennt an die Küche."
      },
      {
       "type": "buttons",
@@ -1687,27 +1708,27 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Tischplan nach Grundriss.** Räume, Terrasse, Stammtisch. Tische zusammenlegen und umsetzen."
+        "text": "**Tischplan nach Grundriss.** Jeder Raum und die Terrasse bekommen einen eigenen Plan. An einem Tisch führen Sie mehrere Partien getrennt."
        },
        {
         "nr": "02",
-        "text": "**Gänge an die Küche.** Vorspeise, Hauptgang, Dessert auf Abruf."
+        "text": "**Gangsteuerung.** Die Bestellung geht nach Gängen getrennt an die Küche. Je Tisch lässt sich die Gangsteuerung ausschalten."
        },
        {
         "nr": "03",
-        "text": "**Rechnung splitten.** Nach Person, Position oder Betrag."
+        "text": "**Rechnung splitten.** Sie teilen die Rechnung nach Person, Position oder Betrag."
        },
        {
         "nr": "04",
-        "text": "**Karte am Tisch.** Tap to Pay am Handgerät oder mobiles Terminal."
+        "text": "**Karte am Tisch.** Der Gast zahlt per Tap to Pay am Android-Handgerät oder am mobilen Terminal. Trinkgeld buchen Sie über die Tip-Taste."
        },
        {
         "nr": "05",
-        "text": "**Rechte je Rolle.** Wer storniert, wer Rabatt gibt. Anmeldung per PIN."
+        "text": "**Rechte je Rolle.** Mitarbeitende melden sich per PIN an. Je Rolle legen Sie fest, wer storniert und wer Rabatt gibt."
        },
        {
         "nr": "06",
-        "text": "**Zahlen am Abend.** Tagesabschluss, Umsatz nach Kellner und Artikel."
+        "text": "**Tagesabschluss und DSFinV-K.** Der Tagesabschluss zeigt Umsatz je Kellner und je Artikel. Den DSFinV-K-Export geben Sie an Ihren Steuerberater."
        }
       ]
      }
@@ -1721,7 +1742,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Für die meisten Restaurants heute Matrix NXT: ohne Server, mit Handgerät und Tap to Pay. Wer ohne Internet kassieren muss oder Spezialschnittstellen hat, nimmt Matrix POS."
+      "text": "Matrix NXT läuft im Browser und auf Android, ohne Server im Restaurant. Wer ohne Internet kassieren muss oder eine der Schnittstellen unten braucht, nimmt Matrix POS."
      },
      {
       "type": "buttons",
@@ -1744,7 +1765,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Reservierung (RESERViSiON), Self-Ordering (Flixorder, servier.bar), Warenwirtschaft (KOST, FutureLog), Buchhaltung (DATEV), Gutscheine. Für Matrix POS."
+      "text": "Matrix POS ist angebunden an RESERViSiON für Reservierungen, an Flixorder und servier.bar für Bestellungen am Tisch, an KOST und FutureLog für die Warenwirtschaft und an DATEV für die Buchhaltung. Gutscheine verwaltet die Matrix Gutscheinverwaltung oder ein angebundener Anbieter wie Yovite oder Incert. Für Matrix NXT ist die Online-Tischreservierung mit RESERViSiON in Arbeit."
      },
      {
       "type": "buttons",
@@ -1805,18 +1826,18 @@
  {
   "slug": "branchen/hotel",
   "title": "Hotel",
-  "metaTitle": "Kassensystem für Hotels mit Anbindung an protel, Opera, Mews, ASA | Matrix POS",
-  "description": "Restaurant, Bar, Frühstück und Spa aufs Zimmerkonto. Matrix ist an protel, ASA, Opera, SIHOT, Mews und Guestline angebunden. Seit 30 Jahren in der Hotellerie.",
+  "metaTitle": "Kassensystem für Hotels mit Anbindung an protel, Opera, ASA | Matrix POS",
+  "description": "Matrix POS bucht Umsätze aus Restaurant und Bar aufs Zimmerkonto. Angebunden an protel, ASA, Oracle Opera und Guestline. Seit 30 Jahren in Hotels.",
   "sections": [
    {
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "Alles aufs Zimmer.",
+    "heading": "Umsätze direkt aufs Zimmerkonto.",
     "blocks": [
      {
       "type": "p",
-      "text": "Umsätze aus Restaurant, Bar, Frühstück und Spa landen direkt auf dem Zimmerkonto. Seit 30 Jahren angebunden an die Hotelsoftware, mit der Hotels arbeiten."
+      "text": "Matrix POS sucht die Buchung im Hotelsystem und bucht den Bon aufs Gastkonto. Für protel, Opera, ASA und weitere."
      },
      {
       "type": "buttons",
@@ -1846,23 +1867,23 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Zimmerbuchung aus der Kasse.** Gast nennt die Zimmernummer, die Kasse prüft im PMS, der Umsatz steht auf dem Zimmerkonto."
+        "text": "**Zimmerbuchung aus der Kasse.** Der Gast nennt die Zimmernummer, die Kasse prüft die Buchung im PMS und bucht den Umsatz auf das Zimmerkonto."
        },
        {
         "nr": "02",
-        "text": "**Mehrere Outlets.** Restaurant, Bar, Poolbar, Roomservice: eigene Kassen, ein Backoffice."
+        "text": "**Room-Service über Flixorder.** Gäste bestellen digital über Flixorder, die Bestellung läuft in Matrix POS ein."
        },
        {
         "nr": "03",
-        "text": "**Bankett.** Abrechnung auf Veranstaltungskonto, Schnittstelle zu Bp Event."
+        "text": "**Bankett.** Matrix POS ist an Bp Event, ehemals BANKETTprofi, angebunden."
        },
        {
         "nr": "04",
-        "text": "**Payment aus einer Hand.** Eine Payment-Abrechnung über alle Outlets."
+        "text": "**Payment an Kasse und Rezeption.** Matrix PAY wickelt Kartenzahlungen an der Kasse, am Front Office und für Online-Buchungen über Channelmanager oder Website ab."
        },
        {
         "nr": "05",
-        "text": "**Türschließsysteme.** ASSA ABLOY angebunden."
+        "text": "**Türschließsysteme.** Matrix bindet die Türschließsysteme ASSA ABLOY und VingCard an."
        }
       ]
      }
@@ -1876,11 +1897,11 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Oracle Opera (OHIP) · protel · ASA Hotel · Guestline · Mews · SIHOT · weitere über die generische Hotelschnittstelle. Für Matrix POS."
+      "text": "Oracle Opera (OHIP) · protel SPE/MPE und protel AIR · ASA Hotel · Guestline · Mews · SIHOT · weitere über die generische Hotelschnittstelle."
      },
      {
       "type": "p",
-      "text": "Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit."
+      "text": "Diese Anbindungen laufen mit Matrix POS. Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit."
      },
      {
       "type": "buttons",
@@ -1903,7 +1924,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Hotels mit gewachsener Infrastruktur arbeiten mit Matrix POS. Für NXT folgt die Hotelanbindung. Oft passt beides, Outlet für Outlet."
+      "text": "Zimmerbuchung aus der Kasse läuft heute mit Matrix POS. Matrix NXT bucht aufs Zimmer, sobald die Anbindung an protel und ASA Hotel live ist."
      },
      {
       "type": "buttons",
@@ -1942,11 +1963,11 @@
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
-    "heading": "Welches PMS, wie viele Outlets?",
+    "heading": "Nennen Sie uns Ihr PMS.",
     "blocks": [
      {
       "type": "p",
-      "text": "Zwei Angaben, und wir sagen Ihnen, wie die Anbindung läuft."
+      "text": "Mit PMS und Zahl der Outlets sagen wir Ihnen, wie die Anbindung läuft."
      },
      {
       "type": "buttons",
@@ -1968,8 +1989,8 @@
  {
   "slug": "branchen/bar-cafe",
   "title": "Bar & Café",
-  "metaTitle": "Kassensystem für Bar und Café: Schnellwahl, Theke, Terrasse | Matrix POS",
-  "description": "Schnell an der Theke, mobil auf der Terrasse. Matrix NXT für Bar und Café mit Schnellwahl, Tap to Pay und Tagesabschluss.",
+  "metaTitle": "Kassensystem für Bar und Café: Theke, Terrasse, Tap to Pay | Matrix POS",
+  "description": "Matrix NXT auf dem Tablet an der Theke und am Handgerät auf der Terrasse. Offene Tische, Splitten, Tap to Pay und Tagesabschluss.",
   "sections": [
    {
     "id": "hero",
@@ -1979,7 +2000,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Favoriten vorne, zwei Tipps bis zum Bon, Karte ans Handgerät. Am Abend steht der Tagesabschluss."
+      "text": "Matrix NXT läuft an der Theke auf dem Tablet und draußen am Handgerät. Beide buchen auf denselben Tischplan."
      },
      {
       "type": "buttons",
@@ -2009,23 +2030,19 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Schnellwahl.** Favoriten und Warengruppen so angeordnet, wie Ihre Hand läuft."
+        "text": "**Artikel nach Warengruppen.** Die Warengruppen stehen als Leiste über dem Artikelraster. Artikel ohne eigene Taste rufen Sie per PLU auf."
        },
        {
         "nr": "02",
-        "text": "**Ein Gerät reicht.** Ein Tablet an der Theke, bei Bedarf ein Handgerät für draußen."
+        "text": "**Tablet an der Theke, Handgerät draußen.** An der Theke läuft Matrix NXT auf dem Samsung Galaxy Tab A11, auf der Terrasse auf Orderman 10 oder Google Pixel."
        },
        {
         "nr": "03",
-        "text": "**Tap to Pay.** Karte ans Handgerät, fertig."
+        "text": "**Tap to Pay.** Der Gast hält Karte oder Smartphone an das Android-Handgerät, die Zahlung läuft über Adyen. Trinkgeld buchen Sie über die Tip-Taste."
        },
        {
         "nr": "04",
-        "text": "**Offene Tische.** Deckel führen, später abrechnen, splitten."
-       },
-       {
-        "nr": "05",
-        "text": "**Preise nach Uhrzeit.** Happy Hour ohne Umbuchen."
+        "text": "**Offene Tische.** Der Deckel bleibt am Tisch offen, bis der Gast zahlt. Mehrere Partien an einem Tisch führen Sie getrennt und splitten beim Zahlen nach Person oder Position."
        }
       ]
      }
@@ -2039,7 +2056,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Für Bar und Café ist Matrix NXT die erste Wahl: schnell eingerichtet, ohne Server, mit Handgerät und Tap to Pay."
+      "text": "Für Bar und Café empfehlen wir Matrix NXT. Die Kasse läuft im Browser und auf Android, einen Server im Betrieb brauchen Sie nicht. Ohne Internet kassiert NXT heute nicht; wer das braucht, nimmt Matrix POS."
      },
      {
       "type": "buttons",
@@ -2108,18 +2125,18 @@
  {
   "slug": "branchen/aussengastronomie",
   "title": "Biergarten & Außengastronomie",
-  "metaTitle": "Kassensystem für Biergarten und Außengastronomie: Handgerät, Pfand | Matrix POS",
-  "description": "Mobil bonieren und kassieren im Biergarten, Pfand abrechnen, Spitzenlast am Wochenende. Matrix NXT mit Handgerät oder Matrix NEO.",
+  "metaTitle": "Kassensystem für Biergarten und Außengastronomie: Handgerät, Tap to Pay | Matrix POS",
+  "description": "Bonieren und kassieren an der Bierbank mit Orderman oder Google Pixel, Kartenzahlung per Tap to Pay. Matrix NXT oder Matrix NEO zur Matrix POS.",
   "sections": [
    {
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "Die Kasse geht zu den Gästen.",
+    "heading": "Bonieren an der Bierbank.",
     "blocks": [
      {
       "type": "p",
-      "text": "Handgerät, Bondruck am Gürtel, Karte am Tisch. Synchron mit der Hauptkasse, auch wenn alle Bänke voll sind."
+      "text": "Matrix NXT auf Orderman 10 oder Google Pixel: Bestellung am Tisch aufnehmen, Karte per Tap to Pay kassieren."
      },
      {
       "type": "buttons",
@@ -2149,19 +2166,19 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Mobil bonieren und kassieren.** Bestellung am Tisch, Bon aus dem Gürteldrucker, Karte ans Gerät."
+        "text": "**Bonieren am Tisch.** Die Bedienung boniert am Handgerät direkt am Tisch und muss für keine Bestellung zur Kasse laufen."
        },
        {
         "nr": "02",
-        "text": "**Pfand.** Pfand auf Glas und Krug, Rückgabe mit einem Tipp."
+        "text": "**Kassieren am Tisch.** Mit Matrix NXT zahlt der Gast per Tap to Pay am Android-Handgerät, abgewickelt über Adyen. Getrennt zahlende Gäste splitten Sie nach Person, Position oder Betrag."
        },
        {
         "nr": "03",
-        "text": "**Viele Geräte.** Mehrere Handgeräte, mehrere Ausgabestellen, ein System."
+        "text": "**Handgeräte an der Hauptkasse.** Mit Matrix NEO steht jede Buchung vom Handgerät sofort an der Matrix POS im Haus."
        },
        {
         "nr": "04",
-        "text": "**Sonne und Regen.** Robuste Handgeräte, Display mit hohem Kontrast."
+        "text": "**Internet im Garten.** Matrix NXT braucht heute eine Internetverbindung am Handgerät. Matrix POS läuft lokal und kassiert ohne Internet weiter."
        }
       ]
      }
@@ -2175,7 +2192,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Neue Betriebe: Matrix NXT mit Orderman oder Google Pixel. Bestehende Matrix-POS-Betriebe erweitern mit Matrix NEO."
+      "text": "Neue Betriebe starten mit Matrix NXT auf Orderman 10, Orderman Magellan EASY oder Google Pixel 9 und 10. Wer Matrix POS im Haus hat, ergänzt Handgeräte mit Matrix NEO."
      },
      {
       "type": "buttons",
@@ -2206,7 +2223,7 @@
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
-    "heading": "Wie viele Bänke, wie viele Geräte?",
+    "heading": "Nennen Sie uns Ihre Sitzplätze.",
     "blocks": [
      {
       "type": "buttons",
@@ -2229,17 +2246,17 @@
   "slug": "branchen/freizeitpark",
   "title": "Freizeitpark",
   "metaTitle": "Kassensystem für Freizeitparks: viele Outlets, ein Backoffice | Matrix POS",
-  "description": "Zwanzig Outlets, Spitzenlast an Feiertagen, ein Backoffice. Matrix POS in Freizeitparks: zentrale Stammdaten, eine Auswertung über alle Outlets.",
+  "description": "Matrix POS im Freizeitpark: Parkrestaurant und Check-out-Gastronomie in einem System, Warenwirtschaft mit eigener Produktion, Anbindung an Convious.",
   "sections": [
    {
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "Viele Outlets. Ein Backoffice.",
+    "heading": "Ein System für alle Outlets.",
     "blocks": [
      {
       "type": "p",
-      "text": "Stand, Kiosk, Parkrestaurant: Matrix führt Dutzende Kassen in einem System, mit zentralen Stammdaten und einer Auswertung über alles."
+      "text": "Bediente Gastronomie, Check-out-Gastronomie und Warenwirtschaft mit eigener Produktion laufen in Matrix POS zusammen."
      },
      {
       "type": "buttons",
@@ -2269,27 +2286,27 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Zentrale Stammdaten.** Artikel und Preise einmal pflegen, überall gültig."
+        "text": "**Bedient und Check-out.** Das Parkrestaurant arbeitet mit Tischplan, der Imbiss mit Check-out-Kasse. Beide buchen in dasselbe System."
        },
        {
         "nr": "02",
-        "text": "**Spitzenlast.** Hunderte Bons pro Stunde am Feiertag."
+        "text": "**Zentrale Stammdaten.** Artikel und Preise pflegen Sie in Matrix Office, jede Kasse im Park übernimmt sie."
        },
        {
         "nr": "03",
-        "text": "**Selbstbedienung.** Kundendisplay, Scanner, Schnellwahl."
+        "text": "**Interne Produzenten.** Matrix bildet eigene Produktionsstätten ab, die die Outlets im Park beliefern."
        },
        {
         "nr": "04",
-        "text": "**Auswertung über alles.** Umsatz je Outlet, je Stunde, je Artikel."
+        "text": "**Selbstbedienung.** Gäste bestellen am Kiosk von Flixorder, der Abholmonitor zeigt fertige Bestellungen. An der Check-out-Kasse arbeiten Kundendisplay und Scanner."
        },
        {
         "nr": "05",
-        "text": "**Viele Aushilfen.** Schnelle Einarbeitung, Rechte je Rolle."
+        "text": "**Ticketing.** Matrix POS ist an das Ticketsystem Convious angebunden."
        },
        {
         "nr": "06",
-        "text": "**Ticketing.** Schnittstelle zu Convious."
+        "text": "**Anmeldung per Transponder.** Saisonkräfte melden sich mit Transponderkarte an der Kasse an."
        }
       ]
      }
@@ -2303,7 +2320,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Parks mit vielen Outlets und Speziallösungen arbeiten mit Matrix POS."
+      "text": "Freizeitparks arbeiten mit Matrix POS. Die Kassen laufen lokal im Park und kassieren auch bei Ausfall des Internets weiter."
      }
     ]
    },
@@ -2327,7 +2344,7 @@
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
-    "heading": "Wie viele Outlets, wie viele Gäste am Spitzentag?",
+    "heading": "Nennen Sie uns Ihre Outlets.",
     "blocks": [
      {
       "type": "buttons",
@@ -2349,18 +2366,18 @@
  {
   "slug": "branchen/foodcourt",
   "title": "Food Court",
-  "metaTitle": "Kassensystem für Food Courts: mehrere Stationen, Selbstbedienung | Matrix POS",
-  "description": "Mehrere Stationen, zentrale Stammdaten, Auswertung je Station. Matrix für Food Courts und Selbstbedienungsrestaurants.",
+  "metaTitle": "Kassensystem für Food Courts: Bestell-Kiosk, Abholmonitor, Bonmonitor | Matrix POS",
+  "description": "Matrix POS im Food Court: Bestell-Kiosk mit Abholmonitor über Flixorder, Bonmonitor in der Küche, Kartenzahlung mit Matrix PAY.",
   "sections": [
    {
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "Mehrere Stationen. Ein System.",
+    "heading": "Kassen für mehrere Ausgabestationen.",
     "blocks": [
      {
       "type": "p",
-      "text": "Zentrale Stammdaten, Selbstbedienung, Auswertung je Station."
+      "text": "Matrix POS mit Bestell-Kiosk und Abholmonitor über Flixorder, Kartenzahlung mit Matrix PAY."
      },
      {
       "type": "buttons",
@@ -2390,21 +2407,33 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Zentrale Stammdaten.** Artikel und Preise einmal pflegen, an jeder Station gültig."
+        "text": "**Bestell-Kiosk und Abholmonitor.** Gäste bestellen und zahlen am Kiosk von Flixorder. Der Abholmonitor zeigt, welche Bestellung fertig ist."
        },
        {
         "nr": "02",
-        "text": "**Selbstbedienung.** Kundendisplay, Scanner, Schnellwahl."
+        "text": "**Bonmonitor in der Küche.** Matrix Bonmonitor zeigt die Bestellungen an der Station. Bons lassen sich gruppieren, zurückstellen, sperren und priorisieren."
        },
        {
         "nr": "03",
-        "text": "**Spitzenlast zur Mittagszeit.** Schnell bonieren, auch bei langer Schlange."
+        "text": "**Stammdaten in Matrix Office.** Artikel, Warengruppen, Zahlarten und Artikelzwänge legen Sie an einer Stelle an."
        },
        {
         "nr": "04",
-        "text": "**Auswertung je Station.** Umsatz je Station, je Stunde, je Artikel."
+        "text": "**Peripherie an der Kasse.** Kundendisplay und Scanner, bei Bedarf eine Waage, hängen direkt an Matrix POS."
        }
       ]
+     }
+    ]
+   },
+   {
+    "id": "welche-matrix",
+    "name": "Welche Matrix?",
+    "eyebrow": null,
+    "heading": "Welche Matrix?",
+    "blocks": [
+     {
+      "type": "p",
+      "text": "Bestell-Kiosk und Self-Ordering gibt es heute nur mit Matrix POS über Flixorder. Matrix NXT hat beides nicht."
      }
     ]
    },
@@ -2428,7 +2457,7 @@
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
-    "heading": "Wie viele Stationen, wie viele Gäste zur Spitzenzeit?",
+    "heading": "Nennen Sie uns Ihre Stationen.",
     "blocks": [
      {
       "type": "buttons",
@@ -2451,17 +2480,17 @@
   "slug": "branchen/systemgastronomie",
   "title": "Systemgastronomie",
   "metaTitle": "Kassensystem für Systemgastronomie und Filialbetriebe | Matrix POS",
-  "description": "Zentrale Stammdaten, Auswertung über alle Standorte, Rollout ohne Techniker. Matrix für Betriebe mit mehreren Standorten.",
+  "description": "Matrix für Filialbetriebe: Einführung mit Pilotstandort, Cloud-TSE je Filiale, Kartenzahlung aller Standorte über Matrix PAY.",
   "sections": [
    {
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "Ein Standard. Alle Standorte.",
+    "heading": "Eine Kasse für alle Filialen.",
     "blocks": [
      {
       "type": "p",
-      "text": "Zentrale Artikel und Preise, Auswertung über alle Filialen, Ausnahmen je Standort."
+      "text": "Matrix für Filialbetriebe mit Cloud-TSE je Filiale und Kartenzahlung aller Standorte über Matrix PAY."
      },
      {
       "type": "buttons",
@@ -2491,23 +2520,15 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Zentrale Stammdaten.** Artikel, Preise und Aktionen einmal pflegen, an alle Standorte verteilen."
+        "text": "**Updates zentral.** Matrix NXT bekommt Updates zentral, ohne Techniker vor Ort."
        },
        {
         "nr": "02",
-        "text": "**Rollout ohne Techniker.** Neue Filiale, Geräte per Code anmelden, Layout kommt mit. Mit Matrix NXT."
+        "text": "**Kartenzahlung über Matrix PAY.** Kartenzahlungen aller Standorte laufen über Adyen und stehen in einer Abrechnung."
        },
        {
         "nr": "03",
-        "text": "**Auswertung über alles.** Umsatz und Storno je Filiale und im Vergleich."
-       },
-       {
-        "nr": "04",
-        "text": "**Rechte und Rollen.** Betriebsleitung sieht den Standort, die Zentrale alles."
-       },
-       {
-        "nr": "05",
-        "text": "**Ein Payment-Vertrag.** Alle Standorte, eine Abrechnung, mit Matrix PAY."
+        "text": "**TSE und Meldepflicht je Filiale.** Jede Filiale bekommt die Cloud-TSE von Fiskaly. Die Kassenmeldung an ELSTER ist abgedeckt."
        }
       ]
      }
@@ -2517,11 +2538,11 @@
     "id": "grosse-projekte",
     "name": "Große Projekte",
     "eyebrow": null,
-    "heading": "Ab mehreren Standorten planen wir gemeinsam.",
+    "heading": "Einführung mit Pilotstandort.",
     "blocks": [
      {
       "type": "p",
-      "text": "Anforderungen, Pilotstandort, Rollout, Schulung. Dafür stellen wir Ihnen vorab drei Fragen: Standorte, heutiges System, Zeithorizont."
+      "text": "Wir richten zuerst einen Pilotstandort ein und rollen danach auf die weiteren Filialen aus. Vorab brauchen wir die Zahl der Standorte, Ihr heutiges Kassensystem und den gewünschten Starttermin."
      },
      {
       "type": "buttons",
@@ -2575,7 +2596,7 @@
   "slug": "support",
   "title": "Support & Wartung",
   "metaTitle": "Support und Wartung aus Hannover, 7 Tage die Woche | Matrix POS",
-  "description": "Unser Support kommt aus der Gastronomie. 7 Tage die Woche per Telefon, Supportportal und Fernwartung. Wartungsverträge Basic und Enterprise.",
+  "description": "Support für Matrix NXT, POS und PAY aus Hannover: Telefon und Supportportal an 7 Tagen, Fernwartung per TeamViewer QuickSupport. Wartungsverträge Basic und Enterprise.",
   "sections": [
    {
     "id": "hero",
@@ -2585,7 +2606,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Unser Support sitzt in Hannover, spricht Deutsch und kennt den Betrieb von innen. 7 Tage die Woche."
+      "text": "Telefon und Supportportal für Matrix NXT, POS und PAY, 7 Tage die Woche aus Hannover."
      },
      {
       "type": "buttons",
@@ -2615,7 +2636,7 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Supportportal.** Anfrage stellen, Status sehen, Anleitungen finden. Der schnellste Weg für alles, was nicht brennt."
+        "text": "**Supportportal.** Sie legen ein Ticket an und sehen dort den Bearbeitungsstand. Anleitungen liegen im Helpcenter."
        },
        {
         "nr": "02",
@@ -2623,7 +2644,7 @@
        },
        {
         "nr": "03",
-        "text": "**Fernwartung.** Wir schauen mit Ihrer Freigabe direkt auf Ihre Kasse."
+        "text": "**Fernwartung.** Per TeamViewer QuickSupport: Sie nennen dem Support die angezeigte ID und geben die Verbindung frei."
        }
       ]
      },
@@ -2648,7 +2669,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Leute, die selbst im Service, in der Küche oder im F&B gearbeitet haben und die Matrix seit Jahren kennen."
+      "text": "Im Support arbeiten Restaurantfachleute, Köche und F&B-Manager."
      },
      {
       "type": "placeholder",
@@ -2665,8 +2686,8 @@
      {
       "type": "list",
       "items": [
-       "**Basic.** Telefon- und Portal-Support, Updates, Fernwartung.",
-       "**Enterprise.** Dazu priorisierte Bearbeitung, feste Ansprechpartner, Vor-Ort-Service. Für Betriebe mit mehreren Standorten."
+       "**Basic.** Support per Telefon und Supportportal, Fernwartung, Software-Updates.",
+       "**Enterprise.** Zusätzlich priorisierte Bearbeitung, feste Ansprechpartner und Service vor Ort. Gedacht für Betriebe mit mehreren Standorten."
       ]
      },
      {
@@ -2694,7 +2715,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Anleitungen, Updates und Ihr Kundenkonto finden Sie im Supportportal."
+      "text": "Anleitungen und Ihr Kundenkonto liegen im Supportportal."
      },
      {
       "type": "buttons",
@@ -2729,12 +2750,8 @@
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
-    "heading": "Noch kein Kunde?",
+    "heading": "Demo mit Ihren Artikeln.",
     "blocks": [
-     {
-      "type": "p",
-      "text": "Fragen Sie nach einer Referenz in Ihrer Nähe und sprechen Sie mit einem Betrieb, der unseren Support kennt."
-     },
      {
       "type": "buttons",
       "items": [
@@ -2756,7 +2773,7 @@
   "slug": "fernwartung",
   "title": "Fernwartung",
   "metaTitle": "Fernwartung mit TeamViewer QuickSupport | Matrix POS",
-  "description": "In drei Schritten zur Fernwartung: QuickSupport laden, ID nennen, Verbindung freigeben. Immer die aktuelle Version vom Hersteller.",
+  "description": "In drei Schritten zur Fernwartung: QuickSupport laden, ID nennen, Verbindung freigeben. Der Download kommt direkt von TeamViewer.",
   "sections": [
    {
     "id": "hero",
@@ -2766,7 +2783,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Unser Support schaut mit Ihrer Freigabe auf Ihre Kasse. Sie sehen alles mit und beenden die Sitzung jederzeit."
+      "text": "Über TeamViewer QuickSupport greift unser Support nach Ihrer Freigabe auf die Kasse zu. Sie trennen die Verbindung jederzeit."
      },
      {
       "type": "buttons",
@@ -2789,7 +2806,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "1 **Laden.** Die Datei kommt direkt vom Hersteller und ist immer aktuell. Keine Installation nötig."
+      "text": "1 **Laden.** QuickSupport laden Sie direkt bei TeamViewer. Das Programm startet ohne Installation."
      },
      {
       "type": "p",
@@ -2797,7 +2814,23 @@
      },
      {
       "type": "p",
-      "text": "3 **Freigeben.** Verbindung bestätigen. Sie können jederzeit trennen."
+      "text": "3 **Freigeben.** Bestätigen Sie die Verbindungsanfrage. Schließen Sie QuickSupport, ist die Verbindung getrennt."
+     }
+    ]
+   },
+   {
+    "id": "sicherheit",
+    "name": "Sicherheit",
+    "eyebrow": null,
+    "heading": "Sicherheit",
+    "blocks": [
+     {
+      "type": "list",
+      "items": [
+       "Wir verbinden uns nur nach telefonischer Absprache.",
+       "Für Windows und macOS.",
+       "Tickets und Störungsmeldungen laufen über das Supportportal: support.matrixpos.de"
+      ]
      }
     ]
    }
@@ -2809,7 +2842,7 @@
   "slug": "hardware",
   "title": "Hardware",
   "metaTitle": "Hardware für Matrix NXT, Matrix POS und Matrix PAY | Matrix POS",
-  "description": "Zertifizierte Geräte für Matrix NXT, Terminals und Peripherie für Matrix POS, Terminals für Matrix PAY.",
+  "description": "Matrix NXT läuft auf Orderman 10, Orderman Magellan EASY, Google Pixel 9 und 10 und Samsung Galaxy Tab A11. Dazu Terminals und Peripherie für Matrix POS und PAY.",
   "sections": [
    {
     "id": "hero",
@@ -2819,7 +2852,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Zertifizierte Geräte für NXT, Terminals und Peripherie für POS, Terminals für PAY."
+      "text": "Hier finden Sie die für Matrix NXT zertifizierten Geräte sowie Terminals und Peripherie für Matrix POS und PAY."
      },
      {
       "type": "buttons",
@@ -2850,7 +2883,7 @@
      },
      {
       "type": "p",
-      "text": "Dazu ein Bondrucker. An der Theke läuft NXT auch im Browser am Touch-PC. Die TSE kommt aus der Cloud, ohne Hardware im Betrieb."
+      "text": "Bons druckt NXT auf einem Bondrucker. An der Theke läuft NXT auch im Browser am Touch-PC. Die TSE-Signatur kommt von der Cloud-TSE, ein TSE-Stick entfällt."
      },
      {
       "type": "placeholder",
@@ -2862,15 +2895,16 @@
     "id": "fuer-pos",
     "name": "Für POS",
     "eyebrow": null,
-    "heading": "Stationär und erweiterbar.",
+    "heading": "Terminals und Peripherie.",
     "blocks": [
      {
       "type": "list",
       "items": [
-       "Terminals für Service und Bar",
-       "Bondrucker, Kundendisplays, Scanner, Waagen, Kartenleser",
-       "NEO-Handgerät mit Bondruck und Kartenzahlung",
-       "Cloud-TSE von Fiskaly. Bestehende Hardware-TSE läuft vorerst weiter."
+       "Kassenterminals Orderman Pulse und Terminals von Toshiba",
+       "Bondrucker von Epson und Star, Waagen von Mettler Toledo",
+       "Kundendisplays, Scanner und Kartenleser",
+       "NEO auf Orderman-Handgeräten oder eigenen Smartphones, Bondruck per Bluetooth oder WLAN",
+       "TSE-Signatur über die Cloud-TSE von Fiskaly"
       ]
      },
      {
@@ -2887,7 +2921,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Stationär an der Theke, mobil im Service, Tap to Pay am Handgerät mit NXT."
+      "text": "An der Theke steht das Terminal fest, im Service nehmen Sie es mit an den Tisch. Mit NXT zahlen Gäste per Tap to Pay direkt am Handgerät."
      },
      {
       "type": "placeholder",
@@ -2914,7 +2948,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Geräte bekommen Sie über uns, vorkonfiguriert und getestet. Bestehende Geräte prüfen wir auf Eignung."
+      "text": "Wir liefern die Geräte vorkonfiguriert und getestet. Vorhandene Geräte prüfen wir auf Eignung für NXT oder POS."
      }
     ]
    },
@@ -2922,11 +2956,11 @@
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
-    "heading": "Welche Geräte passen zu Ihrem Betrieb?",
+    "heading": "Geräte für Ihren Betrieb planen.",
     "blocks": [
      {
       "type": "p",
-      "text": "Schicken Sie uns, was Sie heute im Einsatz haben."
+      "text": "Schicken Sie uns eine Liste der Geräte, die heute bei Ihnen laufen."
      },
      {
       "type": "buttons",
@@ -2949,17 +2983,17 @@
   "slug": "schnittstellen",
   "title": "Schnittstellen",
   "metaTitle": "Schnittstellen: Hotelsoftware, Payment, Warenwirtschaft, Buchhaltung | Matrix POS",
-  "description": "Matrix bindet an, womit Sie arbeiten: protel, Opera, ASA, Guestline, Mews, Adyen, OPI und Nexo, KOST, DATEV, Flixorder, Schankanlagen, Gutscheine.",
+  "description": "Schnittstellen von Matrix POS zu protel, Oracle Opera, ASA, Guestline, Adyen, OPI und Nexo, KOST, DATEV und Flixorder, dazu Schankanlagen und Gutscheindienste.",
   "sections": [
    {
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "Matrix spricht mit Ihren Systemen.",
+    "heading": "Matrix an Ihre Systeme anbinden.",
     "blocks": [
      {
       "type": "p",
-      "text": "Hotelsoftware, Payment, Warenwirtschaft, Buchhaltung, Reservierung, Schankanlagen. Über 40 Anbindungen laufen heute im Betrieb."
+      "text": "Matrix POS bucht Umsätze auf das Zimmerkonto der Hotelsoftware und übergibt Verkäufe an Warenwirtschaft und Buchhaltung."
      },
      {
       "type": "buttons",
@@ -2986,11 +3020,11 @@
      },
      {
       "type": "p",
-      "text": "Zimmerbuchung aus der Kasse, Umsätze aufs Zimmerkonto."
+      "text": "Die Kasse bucht Umsätze per Zimmerbuchung direkt auf das Zimmerkonto des Gastes."
      },
      {
       "type": "p",
-      "text": "Oracle Opera (OHIP) · protel · ASA Hotel · Guestline · Mews · SIHOT · weitere über die generische Hotelschnittstelle"
+      "text": "Oracle Opera (OHIP) · protel SPE/MPE und protel AIR · ASA Hotel · Guestline · weitere über die generische Hotelschnittstelle"
      },
      {
       "type": "h3",
@@ -2998,7 +3032,7 @@
      },
      {
       "type": "p",
-      "text": "Matrix PAY mit Adyen. Terminals anderer Anbieter über OPI und Nexo."
+      "text": "Matrix PAY läuft über Adyen. Terminals anderer Anbieter binden wir über OPI und Nexo an."
      },
      {
       "type": "h3",
@@ -3006,11 +3040,11 @@
      },
      {
       "type": "p",
-      "text": "Verkäufe buchen Bestände ab."
+      "text": "Jeder Verkauf bucht den Bestand in der Warenwirtschaft ab, mit KOST in Echtzeit."
      },
      {
       "type": "p",
-      "text": "KOST · FutureLog · Gruber · weitere über die generische Schnittstelle"
+      "text": "KOST · FutureLog · weitere über die generische Schnittstelle"
      },
      {
       "type": "h3",
@@ -3018,7 +3052,7 @@
      },
      {
       "type": "p",
-      "text": "Tagesabschlüsse direkt in die Buchhaltung."
+      "text": "Die Kasse übergibt die Tagesabschlüsse an die Finanzbuchhaltung."
      },
      {
       "type": "p",
@@ -3030,7 +3064,11 @@
      },
      {
       "type": "p",
-      "text": "RESERViSiON · Flixorder · servier.bar · OpenTable"
+      "text": "Mit Flixorder bestellen Gäste per QR-Code am Tisch, am Kiosk oder zum Mitnehmen, im Hotel auch über Room-Service."
+     },
+     {
+      "type": "p",
+      "text": "RESERViSiON · Flixorder · servier.bar"
      },
      {
       "type": "h3",
@@ -3046,7 +3084,11 @@
      },
      {
       "type": "p",
-      "text": "Schankanlagen und Kaffeemaschinen über die generische Schnittstelle · Bp Event"
+      "text": "Schankanlagen und Kaffeemaschinen binden wir über die generische Schnittstelle an."
+     },
+     {
+      "type": "p",
+      "text": "Bp Event (ehemals BANKETTprofi)"
      },
      {
       "type": "h3",
@@ -3054,7 +3096,11 @@
      },
      {
       "type": "p",
-      "text": "Matrix Gutscheinverwaltung · Matrix Wallet mit Transponderkarten"
+      "text": "Matrix Wallet führt Kunden-, Rabatt- und Bonuskarten sowie aufladbare Geldkarten auf Transponderkarten."
+     },
+     {
+      "type": "p",
+      "text": "Matrix Gutscheinverwaltung · Matrix Wallet"
      },
      {
       "type": "h3",
@@ -3078,7 +3124,7 @@
      },
      {
       "type": "p",
-      "text": "Orderman · Epson und Star (Drucker) · Mettler Toledo (Waagen) · Cashlogy (Cash-Management) · ASSA ABLOY (Türschließsysteme)"
+      "text": "Orderman · Epson und Star (Drucker) · Mettler Toledo (Waagen) · Cashlogy (Cash-Management)"
      },
      {
       "type": "h3",
@@ -3114,7 +3160,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Matrix POS · Matrix NXT · Fremdkassen · Hotelsoftware über die Kasse"
+      "text": "Matrix POS · Matrix NXT · Fremdkassen · Hotelsoftware über die Kasse · Front Office und Online-Buchungen über Channelmanager oder Website"
      }
     ]
    },
@@ -3126,7 +3172,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Nennen Sie uns System und Hersteller. Viele Anbindungen wurden schon einmal gebaut."
+      "text": "Nennen Sie uns System und Hersteller. Für Hotelsoftware und Warenwirtschaft gibt es zusätzlich je eine generische Schnittstelle."
      },
      {
       "type": "buttons",
@@ -3149,7 +3195,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Sie wollen Ihr System an Matrix anbinden?"
+      "text": "Hersteller, die ihr System an Matrix anbinden wollen, melden sich über das Partnerformular."
      },
      {
       "type": "buttons",
@@ -3172,17 +3218,17 @@
   "slug": "kasse-und-gesetz",
   "title": "Kasse & Gesetz",
   "metaTitle": "TSE, KassenSichV, GoBD, Kassenmeldepflicht: Was Ihre Kasse erfüllen muss | Matrix POS",
-  "description": "Was eine Gastro-Kasse in Deutschland und Österreich erfüllen muss, und wie Matrix POS und Matrix NXT es abdecken. TSE, KassenSichV, GoBD, DSFinV-K, Meldepflicht, RKSV.",
+  "description": "Pflichten für Gastro-Kassen in Deutschland und Österreich: TSE nach § 146a AO, KassenSichV, GoBD, DSFinV-K, Kassenmeldepflicht über ELSTER, RKSV. So setzt Matrix sie um.",
   "sections": [
    {
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "Was das Gesetz von Ihrer Kasse verlangt.",
+    "heading": "Was Ihre Kasse erfüllen muss.",
     "blocks": [
      {
       "type": "p",
-      "text": "TSE, KassenSichV, GoBD, Meldepflicht. Hier steht, was die Begriffe bedeuten und wie Matrix sie erfüllt. Keine Rechtsberatung."
+      "text": "Die Pflichten aus § 146a AO und der KassenSichV, und wie Matrix POS und Matrix NXT sie umsetzen. Keine Rechtsberatung."
      }
     ]
    },
@@ -3198,7 +3244,7 @@
      },
      {
       "type": "p",
-      "text": "Technische Sicherheitseinrichtung. Jede Buchung bekommt eine zertifizierte Signatur, nichts lässt sich nachträglich ändern. Matrix NXT und Matrix POS nutzen die Cloud-TSE von Fiskaly, ohne Hardware im Betrieb. Bestehende Hardware-TSE läuft vorerst weiter, Bestandskunden erhalten künftig ebenfalls die Cloud-TSE."
+      "text": "Technische Sicherheitseinrichtung nach § 146a AO. Sie zeichnet jeden Kassenvorgang auf und signiert ihn, damit spätere Änderungen erkennbar sind. Die TSE muss vom BSI zertifiziert sein. Matrix NXT und Matrix POS signieren über die Cloud-TSE von Fiskaly, ohne Hardware im Betrieb. Bestehende Hardware-TSE (Swissbit) läuft vorerst weiter, auch diese Betriebe stellen wir auf die Cloud-TSE um."
      },
      {
       "type": "h3",
@@ -3206,7 +3252,7 @@
      },
      {
       "type": "p",
-      "text": "Die Kassensicherungsverordnung regelt TSE, Belegausgabe und Meldepflicht. Beide Matrix-Systeme sind konform."
+      "text": "Die Kassensicherungsverordnung konkretisiert § 146a AO: welche Systeme eine TSE brauchen, was die TSE leisten muss und welche Angaben auf dem Beleg stehen. Nach der Belegausgabepflicht bekommt der Gast zu jedem Vorgang einen Beleg, mit seiner Zustimmung auch elektronisch. Beide Matrix-Systeme sind konform."
      },
      {
       "type": "h3",
@@ -3214,7 +3260,7 @@
      },
      {
       "type": "p",
-      "text": "Daten müssen vollständig, unveränderbar und auswertbar aufbewahrt werden. Matrix speichert alle Vorgänge revisionssicher und exportiert sie für den Steuerberater."
+      "text": "Die GoBD verlangen, dass Kassendaten unveränderbar aufbewahrt werden und bei einer Prüfung maschinell auswertbar sind. Matrix speichert alle Vorgänge revisionssicher und exportiert sie für den Steuerberater."
      },
      {
       "type": "h3",
@@ -3222,7 +3268,7 @@
      },
      {
       "type": "p",
-      "text": "Das Exportformat für die Betriebsprüfung. Matrix NXT exportiert DSFinV-K aus dem Backoffice."
+      "text": "Die Digitale Schnittstelle der Finanzverwaltung für Kassensysteme legt fest, in welcher Struktur die Kasse ihre Daten für Kassennachschau und Betriebsprüfung exportiert. Matrix NXT exportiert DSFinV-K aus dem Backoffice."
      },
      {
       "type": "h3",
@@ -3230,7 +3276,7 @@
      },
      {
       "type": "p",
-      "text": "Seit 1. Januar 2025 müssen elektronische Kassen dem Finanzamt gemeldet werden. Matrix liefert die Daten dafür."
+      "text": "Nach § 146a AO melden Betriebe ihre elektronischen Kassen und die zugehörige TSE dem Finanzamt, seit 1. Januar 2025 über ELSTER. Für Matrix POS gibt es eine ELSTER-Kassenmeldung über die ERiC-Schnittstelle."
      },
      {
       "type": "h3",
@@ -3238,7 +3284,7 @@
      },
      {
       "type": "p",
-      "text": "Für Betriebe in Österreich signiert Matrix NXT nach der Registrierkassensicherheitsverordnung."
+      "text": "In Österreich gilt die Registrierkassensicherheitsverordnung: Jeder Beleg wird signiert und trägt einen maschinenlesbaren Code. Matrix NXT signiert nach der RKSV."
      }
     ]
    },
@@ -3298,7 +3344,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Fällt die TSE aus, läuft die Kasse weiter und protokolliert den Ausfall, wie das Gesetz es verlangt. Fällt das Internet aus, kassiert Matrix POS weiter. Matrix NXT braucht heute eine Verbindung, der Offline-Betrieb ist in Arbeit."
+      "text": "Fällt die TSE aus, darf weiter kassiert werden, der Ausfall muss aber dokumentiert sein. Matrix kassiert in diesem Fall weiter und protokolliert den Ausfall. Fällt das Internet aus, kassiert Matrix POS weiter. Matrix NXT braucht heute eine Verbindung, der Offline-Betrieb ist in Arbeit."
      }
     ]
    },
@@ -3329,7 +3375,7 @@
   "slug": "faq",
   "title": "FAQ",
   "metaTitle": "Häufige Fragen zu Kassensystemen für die Gastronomie | Matrix POS",
-  "description": "Internetausfall, TSE, Wechsel von POS auf NXT, Hotelsoftware, Payment ohne Matrix-Kasse, Kosten. Die Antworten.",
+  "description": "Antworten zu Offline-Betrieb, Cloud-TSE, Wechsel von Matrix POS auf NXT, Hotelschnittstellen, Matrix PAY mit Fremdkasse und Kassenmeldepflicht.",
   "sections": [
    {
     "id": "hero",
@@ -3361,13 +3407,13 @@
        {
         "q": "Ist Matrix TSE-konform?",
         "a": [
-         "Ja, beide Systeme. Sie nutzen die Cloud-TSE von Fiskaly, ohne TSE-Hardware im Betrieb. Wer heute eine Hardware-TSE einsetzt, kann sie vorerst weiter nutzen. Mehr auf → /kasse-und-gesetz"
+         "Ja, beide Systeme. Sie signieren über die Cloud-TSE von Fiskaly, ohne TSE-Hardware im Betrieb. Betriebe mit Hardware-TSE (Swissbit) kassieren damit vorerst weiter und werden später auf die Cloud-TSE umgestellt. Mehr auf → /kasse-und-gesetz"
         ]
        },
        {
         "q": "Kann ich von Matrix POS auf Matrix NXT wechseln?",
         "a": [
-         "Ja. Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. NXT wächst mit jedem Update. Ob Ihr Betrieb heute schon passt, klären wir im Gespräch."
+         "Ja. Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. Ob NXT Ihren Betrieb heute abdeckt, hängt vor allem an zwei Punkten, die für NXT noch in Arbeit sind: Offline-Betrieb und Hotelschnittstelle."
         ]
        },
        {
@@ -3410,7 +3456,7 @@
        {
         "q": "Warum Matrix PAY?",
         "a": [
-         "Kasse und Bezahlen aus einer Hand: ein Vertrag, ein Ansprechpartner, eine Abrechnung. Die Abwicklung läuft über Adyen."
+         "Mit Matrix POS geht der Betrag von der Kasse ans Terminal, der Tagesabschluss braucht keinen Abgleich. In Matrix NXT ist die Kartenzahlung integriert, auch per Tap to Pay am Handgerät. Die Abwicklung läuft über Adyen."
         ]
        },
        {
@@ -3435,13 +3481,13 @@
        {
         "q": "Welche Hotelsoftware ist angebunden?",
         "a": [
-         "Für Matrix POS: protel, ASA Hotel, Opera, SIHOT, Mews, Guestline. Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit. → /schnittstellen"
+         "Für Matrix POS: protel, ASA Hotel, Oracle Opera, Guestline. Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit. → /schnittstellen"
         ]
        },
        {
         "q": "Meine Warenwirtschaft fehlt in der Liste. Was nun?",
         "a": [
-         "Fragen Sie uns. Viele Anbindungen wurden schon einmal gebaut."
+         "Die Liste zeigt die über 40 Anbindungen, die heute im Betrieb laufen. Fehlt Ihr System, prüfen wir, ob es eine Schnittstelle anbietet."
         ]
        }
       ]
@@ -3460,7 +3506,7 @@
        {
         "q": "Was kostet Matrix?",
         "a": [
-         "Das hängt von Geräten, Standorten und Payment ab. Wir machen Ihnen nach einem kurzen Gespräch ein Angebot."
+         "Der Preis richtet sich nach der Zahl der Geräte und Standorte. Das Angebot erstellen wir nach dem Erstgespräch."
         ]
        },
        {
@@ -3485,13 +3531,13 @@
        {
         "q": "Ist ein elektronisches Kassensystem Pflicht?",
         "a": [
-         "Nein. Wer aber eine elektronische Kasse nutzt, muss TSE, Belegausgabe und Meldepflicht erfüllen. → /kasse-und-gesetz"
+         "Nein. Wer eine elektronische Kasse nutzt, muss sie nach § 146a AO mit einer zertifizierten TSE absichern, Belege ausgeben und dem Finanzamt melden. → /kasse-und-gesetz"
         ]
        },
        {
         "q": "Was ist die Kassenmeldepflicht?",
         "a": [
-         "Seit 2025 müssen elektronische Kassen dem Finanzamt gemeldet werden. Matrix liefert die Daten dafür."
+         "Seit 1. Januar 2025 melden Betriebe ihre elektronischen Kassen samt TSE über ELSTER an das Finanzamt (§ 146a AO). Für Matrix POS gibt es dafür die ELSTER-Kassenmeldung."
         ]
        }
       ]
@@ -3525,7 +3571,7 @@
   "slug": "partner",
   "title": "Partner",
   "metaTitle": "Partner werden: Vertrieb, Integration, Schnittstelle | Matrix POS",
-  "description": "Zwei Wege, Partner von Matrix zu werden: als Vertriebspartner verkaufen und betreuen Sie Matrix. Als Technologiepartner läuft Ihr Produkt in Matrix oder spricht mit Matrix.",
+  "description": "Vertriebspartner verkaufen und betreuen Matrix vor Ort. Technologiepartner integrieren ihr Produkt in Matrix oder binden es per Schnittstelle an.",
   "sections": [
    {
     "id": "hero",
@@ -3539,7 +3585,7 @@
      },
      {
       "type": "p",
-      "text": "Zwei Wege, Partner von Matrix zu werden: als Vertriebspartner verkaufen und betreuen Sie Matrix. Als Technologiepartner läuft Ihr Produkt in Matrix oder spricht mit Matrix."
+      "text": "Vertriebspartner verkaufen und betreuen Matrix vor Ort. Technologiepartner integrieren ihr Produkt in Matrix oder binden es per Schnittstelle an."
      },
      {
       "type": "buttons",
@@ -3567,7 +3613,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Sie verkaufen Matrix NXT und Matrix PAY in Ihrer Region, installieren vor Ort und betreuen Ihre Kunden selbst. Matrix steht dahinter."
+      "text": "Sie verkaufen Matrix NXT und Matrix PAY in Ihrer Region und betreuen Ihre Kunden selbst. Den Second-Level-Support übernimmt Matrix in Hannover."
      },
      {
       "type": "p",
@@ -3577,8 +3623,8 @@
       "type": "list",
       "items": [
        "**Das bringen Sie.** Kundenzugang in der Gastronomie, Installation vor Ort, First-Level-Support, Beratung zu Hardware und Payment.",
-       "**Das bringen wir.** Produkt, Schulung, Demo-Zugang, Second-Level-Support aus Hannover, Partnerkonditionen auf Anfrage.",
-       "**So läuft es.** Jede verkaufte Kasse kann ein Payment-Vertrag werden. Terminals installieren Sie, den Payment-Support übernimmt Matrix.",
+       "**Das bringen wir.** Wir schulen Sie auf Matrix NXT und PAY und stellen einen Demo-Zugang. Der Second-Level-Support kommt aus Hannover. Partnerkonditionen auf Anfrage.",
+       "**So läuft es.** Zu jeder Kasse können Sie Matrix PAY mitverkaufen. Die Terminals installieren Sie, den Payment-Support übernimmt Matrix.",
        "**Nennung.** Partnerliste auf matrixpos.de nach Freigabe."
       ]
      },
@@ -3603,15 +3649,15 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Ihr Produkt und Matrix arbeiten zusammen. Entweder läuft es im Matrix-Produkt, oder es spricht von außen damit. Der Unterschied entscheidet, was wir gemeinsam bauen."
+      "text": "Es gibt zwei Formen. Bei der Integration bauen wir Ihr Produkt fest in Matrix ein. Bei der Schnittstelle tauschen Ihr System und Matrix Daten aus."
      },
      {
       "type": "p",
-      "text": "Grafik (Partner-Landkarte): links Schnittstellen (Hotelsoftware, Warenwirtschaft, Buchhaltung, Reservierung und Self-Ordering), gestrichelt verbunden mit dem Produkt; im Produkt die Integrationen Adyen, Fiskaly, Orderman. „Der Kunde kauft es mit der Kasse. Für ihn ist es Matrix.\""
+      "text": "Grafik (Partner-Landkarte): links Schnittstellen (Hotelsoftware, Warenwirtschaft, Buchhaltung, Reservierung und Self-Ordering), gestrichelt verbunden mit dem Produkt; im Produkt die Integrationen Adyen, Fiskaly, Orderman. „Integrierte Produkte kauft der Kunde zusammen mit der Kasse.\""
      },
      {
       "type": "p",
-      "text": "Zahlung, TSE, Hardware: Matrix baut Ihr Produkt fest ein und verkauft es mit. Sie liefern das Produkt und den Support dafür, wir zertifizieren, nennen Sie auf den Produktseiten und bringen Sie über alle Vertriebspartner in den Markt. Heute: Adyen, Fiskaly, Orderman."
+      "text": "Matrix baut Ihr Produkt fest ein und verkauft es mit. Sie liefern das Produkt und den Support dafür. Wir zertifizieren es und verkaufen es über alle Vertriebspartner mit. Heute: Adyen, Fiskaly, Orderman."
      },
      {
       "type": "buttons",
@@ -3630,7 +3676,7 @@
      },
      {
       "type": "p",
-      "text": "Hotelsoftware, Warenwirtschaft, Buchhaltung, Reservierung: Ihr System bleibt Ihr System, Matrix tauscht Daten damit aus. Sie bauen die Anbindung auf Ihrer Seite, wir liefern Dokumentation, Testumgebung und den Eintrag in der Schnittstellenliste. Heute: über 40 Anbindungen im Betrieb."
+      "text": "Für Hotelsoftware, Warenwirtschaft, Buchhaltung und Reservierung tauscht Matrix Daten mit Ihrem System aus. Sie bauen die Anbindung auf Ihrer Seite. Wir liefern Dokumentation und Testumgebung und tragen Sie in die Schnittstellenliste ein. Heute: über 40 Anbindungen im Betrieb."
      },
      {
       "type": "buttons",
@@ -3704,7 +3750,7 @@
        },
        {
         "nr": "02",
-        "text": "**Gespräch.** 30 Minuten mit dem Partnermanagement: Markt, Produkt, Konditionen. Online oder in Hannover."
+        "text": "**Gespräch.** 30 Minuten mit dem Partnermanagement über Ihr Gebiet und die Konditionen, online oder in Hannover."
        },
        {
         "nr": "03",
@@ -3740,13 +3786,8 @@
     "heading": "Sprechen wir.",
     "blocks": [
      {
-      "type": "cards",
-      "items": [
-       {
-        "nr": "30",
-        "text": "Jahre im Markt, zwei Kassen, ein Payment. Jeder Kassenverkauf kann ein Payment-Vertrag werden."
-       }
-      ]
+      "type": "p",
+      "text": "Mit Matrix POS und Matrix NXT verkaufen Sie zwei Kassen, mit Matrix PAY die Kartenzahlung dazu."
      },
      {
       "type": "buttons",
@@ -3785,8 +3826,8 @@
  {
   "slug": "empfehlen",
   "title": "Matrix empfehlen",
-  "metaTitle": "Matrix empfehlen – Prämie für Ihre Weiterempfehlung | Matrix POS",
-  "description": "Sie kennen einen Betrieb, der eine neue Kasse sucht? Empfehlen Sie Matrix weiter und erhalten Sie eine Prämie.",
+  "metaTitle": "Matrix empfehlen: Prämie für Ihre Empfehlung | Matrix POS",
+  "description": "Nennen Sie uns einen Betrieb, der eine neue Kasse sucht. Wird daraus ein Kunde von Matrix, erhalten Sie eine Prämie.",
   "sections": [
    {
     "id": "konzept-in-kuerze",
@@ -3810,11 +3851,11 @@
     "id": "hero",
     "name": "Hero",
     "eyebrow": "MATRIX EMPFEHLEN",
-    "heading": "Gute Kassen sprechen sich herum.",
+    "heading": "Empfehlen Sie Matrix weiter.",
     "blocks": [
      {
       "type": "p",
-      "text": "Seit 30 Jahren arbeiten Betriebe mit Matrix, weil Kolleginnen und Kollegen es ihnen empfohlen haben. Kennen Sie einen Betrieb, der eine Kasse sucht? Wir bedanken uns für Ihre Empfehlung."
+      "text": "Nennen Sie uns einen Betrieb, der eine neue Kasse sucht. Kommt ein Vertrag zustande, erhalten Sie eine Prämie."
      },
      {
       "type": "buttons",
@@ -3848,7 +3889,7 @@
        },
        {
         "nr": "03",
-        "text": "**Wir bedanken uns.** Wird aus Ihrer Empfehlung ein Kunde, erhalten Sie."
+        "text": "**Prämie.** Wird aus Ihrer Empfehlung ein Kunde, erhalten Sie."
        }
       ]
      }
@@ -3873,7 +3914,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "**Kann ich auch mehrere Betriebe empfehlen?** Ja, senden Sie das Formular einfach erneut."
+      "text": "**Kann ich auch mehrere Betriebe empfehlen?** Ja, senden Sie das Formular je Betrieb einmal."
      },
      {
       "type": "p",
@@ -3893,7 +3934,7 @@
   "slug": "ueber-uns",
   "title": "Über uns",
   "metaTitle": "Über Matrix POS: 30 Jahre Gastro-Kassen aus Hannover | Matrix POS",
-  "description": "Matrix POS GmbH aus Hannover entwickelt seit über 30 Jahren Kassen für die Gastronomie. Ein Team aus Gastro-Leuten und Entwicklern, mit Matrix NXT in der Cloud.",
+  "description": "Matrix POS GmbH, Hannover: seit über 30 Jahren Kassen für Gastronomie und Hotellerie. Über 60 Mitarbeitende entwickeln und betreuen Matrix NXT, POS, PAY und CONGA.",
   "sections": [
    {
     "id": "hero",
@@ -3903,7 +3944,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Seit über 30 Jahren bauen wir in Hannover Kassen für Leute, die im Service stehen, in der Küche oder an der Rezeption. Viele von uns haben das selbst gemacht."
+      "text": "Seit über 30 Jahren Kassen für Gastronomie und Hotellerie aus Hannover. Im Support arbeiten Fachleute aus Service und Küche."
      },
      {
       "type": "placeholder",
@@ -3932,11 +3973,15 @@
     "id": "geschichte",
     "name": "Geschichte",
     "eyebrow": null,
-    "heading": "Geschichte",
+    "heading": "Seit über 30 Jahren die Matrix.",
     "blocks": [
      {
       "type": "p",
-      "text": "Seit über 30 Jahren entwickeln wir die Matrix, seit 2025 als eigenständige Matrix POS GmbH."
+      "text": "Aus der stationären Kasse Matrix POS sind Matrix PAY für das Bezahlen, CONGA für Dienstplan und Zeiterfassung und die Cloud-Kasse Matrix NXT entstanden. Im Januar 2025 hat Everfield den Gastronomiekassenbereich der 42 GmbH übernommen. Seitdem arbeiten wir als Matrix POS GmbH, weiter in Hannover."
+     },
+     {
+      "type": "p",
+      "text": "Produktfamilie als Zeitleiste ohne Jahreszahlen: POS (stationär, läuft im Haus) · PAY (Terminals, Tap to Pay, Adyen) · CONGA (Dienstplan, Zeiterfassung für POS) · NXT (Cloud-Kasse, Leadprodukt ab 2026, hervorgehoben)."
      }
     ]
    },
@@ -3951,33 +3996,21 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Konfiguration.** Keine zwei Betriebe sind gleich. Wir richten die Kasse auf den Betrieb ein."
+        "text": "**Konfiguration.** Artikel, Warengruppen, Artikelzwänge und Schnittstellen richtet unser Professional Services auf Ihren Betrieb ein."
        },
        {
         "nr": "02",
-        "text": "**Nähe.** Support aus Hannover, von Leuten aus der Branche, 7 Tage die Woche."
+        "text": "**Nähe.** Telefonsupport an 7 Tagen die Woche aus Hannover, Fernwartung per TeamViewer QuickSupport."
        },
        {
         "nr": "03",
-        "text": "**Offenheit.** Schnittstellen zu den Systemen, mit denen Sie arbeiten."
+        "text": "**Offenheit.** Über 40 Schnittstellen laufen im Betrieb, darunter protel, Oracle Opera und DATEV."
        },
        {
         "nr": "04",
-        "text": "**Ehrlichkeit.** Was ein Produkt nicht kann, sagen wir vor dem Kauf."
+        "text": "**Ehrlichkeit.** Was in Arbeit ist, steht bei uns als in Arbeit da, zum Beispiel der Offline-Betrieb von Matrix NXT."
        }
       ]
-     }
-    ]
-   },
-   {
-    "id": "management",
-    "name": "Management",
-    "eyebrow": null,
-    "heading": "Wer Matrix führt.",
-    "blocks": [
-     {
-      "type": "p",
-      "text": "Ansprechpartner mit Namen, aus Hannover. Personen und Fotos pflegen wir in Supabase (Tabelle team_members)."
      }
     ]
    },
@@ -3994,10 +4027,10 @@
      {
       "type": "list",
       "items": [
-       "**Support.** Leute aus Service, Küche und F&B, die die Kasse von beiden Seiten kennen.",
-       "**Professional Services.** Einführung, Schulung, Schnittstellen, vor Ort und remote.",
+       "**Support.** Fachleute aus Service und Küche, 7 Tage die Woche erreichbar.",
+       "**Professional Services.** Richtet die Kasse ein und schult Ihr Personal, vor Ort oder per Fernwartung.",
        "**Entwicklung.** Matrix NXT, POS, PAY und CONGA, aus Hannover.",
-       "**Vertrieb.** Beratung für Gastronomie und Hotellerie."
+       "**Vertrieb.** Demo und Angebot für Gastronomie und Hotellerie."
       ]
      }
     ]
@@ -4010,7 +4043,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Adyen für Payment, Fiskaly für die Cloud-TSE."
+      "text": "Fest eingebaut sind Adyen für Payment und Fiskaly für die Cloud-TSE. Die Handgeräte von Orderman sind für Matrix zertifiziert."
      },
      {
       "type": "buttons",
@@ -4045,7 +4078,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "In Hannover, bei Ihnen im Betrieb oder per Video."
+      "text": "Demo in Hannover, bei Ihnen im Betrieb oder per Video."
      },
      {
       "type": "buttons",
@@ -4100,7 +4133,7 @@
      },
      {
       "type": "p",
-      "text": "Kneipe mit Gästezimmern. Der Inhaber kam als Quereinsteiger, die Kasse wurde auf seine Abläufe zugeschnitten."
+      "text": "Kneipe mit Gästezimmern. Der Inhaber kam aus einer anderen Branche, sein Kassenpartner hat Matrix auf seine Abläufe eingerichtet."
      },
      {
       "type": "placeholder",
@@ -4112,7 +4145,7 @@
      },
      {
       "type": "p",
-      "text": "Neu geplantes Konzept mit zwei Spitzenköchen und eigens ausgebildetem Service. Die Kasse wurde genauso individuell eingerichtet."
+      "text": "Neu geplantes Konzept mit zwei Spitzenköchen und eigens ausgebildetem Service."
      },
      {
       "type": "placeholder",
@@ -4124,7 +4157,7 @@
      },
      {
       "type": "p",
-      "text": "Hotel und Gastronomie unter einem Dach, eine Payment-Abrechnung für alles."
+      "text": "Hotel mit eigener Gastronomie. Matrix PAY läuft mit der Hotelsoftware, alle Zahlungen stehen in einer Payment-Abrechnung."
      },
      {
       "type": "p",
@@ -4144,7 +4177,7 @@
      },
      {
       "type": "p",
-      "text": "Bedienung, Check-out-Gastronomie und Warenwirtschaft mit eigener Produktion in einem System."
+      "text": "Der Zoo betreibt bediente Restaurants und Check-out-Gastronomie mit Matrix und beliefert die Outlets aus eigener Produktion."
      },
      {
       "type": "p",
@@ -4160,7 +4193,7 @@
      },
      {
       "type": "p",
-      "text": "Seit 15 Jahren mit Matrix. Support auch am Wochenende."
+      "text": "Seit 15 Jahren mit Matrix."
      },
      {
       "type": "p",
@@ -4192,10 +4225,6 @@
      },
      {
       "type": "p",
-      "text": "Die Stimme aus dem Service."
-     },
-     {
-      "type": "p",
       "text": "„Sie ist total einfach, selbsterklärend und erleichtert einem den Arbeitsalltag enorm. Egal was war, es war immer sofort jemand für uns da und hat das Problem gelöst.\""
      },
      {
@@ -4208,7 +4237,7 @@
     "id": "abschluss",
     "name": "Abschluss",
     "eyebrow": null,
-    "heading": "Eine Referenz in Ihrer Nähe?",
+    "heading": "Einen Referenzbetrieb besuchen.",
     "blocks": [
      {
       "type": "p",
@@ -4235,7 +4264,7 @@
   "slug": "jobs",
   "title": "Jobs",
   "metaTitle": "Jobs bei Matrix POS in Hannover | Matrix POS",
-  "description": "Du kommst aus Restaurant, Hotel oder Küche und hast Lust auf Technik? Matrix POS in Hannover sucht Support und Vertrieb.",
+  "description": "Matrix POS in Hannover sucht Mitarbeiter im Support und einen Sales Manager Payment Solutions. Gastro-Erfahrung zählt, Kassentechnik lernst du bei uns.",
   "sections": [
    {
     "id": "hero",
@@ -4245,7 +4274,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Wir sind ein Team aus Leuten, die aus der Gastronomie kommen und IT können. Wenn du Erfahrung aus Restaurant, Hotel oder Küche mitbringst und Lust auf Technik hast, melde dich."
+      "text": "Wir suchen Leute aus Restaurant, Hotel und Küche für Support und Vertrieb in Hannover."
      },
      {
       "type": "buttons",
@@ -4298,15 +4327,15 @@
       "items": [
        {
         "nr": "01",
-        "text": "**Deine Erfahrung zählt.** Unser Support besteht aus Leuten, die den Betrieb von innen kennen."
+        "text": "**Deine Erfahrung zählt.** Im Support sitzen Kolleginnen und Kollegen aus Service und Küche. Am Telefon geht es um Abläufe, die du kennst: Bonieren, Splitten, Tagesabschluss."
        },
        {
         "nr": "02",
-        "text": "**Technik lernst du bei uns.** Kasse, Payment, Schnittstellen, mit erfahrenen Kolleginnen und Kollegen."
+        "text": "**Technik lernst du bei uns.** Du arbeitest dich in Matrix POS und NXT ein, in Kartenzahlung mit Adyen und in Hotelschnittstellen wie protel."
        },
        {
         "nr": "03",
-        "text": "**Ein Produkt mit Zukunft.** Mit Matrix NXT arbeitest du an der nächsten Generation."
+        "text": "**Matrix NXT.** Unsere Cloud-Kasse läuft im Browser und auf Android und ist ab 2026 unser Leadprodukt."
        }
       ]
      }
@@ -4363,7 +4392,7 @@
   "slug": "demo",
   "title": "Demo buchen / Kontakt",
   "metaTitle": "Demo buchen: Matrix NXT und Matrix POS live sehen | Matrix POS",
-  "description": "Lassen Sie sich Matrix zeigen: per Video, in Hannover oder bei Ihnen vor Ort. Termin wählen, Rückruf vereinbaren oder Nachricht schreiben.",
+  "description": "Demo von Matrix NXT und Matrix POS: 30 Minuten mit Ihren Artikeln und Ihrem Grundriss, per Video, in Hannover oder bei Ihnen vor Ort.",
   "sections": [
    {
     "id": "hero",
@@ -4443,11 +4472,11 @@
     "id": "grosse-projekte",
     "name": "Große Projekte",
     "eyebrow": null,
-    "heading": "Mehrere Standorte? Dann nehmen wir uns mehr Zeit.",
+    "heading": "Projekte mit mehreren Standorten.",
     "blocks": [
      {
       "type": "p",
-      "text": "Für Systemgastronomie, Hotelgruppen und Freizeitparks arbeiten wir mit Pilotstandort und Projektplan. Drei Fragen vorab: Standorte, heutiges System, Zeithorizont."
+      "text": "Bei mehreren Standorten führen wir Matrix zuerst an einem Pilotstandort ein und rollen dann nach Projektplan aus. Für das Erstgespräch brauchen wir die Zahl der Standorte und Ihr heutiges Kassensystem."
      }
     ]
    },
@@ -4475,11 +4504,11 @@
      },
      {
       "type": "p",
-      "text": "2 Kurzes Gespräch über Betrieb, Ziele und heutige Systeme."
+      "text": "2 Im Erstgespräch klären wir Ihre Betriebsart und welche Systeme angebunden werden müssen."
      },
      {
       "type": "p",
-      "text": "3 Demo per Video, in Hannover oder vor Ort."
+      "text": "3 Demo mit Ihren Artikeln, am vereinbarten Ort oder per Video."
      }
     ]
    }

@@ -15,7 +15,7 @@ export async function PartnerDirectory() {
         <span className="b-m b-kicker">Vertriebspartner</span>
         <h2 className="b-d sub-h2">Matrix in Ihrer Nähe.</h2>
         <p className="sub-p" style={{ maxWidth: 720 }}>
-          Unsere Partner beraten, installieren und betreuen Matrix vor Ort. In Deutschland nach Postleitzahl, dazu Österreich und die Schweiz.
+          Vertriebspartner installieren Matrix vor Ort und übernehmen den First-Level-Support. Sortiert nach Postleitzahl in Deutschland, dazu Österreich und die Schweiz.
         </p>
         <div className="pd-groups">
           {[...groups].map(([region, list]) => (
