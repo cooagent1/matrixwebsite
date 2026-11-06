@@ -10,8 +10,9 @@ const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variabl
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`lp lp-sub ${bricolage.variable} ${jetbrains.variable} ${inter.variable}`}>
+      <a href="#main" className="skip-link">Zum Inhalt springen</a>
       <LpHeader />
-      <main className="flex-1">{children}</main>
+      <main id="main" className="flex-1">{children}</main>
       <LpFooter />
     </div>
   );

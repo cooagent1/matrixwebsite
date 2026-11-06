@@ -1,5 +1,7 @@
 "use client";
+/* eslint-disable react-hooks/set-state-in-effect -- Einwilligung steht nur im Browser (localStorage), Abgleich nach dem Mount ist gewollt. */
 
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 // Einwilligung für Statistik (Google Analytics 4) und Marketing (HubSpot-Tracking).
@@ -60,16 +62,24 @@ function apply(c: Choice) {
   }
 }
 
+// Banner wird serverseitig mit ausgeliefert (früh sichtbar, kein Layout-Sprung). Wer schon entschieden hat,
+// bekommt per Inline-Skript die Klasse mp-has-consent und sieht ihn nie; nach der Hydration schließt React ihn.
+export const CONSENT_BOOT = `try{if(localStorage.getItem("mp_consent_v1"))document.documentElement.classList.add("mp-has-consent")}catch(e){}`;
+
 export function ConsentBanner() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+  const [initial, setInitial] = useState(true);
   const [details, setDetails] = useState(false);
   const [stat, setStat] = useState(false);
   const [mkt, setMkt] = useState(false);
 
   useEffect(() => {
     const c = read();
-    if (c) apply(c);
-    else setOpen(true);
+    if (c) {
+      apply(c);
+      setOpen(false);
+    }
+    setInitial(false);
     const reopen = () => {
       const cur = read();
       setStat(!!cur?.statistics);
@@ -93,13 +103,13 @@ export function ConsentBanner() {
 
   if (!open) return null;
   return (
-    <div className="consent" role="dialog" aria-modal="false" aria-labelledby="consent-title">
+    <div className="consent" data-initial={initial ? "" : undefined} role="dialog" aria-modal="false" aria-labelledby="consent-title">
       <div className="consent-in">
         <p id="consent-title" className="consent-t">Ihre Privatsphäre</p>
         <p className="consent-p">
           Wir möchten mit Google Analytics verstehen, wie unsere Website genutzt wird, und mit HubSpot unsere Kontakte
           und Anfragen besser betreuen. Dafür brauchen wir Ihre Einwilligung. Sie können sie jederzeit über
-          „Cookie-Einstellungen“ im Seitenfuß widerrufen. Mehr in der <a href="/datenschutz" className="link">Datenschutzerklärung</a>.
+          „Cookie-Einstellungen“ im Seitenfuß widerrufen. Mehr in der <Link href="/datenschutz" className="link">Datenschutzerklärung</Link>.
         </p>
         {details && (
           <div className="consent-opts">

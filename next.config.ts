@@ -22,7 +22,7 @@ const OLD_TO_NEW: [string, string][] = [
   ["/uber-uns", "/ueber-uns"],
   ["/unsere-partner", "/partner"],
   ["/partner-werden", "/partner"],
-  ["/jobs/:path*", "/jobs"],
+  ["/jobs/:path+", "/jobs"],
   // Kontakt und Termine
   ["/contactus", "/demo"],
   ["/appointment", "/demo"],
@@ -44,15 +44,26 @@ const OLD_TO_NEW: [string, string][] = [
   ["/my", PORTAL],
   ["/my/:path*", PORTAL],
   ["/https/support-matrixpos-de/help", PORTAL],
-  // Ohne Gegenstück in V1: Blog, Events, Shop, Profile
+  // Blog: Beiträge auf das passende Thema statt pauschal auf die Startseite (Audit 06.11.)
+  ["/blog/news-messen-3/wichtige-frist-neigt-sich-dem-ende-zu-meldepflicht-fur-kassensysteme-bis-zum-31-juli-2025-3", "/kasse-und-gesetz"],
+  ["/blog/pressemeldung-ubernahme-durch-everfield-2/:path*", "/ueber-uns"],
+  ["/blog/news-messen-3/:path*", "/ueber-uns"],
   ["/blog", "/"],
   ["/blog/:path*", "/"],
+  ["/news", "/ueber-uns"],
+  ["/presse", "/ueber-uns"],
+  // Ohne Gegenstück in V1: Events, Shop, Profile
   ["/events", "/"],
   ["/event/:path*", "/"],
-  ["/shop", "/"],
-  ["/shop/:path*", "/"],
+  ["/shop", "/hardware"],
+  ["/shop/:path*", "/hardware"],
+  ["/kontakt", "/demo"],
   ["/profile/:path*", "/"],
-  ["/website/info", "/"],
+  // Social-Links der alten Seite
+  ["/website/social/linkedin", "https://www.linkedin.com/company/matrix-pos-gmbh/"],
+  ["/website/social/instagram", "https://www.instagram.com/matrixpos_gmbh"],
+  ["/website/social/facebook", "https://www.facebook.com/profile.php?id=61572403651608"],
+  ["/website/:path*", "/"],
 ];
 
 const nextConfig: NextConfig = {

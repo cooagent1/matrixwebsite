@@ -238,6 +238,7 @@ function parseFile(file, slug) {
         while (sec.blocks[k + 1] && sec.blocks[k + 1].type === "p") a.push(sec.blocks[++k].text);
         const prev = out[out.length - 1];
         const item = { q: b.text, a };
+        if (!a.length) continue; // Frage ohne Antwort (nur [PRÜFEN]) nicht ausliefern
         if (prev && prev.type === "faq") prev.items.push(item); else out.push({ type: "faq", items: [item] });
       } else out.push(b);
     }
@@ -250,7 +251,7 @@ function parseFile(file, slug) {
   delete page._meta;
   // leere Abschnitte entfernen
   // Abschnitte ohne Inhalt (nur Überschrift, Rest war [PRÜFEN]) nicht ausliefern
-  page.sections = page.sections.filter((s) => s.blocks.length);
+  page.sections = page.sections.filter((s) => s.blocks.length || (/^hero$/i.test(s.name) && s.heading));
   page.stub = page.sections.reduce((n, s) => n + s.blocks.length, 0) < 1;
   page.draft = DRAFTS.has(slug);
   return page;

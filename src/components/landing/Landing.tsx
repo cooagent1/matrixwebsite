@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { HeroVideo } from "./HeroVideo";
 import Link from "next/link";
 import { LpFooter, LpHeader } from "./Chrome";
 import { BranchenTabs } from "./BranchenTabs";
@@ -59,10 +60,10 @@ export function Landing() {
   const logos = [...LOGOS, ...LOGOS];
   return (
     <>
+      <a href="#main" className="skip-link">Zum Inhalt springen</a>
+      <main id="main">
       <section className="b-hero" id="top">
-        <video autoPlay muted loop playsInline preload="auto" poster="/lp/hero-poster.jpg" aria-hidden="true" className="b-hero-video">
-          <source src="/lp/hero.mp4" type="video/mp4" />
-        </video>
+        <HeroVideo />
         <div className="b-hero-shade" aria-hidden="true" />
         <div className="b-grain" aria-hidden="true" />
         <div className="b-d b-word" aria-hidden="true">NXT</div>
@@ -70,11 +71,11 @@ export function Landing() {
         <LpHeader />
 
         <div className="b-wrap b-hero-body">
-          <div className="b-rise b-m b-kicker" style={{ animationDelay: ".1s" }}>Matrix NXT. Die Cloud-Kasse aus Hannover.</div>
-          <h1 className="b-d b-h1 b-rise" style={{ animationDelay: ".2s" }}>
+          <div className="b-rise b-m b-kicker" style={{ animationDelay: "0s" }}>Matrix NXT. Die Cloud-Kasse aus Hannover.</div>
+          <h1 className="b-d b-h1">
             Weniger Kasse im Kopf.<br /><span className="b-grad">Mehr Gastgeber.</span>
           </h1>
-          <div className="b-rise b-hero-row" style={{ animationDelay: ".35s" }}>
+          <div className="b-rise b-hero-row" style={{ animationDelay: ".1s" }}>
             <p className="b-hero-p">Läuft im Browser und auf Android, ohne Server im Betrieb. Tischplan, Handgerät, Kartenzahlung und TSE sind drin. Support von Leuten, die selbst in der Gastronomie gearbeitet haben.</p>
             <div className="b-hero-btns">
               <Link href="/demo" className="b-btn b-btn-acc">Demo buchen<Arrow /></Link>
@@ -161,6 +162,7 @@ export function Landing() {
           <div className="b-demo-btns"><Link href="/demo" className="b-btn b-btn-white">Demo buchen</Link><Link href="/demo#rueckruf" className="b-btn b-btn-ghost">Rückruf vereinbaren</Link></div>
         </div>
       </section>
+      </main>
 
       <LpFooter />
     </>

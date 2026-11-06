@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -42,8 +43,7 @@ export function BranchenTabs() {
     <section id="branchen" className="b-branchen" aria-label="Branchen">
       {SEGMENTS.map((s, k) => (
         // Alle Bilder im DOM, damit der Wechsel ohne Nachladen passiert.
-        // eslint-disable-next-line @next/next/no-img-element
-        <img key={s.slug} src={s.img} alt="" className="b-branchen-img" style={{ opacity: k === i ? 1 : 0, transition: "opacity .5s" }} loading={k === 0 ? "eager" : "lazy"} />
+        <Image key={s.slug} src={s.img} alt={k === i ? `${s.name}: ${s.title}` : ""} aria-hidden={k !== i} fill sizes="100vw" quality={70} className="b-branchen-img" style={{ opacity: k === i ? 1 : 0, transition: "opacity .5s" }} loading={k === 0 ? "eager" : "lazy"} />
       ))}
       <div className="b-branchen-shade" aria-hidden="true" />
       <div className="b-grain" aria-hidden="true" />

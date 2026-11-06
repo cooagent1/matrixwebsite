@@ -2,6 +2,7 @@ import { ConsentLink } from "@/components/Consent";
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { NAV, QUICK, SUPPORT_PORTAL } from "@/lib/nav";
+import { PHONE, SOCIAL } from "@/lib/seo";
 
 // Gemeinsamer Rahmen aller Seiten im A2-Design: Menü-Pille oben links, schlanker Footer.
 export function LpHeader() {
@@ -51,7 +52,17 @@ export function LpFooter() {
   return (
     <footer className="b-foot">
       <div className="b-wrap b-foot-in">
-        <span>© {new Date().getFullYear()} Matrix POS GmbH · Eckenerstraße 2 · 30179 Hannover · <a href="mailto:sales@matrixpos.de">sales@matrixpos.de</a></span>
+        <address className="b-foot-nap">
+          <b>Matrix POS GmbH</b>
+          <span>Eckenerstraße 2 · 30179 Hannover</span>
+          <span><a href={`tel:${PHONE.replace(/[^\d+]/g, "")}`}>{PHONE}</a> · <a href="mailto:sales@matrixpos.de">sales@matrixpos.de</a></span>
+          <span className="b-foot-social">
+            {SOCIAL.map((s) => (
+              <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer">{s.name}</a>
+            ))}
+          </span>
+          <small>© {new Date().getFullYear()} Matrix POS GmbH</small>
+        </address>
         <div className="b-foot-links">
           <a href={SUPPORT_PORTAL} target="_blank" rel="noopener noreferrer">Supportportal</a>
           <Link href="/partner">Partner werden</Link>

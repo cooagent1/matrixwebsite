@@ -17,7 +17,7 @@
 .lp .b-marq{display:flex;width:max-content;animation:b-scroll 32s linear infinite}
 .lp .b-marq-slow{animation-duration:70s;gap:96px;align-items:center}
 @keyframes b-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.lp .b-rise{animation:b-rise 1s cubic-bezier(.2,.8,.2,1) both}
+.lp .b-rise{animation:b-rise .45s cubic-bezier(.2,.8,.2,1) both}
 @keyframes b-rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 @media (prefers-reduced-motion:reduce){.lp .b-marq{animation:none;width:auto;flex-wrap:wrap}.lp .b-aurora{animation:none}.lp .b-rise{animation:none !important;opacity:1 !important}}
 .lp .b-grad{background:linear-gradient(90deg,#ffffff 0%,#7FDCFF 45%,#00ABE5 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -157,7 +157,7 @@
 .lp .b-rail::-webkit-scrollbar{display:none}
 .lp .b-card{flex:0 0 360px;scroll-snap-align:start;border-radius:28px;background:#111113;border:1px solid rgba(255,255,255,0.08);padding:32px;box-sizing:border-box;min-height:380px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;transition:transform .3s,border-color .3s}
 .lp .b-card:hover{transform:translateY(-6px);border-color:rgba(0,171,229,0.6)}
-.lp .b-card .n{font-size:72px;font-weight:800;line-height:1;color:rgba(255,255,255,0.12)}
+.lp .b-card .n{font-size:72px;font-weight:800;line-height:1;color:rgba(255,255,255,0.38)}
 .lp .b-card h3{margin:0;font-size:24px;font-weight:700}
 .lp .b-card p{margin:0;font-size:15px;line-height:1.5;color:var(--lp-mute)}
 
@@ -189,7 +189,7 @@
 .lp .b-quote figure{margin:0;display:flex;flex-direction:column;gap:28px}
 .lp .b-quote blockquote{margin:0;font-size:48px;line-height:1.1;font-weight:700;max-width:980px;text-wrap:balance}
 .lp .b-quote figcaption{display:flex;align-items:center;gap:16px}
-.lp .b-avatar{width:52px;height:52px;border-radius:999px;background:#1F1F22;border:1px solid rgba(255,255,255,0.14);display:inline-flex;align-items:center;justify-content:center;font-size:11px;color:#767676}
+.lp .b-avatar{width:52px;height:52px;border-radius:999px;background:#1F1F22;border:1px solid rgba(255,255,255,0.14);display:inline-flex;align-items:center;justify-content:center;font-size:11px;color:#A8A8A8}
 .lp .b-quote figcaption div{display:flex;flex-direction:column}
 .lp .b-quote figcaption small{font-size:14px;color:var(--lp-mute)}
 
@@ -231,7 +231,7 @@
 .lp .sub-card{display:flex;flex-direction:column;gap:10px;border-radius:24px;background:#111113;border:1px solid rgba(255,255,255,0.08);padding:28px;box-sizing:border-box;text-decoration:none;color:inherit;height:100%;transition:transform .3s,border-color .3s}
 .lp .sub-card h3{margin:0;font-size:22px;font-weight:700;color:#fff}
 .lp .sub-card p{margin:0;font-size:15px;line-height:1.55;color:var(--lp-mute)}
-.lp .sub-card .n{font-size:48px;font-weight:800;line-height:1;color:rgba(255,255,255,0.12)}
+.lp .sub-card .n{font-size:48px;font-weight:800;line-height:1;color:rgba(255,255,255,0.38)}
 .lp .sub-card-link:hover{transform:translateY(-6px);border-color:rgba(0,171,229,0.6);color:inherit}
 .lp .sub-more{margin-top:auto;padding-top:8px;font-size:14px;color:var(--lp-acc2)}
 .lp .sub-nums{flex-wrap:wrap;gap:40px;list-style:none;margin:8px 0 0;padding:0}
@@ -253,8 +253,8 @@
 .lp .sub-faq details{border-bottom:1px solid rgba(255,255,255,0.12)}
 .lp .sub-faq summary{display:flex;justify-content:space-between;gap:16px;align-items:center;cursor:pointer;list-style:none;padding:20px 0;font-size:20px;font-weight:700;color:#fff}
 .lp .sub-faq summary::-webkit-details-marker{display:none}
-.lp .sub-faq summary span{color:var(--lp-acc);font-size:26px;line-height:1;transition:transform .25s}
-.lp .sub-faq details[open] summary span{transform:rotate(45deg)}
+.lp .sub-faq summary .sub-faq-ico{color:var(--lp-acc);flex:0 0 auto;transition:transform .25s}
+.lp .sub-faq details[open] summary .sub-faq-ico{transform:rotate(45deg)}
 .lp .sub-faq details>div{padding:0 0 20px;display:flex;flex-direction:column;gap:10px;color:#D9D9D9;line-height:1.6;max-width:760px}
 .lp .sub-faq details>div p{margin:0}
 .lp .sub-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;aspect-ratio:16/9;max-width:760px;border:1.5px dashed rgba(255,255,255,0.25);border-radius:20px;background:repeating-linear-gradient(45deg,#0E0E10,#0E0E10 12px,#121214 12px,#121214 24px);padding:16px;text-align:center;color:#8E8E8E;font-size:14px}
@@ -343,3 +343,24 @@
 .lp .pt-msg{font-size:14px;color:#FFC938}
 @media (max-width:1100px){.lp .pt-two,.lp .pt-formgrid{grid-template-columns:1fr !important}.lp .pt-map{grid-template-columns:1fr}.lp .pt-conn{display:none}.lp .pt-block{padding:32px}.lp .pt-steps{grid-template-columns:1fr}}
 @media (max-width:720px){.lp .pt-h2{font-size:40px}.lp .pt-row{grid-template-columns:1fr;gap:4px}.lp .pt-int{grid-template-columns:1fr}.lp .pt-fields{grid-template-columns:1fr}.lp .pt-block{padding:24px;border-radius:24px}}
+
+/* Audit 06.11.: Hero mobil – Kontrast, CTA im ersten Bildschirm, Mockups nicht beschneiden */
+.lp .skip-link{position:absolute;left:16px;top:-80px;z-index:100;padding:12px 20px;border-radius:999px;background:var(--lp-acc);color:var(--lp-bg);font-weight:600;text-decoration:none}
+.lp .skip-link:focus{top:16px;color:var(--lp-bg)}
+@media (max-width:720px){
+  .lp .b-hero{min-height:100svh}
+  .lp .b-hero-shade{background:linear-gradient(180deg, rgba(7,7,8,0.55) 0%, rgba(7,7,8,0.5) 35%, rgba(7,7,8,0.97) 100%)}
+  .lp .b-hero-body{padding-top:112px;gap:20px}
+  .lp .b-h1{font-size:46px}
+  .lp .b-hero-row{flex-direction:column-reverse;align-items:stretch;gap:16px}
+  .lp .b-hero-p{font-size:17px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .lp .b-hero-btns .b-btn{height:52px;flex:1 1 auto}
+  .lp .b-feedbar{margin-top:16px}
+  .lp .b-stage{zoom:.56}
+  .lp .tab-sum{display:none}
+}
+.lp .b-foot-nap{font-style:normal;display:flex;flex-direction:column;gap:4px;line-height:1.5}
+.lp .b-foot-nap b{color:#fff;font-weight:600}
+.lp .b-foot-nap small{font-size:12px;margin-top:6px}
+.lp .b-foot-social{display:flex;gap:16px;margin-top:6px}
+.lp .b-foot-in{align-items:flex-start}

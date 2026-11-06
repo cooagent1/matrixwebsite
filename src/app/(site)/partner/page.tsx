@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMeta } from "@/lib/seo";
 import { PartnerForm } from "@/components/partner/PartnerForm";
 
-export const metadata: Metadata = {
-  title: { absolute: "Partner werden: Vertrieb, Integration, Schnittstelle | Matrix POS" },
+export const metadata: Metadata = pageMeta({
+  title: "Partner werden: Vertrieb, Integration, Schnittstelle | Matrix POS",
   description:
     "Zwei Wege, Partner von Matrix zu werden: als Vertriebspartner verkaufen und betreuen Sie Matrix. Als Technologiepartner läuft Ihr Produkt in Matrix oder spricht mit Matrix.",
-};
+  path: "/partner",
+});
 
 // Design: Canvas "Partnerprogramm Matrix" (6.11.2026). Zwei Blöcke: Verkaufen (Vertriebspartner), Verbinden (Technologiepartner mit Integration und Schnittstelle).
 export default function PartnerPage() {

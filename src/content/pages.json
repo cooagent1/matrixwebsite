@@ -267,8 +267,7 @@
        {
         "q": "Welche Hotelsoftware ist angebunden?",
         "a": [
-         "Für Matrix POS: protel, ASA Hotel, Opera, SIHOT, Mews, Guestline. Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit. → /schnittstellen",
-         "Fragen Sie uns. Viele Anbindungen wurden schon einmal gebaut."
+         "Für Matrix POS: protel, ASA Hotel, Opera, SIHOT, Mews, Guestline. Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit. → /schnittstellen"
         ]
        },
        {
@@ -2899,12 +2898,8 @@
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": null,
+    "heading": "Matrix spricht mit Ihren Systemen.",
     "blocks": [
-     {
-      "type": "h3",
-      "text": "Matrix spricht mit Ihren Systemen"
-     },
      {
       "type": "p",
       "text": "Hotelsoftware, Payment, Warenwirtschaft, Buchhaltung, Reservierung, Schankanlagen. Über 40 Anbindungen laufen heute im Betrieb."
@@ -3375,7 +3370,7 @@
     "id": "hotel-und-schnittstellen",
     "name": "Hotel und Schnittstellen",
     "eyebrow": null,
-    "heading": "Meine Warenwirtschaft steht nicht in der Liste.",
+    "heading": "Hotel und Schnittstellen",
     "blocks": [
      {
       "type": "faq",
@@ -3383,7 +3378,12 @@
        {
         "q": "Welche Hotelsoftware ist angebunden?",
         "a": [
-         "Für Matrix POS: protel, ASA Hotel, Opera, SIHOT, Mews, Guestline. Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit. → /schnittstellen",
+         "Für Matrix POS: protel, ASA Hotel, Opera, SIHOT, Mews, Guestline. Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit. → /schnittstellen"
+        ]
+       },
+       {
+        "q": "Meine Warenwirtschaft fehlt in der Liste. Was nun?",
+        "a": [
          "Fragen Sie uns. Viele Anbindungen wurden schon einmal gebaut."
         ]
        }
@@ -3411,10 +3411,6 @@
         "a": [
          "Ja, Basic und Enterprise. → /support"
         ]
-       },
-       {
-        "q": "Wie lange dauert die Einführung?",
-        "a": []
        }
       ]
      }
@@ -3471,26 +3467,35 @@
  {
   "slug": "partner",
   "title": "Partner",
-  "metaTitle": "Partner von Matrix: Payment, Vertrieb, Hardware, Software | Matrix POS",
-  "description": "Unsere Partner Adyen und Fiskaly, und wie Sie Partner werden: als Vertriebspartner für Matrix NXT, als Payment-, Hardware- oder Softwarepartner.",
+  "metaTitle": "Partner werden: Vertrieb, Integration, Schnittstelle | Matrix POS",
+  "description": "Zwei Wege, Partner von Matrix zu werden: als Vertriebspartner verkaufen und betreuen Sie Matrix. Als Technologiepartner läuft Ihr Produkt in Matrix oder spricht mit Matrix.",
   "sections": [
    {
     "id": "hero",
     "name": "Hero",
     "eyebrow": null,
-    "heading": "Partner.",
+    "heading": "Verkaufen oder verbinden.",
     "blocks": [
      {
       "type": "p",
-      "text": "Mit wem wir arbeiten, und wie Sie Partner werden."
+      "text": "Überzeile: Partner"
+     },
+     {
+      "type": "p",
+      "text": "Zwei Wege, Partner von Matrix zu werden: als Vertriebspartner verkaufen und betreuen Sie Matrix. Als Technologiepartner läuft Ihr Produkt in Matrix oder spricht mit Matrix."
      },
      {
       "type": "buttons",
       "items": [
        {
         "kind": "button",
-        "label": "Partneranfrage",
-        "href": "#formular"
+        "label": "Vertriebspartner",
+        "href": "#vertrieb"
+       },
+       {
+        "kind": "button",
+        "label": "Technologiepartner",
+        "href": "#technologie"
        }
       ],
       "phone": null
@@ -3498,84 +3503,174 @@
     ]
    },
    {
-    "id": "unsere-partner",
-    "name": "Unsere Partner",
+    "id": "weg-1-verkaufen-vertriebspartner",
+    "name": "Weg 1 · Verkaufen: Vertriebspartner",
     "eyebrow": null,
-    "heading": "Unsere Partner",
+    "heading": "Weg 1 · Verkaufen: Vertriebspartner",
     "blocks": [
      {
       "type": "p",
-      "text": "**Payment.** Adyen. Die Zahlungsabwicklung hinter Matrix PAY."
+      "text": "Sie verkaufen Matrix NXT und Matrix PAY in Ihrer Region, installieren vor Ort und betreuen Ihre Kunden selbst. Matrix steht dahinter."
      },
      {
       "type": "p",
-      "text": "**TSE.** Fiskaly. Die Cloud-TSE für Matrix NXT und Matrix POS."
+      "text": "Passt für: Kassenhändler · IT-Dienstleister Gastronomie · Payment-Vermittler"
+     },
+     {
+      "type": "list",
+      "items": [
+       "**Das bringen Sie.** Kundenzugang in der Gastronomie, Installation vor Ort, First-Level-Support, Beratung zu Hardware und Payment.",
+       "**Das bringen wir.** Produkt, Schulung, Demo-Zugang, Second-Level-Support aus Hannover, Partnerkonditionen auf Anfrage.",
+       "**So läuft es.** Jede verkaufte Kasse kann ein Payment-Vertrag werden. Terminals installieren Sie, den Payment-Support übernimmt Matrix.",
+       "**Nennung.** Partnerliste auf matrixpos.de nach Freigabe."
+      ]
+     },
+     {
+      "type": "buttons",
+      "items": [
+       {
+        "kind": "button",
+        "label": "Vertriebspartner werden",
+        "href": "#anfrage"
+       }
+      ],
+      "phone": null
      }
     ]
    },
    {
-    "id": "partner-werden",
-    "name": "Partner werden",
+    "id": "weg-2-verbinden-technologiepartner",
+    "name": "Weg 2 · Verbinden: Technologiepartner",
     "eyebrow": null,
-    "heading": "Partner werden",
+    "heading": "Integration: Ihr Produkt läuft in Matrix.",
     "blocks": [
      {
       "type": "p",
-      "text": "**Vertriebspartner für NXT.** Sie verkaufen und betreuen Matrix NXT in Ihrer Region. Wir liefern Produkt, Schulung und Second-Level-Support."
+      "text": "Ihr Produkt und Matrix arbeiten zusammen. Entweder läuft es im Matrix-Produkt, oder es spricht von außen damit. Der Unterschied entscheidet, was wir gemeinsam bauen."
      },
      {
       "type": "p",
-      "text": "**Payment-Partner.** Sie vermitteln Matrix PAY, mit oder ohne Matrix-Kasse."
+      "text": "Grafik (Partner-Landkarte): links Schnittstellen (Hotelsoftware, Warenwirtschaft, Buchhaltung, Reservierung und Self-Ordering), gestrichelt verbunden mit dem Produkt; im Produkt die Integrationen Adyen, Fiskaly, Orderman. „Der Kunde kauft es mit der Kasse. Für ihn ist es Matrix.\""
      },
      {
       "type": "p",
-      "text": "**Hardware-Partner.** Terminals, Handgeräte, Drucker: Sie liefern, wir zertifizieren."
+      "text": "Zahlung, TSE, Hardware: Matrix baut Ihr Produkt fest ein und verkauft es mit. Sie liefern das Produkt und den Support dafür, wir zertifizieren, nennen Sie auf den Produktseiten und bringen Sie über alle Vertriebspartner in den Markt. Heute: Adyen, Fiskaly, Orderman."
+     },
+     {
+      "type": "buttons",
+      "items": [
+       {
+        "kind": "button",
+        "label": "Integration anfragen",
+        "href": "#anfrage"
+       }
+      ],
+      "phone": null
+     },
+     {
+      "type": "h3",
+      "text": "Schnittstelle: Ihr System spricht mit Matrix."
      },
      {
       "type": "p",
-      "text": "**Software-Partner.** Ihr System an Matrix anbinden. Dokumentation und Testumgebung auf Anfrage."
+      "text": "Hotelsoftware, Warenwirtschaft, Buchhaltung, Reservierung: Ihr System bleibt Ihr System, Matrix tauscht Daten damit aus. Sie bauen die Anbindung auf Ihrer Seite, wir liefern Dokumentation, Testumgebung und den Eintrag in der Schnittstellenliste. Heute: über 40 Anbindungen im Betrieb."
+     },
+     {
+      "type": "buttons",
+      "items": [
+       {
+        "kind": "button",
+        "label": "Schnittstelle anfragen",
+        "href": "#anfrage"
+       }
+      ],
+      "phone": null
+     },
+     {
+      "type": "table",
+      "head": [
+       "",
+       "Integration",
+       "Schnittstelle"
+      ],
+      "rows": [
+       [
+        "Wo läuft es",
+        "im Matrix-Produkt",
+        "in Ihrem System"
+       ],
+       [
+        "Wer verkauft es",
+        "Matrix und die Vertriebspartner",
+        "Sie, an gemeinsame Kunden"
+       ],
+       [
+        "Technik auf Ihrer Seite",
+        "Produkt nach Matrix-Vorgabe",
+        "Anbindung an Ihrem System"
+       ],
+       [
+        "Matrix liefert",
+        "Zertifizierung, Einbau, Vertrieb",
+        "Dokumentation, Testumgebung"
+       ],
+       [
+        "Nennung",
+        "auf den Produktseiten",
+        "in der Schnittstellenliste"
+       ],
+       [
+        "Konditionen",
+        "auf Anfrage",
+        "auf Anfrage"
+       ]
+      ]
      },
      {
       "type": "p",
-      "text": "Konditionen auf Anfrage."
+      "text": "Schnittstellen heute: protel · ASA Hotel · Oracle Opera · Guestline · Mews · SIHOT · DATEV · KOST · RESERViSiON · Flixorder · über 40 insgesamt. → /schnittstellen"
      }
     ]
    },
    {
-    "id": "warum-matrix",
-    "name": "Warum Matrix",
+    "id": "so-werden-sie-partner",
+    "name": "So werden Sie Partner",
     "eyebrow": null,
-    "heading": "Warum Matrix",
+    "heading": "Drei Schritte bis zum Start.",
     "blocks": [
      {
       "type": "cards",
       "items": [
        {
         "nr": "01",
-        "text": "**30 Jahre im Markt.** Ein bekannter Name in Hotellerie und Gastronomie."
+        "text": "**Anfrage.** Sie sagen uns, ob Sie verkaufen oder verbinden wollen, und was Sie heute tun. Zwei Minuten im Formular."
        },
        {
         "nr": "02",
-        "text": "**Zwei Kassen, eine Zielgruppe.** POS für gewachsene Betriebe, NXT für neue."
+        "text": "**Gespräch.** 30 Minuten mit dem Partnermanagement: Markt, Produkt, Konditionen. Online oder in Hannover."
        },
        {
         "nr": "03",
-        "text": "**Support, der bleibt.** Ihre Kunden rufen Leute aus der Gastronomie an."
-       },
-       {
-        "nr": "04",
-        "text": "**Payment dazu.** Jeder Kassenverkauf kann ein Payment-Vertrag werden."
+        "text": "**Start.** Vertrieb: Schulung und Demo-Zugang. Integration: Zertifizierung. Schnittstelle: Dokumentation und Testumgebung."
        }
       ]
      }
     ]
    },
    {
-    "id": "formular",
-    "name": "Formular",
+    "id": "partneranfrage",
+    "name": "Partneranfrage",
     "eyebrow": null,
-    "heading": "Nachricht schreiben",
+    "heading": "Verkaufen oder verbinden?",
     "blocks": [
+     {
+      "type": "p",
+      "text": "Wir melden uns innerhalb eines Werktags. Sie sind Kunde und brauchen Hilfe? Dann bitte über das Supportportal."
+     },
+     {
+      "type": "p",
+      "text": "partner@matrixpos.de · Eckenerstraße 2, 30179 Hannover"
+     },
      {
       "type": "form"
      }
@@ -3588,15 +3683,41 @@
     "heading": "Sprechen wir.",
     "blocks": [
      {
+      "type": "cards",
+      "items": [
+       {
+        "nr": "30",
+        "text": "Jahre im Markt, zwei Kassen, ein Payment. Jeder Kassenverkauf kann ein Payment-Vertrag werden."
+       }
+      ]
+     },
+     {
       "type": "buttons",
       "items": [
        {
         "kind": "button",
         "label": "Partneranfrage",
-        "href": "#formular"
+        "href": "#anfrage"
+       },
+       {
+        "kind": "button",
+        "label": "Rückruf vereinbaren",
+        "href": "/demo#rueckruf"
        }
       ],
-      "phone": "+49 511 592938-0"
+      "phone": null
+     }
+    ]
+   },
+   {
+    "id": "nicht-auf-der-seite",
+    "name": "Nicht auf der Seite",
+    "eyebrow": null,
+    "heading": "Nicht auf der Seite",
+    "blocks": [
+     {
+      "type": "p",
+      "text": "Provisionen, Revenue-Share und Preise aus dem Launchdeck (vertraulich). Nennbare Vertriebspartner fehlen noch (Sales)."
      }
     ]
    }
@@ -3874,6 +3995,13 @@
   "metaTitle": "Referenzen: Restaurants, Hotels und Bars mit Matrix | Matrix POS",
   "description": "Betriebe, die mit Matrix arbeiten: Hennings Bar, Parkhotel Laim und weitere.",
   "sections": [
+   {
+    "id": "hero",
+    "name": "Hero",
+    "eyebrow": null,
+    "heading": "Betriebe, die mit Matrix arbeiten.",
+    "blocks": []
+   },
    {
     "id": "referenzen",
     "name": "Referenzen",

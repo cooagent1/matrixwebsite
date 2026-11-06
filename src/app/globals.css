@@ -87,3 +87,4 @@ details > summary::-webkit-details-marker { display: none; }
 .consent-b:focus-visible{outline:2px solid #5FD3FF;outline-offset:2px}
 .consent-link{background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer}
 .consent-link:hover{color:#fff}
+html.mp-has-consent .consent[data-initial]{display:none}

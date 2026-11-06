@@ -169,7 +169,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
               <div key={i} className="sub-faq">
                 {b.items.map((it, j) => (
                   <details key={j}>
-                    <summary className="b-d">{it.q}<span aria-hidden="true">+</span></summary>
+                    <summary className="b-d">{it.q}<svg className="sub-faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
                     <div>
                       {it.a.map((t, k) => (<p key={k}><Inline text={t} /></p>))}
                     </div>
@@ -193,6 +193,8 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
 
 function SectionView({ s, index, isFirst }: { s: Section; index: number; isFirst: boolean }) {
   const hero = /^hero$/i.test(s.name);
+  // In Produktion keine Abschnitte, die nur aus Platzhaltern bestehen (sonst leere Überschrift).
+  if (!hero && !SHOW_PLACEHOLDERS && s.blocks.every((b) => b.type === "placeholder")) return null;
   const closing = /^abschluss$/i.test(s.name);
   if (hero)
     return (
