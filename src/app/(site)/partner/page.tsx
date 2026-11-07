@@ -18,14 +18,23 @@ export const metadata: Metadata = pageMeta({
 export default function PartnerPage() {
   return (
     <>
-      <section className="sub-hero" id="top">
-        <div className="b-aurora" aria-hidden="true" />
-        <div className="b-grain" aria-hidden="true" />
-        <div className="b-wrap sub-hero-in">
-          <span className="b-m b-kicker">Partner</span>
-          <h1 className="b-d sub-h1">Verkaufen oder verbinden.</h1>
-          <p className="sub-lead" style={{ maxWidth: 720 }}>Vertriebspartner verkaufen und betreuen Matrix vor Ort. Technologiepartner integrieren ihr Produkt in Matrix oder binden es per Schnittstelle an.</p>
-          <div className="sub-btns"><a href="#vertrieb" className="b-btn b-btn-acc">Vertriebspartner</a><a href="#technologie" className="b-btn b-btn-ghost">Technologiepartner</a></div>
+      <section className="sub-hero sub-hero-img sub-hero-card" id="top">
+        <div className="b-wrap sub-hero-grid">
+          <div className="sub-hero-in">
+            <span className="b-m b-kicker">Partner</span>
+            <h1 className="b-d sub-h1">Verkaufen oder verbinden.</h1>
+            <div className="sub-hero-body">
+              <p className="sub-p">Vertriebspartner verkaufen und betreuen Matrix vor Ort. Technologiepartner integrieren ihr Produkt in Matrix oder binden es per Schnittstelle an.</p>
+              <div className="sub-btns"><a href="#anfrage" className="b-btn b-btn-acc">Partner werden</a><a href="#ablauf" className="b-btn b-btn-ghost">So läuft es ab</a></div>
+            </div>
+          </div>
+          <div className="sub-hero-box">
+            <div className="sub-tiles">
+              <a href="#vertrieb" className="sub-tile sub-tile-link"><strong>Vertriebspartner</strong><span>Verkaufen und betreuen Matrix vor Ort.</span></a>
+              <a href="#technologie" className="sub-tile sub-tile-link"><strong>Technologiepartner</strong><span>Integrieren ihr Produkt oder binden es per Schnittstelle an.</span></a>
+              <Link href="/partner/verzeichnis" className="sub-tile sub-tile-link"><strong>Partnerverzeichnis</strong><span>Wer Matrix in Ihrer Region betreut.</span></Link>
+            </div>
+          </div>
         </div>
       </section>
 
