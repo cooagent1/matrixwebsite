@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import { CONSENT_BOOT, ConsentBanner } from "@/components/Consent";
@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
   robots: process.env.NEXT_PUBLIC_INDEXABLE === "true" ? { index: true, follow: true } : { index: false, follow: false },
 };
+
+// Farbe der Browserleiste, passend zum Favicon (#232323)
+export const viewport: Viewport = { themeColor: "#232323" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

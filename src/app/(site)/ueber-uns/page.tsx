@@ -3,12 +3,15 @@ import { T } from "@/components/T";
 import Link from "next/link";
 import { getTeam } from "@/lib/cms";
 import { TeamGrid } from "@/components/cms/TeamGrid";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: { absolute: "Über Matrix POS: 30 Jahre Gastro-Kassen aus Hannover | Matrix POS" },
+// Canonical, Open Graph und Twitter wie auf allen Seiten über pageMeta (Audit 07.11.)
+export const metadata: Metadata = pageMeta({
+  title: "Über Matrix POS: 30 Jahre Gastro-Kassen aus Hannover | Matrix POS",
   description:
     "Matrix POS GmbH, Hannover: seit über 30 Jahren Kassen für Gastronomie und Hotellerie. Über 60 Mitarbeitende entwickeln und betreuen Matrix NXT, POS, PAY und CONGA.",
-};
+  path: "/ueber-uns",
+});
 
 const LOGOS: [string, string, string][] = [
   ["atlantic-hotels", "Atlantic Hotels", ""],

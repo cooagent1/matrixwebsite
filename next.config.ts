@@ -81,7 +81,43 @@ const OLD_TO_NEW: [string, string][] = [
   ["/website/:path*", "/"],
 ];
 
+// Security-Header (Audit 07.11.). CSP mit 'unsafe-inline' für Skripte, weil Next.js die Seiten statisch
+// ausliefert und Inline-Skripte (RSC-Payload, Consent-Boot) ohne Nonce braucht. Schutz kommt aus der
+// Host-Liste, frame-ancestors, object-src, base-uri und form-action.
+// Externe Dienste: GA4 und HubSpot (erst nach Consent, nur auf matrixpos.de), Supabase (Teamfotos),
+// vercel.live (Toolbar auf Preview-Deployments). Neuen Dienst im Browser? Hier eintragen.
+const dev = process.env.NODE_ENV === "development";
+const HUBSPOT = ["https://*.hubspot.com", "https://*.hs-scripts.com", "https://*.hs-analytics.net", "https://*.hs-banner.com", "https://*.hscollectedforms.net", "https://*.usemessages.com", "https://*.hsforms.com", "https://*.hsforms.net", "https://*.hubapi.com", "https://*.hubspotusercontent-eu1.net"];
+const GOOGLE = ["https://www.googletagmanager.com", "https://*.google-analytics.com", "https://*.analytics.google.com"];
+const CSP = [
+  "default-src 'self'",
+  `script-src 'self' 'unsafe-inline'${dev ? " 'unsafe-eval'" : ""} ${[...GOOGLE, ...HUBSPOT, "https://vercel.live"].join(" ")}`,
+  "style-src 'self' 'unsafe-inline'",
+  `img-src 'self' data: blob: https://*.supabase.co ${[...GOOGLE, ...HUBSPOT, "https://vercel.live", "https://vercel.com"].join(" ")}`,
+  "font-src 'self' data: https://vercel.live",
+  `connect-src 'self' ${[...GOOGLE, ...HUBSPOT, "https://vercel.live", "wss://ws-us3.pusher.com"].join(" ")}${dev ? " ws:" : ""}`,
+  "media-src 'self'",
+  "frame-src 'self' https://*.hubspot.com https://vercel.live",
+  "frame-ancestors 'none'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self' https://*.hsforms.com https://*.hubspot.com",
+  ...(dev ? [] : ["upgrade-insecure-requests"]),
+].join("; ");
+
+const SECURITY_HEADERS = [
+  { key: "Content-Security-Policy", value: CSP },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()" },
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
+];
+
 const nextConfig: NextConfig = {
+  async headers() {
+    return [{ source: "/:path*", headers: SECURITY_HEADERS }];
+  },
   turbopack: {
     rules: {
       "*.css": {
