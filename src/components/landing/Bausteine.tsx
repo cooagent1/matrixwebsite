@@ -228,6 +228,141 @@ function Zahlen() {
   );
 }
 
+function Story() {
+  const [at, setAt] = useState(1);
+  const steps = [
+    ["Erster Schritt in einem Satz.", "Zwei bis drei Sätze dazu. Beim Scrollen wird der nächste Schritt aktiv, der vorherige wird grau."],
+    ["Zweiter Schritt, gerade aktiv.", "Zwei bis drei Sätze dazu. Hier kann auch ein Bild oder ein Screenshot stehen, die Spalte wächst mit."],
+    ["Dritter Schritt in einem Satz.", "Zwei bis drei Sätze dazu. Beliebig viele Schritte, die Sektion ist so lang wie der Inhalt."],
+    ["Vierter Schritt in einem Satz.", "Am Ende eine Aktion oder der Übergang zur nächsten Sektion."],
+  ];
+  return (
+    <section className="bs bs-light bs-story" aria-label="Baustein Sticky-Story">
+      <div className="b-wrap bs-story-grid">
+        <div className="bs-story-left">
+          <Tag n={9} name="Sticky-Story" />
+          <span className="b-m b-kicker">Kicker des Abschnitts</span>
+          <h2 className="b-d bs-h2">Links bleibt stehen, rechts läuft die Geschichte.</h2>
+          <p className="bs-lead">Beim Scrollen bleibt diese Spalte stehen. Die große Zahl zählt mit, welcher Schritt gerade im Bild ist. Hier als Klick.</p>
+          <div className="bs-story-big b-d">0{at + 1}</div>
+        </div>
+        <div className="bs-story-steps">
+          <span className="bs-story-rail" aria-hidden="true"><i style={{ height: `${((at + 0.5) / steps.length) * 100}%` }} /></span>
+          {steps.map(([h, p], i) => (
+            <button key={h} type="button" className={`bs-step ${i === at ? "on" : ""}`} onClick={() => setAt(i)} aria-pressed={i === at}><span className="n">0{i + 1}</span><span><b className="b-d">{h}</b><em>{p}</em></span></button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Band() {
+  const a = ["LOGO A", "LOGO B", "LOGO C", "LOGO D", "LOGO E", "LOGO F", "LOGO G"];
+  const b = ["LOGO H", "LOGO I", "LOGO J", "LOGO K", "LOGO L", "LOGO M", "LOGO N"];
+  const row = (xs: string[], rev?: boolean) => (
+    <div className="bs-band" aria-hidden="true"><div className={`bs-track ${rev ? "rev" : ""}`}>{[...xs, ...xs].map((n, i) => <span key={i} className={`bs-lg ${i % 7 === 2 ? "acc" : ""}`}>{n}</span>)}</div></div>
+  );
+  return (
+    <section className="bs bs-dark bs-bandsec" aria-label="Baustein Logo-Band">
+      <div className="b-wrap bs-center"><Tag n={10} name="Logo-Band und Statement" /><span className="b-m b-kicker">Kicker des Abschnitts</span><h2 className="b-d bs-h2">Zwei Bänder, gegenläufig.</h2></div>
+      {row(a)}
+      <div className="b-wrap bs-band-mid"><p className="b-d">Ein Statement zwischen den Bändern, das sagt, was die Logos gemeinsam haben.</p><span>Ein Satz darunter, der einordnet: Kunden, Partner, Schnittstellen oder Auszeichnungen.</span></div>
+      {row(b, true)}
+    </section>
+  );
+}
+
+function Vergleich() {
+  return (
+    <section className="bs bs-light bs-vs" aria-label="Baustein Vergleich">
+      <div className="b-wrap">
+        <div className="bs-center"><Tag n={11} name="Vergleich" /><span className="b-m b-kicker">Kicker des Abschnitts</span><h2 className="b-d bs-h2">Vorher links, nachher rechts.</h2></div>
+        <div className="bs-vs-grid">
+          <div className="bs-vs-badge" aria-hidden="true">VS</div>
+          <div className="bs-vs-col a"><h3 className="b-m">OHNE</h3><div className="t b-d">Der alte Zustand in einem Satz.</div>{["Punkt, der heute Zeit kostet.", "Punkt, der heute Fehler macht.", "Punkt, der heute niemanden freut.", "Punkt, der heute doppelt passiert."].map((t) => <div key={t} className="li"><i>–</i><span>{t}</span></div>)}</div>
+          <div className="bs-vs-col b"><h3 className="b-m">MIT</h3><div className="t b-d">Der neue Zustand in einem Satz.</div>{[1, 2, 3, 4].map((i) => <div key={i} className="li"><i>✓</i><span>Gleicher Punkt, gelöst.</span></div>)}</div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Zeit() {
+  const [at, setAt] = useState(2);
+  const pts = ["1994", "2004", "2014", "2019", "2024", "Heute"];
+  return (
+    <section className="bs bs-dark bs-zeit" aria-label="Baustein Zeitstrahl">
+      <div className="b-wrap">
+        <div className="bs-head2">
+          <div><Tag n={12} name="Zeitstrahl" /><span className="b-m b-kicker">Kicker des Abschnitts</span><h2 className="b-d bs-h2">Sechs Stationen auf einer Linie.</h2></div>
+          <p className="bs-lead">Meilensteine, Jahre, Versionen oder Phasen. Die aktive Station hebt sich als Karte ab.</p>
+        </div>
+        <div className="bs-zeit-grid">
+          <span className="bs-zeit-line" aria-hidden="true" />
+          {pts.map((y, i) => (
+            <button key={y} type="button" className={`bs-pt ${i === at ? "on" : ""}`} onClick={() => setAt(i)} aria-pressed={i === at}><i /><span className="bs-pt-card"><b className="bs-mono">{y}</b><em>{i === at ? "Die aktive Station bekommt zwei bis drei Sätze und mehr Platz." : "Ein Satz zur Station."}</em></span></button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Tabs() {
+  const [at, setAt] = useState(1);
+  const tabs = ["Funktion eins", "Funktion zwei", "Funktion drei", "Funktion vier"];
+  const bars = [30, 45, 38, 80, 55, 95, 62, 48];
+  return (
+    <section className="bs bs-light bs-tabs" aria-label="Baustein Tabs mit Fenster">
+      <div className="b-wrap">
+        <Tag n={13} name="Tabs mit Fenster" />
+        <span className="b-m b-kicker">Kicker des Abschnitts</span>
+        <h2 className="b-d bs-h2">Vier Funktionen, ein Fenster.</h2>
+        <div className="bs-tabs-grid">
+          <div className="bs-tabs-list">
+            {tabs.map((t, i) => (
+              <button key={t} type="button" className={`bs-tab ${i === at ? "on" : ""}`} onClick={() => setAt(i)} aria-pressed={i === at}><b className="b-d">{t}</b><span>Ein Satz zur Funktion, erscheint nur, wenn der Tab offen ist.</span></button>
+            ))}
+          </div>
+          <div className="bs-win" aria-label="Fenster mit Beispielansicht">
+            <div className="bs-win-bar"><i /><i /><i /><span className="bs-mono">app.beispiel.de/{tabs[at].toLowerCase().replace(" ", "-")}</span></div>
+            <div className="bs-win-scr">
+              <div className="bs-win-side">{[0, 1, 2, 3, 4].map((i) => <span key={i} className={i === at ? "on" : ""} />)}</div>
+              <div className="bs-win-main">
+                <div className="bs-kpis">{["Kennzahl eins", "Kennzahl zwei", "Kennzahl drei"].map((k) => <div key={k} className="bs-kpi"><b className="b-d">Zahl</b><small>{k}</small></div>)}</div>
+                <div className="bs-chart" aria-hidden="true">{bars.map((h, i) => <i key={i} className={(i + at) % 3 === 0 ? "acc" : ""} style={{ height: `${h}%` }} />)}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Zitat() {
+  const [at, setAt] = useState(0);
+  return (
+    <section className="bs bs-grey bs-zitat" aria-label="Baustein Zitat-Spotlight">
+      <div className="b-wrap bs-zitat-grid">
+        <div className="bs-zitat-mark b-d" aria-hidden="true">„</div>
+        <div className="bs-zitat-body">
+          <Tag n={14} name="Zitat-Spotlight" />
+          <span className="b-m b-kicker">Kicker des Abschnitts</span>
+          <p className="bs-zitat-q b-d">Ein Zitat über drei bis vier Zeilen, groß gesetzt, damit es die ganze Sektion trägt. Ein echter Satz von einem echten Menschen, nicht glattgebügelt. Stimme {at + 1}.</p>
+          <div className="bs-who"><span className="av" aria-hidden="true" /><span><b>Vorname Nachname</b><small>Funktion, Betrieb, Ort</small></span><span className="logo" aria-hidden="true" /></div>
+          <div className="bs-zitat-nav">
+            <span className="bs-dots" aria-hidden="true">{[0, 1, 2, 3].map((i) => <i key={i} className={i === at ? "on" : ""} />)}</span>
+            <small>{at + 1} von 4</small>
+            <span className="bs-zitat-btns"><button type="button" className="bs-nav light" aria-label="Zurück" onClick={() => setAt((at + 3) % 4)}>←</button><button type="button" className="bs-nav light" aria-label="Weiter" onClick={() => setAt((at + 1) % 4)}>→</button></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function Bausteine() {
   return (
     <div id="bausteine" className="bs-wrap">
@@ -239,6 +374,12 @@ export function Bausteine() {
       <Spalten />
       <Bento />
       <Zahlen />
+      <Story />
+      <Band />
+      <Vergleich />
+      <Zeit />
+      <Tabs />
+      <Zitat />
     </div>
   );
 }
