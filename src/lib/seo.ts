@@ -130,7 +130,9 @@ export function pageJsonLd(page: Page, title: (slug: string) => string | undefin
       provider: { "@id": ORG_ID },
     });
 
-  const faqs = page.sections.flatMap((s) => s.blocks.flatMap((b) => (b.type === "faq" ? b.items : [])));
+  const faqs = page.sections.flatMap((s) =>
+    s.blocks.flatMap((b) => (b.type === "faq" ? b.items : b.type === "faqgroups" ? b.groups.flatMap((g) => g.items) : [])),
+  );
   if (faqs.length)
     out.push({
       "@type": "FAQPage",

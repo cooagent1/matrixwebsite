@@ -10,7 +10,7 @@ export type Block =
   | { type: "buttons"; items: Button[]; phone: string | null }
   | { type: "placeholder"; label: string }
   | { type: "badges"; items: string[] }
-  | { type: "faq"; items: { q: string; a: string[] }[] }
+  | { type: "faq"; items: { q: string; a: string[] }[]; cms?: boolean }
   | { type: "form" }
   // Nachtpaket 07.11.: kompakte Wege-Zeile (/demo) und Kontaktkarte für die Seitenspalte
   | { type: "ways"; items: { title: string; text: string; button: Button }[] }

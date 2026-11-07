@@ -4,10 +4,11 @@ import { PageView } from "@/components/PageView";
 import { JsonLd } from "@/components/JsonLd";
 import { getTeam } from "@/lib/cms";
 import { getPage, livePages } from "@/lib/content";
+import { withCmsFaqs } from "@/lib/faq";
 import { pageJsonLd, pageMeta } from "@/lib/seo";
 
 export const dynamicParams = false;
-// Inhalte aus dem CMS (Team auf /ueber-uns) alle 5 Minuten neu.
+// Inhalte aus dem CMS (Team auf /ueber-uns, FAQ) alle 5 Minuten neu.
 export const revalidate = 300;
 
 export function generateStaticParams() {
@@ -25,8 +26,9 @@ export async function generateMetadata(props: PageProps<"/[...slug]">): Promise<
 
 export default async function Page(props: PageProps<"/[...slug]">) {
   const { slug } = await props.params;
-  const page = getPage(slug.join("/"));
-  if (!page) notFound();
+  const raw = getPage(slug.join("/"));
+  if (!raw) notFound();
+  const page = await withCmsFaqs(raw);
   return (
     <>
       <JsonLd data={pageJsonLd(page, (s) => getPage(s)?.title)} />

@@ -6,7 +6,10 @@ import { BranchenTabs } from "./BranchenTabs";
 import { ScenesCarousel } from "./ScenesCarousel";
 import { Zahlen } from "./Zahlen";
 import { QuoteCarousel } from "./QuoteCarousel";
-import { FAQ, LAW } from "./startseite-data";
+import { LAW } from "./startseite-data";
+import type { Faq } from "@/lib/faq";
+import { faqParagraphs } from "@/lib/faq";
+import { Inline } from "../Inline";
 import { T } from "../T";
 
 const LOGOS = [
@@ -27,7 +30,7 @@ function Arrow() {
   );
 }
 
-export function Landing() {
+export function Landing({ faqs }: { faqs: Faq[] }) {
     const logos = [...LOGOS, ...LOGOS];
   return (
     <>
@@ -94,12 +97,11 @@ export function Landing() {
           <span className="b-m b-kicker">Häufige Fragen</span>
           <h2 className="b-d sub-h2"><T k="start.faq.h2" /></h2>
           <div className="sub-faq">
-            {FAQ.map((f) => (
-              <details key={f.q}>
-                <summary className="b-d"><T k={f.q} /><svg className="sub-faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+            {faqs.map((f) => (
+              <details key={f.frage}>
+                <summary className="b-d">{f.frage}<svg className="sub-faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
                 <div>
-                  <p><T k={f.a} /></p>
-                  {f.link && <p><Link href={f.link.href} className="link">{f.link.label}</Link></p>}
+                  {faqParagraphs(f).map((t, k) => (<p key={k}><Inline text={t} /></p>))}
                 </div>
               </details>
             ))}

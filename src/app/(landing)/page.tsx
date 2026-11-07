@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Landing } from "@/components/landing/Landing";
 import { pageMeta } from "@/lib/seo";
 import { JsonLd } from "@/components/JsonLd";
-import { FAQ } from "@/components/landing/startseite-data";
-import { txt } from "@/components/T";
+import { startFaqs } from "@/lib/faq";
 
 export const metadata: Metadata = pageMeta({
   title: "Kassensysteme für die Gastronomie aus Hannover | Matrix POS",
@@ -12,15 +11,19 @@ export const metadata: Metadata = pageMeta({
   path: "/",
 });
 
-export default function Home() {
+// FAQ der Startseite aus dem CMS (startseite = true), alle 5 Minuten neu.
+export const revalidate = 300;
+
+export default async function Home() {
+  const faqs = await startFaqs();
   const faq = {
     "@type": "FAQPage",
-    mainEntity: FAQ.map((f) => ({ "@type": "Question", name: txt(f.q), acceptedAnswer: { "@type": "Answer", text: txt(f.a) } })),
+    mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.frage, acceptedAnswer: { "@type": "Answer", text: f.antwort.replace(/\*\*/g, "").replace(/\s*\n\s*\n\s*/g, " ") } })),
   };
   return (
     <>
       <JsonLd data={[faq]} />
-      <Landing />
+      <Landing faqs={faqs} />
     </>
   );
 }

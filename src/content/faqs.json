@@ -1,0 +1,242 @@
+{
+ "_hinweis": "Fallback und Startbestand für die Supabase-Tabellen faq_groups und faqs. Sobald faqs in Supabase Zeilen hat, liest die Website nur noch dort. Änderungen dann im Supabase Table Editor.",
+ "gruppen": [
+  {
+   "slug": "kasse-und-betrieb",
+   "titel": "Kasse und Betrieb",
+   "sort": 10
+  },
+  {
+   "slug": "bezahlen",
+   "titel": "Bezahlen",
+   "sort": 20
+  },
+  {
+   "slug": "hotel-und-schnittstellen",
+   "titel": "Hotel und Schnittstellen",
+   "sort": 30
+  },
+  {
+   "slug": "kosten-und-vertrag",
+   "titel": "Kosten und Vertrag",
+   "sort": 40
+  },
+  {
+   "slug": "gesetz",
+   "titel": "Gesetz",
+   "sort": 50
+  }
+ ],
+ "fragen": [
+  {
+   "gruppe": "kasse-und-betrieb",
+   "frage": "Funktioniert die Kasse, wenn das Internet ausfällt?",
+   "antwort": "Matrix POS läuft lokal und kassiert ohne Internet weiter. Matrix NXT braucht heute eine Verbindung, der Offline-Betrieb ist in Arbeit. Wer heute ohne Netz kassieren muss, nimmt Matrix POS.",
+   "link_href": null,
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 10
+  },
+  {
+   "gruppe": "kasse-und-betrieb",
+   "frage": "Ist Matrix TSE-konform?",
+   "antwort": "Ja, beide Systeme. Sie signieren über die Cloud-TSE von Fiskaly, ohne TSE-Hardware im Betrieb. Betriebe mit Hardware-TSE (Swissbit) kassieren damit vorerst weiter und werden später auf die Cloud-TSE umgestellt.",
+   "link_href": null,
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 20
+  },
+  {
+   "gruppe": "kasse-und-betrieb",
+   "frage": "Kann ich von Matrix POS auf Matrix NXT wechseln?",
+   "antwort": "Ja. Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. Ob NXT Ihren Betrieb heute abdeckt, hängt vor allem an zwei Punkten, die für NXT noch in Arbeit sind: Offline-Betrieb und Hotelschnittstelle.",
+   "link_href": null,
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 30
+  },
+  {
+   "gruppe": "kasse-und-betrieb",
+   "frage": "Brauche ich einen Server im Betrieb?",
+   "antwort": "Für Matrix NXT nicht. Für Matrix POS ja, die Kasse ist lokal installiert.",
+   "link_href": null,
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 40
+  },
+  {
+   "gruppe": "kasse-und-betrieb",
+   "frage": "Welche Hardware brauche ich?",
+   "antwort": "Für NXT: Orderman 10, Orderman Magellan EASY, Google Pixel 9 oder 10, Samsung Galaxy Tab A11, dazu ein Bondrucker. Für POS stationäre Terminals.",
+   "link_href": "/kassensysteme",
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 50
+  },
+  {
+   "gruppe": "kasse-und-betrieb",
+   "frage": "Geht Self-Ordering oder ein Bestell-Kiosk?",
+   "antwort": "Bei Matrix POS über Schnittstelle, zum Beispiel Flixorder. Bei Matrix NXT nicht.",
+   "link_href": null,
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 60
+  },
+  {
+   "gruppe": "bezahlen",
+   "frage": "Brauche ich eine Matrix-Kasse, um Matrix PAY zu nutzen?",
+   "antwort": "Nein. Matrix PAY läuft auch mit einer anderen Kasse.",
+   "link_href": "/pay",
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 10
+  },
+  {
+   "gruppe": "bezahlen",
+   "frage": "Warum Matrix PAY?",
+   "antwort": "Mit Matrix POS geht der Betrag von der Kasse ans Terminal, der Tagesabschluss braucht keinen Abgleich. In Matrix NXT ist die Kartenzahlung integriert, auch per Tap to Pay am Handgerät. Die Abwicklung läuft über Adyen.",
+   "link_href": null,
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 20
+  },
+  {
+   "gruppe": "bezahlen",
+   "frage": "Wer hilft bei Problemen mit dem Terminal?",
+   "antwort": "Derselbe Support wie für die Kasse, 7 Tage die Woche aus Hannover.",
+   "link_href": null,
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 30
+  },
+  {
+   "gruppe": "hotel-und-schnittstellen",
+   "frage": "Welche Hotelsoftware ist angebunden?",
+   "antwort": "Für Matrix POS: protel, ASA Hotel, Oracle Opera, Guestline. Für Matrix NXT ist die Anbindung an protel und ASA Hotel in Arbeit.",
+   "link_href": "/schnittstellen",
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 10
+  },
+  {
+   "gruppe": "hotel-und-schnittstellen",
+   "frage": "Meine Warenwirtschaft fehlt in der Liste. Was nun?",
+   "antwort": "Die Liste zeigt die über 40 Anbindungen, die heute im Betrieb laufen. Fehlt Ihr System, prüfen wir, ob es eine Schnittstelle anbietet.",
+   "link_href": null,
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 20
+  },
+  {
+   "gruppe": "kosten-und-vertrag",
+   "frage": "Was kostet Matrix?",
+   "antwort": "Der Preis richtet sich nach der Zahl der Geräte und Standorte. Das Angebot erstellen wir nach dem Erstgespräch.",
+   "link_href": null,
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 10
+  },
+  {
+   "gruppe": "kosten-und-vertrag",
+   "frage": "Gibt es Wartungsverträge?",
+   "antwort": "Ja, Basic und Enterprise.",
+   "link_href": "/support",
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 20
+  },
+  {
+   "gruppe": "gesetz",
+   "frage": "Ist ein elektronisches Kassensystem Pflicht?",
+   "antwort": "Nein. Wer eine elektronische Kasse nutzt, muss sie nach § 146a AO mit einer zertifizierten TSE absichern, Belege ausgeben und dem Finanzamt melden.",
+   "link_href": "/ratgeber",
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 10
+  },
+  {
+   "gruppe": "gesetz",
+   "frage": "Was ist die Kassenmeldepflicht?",
+   "antwort": "Seit 1. Januar 2025 melden Betriebe ihre elektronischen Kassen samt TSE über ELSTER an das Finanzamt (§ 146a AO). Für Matrix POS gibt es dafür die ELSTER-Kassenmeldung.",
+   "link_href": null,
+   "link_label": null,
+   "startseite": false,
+   "seiten": [],
+   "sort": 20
+  },
+  {
+   "gruppe": "bezahlen",
+   "frage": "Welche Zahlarten nimmt Matrix PAY an?",
+   "antwort": "Girocard, Kreditkarten, Apple Pay und Google Pay. Alle Zahlungen laufen in einer Payment-Abrechnung zusammen, im Dashboard sehen Sie jede Transaktion. Matrix PAY arbeitet an der Kasse, am Front Office und bei Online-Buchungen über Channelmanager oder Website.",
+   "link_href": "/pay",
+   "link_label": "Mehr zu PAY",
+   "startseite": true,
+   "seiten": [],
+   "sort": 40
+  },
+  {
+   "gruppe": "bezahlen",
+   "frage": "Wen rufe ich an, wenn das Kartenterminal ausfällt?",
+   "antwort": "Die Matrix-Hotline unter +49 511 592938-0, 7 Tage die Woche. Kasse und Payment kommen von der Matrix POS GmbH, Störungen an Terminal und Kasse klären wir deshalb in einem Anruf.",
+   "link_href": "/support",
+   "link_label": "Support & Wartung",
+   "startseite": true,
+   "seiten": [],
+   "sort": 50
+  },
+  {
+   "gruppe": "kasse-und-betrieb",
+   "frage": "Auf welchen Geräten läuft die mobile Kasse?",
+   "antwort": "Matrix NEO läuft auf betriebseigenen Smartphones oder auf Orderman-Handhelds. Rechnungen gehen an Bluetooth- oder WLAN-Drucker, das Personal meldet sich per NFC-Transponder an. Matrix NXT ist für Orderman 10, Orderman Magellan EASY sowie Google Pixel 9 und 10 zertifiziert.",
+   "link_href": "/kassensysteme/nxt#hardware",
+   "link_label": "Geräte für NXT",
+   "startseite": true,
+   "seiten": [],
+   "sort": 70
+  },
+  {
+   "gruppe": "hotel-und-schnittstellen",
+   "frage": "Welche Geräte lassen sich an Matrix POS anschließen?",
+   "antwort": "Waagen, Scanner, Kartenleser, Bondrucker und Kundendisplays. Hotelsoftware, Warenwirtschaft und Buchhaltung binden wir über Schnittstellen an.",
+   "link_href": "/schnittstellen",
+   "link_label": "Schnittstellen",
+   "startseite": true,
+   "seiten": [],
+   "sort": 30
+  },
+  {
+   "gruppe": "gesetz",
+   "frage": "Wie melde ich meine Kasse beim Finanzamt?",
+   "antwort": "Nach § 146a Abs. 4 AO ist jede Kasse mit TSE über ELSTER zu melden, bei Inbetriebnahme und Außerbetriebnahme jeweils innerhalb eines Monats. Für Matrix POS gibt es zwei Wege: die Übermittlung über die ERiC-Schnittstelle im Cloud-Portal der Deutschen Fiskal (per Softwareupdate) oder die manuelle Meldung im ELSTER-Formular. Eine Ausfüllhilfe erhalten Kunden über support@matrixpos.de.",
+   "link_href": "/faq#gesetz",
+   "link_label": "Fragen zu Kasse und Gesetz",
+   "startseite": true,
+   "seiten": [],
+   "sort": 30
+  },
+  {
+   "gruppe": "kasse-und-betrieb",
+   "frage": "Wie läuft die Fernwartung?",
+   "antwort": "Über TeamViewer QuickSupport. Unser Support nennt Ihnen am Telefon die Downloadseite, Sie geben die angezeigte ID durch. Die Verbindung ist durchgehend verschlüsselt, mit RSA-Schlüsseltausch (2048 Bit) und AES-Sitzung (256 Bit).",
+   "link_href": "/support#fernwartung",
+   "link_label": "Fernwartung",
+   "startseite": true,
+   "seiten": [],
+   "sort": 80
+  }
+ ]
+}

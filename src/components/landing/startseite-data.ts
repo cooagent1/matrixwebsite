@@ -38,16 +38,4 @@ export const QUOTES: Quote[] = [
 // Kasse und Gesetz: Texte in texte.json (start.gesetzN.titel / .text)
 export const LAW = [1, 2, 3, 4].map((i) => ({ n: String(i).padStart(2, "0"), t: `start.gesetz${i}.titel`, d: `start.gesetz${i}.text` }));
 
-export type Faq = { q: string; a: string; link?: { href: string; label: string } };
-
-// FAQ: Frage und Antwort in texte.json (start.faqN.frage / .antwort), Links hier.
-const FAQ_LINKS: Faq["link"][] = [
-  { href: "/pay", label: "Mehr zu PAY" },
-  { href: "/support", label: "Support & Wartung" },
-  { href: "/kassensysteme/nxt#hardware", label: "Geräte für NXT" },
-  { href: "/schnittstellen", label: "Schnittstellen" },
-  { href: "/faq#gesetz", label: "Fragen zu Kasse und Gesetz" },
-  { href: "/support#fernwartung", label: "Fernwartung" },
-];
-
-export const FAQ = FAQ_LINKS.map((link, i) => ({ q: `start.faq${i + 1}.frage`, a: `start.faq${i + 1}.antwort`, link }));
+// FAQ der Startseite: seit 07.11. in Supabase (faqs, startseite = true), siehe src/lib/faq.ts.
