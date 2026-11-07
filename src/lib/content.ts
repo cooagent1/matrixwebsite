@@ -9,6 +9,7 @@ export type Block =
   | { type: "table"; head: string[]; rows: string[][] }
   | { type: "buttons"; items: Button[]; phone: string | null }
   | { type: "placeholder"; label: string }
+  | { type: "tiles"; items: { n?: string; title?: string; text?: string; href?: string }[] }
   | { type: "badges"; items: string[] }
   | { type: "faq"; items: { q: string; a: string[] }[]; cms?: boolean }
   | { type: "form" }
@@ -43,6 +44,8 @@ export type Section = {
   media?: { src?: string; alt?: string; position?: string; label?: string };
   /** Rechte Spalte neben den Blöcken (ab 1024 px), mobil darunter. */
   aside?: Block[];
+  /** Nur Hero ohne Foto: Inhaltskarte rechts (Kacheln, Logos, Liste), ab 1024 px, mobil darunter. */
+  heroCard?: Block[];
   /** Nur Abschluss: rechte Spalte als Telefon-Karte, Kontaktformular oder Kundenzitat (Name aus QUOTES). */
   close?: "phone" | "form" | "quote";
   closeQuote?: string;

@@ -43,20 +43,24 @@ export default async function UeberUnsPage() {
   const team = (await getTeam()).filter((m) => m.name);
   return (
     <>
-      <section className="sub-hero" id="top">
-        <div className="b-aurora" aria-hidden="true" />
-        <div className="b-grain" aria-hidden="true" />
-        <div className="b-wrap sub-hero-in">
-          <span className="b-m b-kicker">Über uns</span>
-          <h1 className="b-d sub-h1">Wer wir sind.</h1>
-          <p className="sub-lead" style={{ maxWidth: 720 }}>Seit über 30 Jahren Kassen für Gastronomie und Hotellerie aus Hannover. Im Support arbeiten Fachleute aus Service und Küche.</p>
-          <div className="sub-btns"><Link href="/demo" className="b-btn b-btn-acc">Demo buchen</Link><Link href="/jobs" className="b-btn b-btn-ghost">Jobs</Link></div>
-          <ul className="b-nums sub-nums ue-nums">
-            <li className="b-num"><b className="b-d">30<em>+</em></b><span>Jahre Kassen für die Gastronomie</span></li>
-            <li className="b-num"><b className="b-d">10.000<em>+</em></b><span>Installationen in Gastronomie und Hotellerie</span></li>
-            <li className="b-num"><b className="b-d">60<em>+</em></b><span>Gastro-Profis im Team</span></li>
-            <li className="b-num"><b className="b-d">7</b><span>Tage die Woche Support</span></li>
-          </ul>
+      <section className="sub-hero sub-hero-img sub-hero-card" id="top">
+        <div className="b-wrap sub-hero-grid">
+          <div className="sub-hero-in">
+            <span className="b-m b-kicker">Über uns</span>
+            <h1 className="b-d sub-h1">Wer wir sind.</h1>
+            <div className="sub-hero-body">
+              <p className="sub-p">Seit über 30 Jahren Kassen für Gastronomie und Hotellerie aus Hannover. Im Support arbeiten Fachleute aus Service und Küche.</p>
+              <div className="sub-btns"><Link href="/demo" className="b-btn b-btn-acc">Demo buchen</Link><Link href="/jobs" className="b-btn b-btn-ghost">Jobs</Link></div>
+            </div>
+          </div>
+          <div className="sub-hero-box">
+            <div className="sub-tiles">
+              <div className="sub-tile"><b className="b-d">30+</b><span>Jahre Kassen für die Gastronomie</span></div>
+              <div className="sub-tile"><b className="b-d">10.000+</b><span>Installationen in Gastronomie und Hotellerie</span></div>
+              <div className="sub-tile"><b className="b-d">60+</b><span>Gastro-Profis im Team</span></div>
+              <div className="sub-tile"><b className="b-d">7</b><span>Tage die Woche Support</span></div>
+            </div>
+          </div>
         </div>
       </section>
 

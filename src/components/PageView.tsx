@@ -63,6 +63,25 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
             return (
               <p key={i} className="sub-p"><Inline text={b.text} /></p>
             );
+          case "tiles":
+            return (
+              <div key={i} className="sub-tiles">
+                {b.items.map((x, j) => {
+                  const inner = (
+                    <>
+                      {x.n && <b className="b-d">{x.n}</b>}
+                      {x.title && <strong>{x.title}</strong>}
+                      {x.text && <span>{x.text}</span>}
+                    </>
+                  );
+                  return x.href ? (
+                    <Link key={j} href={x.href} className="sub-tile sub-tile-link">{inner}</Link>
+                  ) : (
+                    <div key={j} className="sub-tile">{inner}</div>
+                  );
+                })}
+              </div>
+            );
           case "h3":
             return (
               <h3 key={i} className="b-d sub-h3"><Inline text={b.text} /></h3>
@@ -411,6 +430,20 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
           <figure className="sub-hero-photo">
             <Image src={s.image.src} alt={s.image.alt} fill priority sizes="(min-width: 1024px) 50vw, 100vw" style={{ objectFit: "cover", objectPosition: s.image.position ?? "50% 50%" }} />
           </figure>
+        </div>
+      </section>
+    );
+  if (hero && s.heroCard?.length)
+    // Hero ohne Foto (07.11.): rechts eine Inhaltskarte, je Seite aus dem, was es gibt (Zahlen, Produkte, Themen, Logos).
+    return (
+      <section id={s.id} className="sub-hero sub-hero-img sub-hero-card">
+        <div className="b-wrap sub-hero-grid">
+          <div className="sub-hero-in">
+            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
+            {s.heading && (isFirst ? <h1 className="b-d sub-h1">{s.heading}</h1> : <h2 className="b-d sub-h1">{s.heading}</h2>)}
+            <div className="sub-hero-body"><Blocks blocks={s.blocks} sectionName={s.name} /></div>
+          </div>
+          <div className="sub-hero-box"><Blocks blocks={s.heroCard} sectionName={s.name} /></div>
         </div>
       </section>
     );
