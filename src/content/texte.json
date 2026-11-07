@@ -1362,5 +1362,16 @@
     "text": "Artikel, Preise und Personal übernehmen wir aus Ihrer Matrix Classic. Betriebe mit Hardware-TSE stellen wir auf die Cloud-TSE um. Beim Finanzamt melden Sie die alte TSE als Außerbetriebnahme und die neue TSE als Anschaffung. Ob Ihr Bedarf heute schon abgedeckt ist, prüfen wir im Gespräch anhand Ihrer Schnittstellen und Abläufe. Wer offline kassieren oder einen Bonmonitor in der Küche braucht, arbeitet heute mit Matrix POS.",
     "entwurf": "",
     "hinweis": "Aus vorhandenem Material zusammengestellt (Ratgeber Cloud-TSE, FAQ Gesetz, NXT-Seite), Nachtpaket 07.11."
+  },
+  "ueber-uns.partner.text": {
+    "seite": "Über uns",
+    "bereich": "Mit wem wir arbeiten",
+    "element": "Absatz",
+    "status": "offen",
+    "max": 220,
+    "brief": "Ein bis zwei Sätze zu den festen Technologiepartnern Adyen (Bezahlen), Fiskaly (Cloud-TSE) und Orderman (Handgeräte), dazu Schnittstellen und Vertriebspartner. Anzahl der Schnittstellen nur nennen, wenn belegt.",
+    "text": "",
+    "entwurf": "Drei Partner laufen fest in Matrix: Adyen für das Bezahlen, Fiskaly für die Cloud-TSE und Orderman für die Handgeräte. Dazu kommen Schnittstellen, etwa zu protel und DATEV, und Vertriebspartner in den Regionen.",
+    "hinweis": "Robert 07.11.: Platzhalter statt „Zwei Partner“ (drei Karten daneben)."
   }
 }

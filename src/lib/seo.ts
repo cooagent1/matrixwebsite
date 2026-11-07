@@ -6,7 +6,7 @@ import { LABELS } from "@/lib/nav";
 export const SITE = "https://matrixpos.de";
 export const ORG_NAME = "Matrix POS GmbH";
 export const PHONE = "+49 511 592938-0";
-export const EMAIL = "info@matrixpos.de";
+export const EMAIL = "sales@matrixpos.de";
 export const SOCIAL = [
   { name: "LinkedIn", url: "https://www.linkedin.com/company/matrix-pos-gmbh/" },
   { name: "Instagram", url: "https://www.instagram.com/matrixpos_gmbh" },

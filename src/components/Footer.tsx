@@ -21,7 +21,7 @@ export function Footer() {
             <p className="mt-3 text-sm">
               <a href="tel:+495115929380" className="hover:text-white">+49 (0)511 592938-0</a>
               <br />
-              <a href="mailto:info@matrixpos.de" className="hover:text-white">info@matrixpos.de</a>
+              <a href="mailto:sales@matrixpos.de" className="hover:text-white">sales@matrixpos.de</a>
             </p>
           </div>
           {FOOTER.map((col) => (

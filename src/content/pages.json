@@ -308,7 +308,7 @@
      },
      {
       "type": "p",
-      "text": "info@matrixpos.de · +49 511 592938-0 · Eckenerstraße 2, 30179 Hannover"
+      "text": "sales@matrixpos.de · +49 511 592938-0 · Eckenerstraße 2, 30179 Hannover"
      },
      {
       "type": "form"
@@ -1410,7 +1410,9 @@
      }
     ],
     "media": {
-     "label": "Hotel"
+     "src": "/lp/branchen/hotel.jpg",
+     "alt": "Hotelanlage am Abend mit Pool, Liegen und Restaurant",
+     "position": "50% 60%"
     }
    },
    {
@@ -1458,7 +1460,9 @@
      }
     ],
     "media": {
-     "label": "Biergarten & Terrasse"
+     "src": "/lp/branchen/biergarten.jpg",
+     "alt": "Biergarten am See mit Gästen an Holztischen unter Bäumen",
+     "position": "50% 70%"
     }
    },
    {
@@ -1481,7 +1485,9 @@
      }
     ],
     "media": {
-     "label": "Freizeitpark & Food Court"
+     "src": "/lp/branchen/freizeitpark.jpg",
+     "alt": "Freizeitpark am Abend mit Riesenrad, Kettenkarussell und Achterbahn",
+     "position": "50% 50%"
     }
    },
    {
@@ -1504,7 +1510,9 @@
      }
     ],
     "media": {
-     "label": "Systemgastronomie"
+     "src": "/lp/branchen/systemgastro.jpg",
+     "alt": "Schnellrestaurant mit Theke und zwei Bestellterminals zur Selbstbedienung",
+     "position": "60% 50%"
     }
    },
    {
@@ -2081,7 +2089,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "Matrix POS GmbH · Eckenerstraße 2 · 30179 Hannover · +49 511 592938-0 · info@matrixpos.de"
+      "text": "Matrix POS GmbH · Eckenerstraße 2 · 30179 Hannover · +49 511 592938-0 · sales@matrixpos.de"
      }
     ]
    },
@@ -2430,18 +2438,18 @@
        {
         "title": "Mitarbeiter Support (m/w/d)",
         "meta": "Support · 2 Stellen",
-        "href": "mailto:info@matrixpos.de?subject=Bewerbung%3A%20Mitarbeiter%20Support%20%28m/w/d%29"
+        "href": "mailto:sales@matrixpos.de?subject=Bewerbung%3A%20Mitarbeiter%20Support%20%28m/w/d%29"
        },
        {
         "title": "Sales Manager Payment Solutions (m/w/d)",
         "meta": "Vertrieb · 1 Stelle",
-        "href": "mailto:info@matrixpos.de?subject=Bewerbung%3A%20Sales%20Manager%20Payment%20Solutions%20%28m/w/d%29"
+        "href": "mailto:sales@matrixpos.de?subject=Bewerbung%3A%20Sales%20Manager%20Payment%20Solutions%20%28m/w/d%29"
        }
       ]
      },
      {
       "type": "p",
-      "text": "Nichts dabei? Initiativbewerbungen sind willkommen: [info@matrixpos.de](mailto:info@matrixpos.de?subject=Initiativbewerbung)"
+      "text": "Nichts dabei? Initiativbewerbungen sind willkommen: [sales@matrixpos.de](mailto:sales@matrixpos.de?subject=Initiativbewerbung)"
      }
     ]
    },
@@ -2503,7 +2511,7 @@
     "blocks": [
      {
       "type": "p",
-      "text": "+49 511 592938-0 · info@matrixpos.de"
+      "text": "+49 511 592938-0 · sales@matrixpos.de"
      },
      {
       "type": "buttons",
@@ -2593,7 +2601,7 @@
        },
        {
         "label": "E-Mail",
-        "text": "[info@matrixpos.de](mailto:info@matrixpos.de)"
+        "text": "[sales@matrixpos.de](mailto:sales@matrixpos.de)"
        },
        {
         "label": "Adresse",

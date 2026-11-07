@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { T } from "@/components/T";
 import Link from "next/link";
 import { getTeam } from "@/lib/cms";
 import { TeamGrid } from "@/components/cms/TeamGrid";
@@ -123,7 +124,8 @@ export default async function UeberUnsPage() {
           <div className="pt-col">
             <span className="b-m b-kicker">Partner</span>
             <h2 className="b-d sub-h2">Mit wem wir arbeiten.</h2>
-            <p className="sub-p">Zwei Partner laufen fest in Matrix: Adyen für das Bezahlen, Fiskaly für die Cloud-TSE. Dazu kommen über 40 Schnittstellen, etwa zu protel und DATEV, und Vertriebspartner in den Regionen.</p>
+            {/* ANNAHME (07.11., Robert): Partner-Satz als Platzhalter, bis der Text zu den drei Partnern geliefert ist. */}
+            <p className="sub-p"><T k="ueber-uns.partner.text" /></p>
             <div className="sub-btns"><Link href="/partner" className="b-btn b-btn-ghost">Mehr zu Partnern</Link></div>
           </div>
           <div className="pt-int ue-int">
@@ -153,7 +155,7 @@ export default async function UeberUnsPage() {
           <div className="ue-addr">
             <span className="b-d">Matrix POS GmbH</span>
             <p>Eckenerstraße 2<br />30179 Hannover</p>
-            <p><a href="tel:+495115929380">+49 511 592938-0</a><br /><a href="mailto:info@matrixpos.de">info@matrixpos.de</a></p>
+            <p><a href="tel:+495115929380">+49 511 592938-0</a><br /><a href="mailto:sales@matrixpos.de">sales@matrixpos.de</a></p>
             <a href="https://www.google.com/maps/search/?api=1&query=Eckenerstra%C3%9Fe+2%2C+30179+Hannover" target="_blank" rel="noopener noreferrer" className="link">Anfahrt in Google Maps</a>
           </div>
         </div>
