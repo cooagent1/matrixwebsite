@@ -265,6 +265,17 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                 ))}
               </div>
             );
+          case "jobs":
+            return (
+              <ul key={i} className="sub-jobs">
+                {b.items.map((j2, j) => (
+                  <li key={j} className="sub-card sub-job">
+                    <div><h3 className="b-d">{j2.title}</h3><span className="b-m">{j2.meta}</span></div>
+                    <a href={j2.href} className="btn btn-primary">Bewerben</a>
+                  </li>
+                ))}
+              </ul>
+            );
           case "columns":
             return (
               <div key={i} className="sub-cols">

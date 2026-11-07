@@ -2425,15 +2425,23 @@
       "text": "Alle Stellen in Hannover, Eckenerstraße 2."
      },
      {
-      "type": "list",
+      "type": "jobs",
       "items": [
-       "**Mitarbeiter Support (m/w/d)** · Support · 2 Stellen",
-       "**Sales Manager Payment Solutions (m/w/d)** · Vertrieb · 1 Stelle"
+       {
+        "title": "Mitarbeiter Support (m/w/d)",
+        "meta": "Support · 2 Stellen",
+        "href": "mailto:info@matrixpos.de?subject=Bewerbung%3A%20Mitarbeiter%20Support%20%28m/w/d%29"
+       },
+       {
+        "title": "Sales Manager Payment Solutions (m/w/d)",
+        "meta": "Vertrieb · 1 Stelle",
+        "href": "mailto:info@matrixpos.de?subject=Bewerbung%3A%20Sales%20Manager%20Payment%20Solutions%20%28m/w/d%29"
+       }
       ]
      },
      {
       "type": "p",
-      "text": "Nichts dabei? Initiativbewerbungen sind willkommen: info@matrixpos.de"
+      "text": "Nichts dabei? Initiativbewerbungen sind willkommen: [info@matrixpos.de](mailto:info@matrixpos.de?subject=Initiativbewerbung)"
      }
     ]
    },
@@ -2456,7 +2464,7 @@
        },
        {
         "nr": "03",
-        "text": "**Matrix NXT.** Unsere Cloud-Kasse läuft im Browser und auf Android und ist ab 2026 unser Leadprodukt."
+        "text": "**Arbeiten in Hannover, Eckenerstraße 2.** Entwicklung, Support, Professional Services, Vertrieb und Verwaltung sitzen am selben Standort."
        }
       ]
      }
@@ -2469,16 +2477,21 @@
     "heading": "So geht es weiter",
     "blocks": [
      {
-      "type": "p",
-      "text": "1 **Bewerbung.** Lebenslauf reicht."
-     },
-     {
-      "type": "p",
-      "text": "2 **Kennenlernen.** 30 Minuten per Video oder in Hannover."
-     },
-     {
-      "type": "p",
-      "text": "3 **Probetag.** Du siehst, wie wir arbeiten, dann entscheiden wir gemeinsam."
+      "type": "cards",
+      "items": [
+       {
+        "nr": "01",
+        "text": "**Bewerbung.** Lebenslauf reicht."
+       },
+       {
+        "nr": "02",
+        "text": "**Kennenlernen.** 30 Minuten per Video oder in Hannover."
+       },
+       {
+        "nr": "03",
+        "text": "**Probetag.** Du siehst, wie wir arbeiten, dann entscheiden wir gemeinsam."
+       }
+      ]
      }
     ]
    },

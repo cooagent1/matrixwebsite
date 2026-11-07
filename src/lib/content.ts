@@ -25,6 +25,7 @@ export type Block =
   | { type: "points"; items: string[] }
   | { type: "jumpnav"; items: { label: string; href: string }[] }
   | { type: "faqgroups"; groups: { id: string; title: string; items: { q: string; a: string[] }[] }[] }
+  | { type: "jobs"; items: { title: string; meta: string; href: string }[] }
   | { type: "columns"; items: { title: string; tone?: "blue" | "grey"; text?: string; points: string[]; button?: Button }[] }
   | { type: "contact"; heading?: string; lines: { label: string; text: string }[]; steps?: string[]; stepsHeading?: string; notes?: string[] };
 export type Section = {
