@@ -873,3 +873,12 @@
 .lp .sub-close-quote{margin:0;background:var(--lp-surface2);border-color:var(--lp-line);color:#fff}
 .lp .sub-close-quote blockquote{color:#fff}
 .lp .sub-close-quote small{color:var(--lp-mute)}
+
+/* Logo-Leiste /schnittstellen (07.11.) */
+.lp .sub-logos{margin-top:36px;display:flex;flex-direction:column;gap:14px}
+.lp .sub-logos-l{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--lp-mute)}
+.lp .sub-logos ul{display:flex;flex-wrap:wrap;align-items:center;gap:20px 40px;list-style:none;margin:0;padding:0}
+.lp .sub-logos li{display:flex;align-items:center;height:40px}
+.lp .sub-logos img{width:auto;filter:grayscale(1) brightness(0);opacity:.55}
+.lp .sub-logos-w{font-size:22px;font-weight:600;letter-spacing:-0.02em;color:#000;opacity:.55}
+@media (max-width:720px){.lp .sub-logos ul{gap:14px 28px}.lp .sub-logos-w{font-size:19px}}

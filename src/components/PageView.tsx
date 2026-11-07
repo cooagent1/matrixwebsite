@@ -248,6 +248,26 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                 {b.items.map((it, j) => (<a key={j} href={it.href} className="b-m sub-jump-chip">{it.label}</a>))}
               </nav>
             );
+          case "logos":
+            // ANNAHME (07.11., Robert „gerne“): Logos Oracle und Adyen von Wikimedia Commons (gemeinfrei),
+            // protel, DATEV und Fiskaly als Schriftzug, bis Logodateien der Hersteller vorliegen. Alle einfarbig.
+            return (
+              <div key={i} className="sub-logos">
+                {b.label && <span className="b-m sub-logos-l">{b.label}</span>}
+                <ul>
+                  {b.items.map((l) => (
+                    <li key={l.name}>
+                      {l.src ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={l.src} alt={l.name} style={{ height: l.h ?? 26 }} loading="lazy" />
+                      ) : (
+                        <span className="b-d sub-logos-w">{l.name}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
           case "faqgroups":
             // ANNAHME (Nachtpaket 07.11.): Alle Gruppen in einem Abschnitt, erste Frage je Gruppe offen.
             return (

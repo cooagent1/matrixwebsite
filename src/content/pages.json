@@ -1115,6 +1115,31 @@
        }
       ],
       "phone": null
+     },
+     {
+      "type": "logos",
+      "label": "Angebunden, unter anderem",
+      "items": [
+       {
+        "name": "protel"
+       },
+       {
+        "name": "Oracle",
+        "src": "/lp/logos/integrationen/oracle.svg",
+        "h": 18
+       },
+       {
+        "name": "DATEV"
+       },
+       {
+        "name": "Adyen",
+        "src": "/lp/logos/integrationen/adyen.svg",
+        "h": 44
+       },
+       {
+        "name": "Fiskaly"
+       }
+      ]
      }
     ]
    },

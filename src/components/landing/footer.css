@@ -1,0 +1,32 @@
+/* Footer (07.11.): dunkle Fläche nach Vorbild großer Unternehmensseiten. Slogan und Kontakt links,
+   Linkspalten rechts, darunter Logo, Copyright und Rechtslinks in einer Zeile. */
+.lp .b-ftr{background:var(--lp-dark);color:rgba(255,255,255,0.72);margin-top:24px;padding:80px 0 32px;font-size:15px;line-height:1.5;--lp-ink:#fff;--lp-acc2:#7FDCFF;--lp-line:rgba(255,255,255,0.14)}
+.lp-sub .b-ftr{margin-top:0}
+.lp .b-ftr a{color:inherit;text-decoration:none}
+.lp .b-ftr a:hover{color:#fff}
+.lp .b-ftr-top{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+.lp .b-ftr-brand{display:flex;flex-direction:column;gap:20px;max-width:460px}
+.lp .b-ftr-slogan{margin:0;font-size:clamp(30px,2.2vw + 10px,44px);line-height:1.05;font-weight:800;letter-spacing:-0.02em;color:#fff;text-wrap:balance}
+.lp .b-ftr-brand p{margin:0}
+.lp .b-ftr-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.lp .b-ftr .b-btn{height:52px;padding:0 24px;font-size:15px}
+.lp .b-ftr .b-btn-white{background:#fff;color:var(--lp-dark)}
+.lp .b-ftr .b-btn-ghost{border-color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.06);color:#fff;backdrop-filter:none}
+.lp .b-ftr-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.lp .b-ftr-col h4{margin:0 0 16px;font-size:15px;font-weight:600;color:#fff}
+.lp .b-ftr-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.lp .b-ftr-col li{margin:0}
+.lp .b-ftr-col sup{font-size:11px;margin-left:2px;opacity:.7}
+.lp .b-ftr-adr{font-style:normal;display:flex;flex-direction:column;gap:10px}
+.lp .b-ftr-adr span{display:block}
+.lp .b-ftr-social{display:flex;gap:10px;margin-top:6px}
+.lp .b-ftr-social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;border:1px solid rgba(255,255,255,0.22);color:#fff;transition:background .2s,border-color .2s}
+.lp .b-ftr-social a:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.5)}
+.lp .b-ftr-bot{margin-top:64px;padding-top:24px;border-top:1px solid var(--lp-line);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:14px}
+.lp .b-ftr-bot .b-logo{height:24px}
+.lp .b-ftr-bot small{font-size:14px}
+.lp .b-ftr-legal{display:flex;gap:24px;flex-wrap:wrap;align-items:center;margin:0;padding:0;list-style:none}
+.lp .b-ftr-legal .consent-link{color:inherit}
+.lp .b-ftr-legal .consent-link:hover{color:#fff}
+@media (max-width:1100px){.lp .b-ftr-top{grid-template-columns:1fr;gap:48px}.lp .b-ftr-brand{max-width:560px}}
+@media (max-width:720px){.lp .b-ftr{padding:56px 0 24px}.lp .b-ftr-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}.lp .b-ftr-col ul{gap:12px}.lp .b-ftr-col a{display:inline-block;padding:2px 0}.lp .b-ftr-bot{flex-direction:column;align-items:flex-start;gap:16px;margin-top:48px}.lp .b-ftr-legal{gap:16px}}

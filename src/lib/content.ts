@@ -24,6 +24,7 @@ export type Block =
   | { type: "quotes"; items: { text: string; name: string; role?: string }[] }
   | { type: "points"; items: string[] }
   | { type: "jumpnav"; items: { label: string; href: string }[] }
+  | { type: "logos"; label?: string; items: { name: string; src?: string; h?: number }[] }
   | { type: "faqgroups"; groups: { id: string; title: string; items: { q: string; a: string[] }[] }[] }
   | { type: "jobs"; items: { title: string; meta: string; href: string }[] }
   | { type: "columns"; items: { title: string; tone?: "blue" | "grey"; text?: string; points: string[]; button?: Button }[] }
