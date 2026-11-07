@@ -7,6 +7,7 @@ import { TeamGrid } from "./cms/TeamGrid";
 import type { TeamMember } from "@/lib/cms";
 import { Inline } from "./Inline";
 import { QUOTES } from "./landing/startseite-data";
+import { NxtRad } from "./landing/NxtRad";
 import { EMAIL, PHONE } from "@/lib/seo";
 
 const SHOW_PLACEHOLDERS = process.env.VERCEL_ENV !== "production";
@@ -205,6 +206,8 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
             return SHOW_PLACEHOLDERS ? (
               <div key={i} className="sub-ph" role="img" aria-label="Platzhalter"><span className="b-m">Platzhalter</span>{b.label}</div>
             ) : null;
+          case "nxtrad":
+            return <NxtRad key={i} />;
           case "form":
             return (
               <div key={i} id="formular" className="sub-form"><ContactForm /></div>
@@ -404,6 +407,8 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
 
 function SectionView({ s, index, isFirst, team }: { s: Section; index: number; isFirst: boolean; team?: TeamMember[] }) {
   const hero = /^hero$/i.test(s.name);
+  // Rad (Matrix NXT): eigene dunkle Sektion über die volle Breite, ohne Überschrift aus dem Inhalt.
+  if (s.blocks.some((b) => b.type === "nxtrad")) return <NxtRad id={s.id} />;
   // Team aus dem CMS ersetzt den Textblock im Abschnitt "Management" (/ueber-uns).
   if (/^management$/i.test(s.name) && team?.length)
     return (
@@ -545,6 +550,8 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
   );
 }
 
+const isRad = (s: Section) => s.blocks.some((b) => b.type === "nxtrad");
+
 export function PageView({ page, team }: { page: Page; team?: TeamMember[] }) {
   const first = page.sections[0];
   const hasHero = first && /^hero$/i.test(first.name);
@@ -558,7 +565,8 @@ export function PageView({ page, team }: { page: Page; team?: TeamMember[] }) {
         </section>
       )}
       {page.sections.map((s, i) => (
-        <SectionView key={s.id + i} s={s} index={i} isFirst={i === 0} team={team} />
+        // Das Rad zählt nicht beim Hell/Grau-Wechsel mit, damit die folgenden Abschnitte ihren Ton behalten.
+        <SectionView key={s.id + i} s={s} index={i - page.sections.slice(0, i).filter(isRad).length} isFirst={i === 0} team={team} />
       ))}
     </>
   );

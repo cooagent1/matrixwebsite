@@ -13,6 +13,8 @@ export type Block =
   | { type: "badges"; items: string[] }
   | { type: "faq"; items: { q: string; a: string[] }[]; cms?: boolean }
   | { type: "form" }
+  // Matrix NXT (07.11.): Rad „Acht Dinge, die NXT ausmachen“, Abschnitt mit diesem Block wird als eigene dunkle Sektion gerendert
+  | { type: "nxtrad" }
   // Nachtpaket 07.11.: kompakte Wege-Zeile (/demo) und Kontaktkarte für die Seitenspalte
   | { type: "ways"; items: { title: string; text: string; button: Button }[] }
   | {

@@ -535,6 +535,17 @@
         }
       },
       {
+        "id": "acht-dinge",
+        "name": "Rad",
+        "eyebrow": "Matrix NXT",
+        "heading": "Acht Dinge, die NXT ausmachen.",
+        "blocks": [
+          {
+            "type": "nxtrad"
+          }
+        ]
+      },
+      {
         "id": "funktionen-im-detail",
         "name": "Funktionen im Detail",
         "eyebrow": null,
