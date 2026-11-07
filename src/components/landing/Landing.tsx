@@ -3,6 +3,7 @@ import { HeroVideo } from "./HeroVideo";
 import Link from "next/link";
 import { LpFooter, LpHeader } from "./Chrome";
 import { BranchenTabs } from "./BranchenTabs";
+import { Bausteine } from "./Bausteine";
 import { ScenesCarousel } from "./ScenesCarousel";
 import { Zahlen } from "./Zahlen";
 import { QuoteCarousel } from "./QuoteCarousel";
@@ -109,6 +110,9 @@ export function Landing({ faqs }: { faqs: Faq[] }) {
           <p className="sub-p"><Link href="/faq" className="link">Alle Fragen</Link></p>
         </div>
       </section>
+
+      {/* Signature-Bausteine als Platzhalter (07.11.), Reihenfolge und Inhalt werden am lebenden Objekt entschieden. */}
+      <Bausteine />
 
       <section id="demo" className="b-demo">
         <img src="/lp/fotos/nxt-bistro.jpg" alt="" aria-hidden="true" className="b-demo-img" loading="lazy" />
