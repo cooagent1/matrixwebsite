@@ -845,3 +845,8 @@
 .lp .sub-faqgroup-h{margin:0;font-size:clamp(24px,1.4vw + 12px,32px);line-height:1.1;font-weight:800;padding-top:16px}
 .lp .sub-faqgroup .sub-faq{margin-top:0}
 @media (max-width:900px){.lp .sub-faqgroup{grid-template-columns:1fr;gap:8px}.lp .sub-faqgroups{gap:36px}}
+/* /ueber-uns: Zeitleiste mit Produktname über dem Text, Logo-Leiste im Partner-Abschnitt */
+.lp .ue-line li{grid-template-columns:1fr;gap:6px}
+.lp .ue-line li>div{display:flex;align-items:baseline;gap:12px}
+.lp .ue-line p{align-self:start;max-width:560px}
+.lp #partner .ue-logos{margin-top:48px}

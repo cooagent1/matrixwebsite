@@ -38,7 +38,8 @@ export const revalidate = 300;
 
 export default async function UeberUnsPage() {
   const logos = [...LOGOS, ...LOGOS];
-  const team = await getTeam();
+  // ANNAHME (Nachtpaket 07.11.): Management erst zeigen, wenn das CMS Einträge mit Namen liefert, keine „Name folgt“-Karten.
+  const team = (await getTeam()).filter((m) => m.name);
   return (
     <>
       <section className="sub-hero" id="top">
@@ -58,14 +59,6 @@ export default async function UeberUnsPage() {
         </div>
       </section>
 
-      <section aria-label="Betriebe, die mit Matrix arbeiten" className="b-logos ue-logos">
-        <div className="b-marq b-marq-slow">
-          {logos.map(([file, name, cls], k) => (
-            <img key={k} src={`/lp/logos/${file}.png`} alt={k < LOGOS.length ? name : ""} aria-hidden={k >= LOGOS.length} className={cls} />
-          ))}
-          <span className="gap" />
-        </div>
-      </section>
 
       <section id="geschichte" className="sub-sec">
         <div className="b-wrap ue-two">
@@ -137,6 +130,15 @@ export default async function UeberUnsPage() {
             <div className="pt-node int"><span>Adyen</span><small>Zahlung, Terminals, Tap to Pay</small></div>
             <div className="pt-node int"><span>Fiskaly</span><small>Cloud-TSE, KassenSichV</small></div>
             <div className="pt-node int"><span>Orderman</span><small>Handgeräte, zertifiziert</small></div>
+          </div>
+        </div>
+        {/* ANNAHME (Nachtpaket 07.11.): Logo-Leiste nur hier bei „Mit wem wir arbeiten“, nicht mehr unter dem Hero. */}
+        <div role="region" aria-label="Betriebe, die mit Matrix arbeiten" className="b-logos ue-logos">
+          <div className="b-marq b-marq-slow">
+            {logos.map(([file, name, cls], k) => (
+              <img key={k} src={`/lp/logos/${file}.png`} alt={k < LOGOS.length ? name : ""} aria-hidden={k >= LOGOS.length} className={cls} />
+            ))}
+            <span className="gap" />
           </div>
         </div>
       </section>
