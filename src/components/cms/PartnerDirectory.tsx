@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getPartners, type Partner } from "@/lib/cms";
+import { T } from "@/components/T";
 
 const site = (u: string) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
 const tel = (p: string) => `tel:${p.replace(/[^\d+]/g, "")}`;
@@ -26,9 +27,9 @@ export async function PartnerTeaser() {
           <span className="b-m b-kicker">Vertriebspartner</span>
           <h2 className="b-d sub-h2">Matrix in Ihrer Nähe.</h2>
           <p className="sub-p">
-            {partners.length > 0
-              ? `${partners.length} Vertriebspartner in ${where} installieren Matrix vor Ort und übernehmen den First-Level-Support.`
-              : "Vertriebspartner installieren Matrix vor Ort und übernehmen den First-Level-Support."}
+            {/* Anzahl und Länder aus dem CMS bleiben fest, die Beschreibung ist Platzhalter (seite.partner.9). */}
+            {partners.length > 0 && <>{`${partners.length} Vertriebspartner in ${where}.`} </>}
+            <T k="seite.partner.9" />
           </p>
         </div>
         <Link href="/partner/verzeichnis" className="b-btn b-btn-acc">Zum Partnerverzeichnis</Link>

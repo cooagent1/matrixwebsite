@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Page } from "@/lib/content";
 import { LABELS } from "@/lib/nav";
+import { plain as resolveTexte } from "@/components/T";
 
 // Kanonische Adresse ist immer die Live-Domain, auch auf der Vorschau.
 export const SITE = "https://matrixpos.de";
@@ -91,7 +92,7 @@ const PRODUCTS: Record<string, { name: string; os: string; features: string[] }>
 };
 
 const plain = (t: string) =>
-  t
+  resolveTexte(t)
     .replace(/\*\*([^*]+)\*\*/g, "$1")
     .replace(/\*([^*]+)\*/g, "$1")
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")

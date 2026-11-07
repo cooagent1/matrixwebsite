@@ -54,7 +54,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
               <div key={i} className="sub-grid">
                 {b.items.map((c, j) => (
                   <div key={j} className="sub-card">
-                    <h3 className="b-d">{c.title}</h3>
+                    <h3 className="b-d"><Inline text={c.title} /></h3>
                     <p><Inline text={c.text} /></p>
                   </div>
                 ))}
@@ -71,8 +71,8 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                   const inner = (
                     <>
                       {x.n && <b className="b-d">{x.n}</b>}
-                      {x.title && <strong>{x.title}</strong>}
-                      {x.text && <span>{x.text}</span>}
+                      {x.title && <strong><Inline text={x.title} /></strong>}
+                      {x.text && <span><Inline text={x.text} /></span>}
                     </>
                   );
                   return x.href ? (
@@ -129,7 +129,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                     const l = splitLead(t);
                     return (
                       <div key={j} className="sub-card">
-                        {l ? (<><h3 className="b-d">{l.title}</h3><p><Inline text={l.text} /></p></>) : <p><Inline text={t} /></p>}
+                        {l ? (<><h3 className="b-d"><Inline text={l.title} /></h3><p><Inline text={l.text} /></p></>) : <p><Inline text={t} /></p>}
                       </div>
                     );
                   })}
@@ -151,7 +151,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                   return (
                     <div key={c.nr} className="sub-card">
                       <span className="n b-d">{c.nr}</span>
-                      {l ? (<><h3 className="b-d">{l.title}</h3><p><Inline text={l.text} /></p></>) : <p><Inline text={c.text} /></p>}
+                      {l ? (<><h3 className="b-d"><Inline text={l.title} /></h3><p><Inline text={l.text} /></p></>) : <p><Inline text={c.text} /></p>}
                     </div>
                   );
                 })}
@@ -194,7 +194,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
               <div key={i} className="sub-faq">
                 {b.items.map((it, j) => (
                   <details key={j}>
-                    <summary className="b-d">{it.q}<svg className="sub-faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+                    <summary className="b-d"><Inline text={it.q} /><svg className="sub-faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
                     <div>
                       {it.a.map((t, k) => (<p key={k}><Inline text={t} /></p>))}
                     </div>
@@ -204,7 +204,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
             );
           case "placeholder":
             return SHOW_PLACEHOLDERS ? (
-              <div key={i} className="sub-ph" role="img" aria-label="Platzhalter"><span className="b-m">Platzhalter</span>{b.label}</div>
+              <div key={i} className="sub-ph" role="img" aria-label="Platzhalter"><span className="b-m">Platzhalter</span><Inline text={b.label} /></div>
             ) : null;
           case "nxtrad":
             return <NxtRad key={i} />;
@@ -217,9 +217,9 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
               <ul key={i} className="sub-feats">
                 {b.items.map((c, j) => (
                   <li key={j} className="sub-card sub-feat">
-                    <h3 className="b-d">{c.title}</h3>
+                    <h3 className="b-d"><Inline text={c.title} /></h3>
                     <p><Inline text={c.text} /></p>
-                    {c.link && <Link href={c.link.href} className="sub-more">{c.link.label} →</Link>}
+                    {c.link && <Link href={c.link.href} className="sub-more"><Inline text={c.link.label} /> →</Link>}
                     {c.placeholder && SHOW_PLACEHOLDERS && <span className="b-m sub-feat-ph">Platzhalter: {c.placeholder}</span>}
                   </li>
                 ))}
@@ -230,14 +230,14 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
               <div key={i} className="sub-halves">
                 {b.items.map((h, j) => (
                   <div key={j} id={h.id} className="sub-half">
-                    <h3 className="b-d">{h.title}</h3>
+                    <h3 className="b-d"><Inline text={h.title} /></h3>
                     {h.text && <p className="sub-p"><Inline text={h.text} /></p>}
                     <ul className="sub-half-cards">
                       {h.cards.map((c) => {
                         const l = splitLead(c.text);
                         return (
                           <li key={c.nr} className="sub-card">
-                            {l ? (<><h4 className="b-d">{l.title}</h4><p><Inline text={l.text} /></p></>) : <p><Inline text={c.text} /></p>}
+                            {l ? (<><h4 className="b-d"><Inline text={l.title} /></h4><p><Inline text={l.text} /></p></>) : <p><Inline text={c.text} /></p>}
                           </li>
                         );
                       })}
@@ -252,7 +252,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                 {b.items.map((q, j) => (
                   <figure key={j} className="b-qcard sub-qcard">
                     <svg className="b-qmark-s" width="36" height="28" viewBox="0 0 36 28" aria-hidden="true"><path fill="currentColor" d="M0 28V17C0 7.6 4.6 1.9 13.2 0l1.6 4.2C10 5.8 7.7 9 7.4 13H14v15H0zm21 0V17c0-9.4 4.6-15.1 13.2-17l1.6 4.2C31 5.8 28.7 9 28.4 13H35v15H21z"/></svg>
-                    <blockquote>{q.text}</blockquote>
+                    <blockquote><Inline text={q.text} /></blockquote>
                     <figcaption><div><b>{q.name}</b>{q.role && <small>{q.role}</small>}</div></figcaption>
                   </figure>
                 ))}
@@ -275,7 +275,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
             // protel, DATEV und Fiskaly als Schriftzug, bis Logodateien der Hersteller vorliegen. Alle einfarbig.
             return (
               <div key={i} className="sub-logos">
-                {b.label && <span className="b-m sub-logos-l">{b.label}</span>}
+                {b.label && <span className="b-m sub-logos-l"><Inline text={b.label} /></span>}
                 <ul>
                   {b.items.map((l) => (
                     <li key={l.name}>
@@ -283,7 +283,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                         // eslint-disable-next-line @next/next/no-img-element
                         <img src={l.src} alt={l.name} style={{ height: l.h ?? 26 }} loading="lazy" />
                       ) : (
-                        <span className="b-d sub-logos-w">{l.name}</span>
+                        <span className="b-d sub-logos-w"><Inline text={l.name} /></span>
                       )}
                     </li>
                   ))}
@@ -296,11 +296,11 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
               <div key={i} className="sub-faqgroups">
                 {b.groups.map((g) => (
                   <div key={g.id} id={g.id} className="sub-faqgroup">
-                    <h2 className="b-d sub-faqgroup-h">{g.title}</h2>
+                    <h2 className="b-d sub-faqgroup-h"><Inline text={g.title} /></h2>
                     <div className="sub-faq">
                       {g.items.map((it, j) => (
                         <details key={j} open={j === 0}>
-                          <summary className="b-d">{it.q}<svg className="sub-faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+                          <summary className="b-d"><Inline text={it.q} /><svg className="sub-faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
                           <div>{it.a.map((t, k) => (<p key={k}><Inline text={t} /></p>))}</div>
                         </details>
                       ))}
@@ -314,7 +314,7 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
               <ul key={i} className="sub-jobs">
                 {b.items.map((j2, j) => (
                   <li key={j} className="sub-card sub-job">
-                    <div><h3 className="b-d">{j2.title}</h3><span className="b-m">{j2.meta}</span></div>
+                    <div><h3 className="b-d"><Inline text={j2.title} /></h3><span className="b-m"><Inline text={j2.meta} /></span></div>
                     <a href={j2.href} className="btn btn-primary">Bewerben</a>
                   </li>
                 ))}
@@ -325,8 +325,8 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
               <div key={i} className="sub-cols">
                 {b.items.map((c, j) => (
                   <div key={j} className={`sub-col sub-col-${c.tone ?? "grey"}`}>
-                    <h3 className="b-d">{c.title}</h3>
-                    {c.text && <p className="sub-p">{c.text}</p>}
+                    <h3 className="b-d"><Inline text={c.title} /></h3>
+                    {c.text && <p className="sub-p"><Inline text={c.text} /></p>}
                     <ul className="sub-check">{c.points.map((t, k) => (<li key={k}><Inline text={t} /></li>))}</ul>
                     {c.button && <div className="sub-btns"><Btn item={c.button} tone="dark" secondary={c.button.kind !== "button"} /></div>}
                   </div>
@@ -339,8 +339,8 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                 <ul className="sub-cats">
                   {b.items.map((c, j) => (
                     <li key={j} className="sub-card sub-cat">
-                      <h3 className="b-d">{c.title}</h3>
-                      {c.text && <p>{c.text}</p>}
+                      <h3 className="b-d"><Inline text={c.title} /></h3>
+                      {c.text && <p><Inline text={c.text} /></p>}
                       {c.chips && (
                         <ul className="sub-chips">
                           {c.chips.map((t, k) => (<li key={k} className={`b-m sub-chip ${/^weitere/.test(t) ? "more" : ""}`}>{t}</li>))}
@@ -353,14 +353,14 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                   <div className="sub-cat-notes">
                     {b.notes.map((n, j) => (
                       <div key={j} className={`sub-note sub-note-${n.tone}`}>
-                        <h3 className="b-d">{n.title}</h3>
+                        <h3 className="b-d"><Inline text={n.title} /></h3>
                         {n.rows.map((r, k) => (
                           <div key={k} className="sub-note-row">
-                            {r.label && <span className="b-m sub-note-lbl">{r.label}</span>}
+                            {r.label && <span className="b-m sub-note-lbl"><Inline text={r.label} /></span>}
                             <ul className="sub-chips">{r.chips.map((t, l) => (<li key={l} className="b-m sub-chip">{t}</li>))}</ul>
                           </div>
                         ))}
-                        {n.link && <Link href={n.link.href} className="sub-more">{n.link.label} →</Link>}
+                        {n.link && <Link href={n.link.href} className="sub-more"><Inline text={n.link.label} /> →</Link>}
                       </div>
                     ))}
                   </div>
@@ -372,8 +372,8 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
               <ul key={i} className="sub-ways">
                 {b.items.map((w, j) => (
                   <li key={j}>
-                    <b className="b-d">{w.title}</b>
-                    <span>{w.text}</span>
+                    <b className="b-d"><Inline text={w.title} /></b>
+                    <span><Inline text={w.text} /></span>
                     <Btn item={w.button} tone="dark" secondary={w.button.kind !== "button"} />
                   </li>
                 ))}
@@ -382,15 +382,15 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
           case "contact":
             return (
               <div key={i} className="sub-contact">
-                {b.heading && <span className="b-d sub-contact-h">{b.heading}</span>}
+                {b.heading && <span className="b-d sub-contact-h"><Inline text={b.heading} /></span>}
                 <dl>
                   {b.lines.map((l, j) => (
-                    <div key={j}><dt className="b-m">{l.label}</dt><dd><Inline text={l.text} /></dd></div>
+                    <div key={j}><dt className="b-m"><Inline text={l.label} /></dt><dd><Inline text={l.text} /></dd></div>
                   ))}
                 </dl>
                 {b.steps && (
                   <>
-                    {b.stepsHeading && <span className="b-d sub-contact-h3">{b.stepsHeading}</span>}
+                    {b.stepsHeading && <span className="b-d sub-contact-h3"><Inline text={b.stepsHeading} /></span>}
                     <ol className="sub-contact-steps">
                       {b.steps.map((t, j) => (<li key={j}><Inline text={t} /></li>))}
                     </ol>
@@ -414,7 +414,7 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
     return (
       <section id={s.id} className={`sub-sec ${index % 2 === 0 ? "alt" : ""}`}>
         <div className="b-wrap">
-          {s.heading && <h2 className="b-d sub-h2">{s.heading}</h2>}
+          {s.heading && <h2 className="b-d sub-h2"><Inline text={s.heading} /></h2>}
           <TeamGrid team={team} />
         </div>
       </section>
@@ -428,8 +428,8 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
       <section id={s.id} className="sub-hero sub-hero-img">
         <div className="b-wrap sub-hero-grid">
           <div className="sub-hero-in">
-            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
-            {s.heading && (isFirst ? <h1 className="b-d sub-h1">{s.heading}</h1> : <h2 className="b-d sub-h1">{s.heading}</h2>)}
+            {s.eyebrow && <span className="b-m b-kicker"><Inline text={s.eyebrow} /></span>}
+            {s.heading && (isFirst ? <h1 className="b-d sub-h1"><Inline text={s.heading} /></h1> : <h2 className="b-d sub-h1"><Inline text={s.heading} /></h2>)}
             <div className="sub-hero-body"><Blocks blocks={s.blocks} sectionName={s.name} /></div>
           </div>
           <figure className="sub-hero-photo">
@@ -444,8 +444,8 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
       <section id={s.id} className="sub-hero sub-hero-img sub-hero-card">
         <div className="b-wrap sub-hero-grid">
           <div className="sub-hero-in">
-            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
-            {s.heading && (isFirst ? <h1 className="b-d sub-h1">{s.heading}</h1> : <h2 className="b-d sub-h1">{s.heading}</h2>)}
+            {s.eyebrow && <span className="b-m b-kicker"><Inline text={s.eyebrow} /></span>}
+            {s.heading && (isFirst ? <h1 className="b-d sub-h1"><Inline text={s.heading} /></h1> : <h2 className="b-d sub-h1"><Inline text={s.heading} /></h2>)}
             <div className="sub-hero-body"><Blocks blocks={s.blocks} sectionName={s.name} /></div>
           </div>
           <div className="sub-hero-box"><Blocks blocks={s.heroCard} sectionName={s.name} /></div>
@@ -458,8 +458,8 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
         <div className="b-aurora" aria-hidden="true" />
         <div className="b-grain" aria-hidden="true" />
         <div className="b-wrap sub-hero-in">
-          {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
-          {s.heading && (isFirst ? <h1 className="b-d sub-h1">{s.heading}</h1> : <h2 className="b-d sub-h1">{s.heading}</h2>)}
+          {s.eyebrow && <span className="b-m b-kicker"><Inline text={s.eyebrow} /></span>}
+          {s.heading && (isFirst ? <h1 className="b-d sub-h1"><Inline text={s.heading} /></h1> : <h2 className="b-d sub-h1"><Inline text={s.heading} /></h2>)}
           <div className="sub-hero-body"><Blocks blocks={s.blocks} sectionName={s.name} /></div>
         </div>
       </section>
@@ -472,8 +472,8 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
         <div className="b-grain" aria-hidden="true" />
         <div className="b-wrap sub-close-2">
           <div className="sub-close-in">
-            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
-            {s.heading && <h2 className="b-d sub-h1">{s.heading}</h2>}
+            {s.eyebrow && <span className="b-m b-kicker"><Inline text={s.eyebrow} /></span>}
+            {s.heading && <h2 className="b-d sub-h1"><Inline text={s.heading} /></h2>}
             <Blocks blocks={s.blocks} sectionName={s.name} />
           </div>
           <CloseAside s={s} />
@@ -486,8 +486,8 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
         <div className="b-aurora b-aurora-wide" aria-hidden="true" />
         <div className="b-grain" aria-hidden="true" />
         <div className="b-wrap sub-close-in">
-          {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
-          {s.heading && <h2 className="b-d sub-h1">{s.heading}</h2>}
+          {s.eyebrow && <span className="b-m b-kicker"><Inline text={s.eyebrow} /></span>}
+          {s.heading && <h2 className="b-d sub-h1"><Inline text={s.heading} /></h2>}
           <Blocks blocks={s.blocks} sectionName={s.name} />
         </div>
       </section>
@@ -497,8 +497,8 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
       <section id={s.id} className={`sub-sec ${index % 2 === 0 ? "alt" : ""}`}>
         <div className="b-wrap sub-split">
           <div className="sub-split-main">
-            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
-            {s.heading && <h2 className="b-d sub-h2">{s.heading}</h2>}
+            {s.eyebrow && <span className="b-m b-kicker"><Inline text={s.eyebrow} /></span>}
+            {s.heading && <h2 className="b-d sub-h2"><Inline text={s.heading} /></h2>}
             <Blocks blocks={s.blocks} sectionName={s.name} />
           </div>
           <aside className="sub-split-aside">
@@ -516,12 +516,12 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
             {s.media.src ? (
               <Image src={s.media.src} alt={s.media.alt ?? ""} fill sizes="(min-width: 1024px) 45vw, 100vw" style={{ objectFit: "cover", objectPosition: s.media.position ?? "50% 50%" }} />
             ) : (
-              <span className="b-d">{s.media.label}{SHOW_PLACEHOLDERS && <small className="b-m">Foto folgt</small>}</span>
+              <span className="b-d"><Inline text={s.media.label} />{SHOW_PLACEHOLDERS && <small className="b-m">Foto folgt</small>}</span>
             )}
           </figure>
           <div className="sub-media-txt">
-            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
-            {s.heading && <h2 className="b-d sub-h2">{s.heading}</h2>}
+            {s.eyebrow && <span className="b-m b-kicker"><Inline text={s.eyebrow} /></span>}
+            {s.heading && <h2 className="b-d sub-h2"><Inline text={s.heading} /></h2>}
             <Blocks blocks={s.blocks} sectionName={s.name} />
           </div>
         </div>
@@ -532,8 +532,8 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
       <section id={s.id} className="sub-sec sub-sec-card">
         <div className="b-wrap">
           <div className={`sub-tone sub-tone-${s.card}`}>
-            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
-            {s.heading && <h2 className="b-d sub-h2">{s.heading}</h2>}
+            {s.eyebrow && <span className="b-m b-kicker"><Inline text={s.eyebrow} /></span>}
+            {s.heading && <h2 className="b-d sub-h2"><Inline text={s.heading} /></h2>}
             <Blocks blocks={s.blocks} sectionName={s.name} />
           </div>
         </div>
@@ -542,8 +542,8 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
   return (
     <section id={s.id} className={`sub-sec ${index % 2 === 0 ? "alt" : ""}`}>
       <div className="b-wrap">
-        {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
-        {s.heading && <h2 className="b-d sub-h2">{s.heading}</h2>}
+        {s.eyebrow && <span className="b-m b-kicker"><Inline text={s.eyebrow} /></span>}
+        {s.heading && <h2 className="b-d sub-h2"><Inline text={s.heading} /></h2>}
         <Blocks blocks={s.blocks} sectionName={s.name} />
       </div>
     </section>
@@ -561,7 +561,7 @@ export function PageView({ page, team }: { page: Page; team?: TeamMember[] }) {
         <section className="sub-hero">
           <div className="b-aurora" aria-hidden="true" />
           <div className="b-grain" aria-hidden="true" />
-          <div className="b-wrap sub-hero-in"><h1 className="b-d sub-h1">{page.title}</h1></div>
+          <div className="b-wrap sub-hero-in"><h1 className="b-d sub-h1"><Inline text={page.title} /></h1></div>
         </section>
       )}
       {page.sections.map((s, i) => (
@@ -590,7 +590,7 @@ function CloseAside({ s }: { s: Section }) {
   return (
     <figure className="b-qcard sub-qcard sub-close-quote">
       <svg className="b-qmark-s" width="36" height="28" viewBox="0 0 36 28" aria-hidden="true"><path fill="currentColor" d="M0 28V17C0 7.6 4.6 1.9 13.2 0l1.6 4.2C10 5.8 7.7 9 7.4 13H14v15H0zm21 0V17c0-9.4 4.6-15.1 13.2-17l1.6 4.2C31 5.8 28.7 9 28.4 13H35v15H21z"/></svg>
-      <blockquote>{q.text}</blockquote>
+      <blockquote><Inline text={q.text} /></blockquote>
       <figcaption><div><b>{q.name}</b><small>{q.role}</small></div></figcaption>
     </figure>
   );

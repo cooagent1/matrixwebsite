@@ -30,6 +30,11 @@ export function txt(k: string): string {
   return e.text || e.brief;
 }
 
+/** Strings mit ⟦schlüssel⟧ für Meta-Daten und JSON-LD: gelieferter Text oder leer. */
+export function plain(s: string): string {
+  return s.replace(/⟦([^⟧]+)⟧/g, (_, k) => TEXTE[k]?.text ?? "").replace(/\s{2,}/g, " ").trim();
+}
+
 export function isPlaceholder(k: string): boolean {
   return !entry(k).text;
 }
