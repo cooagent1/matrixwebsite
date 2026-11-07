@@ -472,16 +472,11 @@
      },
      {
       "type": "buttons",
-      "items": [
-       {
-        "kind": "button",
-        "label": "Beratung anfragen",
-        "href": "/demo"
-       }
-      ],
+      "items": [],
       "phone": "+49 511 592938-0"
      }
-    ]
+    ],
+    "close": "form"
    }
   ],
   "stub": false,
@@ -715,7 +710,9 @@
       ],
       "phone": "+49 511 592938-0"
      }
-    ]
+    ],
+    "close": "quote",
+    "closeQuote": "Samantha Kedzia"
    }
   ],
   "stub": false,
@@ -941,7 +938,9 @@
       ],
       "phone": "+49 511 592938-0"
      }
-    ]
+    ],
+    "close": "quote",
+    "closeQuote": "Dirk Schönekäse"
    }
   ],
   "stub": false,
@@ -1080,16 +1079,11 @@
      },
      {
       "type": "buttons",
-      "items": [
-       {
-        "kind": "button",
-        "label": "Beratung anfragen",
-        "href": "/demo?thema=pay"
-       }
-      ],
+      "items": [],
       "phone": "+49 511 592938-0"
      }
-    ]
+    ],
+    "close": "form"
    }
   ],
   "stub": false,
@@ -1298,16 +1292,11 @@
      },
      {
       "type": "buttons",
-      "items": [
-       {
-        "kind": "button",
-        "label": "Schnittstelle anfragen",
-        "href": "/demo?thema=schnittstelle"
-       }
-      ],
+      "items": [],
       "phone": "+49 511 592938-0"
      }
-    ]
+    ],
+    "close": "form"
    }
   ],
   "stub": false,
@@ -1746,9 +1735,10 @@
         "href": "/demo"
        }
       ],
-      "phone": "+49 511 592938-0"
+      "phone": null
      }
-    ]
+    ],
+    "close": "phone"
    }
   ],
   "stub": false,
@@ -2125,7 +2115,8 @@
       ],
       "phone": null
      }
-    ]
+    ],
+    "close": "phone"
    }
   ],
   "stub": false,
@@ -2510,10 +2501,6 @@
     "heading": "Fragen vorab?",
     "blocks": [
      {
-      "type": "p",
-      "text": "+49 511 592938-0 · sales@matrixpos.de"
-     },
-     {
       "type": "buttons",
       "items": [
        {
@@ -2524,7 +2511,8 @@
       ],
       "phone": null
      }
-    ]
+    ],
+    "close": "phone"
    }
   ],
   "stub": false,

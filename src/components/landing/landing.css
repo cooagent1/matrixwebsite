@@ -858,3 +858,18 @@
 .lp .sub-job .btn{flex:0 0 auto;display:inline-flex;align-items:center;height:48px;padding:0 24px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;background:var(--lp-acc);color:#fff}
 .lp .sub-job .btn:hover{background:var(--lp-acc2);color:#fff}
 @media (max-width:720px){.lp .sub-job{flex-direction:column;align-items:flex-start;gap:14px}.lp .sub-job h3{font-size:19px}}
+
+/* Abschluss-Varianten (07.11.): Telefon-Karte, Formular, Zitat rechts neben Überschrift und Buttons */
+.lp .sub-close-2{position:relative;display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+@media (min-width:1024px){.lp .sub-close-2{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}}
+.lp .sub-close-card{border:1px solid var(--lp-line);border-radius:24px;background:var(--lp-surface2);padding:32px;display:flex;flex-direction:column;gap:12px}
+.lp .sub-close-card p{color:var(--lp-text2);font-size:17px;line-height:1.5}
+.lp .sub-close-card a{color:#fff}
+.lp .sub-close-tel{font-size:clamp(30px,3.4vw,44px);line-height:1.1;letter-spacing:-0.02em;color:#fff;text-decoration:none}
+.lp .sub-close-tel:hover{text-decoration:underline}
+.lp .sub-close-form{max-width:none;--lp-ink:#1C1C1E;--lp-text2:#3A3A3C;--lp-mute:#6B6B70;--lp-line:rgba(0,0,0,0.12);--lp-surface:#fff;color:var(--lp-ink)}
+.lp .sub-close-form .card{background:#fff;box-shadow:0 20px 60px rgba(0,0,0,0.25)}
+.lp .sub-close-form a{color:inherit}
+.lp .sub-close-quote{margin:0;background:var(--lp-surface2);border-color:var(--lp-line);color:#fff}
+.lp .sub-close-quote blockquote{color:#fff}
+.lp .sub-close-quote small{color:var(--lp-mute)}

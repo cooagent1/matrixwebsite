@@ -42,6 +42,9 @@ export type Section = {
   media?: { src?: string; alt?: string; position?: string; label?: string };
   /** Rechte Spalte neben den Blöcken (ab 1024 px), mobil darunter. */
   aside?: Block[];
+  /** Nur Abschluss: rechte Spalte als Telefon-Karte, Kontaktformular oder Kundenzitat (Name aus QUOTES). */
+  close?: "phone" | "form" | "quote";
+  closeQuote?: string;
 };
 export type Page = {
   slug: string;

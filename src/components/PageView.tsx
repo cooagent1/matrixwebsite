@@ -6,6 +6,8 @@ import { ContactForm } from "./ContactForm";
 import { TeamGrid } from "./cms/TeamGrid";
 import type { TeamMember } from "@/lib/cms";
 import { Inline } from "./Inline";
+import { QUOTES } from "./landing/startseite-data";
+import { EMAIL, PHONE } from "@/lib/seo";
 
 const SHOW_PLACEHOLDERS = process.env.VERCEL_ENV !== "production";
 
@@ -404,6 +406,22 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
         </div>
       </section>
     );
+  if (closing && s.close)
+    // ANNAHME (07.11., Robert „ok“): Drei Varianten für den Abschluss, je Seite eine (Telefon, Formular, Zitat).
+    return (
+      <section id={s.id} className={`sub-close close-${s.close}`}>
+        <div className="b-aurora b-aurora-wide" aria-hidden="true" />
+        <div className="b-grain" aria-hidden="true" />
+        <div className="b-wrap sub-close-2">
+          <div className="sub-close-in">
+            {s.eyebrow && <span className="b-m b-kicker">{s.eyebrow}</span>}
+            {s.heading && <h2 className="b-d sub-h1">{s.heading}</h2>}
+            <Blocks blocks={s.blocks} sectionName={s.name} />
+          </div>
+          <CloseAside s={s} />
+        </div>
+      </section>
+    );
   if (closing)
     return (
       <section id={s.id} className="sub-close">
@@ -490,5 +508,29 @@ export function PageView({ page, team }: { page: Page; team?: TeamMember[] }) {
         <SectionView key={s.id + i} s={s} index={i} isFirst={i === 0} team={team} />
       ))}
     </>
+  );
+}
+
+function CloseAside({ s }: { s: Section }) {
+  if (s.close === "phone")
+    return (
+      <div className="sub-close-card">
+        <span className="b-m b-kicker">Telefon</span>
+        <a href={`tel:${PHONE.replace(/[^\d+]/g, "")}`} className="b-d sub-close-tel">{PHONE}</a>
+        <p>7 Tage die Woche, Support aus Hannover.</p>
+        <p><a href={`mailto:${EMAIL}`}>{EMAIL}</a><br />Eckenerstraße 2, 30179 Hannover</p>
+      </div>
+    );
+  if (s.close === "form")
+    return (
+      <div id="formular" className="sub-form sub-close-form"><ContactForm /></div>
+    );
+  const q = QUOTES.find((x) => x.name === s.closeQuote) ?? QUOTES[0];
+  return (
+    <figure className="b-qcard sub-qcard sub-close-quote">
+      <svg className="b-qmark-s" width="36" height="28" viewBox="0 0 36 28" aria-hidden="true"><path fill="currentColor" d="M0 28V17C0 7.6 4.6 1.9 13.2 0l1.6 4.2C10 5.8 7.7 9 7.4 13H14v15H0zm21 0V17c0-9.4 4.6-15.1 13.2-17l1.6 4.2C31 5.8 28.7 9 28.4 13H35v15H21z"/></svg>
+      <blockquote>{q.text}</blockquote>
+      <figcaption><div><b>{q.name}</b><small>{q.role}</small></div></figcaption>
+    </figure>
   );
 }
