@@ -246,6 +246,25 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
                 {b.items.map((it, j) => (<a key={j} href={it.href} className="b-m sub-jump-chip">{it.label}</a>))}
               </nav>
             );
+          case "faqgroups":
+            // ANNAHME (Nachtpaket 07.11.): Alle Gruppen in einem Abschnitt, erste Frage je Gruppe offen.
+            return (
+              <div key={i} className="sub-faqgroups">
+                {b.groups.map((g) => (
+                  <div key={g.id} id={g.id} className="sub-faqgroup">
+                    <h2 className="b-d sub-faqgroup-h">{g.title}</h2>
+                    <div className="sub-faq">
+                      {g.items.map((it, j) => (
+                        <details key={j} open={j === 0}>
+                          <summary className="b-d">{it.q}<svg className="sub-faq-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></summary>
+                          <div>{it.a.map((t, k) => (<p key={k}><Inline text={t} /></p>))}</div>
+                        </details>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            );
           case "columns":
             return (
               <div key={i} className="sub-cols">
