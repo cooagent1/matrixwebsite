@@ -3,6 +3,7 @@ import { ConsentLink } from "@/components/Consent";
 import Link from "next/link";
 import { FOOTER } from "@/lib/nav";
 import { Menu, PillScroll } from "./Menu";
+import { Reveal } from "./Reveal";
 import { PHONE, SOCIAL } from "@/lib/seo";
 import "./footer.css";
 
@@ -30,6 +31,7 @@ const ICONS: Record<string, React.ReactNode> = {
 export function LpFooter() {
   return (
     <footer className="b-ftr">
+      <Reveal />
       <div className="b-wrap">
         <div className="b-ftr-top">
           <div className="b-ftr-brand">
