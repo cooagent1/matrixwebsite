@@ -71,7 +71,7 @@ export function PartnerForm() {
         <span>Mit dem Absenden stimme ich der <Link href="/datenschutz" className="link">Datenschutzerklärung</Link> zu.</span>
       </label>
       <div className="pt-actions">
-        <button type="submit" className="b-btn b-btn-acc" disabled={state === "sending"}>{state === "sending" ? "Wird gesendet …" : "Anfrage senden"}</button>
+        <button type="submit" className="b-btn b-btn-white" disabled={state === "sending"}>{state === "sending" ? "Wird gesendet …" : "Anfrage senden"}</button>
         {state === "error" && <span className="pt-msg">Das hat nicht geklappt. Bitte noch einmal versuchen oder an partner@matrixpos.de schreiben.</span>}
         {state === "unavailable" && <span className="pt-msg">Das Formular ist noch nicht freigeschaltet. Schreiben Sie an partner@matrixpos.de.</span>}
       </div>

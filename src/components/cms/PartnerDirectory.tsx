@@ -32,7 +32,7 @@ export async function PartnerTeaser() {
             <T k="seite.partner.9" />
           </p>
         </div>
-        <Link href="/partner/verzeichnis" className="b-btn b-btn-acc">Zum Partnerverzeichnis</Link>
+        <Link href="/partner/verzeichnis" className="b-btn b-btn-white">Zum Partnerverzeichnis</Link>
       </div>
     </section>
   );

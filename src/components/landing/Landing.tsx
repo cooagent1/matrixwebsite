@@ -122,7 +122,7 @@ export function Landing({ faqs }: { faqs: Faq[] }) {
         <div className="b-wrap b-demo-in">
           <h2 className="b-d"><T k="start.demo.h2" /></h2>
           <p><T k="start.demo.text" /></p>
-          <div className="b-demo-btns"><Link href="/demo" className="b-btn b-btn-white">Demo buchen</Link><Link href="/demo#rueckruf" className="b-btn b-btn-ghost">Rückruf vereinbaren</Link></div>
+          <div className="b-demo-btns"><Link href="/demo" className="b-btn b-btn-acc">Demo buchen</Link><Link href="/demo#rueckruf" className="b-btn b-btn-ghost">Rückruf vereinbaren</Link></div>
         </div>
       </section>
       </main>

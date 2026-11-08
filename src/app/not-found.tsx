@@ -15,7 +15,7 @@ export default function NotFound() {
             <span className="b-m b-kicker">404</span>
             <h1 className="b-d sub-h1">Diese Seite gibt es nicht.</h1>
             <p className="sub-lead">Vielleicht hilft Ihnen die Startseite oder ein kurzes Gespräch weiter.</p>
-            <div className="sub-btns"><Link href="/" className="b-btn b-btn-acc">Zur Startseite</Link><Link href="/demo" className="b-btn b-btn-ghost">Demo buchen</Link></div>
+            <div className="sub-btns"><Link href="/" className="b-btn b-btn-white">Zur Startseite</Link><Link href="/demo" className="b-btn b-btn-ghost">Demo buchen</Link></div>
           </div>
         </section>
       </main>

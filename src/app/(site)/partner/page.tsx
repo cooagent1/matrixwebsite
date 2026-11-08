@@ -48,7 +48,7 @@ export default function PartnerPage() {
                 <h2 className="b-d pt-h2">Vertriebspartner</h2>
                 <p className="pt-lead"><T k="seite.partner.5" /></p>
                 <div className="b-devs"><span className="b-m b-dev">Kassenhändler</span><span className="b-m b-dev">IT-Dienstleister Gastronomie</span><span className="b-m b-dev">Payment-Vermittler</span></div>
-                <a href="#anfrage" className="b-btn b-btn-acc pt-cta">Vertriebspartner werden</a>
+                <a href="#anfrage" className="b-btn b-btn-white pt-cta">Vertriebspartner werden</a>
               </div>
               <dl className="pt-dl">
                 <div><dt>Das bringen Sie</dt><dd><T k="seite.partner.6" /></dd></div>

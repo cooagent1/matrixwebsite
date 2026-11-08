@@ -76,17 +76,17 @@ details > summary::-webkit-details-marker { display: none; }
 .consent-in{pointer-events:auto;max-width:720px;width:100%;background:#fff;color:#3A3A3A;border:1px solid rgba(36,36,36,.12);border-radius:20px;padding:20px 22px;box-shadow:0 20px 60px rgba(0,0,0,.18);font-size:15px;line-height:1.55}
 .consent-t{margin:0 0 6px;font-weight:700;color:#242424;font-size:17px}
 .consent-p{margin:0}
-.consent-p .link,.consent-in a{color:#0077A3;text-decoration:underline}
+.consent-p .link,.consent-in a{color:#242424;text-decoration:underline;text-underline-offset:4px}
 .consent-opts{display:grid;gap:10px;margin:14px 0 0}
 .consent-opts label{display:flex;gap:10px;align-items:flex-start}
-.consent-opts input{margin-top:5px;accent-color:#00ABE5}
+.consent-opts input{margin-top:5px;accent-color:#242424}
 .consent-opts b{color:#242424;margin-right:6px}
 .consent-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
 .consent-b{flex:1 1 160px;height:46px;border-radius:999px;border:1px solid #242424;background:#fff;color:#242424;font-weight:600;font-size:15px;cursor:pointer}
 .consent-b:hover{background:#F4F4F4}
-.consent-b:focus-visible{outline:2px solid #00ABE5;outline-offset:2px}
+.consent-b:focus-visible{outline:2px solid #0077A3;outline-offset:2px}
 .consent-link{background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer}
-.consent-link:hover{color:#0077A3}
+.consent-link:hover{color:#5A5A5A}
 html.mp-has-consent .consent[data-initial]{display:none}
 
 /* Platzhalter für Texte, die Matrix noch liefert (src/components/T.tsx).

@@ -48,7 +48,7 @@ export function ScenesCarousel() {
                       <div className="phone-list">
                         <span>2× Kürbissuppe <b>15,80</b></span><span>3× Schnitzel <b>56,70</b></span><span>1× Risotto <b>17,90</b></span><span>4× Wasser 0,75 <b>22,00</b></span><span>2× Riesling 0,2 <b>13,80</b></span>
                       </div>
-                      <div className="phone-btns"><span style={{ background: "#00ABE5" }}>Runde senden</span><span style={{ background: "#fff" }}>Tap to Pay</span></div>
+                      <div className="phone-btns"><span style={{ background: "#BDBDBD" }}>Runde senden</span><span style={{ background: "#fff" }}>Tap to Pay</span></div>
                     </div>
                   </div>
                 </div>
