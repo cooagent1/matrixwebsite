@@ -1234,3 +1234,10 @@ html[data-motion] .lp .ue-line li[data-reveal]:not(.is-in)::after{transform:scal
   .lp .bs-scard.hi:hover{box-shadow:0 40px 80px rgba(36,36,36,0.3)}
   .lp .b-btn:hover svg,.lp .sub-btns .btn:hover svg{transform:none}
 }
+
+/* Menü ganz oben: Abstand zur Hero-Kante (Hero-Rand + Luft), beim Scrollen zurück auf 16 px */
+.lp:has(.b-hero) .b-hdr{top:40px;transition:top var(--t-base) var(--ease)}
+.mp-scrolled .lp:has(.b-hero) .b-hdr{top:16px}
+@media (min-width:721px) and (max-width:1024px){.lp:has(.b-hero) .b-hdr{top:32px}}
+@media (max-width:720px){.lp:has(.b-hero) .b-hdr{top:24px}.mp-scrolled .lp:has(.b-hero) .b-hdr{top:12px}}
+@media (prefers-reduced-motion:reduce){.lp:has(.b-hero) .b-hdr{transition:none}}
