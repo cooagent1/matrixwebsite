@@ -6,8 +6,9 @@ import { useMemo, useState, type ReactNode } from "react";
 // /schnittstellen (12.11.): Verzeichnis in fünf Bereichen statt zwölf Karten, mit Suche und NXT-Stand je Anbindung.
 // Die Anbindungen stehen hier. Der catgrid-Block in pages.json wird auf dieser Seite nicht mehr gerendert.
 
-type Nxt = "live" | "wip" | undefined;
-type Item = [name: string, nxt?: Nxt];
+// Produkte je Anbindung: ohne Angabe Matrix POS. "nxt" = auf NXT im Betrieb, "nxt-wip" = für NXT in Arbeit, "pay" = arbeitet mit Matrix PAY.
+type Tag = "pos" | "nxt" | "nxt-wip" | "pay";
+type Item = [name: string, tags?: Tag[]];
 type Group = { title: string; items: Item[] };
 type Cluster = { id: string; nr: string; name: string; groups: Group[] };
 
@@ -15,7 +16,7 @@ const CLUSTERS: Cluster[] = [
   {
     id: "gast", nr: "01", name: "Gast",
     groups: [
-      { title: "Reservierung und Self-Ordering", items: [["RESERViSiON", "wip"], ["Flixorder"], ["servier.bar"]] },
+      { title: "Reservierung und Self-Ordering", items: [["RESERViSiON", ["pos", "nxt-wip"]], ["Flixorder"], ["servier.bar"]] },
       { title: "Lieferplattformen", items: [["DeliverBee"], ["Lieferando"], ["Wolt"]] },
       { title: "Golf und Freizeitpark", items: [["PC Caddie"], ["Convious"]] },
     ],
@@ -24,6 +25,7 @@ const CLUSTERS: Cluster[] = [
     id: "service", nr: "02", name: "Service",
     groups: [
       { title: "Hardware", items: [["Orderman"], ["Epson (Drucker)"], ["Star (Drucker)"], ["Mettler Toledo (Waagen)"]] },
+      { title: "Küche", items: [["Küchendisplay", ["nxt-wip"]]] },
       { title: "Schank und Kaffee", items: [["Schankanlagen"], ["Kaffeemaschinen"]] },
       { title: "Bankett", items: [["Bp Event (ehemals BANKETTprofi)"]] },
     ],
@@ -31,7 +33,8 @@ const CLUSTERS: Cluster[] = [
   {
     id: "bezahlen", nr: "03", name: "Bezahlen",
     groups: [
-      { title: "Payment", items: [["Adyen (Matrix PAY)", "live"], ["OPI"], ["Nexo"]] },
+      { title: "Payment", items: [["Adyen (Matrix PAY)", ["pos", "nxt", "pay"]], ["OPI"], ["Nexo"]] },
+      { title: "Kassen", items: [["Matrix POS", ["pay"]], ["Matrix NXT", ["pay"]], ["Fremdkassen", ["pay"]]] },
       { title: "Gutscheine und Karten", items: [["Matrix Gutscheinverwaltung"], ["Matrix Wallet"]] },
       { title: "Bargeld", items: [["Cashlogy (Cash-Management)"]] },
     ],
@@ -41,28 +44,37 @@ const CLUSTERS: Cluster[] = [
     groups: [
       {
         title: "Hotelsoftware",
-        items: [["Oracle Opera (OHIP)"], ["protel SPE/MPE", "wip"], ["protel AIR", "wip"], ["ASA Hotel", "wip"], ["Guestline"], ["Generische Hotelschnittstelle"]],
+        items: [["Oracle Opera (OHIP)"], ["protel SPE/MPE", ["pos", "nxt-wip"]], ["protel AIR", ["pos", "nxt-wip"]], ["ASA Hotel", ["pos", "nxt-wip"]], ["Guestline"], ["Generische Hotelschnittstelle"]],
       },
+      { title: "Zahlung im Hotel", items: [["Hotelsoftware über die Kasse", ["pay"]], ["Front Office und Online-Buchungen über Channelmanager oder Website", ["pay"]]] },
     ],
   },
   {
     id: "buero", nr: "05", name: "Büro",
     groups: [
       { title: "Buchhaltung", items: [["DATEV"], ["Addison"], ["CONGA Kassenbuch mit DATEV-Modul"]] },
-      { title: "Fiskal", items: [["Fiskaly (Cloud-TSE)", "live"], ["ELSTER-Kassenmeldung"]] },
+      { title: "Fiskal", items: [["Fiskaly (Cloud-TSE)", ["pos", "nxt"]], ["ELSTER-Kassenmeldung"]] },
       { title: "Warenwirtschaft", items: [["KOST"], ["FutureLog"], ["Generische Schnittstelle"]] },
       { title: "Personal", items: [["Matrix CONGA"], ["Gastromatic"]] },
+      { title: "Datenübernahme", items: [["Datenübernahme aus Matrix Classic", ["nxt"]]] },
     ],
   },
 ];
 
-const NXT_HEUTE = ["Adyen (Matrix PAY)", "Fiskaly (Cloud-TSE)", "Datenübernahme aus Matrix Classic"];
-const NXT_ARBEIT = ["protel", "ASA Hotel", "Online-Tischreservierung (eigene Lösung, RESERViSiON)", "Küchendisplay"];
-const PAY = ["Matrix POS", "Matrix NXT", "Fremdkassen", "Hotelsoftware über die Kasse", "Front Office und Online-Buchungen über Channelmanager oder Website"];
+const PRODUKTE = [
+  { id: "alle", name: "Alle", href: "", more: "" },
+  { id: "pos", name: "POS", href: "/kassensysteme", more: "Mehr zu Matrix POS" },
+  { id: "nxt", name: "NXT", href: "/kassensysteme/nxt", more: "Mehr zu Matrix NXT" },
+  { id: "pay", name: "PAY", href: "/pay", more: "Mehr zu Matrix PAY" },
+];
+const TAG_LABEL: Record<Tag, string> = { pos: "Matrix POS", nxt: "Matrix NXT", "nxt-wip": "Matrix NXT, in Arbeit", pay: "Matrix PAY" };
+const tagsOf = (it: Item): Tag[] => it[1] ?? ["pos"];
+const hasProdukt = (it: Item, p: string) => p === "alle" || tagsOf(it).some((t) => t === p || (p === "nxt" && t === "nxt-wip"));
 
 export function Schnittstellen({ heading, lead, texts }: { heading: ReactNode; lead: ReactNode; texts: Record<string, ReactNode> }) {
   const [q, setQ] = useState("");
   const [sel, setSel] = useState("alle");
+  const [prod, setProd] = useState("alle");
   const needle = q.trim().toLowerCase();
 
   const shown = useMemo(
@@ -73,12 +85,12 @@ export function Schnittstellen({ heading, lead, texts }: { heading: ReactNode; l
           groups: c.groups
             .map((g) => ({
               ...g,
-              items: g.items.filter(([n]) => !needle || n.toLowerCase().includes(needle) || g.title.toLowerCase().includes(needle)),
+              items: g.items.filter((it) => hasProdukt(it, prod) && (!needle || it[0].toLowerCase().includes(needle) || g.title.toLowerCase().includes(needle))),
             }))
             .filter((g) => g.items.length),
         }))
         .filter((c) => c.groups.length),
-    [needle, sel],
+    [needle, sel, prod],
   );
   const count = shown.reduce((n, c) => n + c.groups.reduce((m, g) => m + g.items.length, 0), 0);
 
@@ -110,9 +122,11 @@ export function Schnittstellen({ heading, lead, texts }: { heading: ReactNode; l
                   <button key={c.id} type="button" className={`ss-pill ${sel === c.id ? "on" : ""}`} aria-pressed={sel === c.id} onClick={() => setSel(c.id)}>{c.name}</button>
                 ))}
               </div>
-              <div className="ss-legend">
-                <span><i className="ss-tag live">NXT</i>auch auf Matrix NXT</span>
-                <span><i className="ss-tag wip">NXT</i>für NXT in Arbeit</span>
+              <div className="ss-pills ss-prod" role="group" aria-label="Produkt">
+                {PRODUKTE.map((p) => (
+                  <button key={p.id} type="button" className={`ss-pill ${prod === p.id ? "on" : ""}`} aria-pressed={prod === p.id} onClick={() => setProd(p.id)}>{p.id !== "alle" && <i className={`ss-dot ${p.id}`} aria-hidden="true" />}{p.name}</button>
+                ))}
+                <span className="ss-hint"><i className="ss-dot nxt-wip" aria-hidden="true" />in Arbeit</span>
               </div>
             </div>
           </div>
@@ -133,10 +147,10 @@ export function Schnittstellen({ heading, lead, texts }: { heading: ReactNode; l
                   <div key={g.title} className="ss-group">
                     <h3 className="b-m">{g.title}</h3>
                     <ul>
-                      {g.items.map(([n, nxt]) => (
-                        <li key={n} className="ss-chip">
-                          {n}
-                          {nxt && <i className={`ss-tag ${nxt}`} title={nxt === "live" ? "auch auf Matrix NXT" : "für Matrix NXT in Arbeit"}>NXT</i>}
+                      {g.items.map((it) => (
+                        <li key={it[0]} className="ss-chip">
+                          <span>{it[0]}</span>
+                          <span className="ss-dots">{tagsOf(it).map((t) => (<i key={t} className={`ss-dot ${t}`} role="img" aria-label={TAG_LABEL[t]} title={TAG_LABEL[t]} />))}</span>
                         </li>
                       ))}
                     </ul>
@@ -151,34 +165,12 @@ export function Schnittstellen({ heading, lead, texts }: { heading: ReactNode; l
               <Link href="/demo?thema=schnittstelle" className="ss-empty-btn">Schnittstelle anfragen</Link>
             </div>
           )}
+          {prod !== "alle" && shown.length > 0 && (
+            <div className="ss-prod-more">
+              <Link href={PRODUKTE.find((p) => p.id === prod)!.href}>{PRODUKTE.find((p) => p.id === prod)!.more}</Link>
+            </div>
+          )}
           <div className="ss-end" />
-        </div>
-      </section>
-
-      <section id="stand" className="ss-stand">
-        <div className="b-wrap">
-          <div className="ss-stand-h">
-            <h2 className="b-d sub-h2">Stand je Produkt.</h2>
-            <p>Die Liste oben gilt für Matrix POS. Für NXT und PAY steht hier, was heute läuft.</p>
-          </div>
-          <div className="ss-cards">
-            <div className="ss-card dark">
-              <h3 className="b-d">Matrix NXT</h3>
-              <div className="ss-row"><span className="b-m">Heute</span><ul>{NXT_HEUTE.map((t) => (<li key={t}>{t}</li>))}</ul></div>
-              <div className="ss-row wip"><span className="b-m">In Arbeit</span><ul>{NXT_ARBEIT.map((t) => (<li key={t}>{t}</li>))}</ul></div>
-              <Link href="/kassensysteme/nxt" className="ss-more">Mehr zu NXT</Link>
-            </div>
-            <div className="ss-card">
-              <h3 className="b-d">Matrix PAY</h3>
-              <div className="ss-row"><span className="b-m">Arbeitet mit</span><ul>{PAY.map((t) => (<li key={t}>{t}</li>))}</ul></div>
-              <Link href="/pay" className="ss-more">Mehr zu PAY</Link>
-            </div>
-            <div className="ss-card">
-              <h3 className="b-d">Generische Schnittstelle</h3>
-              <p>Für Hotelsoftware und Warenwirtschaft gibt es je eine generische Schnittstelle. Schankanlagen und Kaffeemaschinen binden wir darüber ebenfalls an.</p>
-              <Link href="#formular" className="ss-more">System nennen</Link>
-            </div>
-          </div>
         </div>
       </section>
     </>
