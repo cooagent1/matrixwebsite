@@ -35,7 +35,4 @@ export const QUOTES: Quote[] = [
   },
 ];
 
-// Kasse und Gesetz: Texte in texte.json (start.gesetzN.titel / .text)
-export const LAW = [1, 2, 3, 4].map((i) => ({ n: String(i).padStart(2, "0"), t: `start.gesetz${i}.titel`, d: `start.gesetz${i}.text` }));
-
 // FAQ der Startseite: seit 07.11. in Supabase (faqs, startseite = true), siehe src/lib/faq.ts.

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { T } from "../T";
 
 // Statisch seit 06.11. (Robert: Seite zu lang): Kopf oben, drei Szenen nebeneinander, kein Scroll-Karussell.
@@ -5,14 +6,13 @@ export function ScenesCarousel() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const cls = (_k: number) => "";
   return (
-    <section id="szenen" className="b-scenes">
+    <section id="szenen" className="b-scenes" aria-labelledby="szenen-h">
       <div className="b-scenes-in">
         <div className="b-aurora" aria-hidden="true" />
         <div className="b-grain" aria-hidden="true" />
         <div className="b-wrap b-story">
           <div className="b-sticky">
-            <span className="b-m b-kicker"><T k="start.szenen.kicker" /></span>
-            <h2 className="b-d b-h2"><T k="start.szenen.h2" /></h2>
+            <h2 className="b-d b-h2" id="szenen-h"><T k="start.szenen.h2" /></h2>
             <p className="b-lead"><T k="start.szenen.lead" /></p>
           </div>
           <div className="b-scene-col">
@@ -71,6 +71,7 @@ export function ScenesCarousel() {
                 <p><T k="start.szene3.text" /></p>
               </div>
           </div>
+          <p className="b-scenes-link"><Link href="/kassensysteme/nxt" className="link"><T k="start.szenen.link" /> →</Link></p>
         </div>
       </div>
     </section>

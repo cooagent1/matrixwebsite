@@ -74,12 +74,12 @@ export const WEBSITE = {
 };
 
 const PRODUCTS: Record<string, { name: string; os: string; features: string[] }> = {
-  nxt: {
+  "kassensysteme/nxt": {
     name: "Matrix NXT",
     os: "Web, Android",
     features: ["Tischplan und Gänge", "Android-Handgerät", "Kartenzahlung und Tap to Pay mit Matrix PAY", "Cloud-TSE von Fiskaly", "Tagesabschluss und DSFinV-K-Export", "Automatische Updates"],
   },
-  pos: {
+  "kassensysteme/pos": {
     name: "Matrix POS",
     os: "Windows",
     features: ["Stationäre Kasse", "Mobil kassieren mit Matrix NEO", "Dienstplan und Zeiterfassung mit Matrix CONGA", "Anbindung an Hotelsoftware, Warenwirtschaft und Buchhaltung"],
@@ -100,6 +100,25 @@ const plain = (t: string) =>
     .replace(/\s+/g, " ")
     .trim();
 
+/** SoftwareApplication für Matrix NXT, POS und PAY (Slug der Produktseite). Keine Preise, keine Bewertungen. */
+export function productJsonLd(slug: string, description?: string): object | null {
+  const p = PRODUCTS[slug];
+  if (!p) return null;
+  return {
+    "@type": "SoftwareApplication",
+    name: p.name,
+    applicationCategory: "BusinessApplication",
+    applicationSubCategory: "Kassensystem für die Gastronomie",
+    operatingSystem: p.os,
+    description,
+    url: abs(`/${slug}`),
+    featureList: p.features,
+    inLanguage: "de-DE",
+    publisher: { "@id": ORG_ID },
+    provider: { "@id": ORG_ID },
+  };
+}
+
 // Strukturierte Daten je Unterseite: Breadcrumb, Produkt (NXT, POS, PAY), FAQ aus den FAQ-Blöcken der Seite.
 export function pageJsonLd(page: Page, title: (slug: string) => string | undefined): object[] {
   const out: object[] = [];
@@ -115,21 +134,9 @@ export function pageJsonLd(page: Page, title: (slug: string) => string | undefin
     itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, item: it.item })),
   });
 
-  const product = PRODUCTS[page.slug];
-  if (product)
-    out.push({
-      "@type": "SoftwareApplication",
-      name: product.name,
-      applicationCategory: "BusinessApplication",
-      applicationSubCategory: "Kassensystem für die Gastronomie",
-      operatingSystem: product.os,
-      description: page.description ?? undefined,
-      url: abs(`/${page.slug}`),
-      featureList: product.features,
-      inLanguage: "de-DE",
-      publisher: { "@id": ORG_ID },
-      provider: { "@id": ORG_ID },
-    });
+  const product = productJsonLd(page.slug, page.description ?? undefined);
+  if (product) out.push(product);
+
 
   const faqs = page.sections.flatMap((s) =>
     s.blocks.flatMap((b) => (b.type === "faq" ? b.items : b.type === "faqgroups" ? b.groups.flatMap((g) => g.items) : [])),

@@ -45,7 +45,7 @@ export function LpFooter() {
           <div className="b-ftr-cols">
             {FOOTER.map((c) => (
               <nav key={c.title} className="b-ftr-col" aria-label={c.title}>
-                <h4>{c.title}</h4>
+                <h2 className="b-ftr-h">{c.title}</h2>
                 <ul>
                   {c.items.map((i) => (
                     <li key={i.href}>
@@ -60,7 +60,7 @@ export function LpFooter() {
               </nav>
             ))}
             <div className="b-ftr-col">
-              <h4>Kontakt</h4>
+              <h2 className="b-ftr-h">Kontakt</h2>
               <address className="b-ftr-adr">
                 <span>Matrix POS GmbH<br />Eckenerstraße 2<br />30179 Hannover</span>
                 <span><a href={`tel:${PHONE.replace(/[^\d+]/g, "")}`}>{PHONE}</a><br /><a href="mailto:sales@matrixpos.de">sales@matrixpos.de</a></span>

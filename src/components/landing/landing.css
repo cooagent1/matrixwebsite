@@ -1234,3 +1234,53 @@ html[data-motion] .lp .ue-line li[data-reveal]:not(.is-in)::after{transform:scal
   .lp .bs-scard.hi:hover{box-shadow:0 40px 80px rgba(36,36,36,0.3)}
   .lp .b-btn:hover svg,.lp .sub-btns .btn:hover svg{transform:none}
 }
+
+/* ── Startseite nach Konzept-Doc 12.11.2026 (sieben Sektionen) ── */
+/* 1 Hero: H1 ist die Suchbegriff-Zeile, der Claim bleibt die große Schrift */
+.lp .b-hero-zeile{margin:0;font-size:15px;line-height:1.4;letter-spacing:.02em;color:var(--lp-ink);opacity:.9;max-width:640px}
+/* 2 Beweisband: Zahlen und Logos in einem Block, Logos statisch */
+.lp .b-beweis{padding:80px 0 64px}
+.lp .b-beweis-h{margin:0 0 8px;font-size:clamp(32px,4.2vw,56px);line-height:1.05;font-weight:800;text-wrap:balance}
+.lp .b-beweis .b-zahlen{padding:0}
+.lp .b-beweis .b-num span strong{color:var(--lp-ink);font-weight:600}
+.lp .b-beweis-logos-l{margin:40px 0 20px;font-size:13px;color:var(--lp-mute)}
+.lp .b-logos-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:32px;align-items:center;justify-items:center}
+.lp .b-logos-row img{height:36px;width:auto;max-width:100%;filter:brightness(0);opacity:.55;display:block}
+.lp .b-logos-row img.tall{height:46px}.lp .b-logos-row img.mid{height:40px}
+@media (max-width:720px){.lp .b-beweis{padding:56px 0 48px}.lp .b-logos-row{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 16px}.lp .b-logos-row img{height:28px}.lp .b-logos-row img.tall{height:36px}.lp .b-logos-row img.mid{height:32px}}
+/* 3 Szenen: Link zur NXT-Seite unter den drei Szenen */
+.lp .b-scenes-link{grid-column:1/-1;margin:8px 0 0;font-size:16px}
+/* 4 Branchen: Kopf über den Fotospalten, Beleg und Link in der offenen Spalte */
+.lp .b-branchen-head{padding-top:96px;padding-bottom:32px}
+.lp .b-col-beleg{margin:0;font-size:14px;color:#8C8C8C}
+.lp .b-col-link{font-size:15px;margin-bottom:6px}
+@media (max-width:720px){.lp .b-branchen-head{padding-top:64px;padding-bottom:20px}}
+/* 5 Herkunft: Zeitleiste in einer Zeile, „Alles aus einer Hand“ und Bestandskunden nebeneinander */
+.lp .b-herkunft-p{max-width:720px}
+.lp .b-zeit{list-style:none;display:flex;margin:40px 0 48px;padding:0;border-top:1px solid var(--lp-line)}
+.lp .b-zeit li{flex:1;display:flex;flex-direction:column;gap:6px;padding:24px 24px 0 0;position:relative}
+.lp .b-zeit li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--lp-ink)}
+.lp .b-zeit b{font-size:28px;font-weight:800;line-height:1}
+.lp .b-zeit span{font-size:14px;line-height:1.4;color:var(--lp-mute);max-width:260px}
+.lp .b-hand-row{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.lp .b-herkunft-h3{margin:0 0 8px;font-size:28px;line-height:1.1;font-weight:800}
+.lp .b-bestand{border-left:1px solid var(--lp-line);padding-left:32px}
+.lp .b-bestand-links{display:flex;flex-direction:column;gap:8px}
+@media (max-width:720px){.lp .b-zeit{flex-direction:column;border-top:0;border-left:1px solid var(--lp-line);margin:32px 0 40px}.lp .b-zeit li{padding:0 0 24px 24px}.lp .b-zeit li::before{top:6px;left:-5px}.lp .b-hand-row{grid-template-columns:1fr;gap:32px}.lp .b-bestand{border-left:0;padding-left:0;border-top:1px solid var(--lp-line);padding-top:24px}}
+/* 6 Kundenstimme: ein Zitat, groß */
+.lp .b-stimme-fig{margin:0;max-width:1000px}
+.lp .b-stimme-fig blockquote{margin:0;font-size:clamp(24px,3vw,40px);line-height:1.2;font-weight:700;letter-spacing:-0.01em;text-wrap:balance;color:var(--lp-ink)}
+.lp .b-stimme-fig figcaption{margin-top:20px;font-size:15px;color:var(--lp-mute)}
+.lp .b-stimme-fig figcaption b{color:var(--lp-ink);font-weight:600}
+/* 7 Fragen: Frage als h3 in summary */
+.lp .b-faq-q{margin:0;font:inherit;color:inherit}
+.lp .b-demo-alt{margin:4px 0 0;font-size:14px;opacity:.85}
+/* Handy: fester „Demo buchen“-Button, solange Hero-Button weg und #fragen noch nicht erreicht */
+.lp .b-sticky-cta{display:none}
+@media (max-width:720px){.lp .b-sticky-cta{display:block;position:fixed;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;transform:translateY(160%);transition:transform var(--t-base) var(--ease)}.lp .b-sticky-cta.on{transform:none}.lp .b-sticky-cta .b-btn{width:100%;box-shadow:0 8px 24px rgba(0,0,0,.18)}}
+/* sieben statt sechs Spalten: offene Spalte breiter, Link hell auf dunklem Foto */
+.lp .b-col.on{flex:6.5 1 0}
+.lp .b-col-link,.lp .b-col-link:hover{color:#fff}
+@media (max-width:720px){.lp .b-col.on{height:460px}}
+/* GOP-Logo ist ein rotes Quadrat mit weißer Schrift: Graustufen statt Schwarz, sonst nur ein Block */
+.lp .b-logos-row img[src*="/gop."]{filter:grayscale(1);opacity:.6;border-radius:6px}
