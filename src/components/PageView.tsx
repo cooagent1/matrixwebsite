@@ -8,6 +8,7 @@ import type { TeamMember } from "@/lib/cms";
 import { Inline } from "./Inline";
 import { QUOTES } from "./landing/startseite-data";
 import { NxtRad } from "./landing/NxtRad";
+import { ProduktFamilie } from "./landing/ProduktFamilie";
 import { EMAIL, PHONE } from "@/lib/seo";
 
 const SHOW_PLACEHOLDERS = process.env.VERCEL_ENV !== "production";
@@ -208,6 +209,8 @@ function Blocks({ blocks: rawBlocks, sectionName }: { blocks: Block[]; sectionNa
             ) : null;
           case "nxtrad":
             return <NxtRad key={i} />;
+          case "familie":
+            return <ProduktFamilie key={i} />;
           case "form":
             return (
               <div key={i} id="formular" className="sub-form"><ContactForm /></div>
@@ -409,6 +412,7 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
   const hero = /^hero$/i.test(s.name);
   // Rad (Matrix NXT): eigene dunkle Sektion über die volle Breite, ohne Überschrift aus dem Inhalt.
   if (s.blocks.some((b) => b.type === "nxtrad")) return <NxtRad id={s.id} />;
+  if (s.blocks.some((b) => b.type === "familie")) return <ProduktFamilie id={s.id} />;
   // Team aus dem CMS ersetzt den Textblock im Abschnitt "Management" (/ueber-uns).
   if (/^management$/i.test(s.name) && team?.length)
     return (

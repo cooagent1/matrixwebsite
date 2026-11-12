@@ -377,6 +377,17 @@
         ]
       },
       {
+        "id": "produkte",
+        "name": "Produkte",
+        "eyebrow": "Produkte",
+        "heading": "Eine Familie. Drei Systeme.",
+        "blocks": [
+          {
+            "type": "familie"
+          }
+        ]
+      },
+      {
         "id": "die-systeme",
         "name": "Die Systeme",
         "eyebrow": null,
