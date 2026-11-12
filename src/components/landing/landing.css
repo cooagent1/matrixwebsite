@@ -1288,3 +1288,9 @@ html[data-motion] .lp .ue-line li[data-reveal]:not(.is-in)::after{transform:scal
 .lp .b-col-body{grid-template-columns:minmax(0,1fr)}
 .lp .b-col-feats{list-style:none;margin:0 0 4px;padding:0;display:flex;flex-direction:column;gap:4px;font-size:15px;color:rgba(255,255,255,.85)}
 .lp .b-col-feats li::before{content:"·";display:inline-block;width:14px;opacity:.6}
+/* Menü ganz oben: Abstand zur Hero-Kante (Hero-Rand + Luft), beim Scrollen zurück auf 16 px */
+.lp:has(.b-hero) .b-hdr{top:40px;transition:top var(--t-base) var(--ease)}
+.mp-scrolled .lp:has(.b-hero) .b-hdr{top:16px}
+@media (min-width:721px) and (max-width:1024px){.lp:has(.b-hero) .b-hdr{top:32px}}
+@media (max-width:720px){.lp:has(.b-hero) .b-hdr{top:24px}.mp-scrolled .lp:has(.b-hero) .b-hdr{top:12px}}
+@media (prefers-reduced-motion:reduce){.lp:has(.b-hero) .b-hdr{transition:none}}
