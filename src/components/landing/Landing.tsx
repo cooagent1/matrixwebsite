@@ -5,6 +5,7 @@ import { LpFooter, LpHeader } from "./Chrome";
 import { BranchenTabs } from "./BranchenTabs";
 import { ScenesCarousel } from "./ScenesCarousel";
 import { StickyCta } from "./StickyCta";
+import { Zeitstrahl } from "./Zeitstrahl";
 import { Inline } from "../Inline";
 import { T, TEXTE, isPlaceholder } from "../T";
 
@@ -94,15 +95,19 @@ export function Landing() {
         {/* 5 Herkunft */}
         <section className="sub-sec b-herkunft" aria-labelledby="herkunft-h">
           <div className="b-wrap">
-            <h2 className="b-d sub-h2" id="herkunft-h"><T k="start.herkunft.h2" /></h2>
-            <p className="sub-p b-herkunft-p"><T k="start.herkunft.text" /></p>
-            {ZEIT.length > 0 && (
-              <ol className="b-zeit">
-                {ZEIT.map((n) => (
-                  <li key={n}><b className="b-d"><T k={`start.zeit${n}.jahr`} /></b><span><T k={`start.zeit${n}.text`} /></span></li>
-                ))}
-              </ol>
-            )}
+            <div className="b-herkunft-grid">
+              <div className="b-herkunft-kopf">
+                <h2 className="b-d sub-h2" id="herkunft-h"><T k="start.herkunft.h2" /></h2>
+                <p className="sub-p b-herkunft-p"><T k="start.herkunft.text" /></p>
+              </div>
+              {ZEIT.length > 0 && (
+                <Zeitstrahl>
+                  {ZEIT.map((n) => (
+                    <li key={n}><b className="b-d"><T k={`start.zeit${n}.jahr`} /></b><span><T k={`start.zeit${n}.text`} /></span></li>
+                  ))}
+                </Zeitstrahl>
+              )}
+            </div>
             <div className="b-hand-row">
               <div>
                 <h3 className="b-d b-herkunft-h3"><T k="start.herkunft.h3" /></h3>
