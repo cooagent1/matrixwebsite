@@ -8,7 +8,7 @@ import type { TeamMember } from "@/lib/cms";
 import { Inline } from "./Inline";
 import { QUOTES } from "./landing/startseite-data";
 import { NxtRad } from "./landing/NxtRad";
-import { ProduktFamilie } from "./landing/ProduktFamilie";
+import { ProduktFamilie, ProduktKarten } from "./landing/ProduktFamilie";
 import { EMAIL, PHONE } from "@/lib/seo";
 
 const SHOW_PLACEHOLDERS = process.env.VERCEL_ENV !== "production";
@@ -439,6 +439,20 @@ function SectionView({ s, index, isFirst, team }: { s: Section; index: number; i
           <figure className="sub-hero-photo">
             <Image src={s.image.src} alt={s.image.alt} fill priority sizes="(min-width: 1024px) 50vw, 100vw" style={{ objectFit: "cover", objectPosition: s.image.position ?? "50% 50%" }} />
           </figure>
+        </div>
+      </section>
+    );
+  if (hero && s.heroCard?.some((b) => b.type === "familie"))
+    // Hero mit Produktkarten (/kassensysteme): Überschrift und Text oben, darunter NXT, POS und PAY als Karten.
+    return (
+      <section id={s.id} className="sub-hero sub-hero-pf">
+        <div className="b-wrap">
+          <div className="sub-hero-in">
+            {s.eyebrow && <span className="b-m b-kicker"><Inline text={s.eyebrow} /></span>}
+            {s.heading && (isFirst ? <h1 className="b-d sub-h1"><Inline text={s.heading} /></h1> : <h2 className="b-d sub-h1"><Inline text={s.heading} /></h2>)}
+            <div className="sub-hero-body"><Blocks blocks={s.blocks} sectionName={s.name} /></div>
+          </div>
+          <ProduktKarten />
         </div>
       </section>
     );

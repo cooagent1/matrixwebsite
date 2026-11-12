@@ -360,29 +360,6 @@
         ],
         "heroCard": [
           {
-            "type": "tiles",
-            "items": [
-              {
-                "title": "Matrix NXT",
-                "text": "⟦seite.kassensysteme.2⟧",
-                "href": "/kassensysteme/nxt"
-              },
-              {
-                "title": "Matrix POS",
-                "text": "⟦seite.kassensysteme.3⟧",
-                "href": "/kassensysteme/pos"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "produkte",
-        "name": "Produkte",
-        "eyebrow": "Produkte",
-        "heading": "Eine Familie. Drei Systeme.",
-        "blocks": [
-          {
             "type": "familie"
           }
         ]
