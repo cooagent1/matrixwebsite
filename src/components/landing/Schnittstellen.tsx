@@ -6,8 +6,8 @@ import { useMemo, useState, type ReactNode } from "react";
 // /schnittstellen (12.11.): Verzeichnis in fünf Bereichen statt zwölf Karten, mit Suche und NXT-Stand je Anbindung.
 // Die Anbindungen stehen hier. Der catgrid-Block in pages.json wird auf dieser Seite nicht mehr gerendert.
 
-// Produkte je Anbindung: ohne Angabe Matrix POS. "nxt" = auf NXT im Betrieb, "nxt-wip" = für NXT in Arbeit, "pay" = arbeitet mit Matrix PAY.
-type Tag = "pos" | "nxt" | "nxt-wip" | "pay";
+// Produkte je Anbindung: ohne Angabe Matrix POS. "nxt" = auf Matrix NXT (12.11.: „in Arbeit“ gibt es nicht als Stufe, gilt als vorhanden), "pay" = arbeitet mit Matrix PAY.
+type Tag = "pos" | "nxt" | "pay";
 type Item = [name: string, tags?: Tag[]];
 type Group = { title: string; items: Item[] };
 type Cluster = { id: string; nr: string; name: string; groups: Group[] };
@@ -16,7 +16,7 @@ const CLUSTERS: Cluster[] = [
   {
     id: "gast", nr: "01", name: "Gast",
     groups: [
-      { title: "Reservierung und Self-Ordering", items: [["RESERViSiON", ["pos", "nxt-wip"]], ["Flixorder"], ["servier.bar"]] },
+      { title: "Reservierung und Self-Ordering", items: [["RESERViSiON", ["pos", "nxt"]], ["Flixorder"], ["servier.bar"]] },
       { title: "Lieferplattformen", items: [["DeliverBee"], ["Lieferando"], ["Wolt"]] },
       { title: "Golf und Freizeitpark", items: [["PC Caddie"], ["Convious"]] },
     ],
@@ -25,7 +25,7 @@ const CLUSTERS: Cluster[] = [
     id: "service", nr: "02", name: "Service",
     groups: [
       { title: "Hardware", items: [["Orderman"], ["Epson (Drucker)"], ["Star (Drucker)"], ["Mettler Toledo (Waagen)"]] },
-      { title: "Küche", items: [["Küchendisplay", ["nxt-wip"]]] },
+      { title: "Küche", items: [["Küchendisplay", ["nxt"]]] },
       { title: "Schank und Kaffee", items: [["Schankanlagen"], ["Kaffeemaschinen"]] },
       { title: "Bankett", items: [["Bp Event (ehemals BANKETTprofi)"]] },
     ],
@@ -44,7 +44,7 @@ const CLUSTERS: Cluster[] = [
     groups: [
       {
         title: "Hotelsoftware",
-        items: [["Oracle Opera (OHIP)"], ["protel SPE/MPE", ["pos", "nxt-wip"]], ["protel AIR", ["pos", "nxt-wip"]], ["ASA Hotel", ["pos", "nxt-wip"]], ["Guestline"], ["Generische Hotelschnittstelle"]],
+        items: [["Oracle Opera (OHIP)"], ["protel SPE/MPE", ["pos", "nxt"]], ["protel AIR", ["pos", "nxt"]], ["ASA Hotel", ["pos", "nxt"]], ["Guestline"], ["Generische Hotelschnittstelle"]],
       },
       { title: "Zahlung im Hotel", items: [["Hotelsoftware über die Kasse", ["pay"]], ["Front Office und Online-Buchungen über Channelmanager oder Website", ["pay"]]] },
     ],
@@ -67,9 +67,9 @@ const PRODUKTE = [
   { id: "nxt", name: "NXT", href: "/kassensysteme/nxt", more: "Mehr zu Matrix NXT" },
   { id: "pay", name: "PAY", href: "/pay", more: "Mehr zu Matrix PAY" },
 ];
-const TAG_LABEL: Record<Tag, string> = { pos: "Matrix POS", nxt: "Matrix NXT", "nxt-wip": "Matrix NXT, in Arbeit", pay: "Matrix PAY" };
+const TAG_LABEL: Record<Tag, string> = { pos: "Matrix POS", nxt: "Matrix NXT", pay: "Matrix PAY" };
 const tagsOf = (it: Item): Tag[] => it[1] ?? ["pos"];
-const hasProdukt = (it: Item, p: string) => p === "alle" || tagsOf(it).some((t) => t === p || (p === "nxt" && t === "nxt-wip"));
+const hasProdukt = (it: Item, p: string) => p === "alle" || tagsOf(it).includes(p as Tag);
 
 export function Schnittstellen({ heading, lead, texts }: { heading: ReactNode; lead: ReactNode; texts: Record<string, ReactNode> }) {
   const [q, setQ] = useState("");
@@ -126,7 +126,6 @@ export function Schnittstellen({ heading, lead, texts }: { heading: ReactNode; l
                 {PRODUKTE.map((p) => (
                   <button key={p.id} type="button" className={`ss-pill ${prod === p.id ? "on" : ""}`} aria-pressed={prod === p.id} onClick={() => setProd(p.id)}>{p.id !== "alle" && <i className={`ss-dot ${p.id}`} aria-hidden="true" />}{p.name}</button>
                 ))}
-                <span className="ss-hint"><i className="ss-dot nxt-wip" aria-hidden="true" />in Arbeit</span>
               </div>
             </div>
           </div>

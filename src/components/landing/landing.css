@@ -1399,10 +1399,8 @@ html[data-motion] .lp .ue-line li[data-reveal]:not(.is-in)::after{transform:scal
 .lp .ss-dot{display:inline-block;flex:none;width:10px;height:10px;border-radius:999px;box-sizing:border-box}
 .lp .ss-dot.pos{background:#242424}
 .lp .ss-dot.nxt{background:#00ABE5}
-.lp .ss-dot.nxt-wip{border:2px solid #00ABE5}
 .lp .ss-dot.pay{background:#FFC938}
 .lp .ss-chip:hover .ss-dot.pos{background:#fff}
 .lp .ss-pill{display:inline-flex;align-items:center;gap:8px}
 .lp .ss-pill.on .ss-dot.pos{background:#fff}
 .lp .ss-prod{align-items:center}
-.lp .ss-hint{display:inline-flex;align-items:center;gap:6px;margin-left:8px;font-size:13px;color:var(--lp-mute)}
