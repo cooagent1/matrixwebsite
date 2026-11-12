@@ -3047,12 +3047,12 @@
     "seite": "Startseite",
     "bereich": "5 Herkunft",
     "element": "Zeitleiste 1: Jahr",
-    "status": "offen",
+    "status": "fest",
     "max": 6,
-    "brief": "Jahr der ersten Matrix-Kasse",
-    "text": "",
+    "brief": "Zeitleiste 1: Jahr",
+    "text": "2001",
     "entwurf": "",
-    "hinweis": "Konzept-Doc 12.11."
+    "hinweis": "Zeitstrahl-Vorgabe 12.11."
   },
   "start.zeit1.text": {
     "seite": "Startseite",
@@ -3061,9 +3061,9 @@
     "status": "fest",
     "max": 38,
     "brief": "Zeitleiste 1: Text",
-    "text": "Die erste Matrix-Kasse geht in Betrieb",
+    "text": "Die erste Matrix POS geht in Betrieb",
     "entwurf": "",
-    "hinweis": "Konzept-Doc 12.11."
+    "hinweis": "Zeitstrahl-Vorgabe 12.11."
   },
   "start.zeit2.jahr": {
     "seite": "Startseite",
@@ -3072,9 +3072,9 @@
     "status": "fest",
     "max": 12,
     "brief": "Zeitleiste 2: Jahr",
-    "text": "2025",
+    "text": "2005",
     "entwurf": "",
-    "hinweis": "Konzept-Doc 12.11."
+    "hinweis": "Zeitstrahl-Vorgabe 12.11."
   },
   "start.zeit2.text": {
     "seite": "Startseite",
@@ -3083,31 +3083,31 @@
     "status": "fest",
     "max": 46,
     "brief": "Zeitleiste 2: Text",
-    "text": "Aus dem Kassenbereich wird die Matrix POS GmbH",
+    "text": "Erste Installation im europäischen Ausland",
     "entwurf": "",
-    "hinweis": "Konzept-Doc 12.11."
+    "hinweis": "Zeitstrahl-Vorgabe 12.11."
   },
   "start.zeit3.jahr": {
     "seite": "Startseite",
     "bereich": "5 Herkunft",
     "element": "Zeitleiste 3: Jahr",
-    "status": "offen",
+    "status": "fest",
     "max": 6,
-    "brief": "Startjahr von Matrix NXT",
-    "text": "",
-    "entwurf": "2026",
-    "hinweis": "Konzept-Doc 12.11."
+    "brief": "Zeitleiste 3: Jahr",
+    "text": "2015",
+    "entwurf": "",
+    "hinweis": "Zeitstrahl-Vorgabe 12.11."
   },
   "start.zeit3.text": {
     "seite": "Startseite",
     "bereich": "5 Herkunft",
     "element": "Zeitleiste 3: Text",
     "status": "fest",
-    "max": 30,
+    "max": 42,
     "brief": "Zeitleiste 3: Text",
-    "text": "Matrix NXT, unsere Cloud-Kasse",
+    "text": "Matrix NEO bringt die Kasse aufs Handgerät",
     "entwurf": "",
-    "hinweis": "Konzept-Doc 12.11."
+    "hinweis": "Zeitstrahl-Vorgabe 12.11."
   },
   "start.zeit4.jahr": {
     "seite": "Startseite",
@@ -3116,20 +3116,42 @@
     "status": "fest",
     "max": 12,
     "brief": "Zeitleiste 4: Jahr",
-    "text": "Heute",
+    "text": "2025",
     "entwurf": "",
-    "hinweis": "Konzept-Doc 12.11."
+    "hinweis": "Zeitstrahl-Vorgabe 12.11."
   },
   "start.zeit4.text": {
     "seite": "Startseite",
     "bereich": "5 Herkunft",
     "element": "Zeitleiste 4: Text",
     "status": "fest",
-    "max": 26,
+    "max": 46,
     "brief": "Zeitleiste 4: Text",
-    "text": "Über 10.000 Installationen",
+    "text": "Aus dem Kassenbereich wird die Matrix POS GmbH",
     "entwurf": "",
-    "hinweis": "freigegeben (alte Werte +25 %, Robert 06.11.)"
+    "hinweis": "Zeitstrahl-Vorgabe 12.11."
+  },
+  "start.zeit5.jahr": {
+    "seite": "Startseite",
+    "bereich": "5 Herkunft",
+    "element": "Zeitleiste 5: Jahr",
+    "status": "fest",
+    "max": 12,
+    "brief": "Zeitleiste 5: Jahr",
+    "text": "Heute",
+    "entwurf": "",
+    "hinweis": "Zeitstrahl-Vorgabe 12.11."
+  },
+  "start.zeit5.text": {
+    "seite": "Startseite",
+    "bereich": "5 Herkunft",
+    "element": "Zeitleiste 5: Text",
+    "status": "fest",
+    "max": 55,
+    "brief": "Zeitleiste 5: Text",
+    "text": "Matrix NXT, die Cloud-Kasse. Über 10.000 Installationen",
+    "entwurf": "",
+    "hinweis": "Zeitstrahl-Vorgabe 12.11."
   },
   "start.herkunft.h3": {
     "seite": "Startseite",

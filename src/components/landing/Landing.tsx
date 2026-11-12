@@ -45,7 +45,7 @@ function Zahl({ n }: { n: number }) {
 }
 
 // Zeitleiste: Punkte mit offenem Jahr (Platzhalter) werden nicht ausgeliefert.
-const ZEIT = [1, 2, 3, 4].filter((n) => !isPlaceholder(`start.zeit${n}.jahr`));
+const ZEIT = [1, 2, 3, 4, 5].filter((n) => !isPlaceholder(`start.zeit${n}.jahr`));
 
 export const START_FAQ = [1, 2, 3, 4];
 

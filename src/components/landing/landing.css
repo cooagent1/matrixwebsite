@@ -1261,7 +1261,7 @@ html[data-motion] .lp .ue-line li[data-reveal]:not(.is-in)::after{transform:scal
 .lp .b-zeit li{flex:1;display:flex;flex-direction:column;gap:6px;padding:24px 24px 0 0;position:relative}
 .lp .b-zeit li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--lp-ink)}
 .lp .b-zeit b{font-size:28px;font-weight:800;line-height:1}
-.lp .b-zeit span{font-size:14px;line-height:1.4;color:var(--lp-mute);max-width:260px}
+.lp .b-zeit span{font-size:14px;line-height:1.4;color:var(--lp-mute);max-width:200px}
 .lp .b-hand-row{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .lp .b-herkunft-h3{margin:0 0 8px;font-size:28px;line-height:1.1;font-weight:800}
 .lp .b-bestand{border-left:1px solid var(--lp-line);padding-left:32px}
