@@ -8,10 +8,11 @@ export const NAV: NavGroup[] = [
   {
     label: "Produkte",
     children: [
+      // Reihenfolge nach Positionierung 12.11. (Robert): NXT zuerst, PAY als eigenes Produkt, POS für Sonderfälle
+      { label: "Matrix NXT", href: "/kassensysteme/nxt", hint: "Die Cloud-Kasse für die Gastronomie" },
+      { label: "Matrix PAY", href: "/pay", hint: "Kartenzahlung, auch mit anderen Kassen" },
+      { label: "Matrix POS", href: "/kassensysteme/pos", hint: "Für individuelle Anforderungen" },
       { label: "Kassensysteme", href: "/kassensysteme", hint: "NXT und POS im Vergleich" },
-      { label: "Matrix NXT", href: "/kassensysteme/nxt", hint: "Die Cloud-Kasse für neue Betriebe" },
-      { label: "Matrix POS", href: "/kassensysteme/pos", hint: "Stationäre Kasse, mit NEO und CONGA" },
-      { label: "Matrix PAY", href: "/pay", hint: "Bezahlen: Terminals und Tap to Pay" },
       { label: "Schnittstellen", href: "/schnittstellen" },
     ],
   },
@@ -61,10 +62,10 @@ export const FOOTER: { title: string; items: NavItem[] }[] = [
   {
     title: "Produkte",
     items: [
-      { label: "Kassensysteme", href: "/kassensysteme" },
       { label: "Matrix NXT", href: "/kassensysteme/nxt" },
-      { label: "Matrix POS", href: "/kassensysteme/pos" },
       { label: "Matrix PAY", href: "/pay" },
+      { label: "Matrix POS", href: "/kassensysteme/pos" },
+      { label: "Kassensysteme", href: "/kassensysteme" },
       { label: "Schnittstellen", href: "/schnittstellen" },
       { label: "Branchen", href: "/branchen" },
     ],

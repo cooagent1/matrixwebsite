@@ -322,14 +322,14 @@
   {
     "slug": "kassensysteme",
     "title": "Kassensysteme",
-    "metaTitle": "Matrix POS oder Matrix NXT? Kassensysteme im Vergleich | Matrix POS",
-    "description": "Matrix POS kassiert lokal auch ohne Internet, Matrix NXT läuft ohne Server im Browser und auf Android. Beide signieren über die Cloud-TSE von Fiskaly.",
+    "metaTitle": "Kassensysteme: Matrix NXT und Matrix POS im Vergleich | Matrix POS",
+    "description": "Matrix NXT ist die Cloud-Kasse für die Gastronomie, ohne Server im Betrieb. Matrix POS richten wir für Unternehmen mit eigenen IT- und Sicherheitsvorgaben ein.",
     "sections": [
       {
         "id": "hero",
         "name": "Hero",
         "eyebrow": null,
-        "heading": "NXT oder POS?",
+        "heading": "⟦seite.kassensysteme.0⟧",
         "blocks": [
           {
             "type": "p",
@@ -340,8 +340,8 @@
             "items": [
               {
                 "kind": "button",
-                "label": "Zum Vergleich",
-                "href": "#vergleich"
+                "label": "Demo buchen",
+                "href": "/demo?thema=nxt"
               }
             ],
             "phone": null
@@ -350,9 +350,9 @@
             "type": "buttons",
             "items": [
               {
-                "kind": "button",
-                "label": "Beratung anfragen",
-                "href": "/demo"
+                "kind": "link",
+                "label": "Zum Vergleich",
+                "href": "#vergleich"
               }
             ],
             "phone": null
@@ -368,7 +368,7 @@
         "id": "die-systeme",
         "name": "Die Systeme",
         "eyebrow": null,
-        "heading": "Was die Systeme unterscheidet.",
+        "heading": "Für wen welche Kasse gedacht ist.",
         "blocks": [
           {
             "type": "columns",
@@ -377,9 +377,9 @@
                 "title": "⟦seite.kassensysteme.4⟧",
                 "tone": "blue",
                 "points": [
-                  "Läuft im Browser und auf Android, ohne Server im Haus.",
-                  "Bonierung am Handgerät und Tap to Pay sind enthalten.",
-                  "Updates spielen wir zentral ein."
+                  "Für Restaurant, Bar und Café mit einem oder wenigen Standorten.",
+                  "Läuft im Browser und auf Android, ohne Server und eigene IT im Betrieb.",
+                  "Handgerät, Tap to Pay und Updates sind enthalten."
                 ],
                 "button": {
                   "kind": "button",
@@ -388,12 +388,12 @@
                 }
               },
               {
-                "title": "POS. Stationär.",
+                "title": "POS. Für Sonderfälle.",
                 "tone": "grey",
                 "points": [
-                  "Lokal installiert, kassiert auch ohne Internet.",
-                  "Über 40 Schnittstellen im Einsatz, darunter protel, Oracle Opera und DATEV.",
-                  "Mobil kassieren Sie mit NEO, Dienstplan und Zeiterfassung kommen mit CONGA."
+                  "Für große Unternehmen mit eigenen IT- und Sicherheitsvorgaben.",
+                  "Lokal installiert und individuell angepasst, kassiert auch ohne Internet.",
+                  "Über 40 Schnittstellen, erweiterbar mit NEO und CONGA."
                 ],
                 "button": {
                   "kind": "link",
@@ -420,9 +420,19 @@
             ],
             "rows": [
               [
+                "Gedacht für",
+                "Gastronomie mit Standardabläufen, ein bis wenige Standorte",
+                "Große Unternehmen mit eigenen IT- und Sicherheitsvorgaben"
+              ],
+              [
                 "Installation",
                 "Cloud, Browser oder Android-App",
                 "Lokal im Betrieb"
+              ],
+              [
+                "Anpassung",
+                "Konfigurierbar im Standard",
+                "Individuell nach Ihren Abläufen"
               ],
               [
                 "Kassieren ohne Internet",
@@ -446,14 +456,14 @@
               ],
               [
                 "Schnittstellen",
-                "Adyen, Fiskaly, Datenübernahme aus Classic. Hotelsoftware in Arbeit",
+                "Adyen, Fiskaly, protel, ASA Hotel, RESERViSiON, Küchendisplay, Datenübernahme aus Classic",
                 "Über 40 im Betrieb"
               ]
             ]
           },
           {
             "type": "p",
-            "text": "Küchendisplay, Zeiterfassung, Self-Ordering und Hotelanbindung: [Was NXT heute nicht kann](/kassensysteme/nxt#was-nxt-heute-nicht-kann)."
+            "text": "Offline-Betrieb, Zeiterfassung und Self-Ordering: [Was NXT heute nicht kann](/kassensysteme/nxt#was-nxt-heute-nicht-kann)."
           },
           {
             "type": "p",
@@ -662,7 +672,7 @@
           },
           {
             "type": "p",
-            "text": "In Arbeit sind die Hotelanbindung an protel und ASA Hotel, die Online-Tischreservierung, ein Küchendisplay, der Offline-Betrieb und die Zeiterfassung."
+            "text": "In Arbeit sind der Offline-Betrieb und die Zeiterfassung."
           },
           {
             "type": "p",
@@ -737,14 +747,14 @@
   {
     "slug": "kassensysteme/pos",
     "title": "Matrix POS",
-    "metaTitle": "Matrix POS, die stationäre Kasse für Gastronomie und Hotel | Matrix POS",
-    "description": "Matrix POS ist lokal im Betrieb installiert und kassiert auch ohne Internet. Über 40 Schnittstellen zu Hotelsoftware, Warenwirtschaft und DATEV. Seit 30 Jahren in Restaurants und Hotels.",
+    "metaTitle": "Matrix POS, die individuelle Kasse für große Gastronomie- und Hotelbetriebe | Matrix POS",
+    "description": "Matrix POS wird lokal installiert und individuell angepasst, für Unternehmen mit eigenen IT- und Sicherheitsvorgaben. Kassiert auch ohne Internet, über 40 Schnittstellen.",
     "sections": [
       {
         "id": "hero",
         "name": "Hero",
         "eyebrow": null,
-        "heading": "POS. Die stationäre Kasse.",
+        "heading": "POS. Für individuelle Anforderungen.",
         "blocks": [
           {
             "type": "p",

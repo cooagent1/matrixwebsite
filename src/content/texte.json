@@ -169,11 +169,11 @@
     "bereich": "NXT oder POS?",
     "element": "p · text",
     "status": "offen",
-    "max": 110,
-    "brief": "Kurze Einordnung, worin sich NXT und POS grundsätzlich unterscheiden, als Hinführung zur Vergleichstabelle.",
+    "max": 180,
+    "brief": "Einordnung in zwei Sätzen: NXT ist die Standardkasse für Gastronomie mit Standardabläufen und einem oder wenigen Standorten, ohne eigene IT. POS ist für große Unternehmen mit eigenen IT- und Sicherheitsvorgaben und individuellen Anpassungen.",
     "text": "",
-    "entwurf": "Matrix NXT läuft in der Cloud, Matrix POS ist lokal installiert. Die Tabelle zeigt, was jede Kasse heute kann.",
-    "hinweis": "",
+    "entwurf": "Matrix NXT ist die Kasse für Restaurants, Bars und Cafés mit einem oder wenigen Standorten. Matrix POS richten wir für Unternehmen mit eigenen IT- und Sicherheitsvorgaben ein.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.kassensysteme.2": {
@@ -182,10 +182,10 @@
     "element": "tiles · text",
     "status": "offen",
     "max": 58,
-    "brief": "Kurzbeschreibung von Matrix NXT in einem Satz: Art der Kasse und für welche Betriebe sie gedacht ist.",
+    "brief": "Kurzbeschreibung NXT in einem Satz: Cloud-Kasse für die Gastronomie, ohne Server und eigene IT.",
     "text": "",
-    "entwurf": "Cloud-Kasse im Browser und auf Android. Für neue Betriebe.",
-    "hinweis": "",
+    "entwurf": "Cloud-Kasse für die Gastronomie, ohne eigene IT.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.kassensysteme.3": {
@@ -194,10 +194,10 @@
     "element": "tiles · text",
     "status": "offen",
     "max": 66,
-    "brief": "Kurzbeschreibung von Matrix POS in einem Satz: Art der Kasse und welche Erweiterungen dazugehören.",
+    "brief": "Kurzbeschreibung POS in einem Satz: lokal installiert, individuell angepasst, für große Unternehmen mit eigenen Vorgaben.",
     "text": "",
-    "entwurf": "Lokal installiert, kassiert auch ohne Internet. Mit NEO und CONGA.",
-    "hinweis": "",
+    "entwurf": "Lokal installiert, angepasst an eigene IT-Vorgaben.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.kassensysteme.4": {
@@ -206,10 +206,10 @@
     "element": "columns · title",
     "status": "offen",
     "max": 33,
-    "brief": "Kartentitel für NXT: Produktname und die Zielgruppe oder Kerneigenschaft in wenigen Worten.",
+    "brief": "Kartentitel NXT: Produktname und Zielgruppe in wenigen Worten (Standardkasse für die Gastronomie).",
     "text": "",
-    "entwurf": "NXT. Die Kasse für neue Betriebe.",
-    "hinweis": "",
+    "entwurf": "NXT. Die Kasse für die Gastronomie.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.kassensysteme.5": {
@@ -217,11 +217,11 @@
     "bereich": "Vergleich",
     "element": "p · text",
     "status": "offen",
-    "max": 216,
-    "brief": "Empfehlung, welche Betriebe heute NXT und welche POS wählen sollten, inklusive Stand der Hotelanbindung.",
+    "max": 220,
+    "brief": "Empfehlung: Gastronomie mit Standardabläufen und wenigen Standorten nimmt NXT. POS nur für große Unternehmen mit eigenen Sicherheits- oder IT-Vorgaben oder wenn ohne Netz kassiert werden muss. Kein Hinweis auf das Produktende von POS.",
     "text": "",
-    "entwurf": "Kurz: Wer neu startet, nimmt NXT. POS bleibt für Betriebe, die ohne Netz kassieren müssen oder viele Schnittstellen brauchen. Hotels mit Zimmerbuchung arbeiten heute mit POS, die Hotelanbindung für NXT ist in Arbeit.",
-    "hinweis": "",
+    "entwurf": "Kurz: Restaurants, Bars und Cafés mit einem oder wenigen Standorten nehmen NXT. Matrix POS richten wir für Unternehmen ein, die eigene Sicherheitsvorgaben haben oder ohne Netz kassieren müssen.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.kassensysteme.6": {
@@ -241,11 +241,11 @@
     "bereich": "Die passende Kasse bestimmen.",
     "element": "p · text",
     "status": "offen",
-    "max": 125,
+    "max": 140,
     "brief": "Welche Angaben Interessenten im Formular machen sollen, damit Matrix die passende Kasse empfehlen kann.",
     "text": "",
-    "entwurf": "Nennen Sie uns Ihre Betriebsart und die Systeme, die angebunden werden müssen. Daran entscheidet sich, ob POS oder NXT passt.",
-    "hinweis": "",
+    "entwurf": "Nennen Sie uns Betriebsart, Zahl der Standorte und die Systeme, die angebunden werden müssen. Dann sagen wir Ihnen, ob NXT reicht.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.kassensysteme.nxt.1": {
@@ -253,11 +253,11 @@
     "bereich": "NXT. Die Cloud-Kasse.",
     "element": "p · text",
     "status": "offen",
-    "max": 120,
-    "brief": "Was Matrix NXT ist, auf welchen Geräten es läuft und was es ohne eigenen Server im Betrieb abdeckt.",
+    "max": 150,
+    "brief": "Was Matrix NXT ist und für wen: Standardkasse für Restaurant, Bar und Café mit einem oder wenigen Standorten, ohne Server und eigene IT, läuft im Browser und auf Android.",
     "text": "",
-    "entwurf": "Matrix NXT läuft im Browser und auf Android. Bonierung und Kartenzahlung laufen in einem System, ohne Server im Betrieb.",
-    "hinweis": "",
+    "entwurf": "Matrix NXT ist die Kasse für Restaurants, Bars und Cafés. Sie läuft im Browser und auf Android, ohne Server und ohne eigene IT im Betrieb.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.kassensysteme.nxt.2": {
@@ -349,11 +349,11 @@
     "bereich": "Was NXT heute nicht kann",
     "element": "p · text",
     "status": "offen",
-    "max": 96,
-    "brief": "Für welche Anforderungen Betriebe heute noch Matrix POS statt NXT nutzen sollten.",
+    "max": 110,
+    "brief": "Für welche Anforderungen Betriebe heute noch Matrix POS nutzen: Kassieren ohne Netz, eigene Sicherheits- und IT-Vorgaben großer Unternehmen.",
     "text": "",
-    "entwurf": "Wer offline kassieren oder einen Bonmonitor in der Küche braucht, arbeitet heute mit Matrix POS.",
-    "hinweis": "",
+    "entwurf": "Wer ohne Netz kassieren muss oder eigene Sicherheitsvorgaben hat, arbeitet heute mit Matrix POS.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.kassensysteme.nxt.10": {
@@ -385,11 +385,11 @@
     "bereich": "POS. Die stationäre Kasse.",
     "element": "p · text",
     "status": "offen",
-    "max": 128,
-    "brief": "Was Matrix POS ist, wie es installiert wird, ob es offline kassiert und seit wann und wo es im Einsatz ist.",
+    "max": 160,
+    "brief": "Was Matrix POS ist und für wen: lokal installiert, individuell angepasst, für große Unternehmen mit eigenen IT- und Sicherheitsvorgaben; kassiert ohne Internet; seit 30 Jahren im Einsatz. Kein Hinweis auf das Produktende.",
     "text": "",
-    "entwurf": "Matrix POS ist lokal im Betrieb installiert und kassiert auch ohne Internet. Seit 30 Jahren läuft sie in Restaurants und Hotels.",
-    "hinweis": "",
+    "entwurf": "Matrix POS wird lokal installiert und auf Ihre Abläufe angepasst. Sie ist für Unternehmen gedacht, die eigene IT- und Sicherheitsvorgaben haben.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.kassensysteme.pos.2": {
@@ -445,11 +445,11 @@
     "bereich": "Für Betriebe, die offline kassieren oder viele Systeme anbinden.",
     "element": "Abschnitt · heading",
     "status": "offen",
-    "max": 64,
-    "brief": "Überschrift, für welche Betriebe Matrix POS die richtige Wahl ist.",
+    "max": 50,
+    "brief": "Überschrift, für wen Matrix POS die richtige Wahl ist: große Unternehmen mit Sonderanforderungen.",
     "text": "",
-    "entwurf": "Für Betriebe, die offline kassieren oder viele Systeme anbinden.",
-    "hinweis": "",
+    "entwurf": "Für Unternehmen mit eigenen Vorgaben.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.kassensysteme.pos.7": {
@@ -806,10 +806,10 @@
     "element": "p · text",
     "status": "offen",
     "max": 120,
-    "brief": "Einleitung: welche Daten die Kasse an welche Systemarten übergibt, etwa Hotelsoftware, Warenwirtschaft und Buchhaltung.",
+    "brief": "Einleitung: welche Daten die Kassen an welche Systemarten übergeben. NXT zuerst nennen.",
     "text": "",
-    "entwurf": "Matrix POS bucht Umsätze auf das Zimmerkonto der Hotelsoftware und übergibt Verkäufe an Warenwirtschaft und Buchhaltung.",
-    "hinweis": "",
+    "entwurf": "Matrix NXT und Matrix POS buchen Umsätze auf das Zimmerkonto der Hotelsoftware und übergeben Verkäufe an Warenwirtschaft und Buchhaltung.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.schnittstellen.3": {
@@ -986,10 +986,10 @@
     "element": "p · text",
     "status": "offen",
     "max": 113,
-    "brief": "Einleitung Hotel: Welche Abläufe im Hotel die Kasse abdeckt, etwa Buchung aufs Zimmerkonto und angebundene Hotelsysteme.",
+    "brief": "Einleitung Hotel: Buchung aufs Zimmerkonto. NXT ist an protel und ASA Hotel angebunden, POS zusätzlich an Opera und weitere.",
     "text": "",
-    "entwurf": "Matrix POS sucht die Buchung im Hotelsystem und bucht den Bon aufs Gastkonto. Für protel, Opera, ASA und weitere.",
-    "hinweis": "",
+    "entwurf": "Die Kasse sucht die Buchung im Hotelsystem und bucht den Bon aufs Gastkonto. Matrix NXT mit protel und ASA Hotel, Matrix POS auch mit Opera und weiteren.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "pages"
   },
   "seite.branchen.10": {
@@ -1549,11 +1549,11 @@
     "bereich": "Abschluss",
     "element": "Absatz",
     "status": "offen",
-    "max": 95,
-    "brief": "Ein Satz zum Abschluss, welches Produktportfolio Partner verkaufen können.",
+    "max": 160,
+    "brief": "Ein Satz zum Abschluss, welches Produktportfolio Partner verkaufen. NXT zuerst, PAY als eigenes Produkt, POS für große Kunden.",
     "text": "",
-    "entwurf": "Mit Matrix POS und Matrix NXT verkaufen Sie zwei Kassen, mit Matrix PAY die Kartenzahlung dazu.",
-    "hinweis": "",
+    "entwurf": "Mit Matrix NXT verkaufen Sie die Cloud-Kasse für die Gastronomie, mit Matrix PAY die Kartenzahlung dazu. Matrix POS ergänzt für große Kunden mit eigenen Vorgaben.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "tsx"
   },
   "seite.ueber-uns.1": {
@@ -1610,10 +1610,10 @@
     "element": "Karte POS",
     "status": "offen",
     "max": 69,
-    "brief": "Kurzbeschreibung von Matrix POS in ein bis zwei Sätzen.",
+    "brief": "Kurzbeschreibung von Matrix POS: lokal installiert, individuell angepasst, für große Unternehmen mit eigenen Vorgaben.",
     "text": "",
-    "entwurf": "Die stationäre Kasse mit Server im Haus. Kassiert auch ohne Internet.",
-    "hinweis": "",
+    "entwurf": "Lokal installiert und individuell angepasst. Für Unternehmen mit eigenen IT-Vorgaben.",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
     "quelle": "tsx"
   },
   "seite.ueber-uns.6": {
@@ -3427,5 +3427,17 @@
     "text": "",
     "entwurf": "30 Minuten, online oder vor Ort.",
     "hinweis": "Konzept-Doc 12.11."
+  },
+  "seite.kassensysteme.0": {
+    "status": "offen",
+    "text": "",
+    "hinweis": "Positionierung 12.11. (Robert): NXT ist die Standardkasse für die Gastronomie, POS für Sonderfälle großer Unternehmen.",
+    "quelle": "pages",
+    "seite": "Kassensysteme",
+    "bereich": "Hero",
+    "element": "Abschnitt · heading",
+    "max": 45,
+    "brief": "Hero-Überschrift. NXT ist die Kasse für die Gastronomie, POS nur für Sonderfälle großer Unternehmen. NXT steht im Vordergrund.",
+    "entwurf": "NXT für die Gastronomie. POS für Sonderfälle."
   }
 }

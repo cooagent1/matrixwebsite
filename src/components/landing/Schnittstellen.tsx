@@ -63,9 +63,9 @@ const CLUSTERS: Cluster[] = [
 
 const PRODUKTE = [
   { id: "alle", name: "Alle", href: "", more: "" },
-  { id: "pos", name: "POS", href: "/kassensysteme", more: "Mehr zu Matrix POS" },
   { id: "nxt", name: "NXT", href: "/kassensysteme/nxt", more: "Mehr zu Matrix NXT" },
   { id: "pay", name: "PAY", href: "/pay", more: "Mehr zu Matrix PAY" },
+  { id: "pos", name: "POS", href: "/kassensysteme/pos", more: "Mehr zu Matrix POS" },
 ];
 const TAG_LABEL: Record<Tag, string> = { pos: "Matrix POS", nxt: "Matrix NXT", pay: "Matrix PAY" };
 const tagsOf = (it: Item): Tag[] => it[1] ?? ["pos"];
