@@ -1284,3 +1284,7 @@ html[data-motion] .lp .ue-line li[data-reveal]:not(.is-in)::after{transform:scal
 @media (max-width:720px){.lp .b-col.on{height:460px}}
 /* GOP-Logo ist ein rotes Quadrat mit weißer Schrift: Graustufen statt Schwarz, sonst nur ein Block */
 .lp .b-logos-row img[src*="/gop."]{filter:grayscale(1);opacity:.6;border-radius:6px}
+/* Branchen ohne Kassenzettel (12.11.): Text über die volle Breite der offenen Spalte, Merkmale als schlichte Liste */
+.lp .b-col-body{grid-template-columns:minmax(0,1fr)}
+.lp .b-col-feats{list-style:none;margin:0 0 4px;padding:0;display:flex;flex-direction:column;gap:4px;font-size:15px;color:rgba(255,255,255,.85)}
+.lp .b-col-feats li::before{content:"·";display:inline-block;width:14px;opacity:.6}
