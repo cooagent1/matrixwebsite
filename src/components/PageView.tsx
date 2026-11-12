@@ -9,6 +9,8 @@ import { Inline } from "./Inline";
 import { QUOTES } from "./landing/startseite-data";
 import { NxtRad } from "./landing/NxtRad";
 import { ProduktFamilie, ProduktKarten } from "./landing/ProduktFamilie";
+import { Schnittstellen } from "./landing/Schnittstellen";
+import { T } from "./T";
 import { EMAIL, PHONE } from "@/lib/seo";
 
 const SHOW_PLACEHOLDERS = process.env.VERCEL_ENV !== "production";
@@ -573,6 +575,26 @@ const isRad = (s: Section) => s.blocks.some((b) => b.type === "nxtrad");
 export function PageView({ page, team }: { page: Page; team?: TeamMember[] }) {
   const first = page.sections[0];
   const hasHero = first && /^hero$/i.test(first.name);
+  // /schnittstellen (12.11.): Hero und Verzeichnis kommen aus einer eigenen Komponente, der Abschluss bleibt aus dem Inhalt.
+  if (page.slug === "schnittstellen")
+    return (
+      <>
+        <Schnittstellen
+          heading={<T k="seite.schnittstellen.1" />}
+          lead={<T k="seite.schnittstellen.2" />}
+          texts={{
+            gast: <T k="seite.schnittstellen.6" />,
+            service: "Schankanlagen und Kaffeemaschinen binden wir über die generische Schnittstelle an.",
+            bezahlen: "Matrix PAY läuft über Adyen. Terminals anderer Anbieter binden wir über OPI und Nexo an.",
+            hotel: <T k="seite.schnittstellen.3" />,
+            buero: <T k="seite.schnittstellen.5" />,
+          }}
+        />
+        {page.sections.filter((s) => s.id === "abschluss").map((s, i) => (
+          <SectionView key={s.id} s={s} index={i} isFirst={false} />
+        ))}
+      </>
+    );
   return (
     <>
       {!hasHero && (
